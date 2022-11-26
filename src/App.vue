@@ -32,7 +32,7 @@ header {
 
 /* ROUTER VIEW */
 header + div {
-  background-color: rgba(166, 255, 0, 0.3);
+  background-color: rgba(255, 0, 0, 0.3);
 }
 
 .logo {
