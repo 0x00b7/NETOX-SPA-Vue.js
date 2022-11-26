@@ -1,3 +1,9 @@
+/* MARKER */
+#u {
+  text-decoration: underline;
+}
+
+/* COLOR */
 .yellow {
   color: yellow;
 }
@@ -10,9 +16,13 @@
   color: greenyellow;
 }
 
+.blueviolet {
+  color: blueviolet
+}
+
 .green
 {
-  color: blueviolet;
+  color: green;
 }
 
 .blue

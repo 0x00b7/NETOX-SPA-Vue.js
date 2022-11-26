@@ -27,12 +27,11 @@ import './assets/fonts/FA/all.min.js'
 header {
   line-height: 1.5;
   max-height: 100vh;
-  background-color: blue;
 }
 
 /* ROUTER VIEW */
 header + div {
-  background-color: rgba(255, 0, 0, 0.3);
+  
 }
 
 .logo {
@@ -44,7 +43,6 @@ header + div {
 }
 
 nav {
-  background-color: red;
   width: 100%;
   font-size: 23px;
   text-align: center;

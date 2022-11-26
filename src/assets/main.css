@@ -1,13 +1,14 @@
 @import './base.css';
+@import './misc.css';
 
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  
+
   font-weight: normal;
 }
 
-a{
+a {
   text-decoration: none;
   color: rgb(255, 255, 255);
   transition: 0.4s;
