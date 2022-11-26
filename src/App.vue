@@ -10,7 +10,6 @@ import './assets/fonts/FA/all.min.js'
       class="logo"
       src="@/assets/logo.svg"
     />
-
     <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -19,7 +18,9 @@ import './assets/fonts/FA/all.min.js'
     </div>
   </header>
 
+<div>
   <RouterView />
+</div>
 </template>
 
 <style scoped>
@@ -45,7 +46,7 @@ header + div {
 nav {
   background-color: red;
   width: 100%;
-  font-size: 12px;
+  font-size: 23px;
   text-align: center;
   margin-top: 2rem;
 }
