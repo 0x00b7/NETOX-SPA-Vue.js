@@ -3,10 +3,13 @@
   import { useFadeIn, useFadeOut } from './assets/scripts/AN/route-ts.js'
 
   import './assets/scripts/FA/all.min.js'
+
+  import PageLoader from './components/PageLoader.vue';
 </script>
 
 <template>
-  
+  <PageLoader/>
+
   <header>
      <div class="wrapper">
         <nav>
