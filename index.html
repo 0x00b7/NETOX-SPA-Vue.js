@@ -1,81 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <link rel="icon" href="/favicon.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creating your Artwork.. | NETOX</title>
-  </head>
-  <body>
-
-    <div id="loader"></div>
-
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
-  </body>
+   <head>
+      <meta charset="UTF-8">
+      <link rel="icon" href="/favicon.ico">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Creating your Artwork.. | NETOX</title>
+   </head>
+   <body>
+      <div id="loader"></div>
+      <div id="app"></div>
+      <script type="module" src="/src/main.js"></script>
+   </body>
 </html>
-
 <script>
-window.onload = function(){
-  var elem = document.getElementById("loader");
-  elem.parentNode.removeChild(elem);
-};
+   window.onload = function(){
+     var elem = document.getElementById("loader");
+     elem.parentNode.removeChild(elem);
+   };
 </script>
-
 <style>
-#loader {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    max-width: 6rem;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    position: fixed;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  #loader:before,
-  #loader:after {
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-    animation: pulsOut 1.8s ease-in-out infinite;
-    filter: drop-shadow(0 0 1rem rgba(0, 130, 255, 0.75));
-  }
-  #loader:before {
-    width: 100%;
-    padding-bottom: 100%;
-    box-shadow: inset 0 0 0 1rem #fff;
-    animation-name: pulsIn;
-  }
-  #loader:after {
-    width: calc(100% - 2rem);
-    padding-bottom: calc(100% - 2rem);
-    box-shadow: 0 0 0 0 #fff;
-  }
-
-  @keyframes pulsIn {
-    0% {
-      box-shadow: inset 0 0 0 1rem #fff;
-      opacity: 1;
-    }
-    50%, 100% {
-      box-shadow: inset 0 0 0 0 rgb(100, 0, 255);
-      opacity: 0;
-    }
-  }
-
-  @keyframes pulsOut {
-    0%, 50% {
-      box-shadow: 0 0 0 0 #fff;
-      opacity: 0;
-    }
-    100% {
-      box-shadow: 0 0 0 1rem #fff;
-      opacity: 1;
-    }
-  }
-      
+   #loader {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   max-width: 6rem;
+   margin-top: 3rem;
+   margin-bottom: 3rem;
+   position: fixed;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   }
+   #loader:before,
+   #loader:after {
+   content: "";
+   position: absolute;
+   border-radius: 50%;
+   animation: pulsOut 1.8s ease-in-out infinite;
+   filter: drop-shadow(0 0 1rem rgba(0, 130, 255, 0.75));
+   }
+   #loader:before {
+   width: 100%;
+   padding-bottom: 100%;
+   box-shadow: inset 0 0 0 1rem #fff;
+   animation-name: pulsIn;
+   }
+   #loader:after {
+   width: calc(100% - 2rem);
+   padding-bottom: calc(100% - 2rem);
+   box-shadow: 0 0 0 0 #fff;
+   }
+   @keyframes pulsIn {
+   0% {
+   box-shadow: inset 0 0 0 1rem #fff;
+   opacity: 1;
+   }
+   50%, 100% {
+   box-shadow: inset 0 0 0 0 rgb(100, 0, 255);
+   opacity: 0;
+   }
+   }
+   @keyframes pulsOut {
+   0%, 50% {
+   box-shadow: 0 0 0 0 #fff;
+   opacity: 0;
+   }
+   100% {
+   box-shadow: 0 0 0 1rem #fff;
+   opacity: 1;
+   }
+   }
 </style>
