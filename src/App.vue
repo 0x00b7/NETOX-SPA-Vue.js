@@ -1,28 +1,8 @@
 <script setup>
   import { RouterLink, RouterView } from "vue-router";
-  import anime from 'animejs';
-  import './assets/fonts/FA/all.min.js'
+  import { useFadeIn, useFadeOut } from './assets/scripts/AN/route-ts.js'
 
-function useFadeIn(el, done) {
-    console.log(el)
-    anime({
-        targets: el,
-        opacity: [0, 1],
-        duration: 100,
-        easing: 'easeInOutSine',
-        complete: done,
-    })
-}
-
-function useFadeOut(el, done) {
-    anime({
-        targets: el,
-        opacity: [1, 0],
-        duration: 50,
-        easing: 'easeInOutSine',
-        complete: done,
-    })
-}
+  import './assets/scripts/FA/all.min.js'
 </script>
 
 <template>
@@ -36,7 +16,7 @@ function useFadeOut(el, done) {
         <nav>
            <RouterLink to="/">Home</RouterLink>
            <RouterLink to="/about">About</RouterLink>
-           <RouterLink to="/env">Developing</RouterLink>
+           <RouterLink to="/env">Devel</RouterLink>
         </nav>
      </div>
   </header>

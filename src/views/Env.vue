@@ -1,24 +1,36 @@
 <template>
   <div class="container">
-    <div class="env">
-      <h1>This page is under construction..</h1>
-    </div>
+    <button @click="go">Fancy</button>
+    <div class="el" ref="square"></div>
   </div>
 </template>
-<style scoped>
 
-  div {
-    width: 100%;
-  }
+<script>
+import anime from 'animejs';
 
-  .container {
-    padding: 1vh 1vh;
-    font-size: 4vh;
-  }
-  
-  @media (min-width: 1024px) {
-    .container {
-      display: flex;
+export default {
+  methods: {
+    go() {
+      anime({
+        targets: this.$refs.square,
+        translateX: 100
+      });
     }
   }
+};
+</script>
+
+<style scoped>
+.container {
+  margin: 5em;
+  padding: 0;
+  text-align: center;
+}
+
+button {
+  padding: 2%;
+  border: 1px solid red;
+  background: 0;
+  color: white;
+}
 </style>
