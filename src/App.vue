@@ -17,7 +17,6 @@ import { useFadeIn, useFadeOut } from './assets/JS/anim.js'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/env">Developing</RouterLink>
       </nav>
     </div>
   </header>

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="welcome">
-      <h1> MAKE THE WWW <br/>YOUR<span id="u" class="blueviolet">TERRITORY!</span>
+      <h1>MAKE THE WWW <br/>YOUR<span id="u" class="blueviolet">TERRITORY!</span>
       </h1>
     </div>
     <div class="definition">
@@ -38,7 +38,6 @@
   </div>
 </template>
 <style scoped>
-
   ul {
     padding: 1% 0;
     left: -1%
@@ -57,13 +56,10 @@
     font-size: 4vh;
   }
 
-  .welcome {
-
-  }
-
   .definition {
     font-size: 2vh;
   }
+
   .definition h2 {
     margin-top: 1rem;
     text-align: center;
