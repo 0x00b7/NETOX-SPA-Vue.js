@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="welcome">
-      <h1> MAKE THE WWW <br /> YOUR <span id="u" class="blueviolet">TERRITORY!</span>
+      <h1> MAKE THE WWW <br/>YOUR<span id="u" class="blueviolet">TERRITORY!</span>
       </h1>
     </div>
     <div class="definition">

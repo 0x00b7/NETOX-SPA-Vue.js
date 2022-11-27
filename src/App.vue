@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import './assets/fonts/FA/all.min.js'
+
+import { useFadeIn, useFadeOut } from './assets/JS/anim.js'
 </script>
 
 <template>
@@ -10,28 +12,29 @@ import './assets/fonts/FA/all.min.js'
       class="logo"
       src="@/assets/logo.svg"
     />
+
     <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/env">Developing</RouterLink>
       </nav>
     </div>
   </header>
 
-<div>
-  <RouterView />
-</div>
+  <router-view v-slot="{ Component }">
+      <transition @enter="useFadeIn" @leave="useFadeOut" v-bind:css="false" mode="out-in">
+        <component :is="Component" />
+      </transition>
+    </router-view>
+
+
 </template>
 
 <style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
-}
-
-/* ROUTER VIEW */
-header + div {
-  
 }
 
 .logo {
