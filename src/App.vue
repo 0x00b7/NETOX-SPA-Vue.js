@@ -6,6 +6,7 @@
 </script>
 
 <template>
+  
   <header>
      <img
         alt="Vue logo"
