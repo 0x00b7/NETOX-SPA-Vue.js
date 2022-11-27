@@ -5,12 +5,18 @@
     <link rel="icon" href="/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creating your Artwork.. | NETOX</title>
-
-    <script src='https://unpkg.com/nprogress@0.2.0/nprogress.js'></script>
-  <link rel='stylesheet' href='https://unpkg.com/nprogress@0.2.0/nprogress.css'/>
   </head>
   <body>
+
+    <div id="loading">Loading</div>
+
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
+
+<script>
+window.onload = function(){
+  document.getElementById("loading").style.display='none';
+};
+</script>
