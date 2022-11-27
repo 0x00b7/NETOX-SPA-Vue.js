@@ -1,8 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import './assets/fonts/FA/all.min.js'
-
 import { useFadeIn, useFadeOut } from './assets/JS/anim.js'
+import './assets/fonts/FA/all.min.js'
 </script>
 
 <template>
@@ -17,6 +16,7 @@ import { useFadeIn, useFadeOut } from './assets/JS/anim.js'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/env">Developing</RouterLink>
       </nav>
     </div>
   </header>
@@ -26,7 +26,6 @@ import { useFadeIn, useFadeOut } from './assets/JS/anim.js'
         <component :is="Component" />
       </transition>
     </router-view>
-
 
 </template>
 

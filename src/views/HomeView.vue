@@ -38,22 +38,13 @@
   </div>
 </template>
 <style scoped>
-  ul {
-    padding: 1% 0;
-    left: -1%
-  }
-
-  li {
-    line-height: 1.5;
+  .container {
+    padding: 1vh 1vh;
+    font-size: 4vh;
   }
 
   div {
     width: 100%;
-  }
-
-  .container {
-    padding: 1vh 1vh;
-    font-size: 4vh;
   }
 
   .definition {
@@ -70,5 +61,14 @@
     .container {
       display: flex;
     }
+  }
+
+  ul {
+    padding: 1% 0;
+    left: -1%
+  }
+
+  li {
+    line-height: 1.5;
   }
 </style>
