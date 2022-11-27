@@ -1,31 +1,51 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
-import { useFadeIn, useFadeOut } from './assets/JS/anim.js'
-import './assets/fonts/FA/all.min.js'
+  import { RouterLink, RouterView } from "vue-router";
+  import anime from 'animejs';
+  import './assets/fonts/FA/all.min.js'
+
+function useFadeIn(el, done) {
+    console.log(el)
+    anime({
+        targets: el,
+        opacity: [0, 1],
+        duration: 100,
+        easing: 'easeInOutSine',
+        complete: done,
+    })
+}
+
+function useFadeOut(el, done) {
+    anime({
+        targets: el,
+        opacity: [1, 0],
+        duration: 50,
+        easing: 'easeInOutSine',
+        complete: done,
+    })
+}
 </script>
 
 <template>
   <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="@/assets/logo.svg"
-    />
-
-    <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/env">Developing</RouterLink>
-      </nav>
-    </div>
+     <img
+        alt="Vue logo"
+        class="logo"
+        src="@/assets/logo.svg"
+        />
+     <div class="wrapper">
+        <nav>
+           <RouterLink to="/">Home</RouterLink>
+           <RouterLink to="/about">About</RouterLink>
+           <RouterLink to="/env">Developing</RouterLink>
+        </nav>
+     </div>
   </header>
 
   <router-view v-slot="{ Component }">
-      <transition @enter="useFadeIn" @leave="useFadeOut" v-bind:css="false" mode="out-in">
+     <transition @enter="useFadeIn" @leave="useFadeOut" :css="false" mode="out-in">
         <component :is="Component" />
-      </transition>
-    </router-view>
+     </transition>
+  </router-view>
 
 </template>
 

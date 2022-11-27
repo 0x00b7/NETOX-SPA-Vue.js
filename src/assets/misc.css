@@ -71,3 +71,18 @@
 .tomato {
   color: tomato;
 }
+
+/* DEV */
+.dev {
+  display: flex;
+}
+
+.el {
+  pointer-events: none;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  margin: 1px;
+  background-color: red;
+  font-size: 14px;
+}

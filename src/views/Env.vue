@@ -6,6 +6,7 @@
   </div>
 </template>
 <style scoped>
+
   div {
     width: 100%;
   }
@@ -14,7 +15,7 @@
     padding: 1vh 1vh;
     font-size: 4vh;
   }
-
+  
   @media (min-width: 1024px) {
     .container {
       display: flex;

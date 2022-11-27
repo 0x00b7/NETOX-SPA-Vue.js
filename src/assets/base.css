@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'Rajdhani';
-  src: url('./fonts/TTF/Rajdhani.woff2') format('woff2'),
-      url('./fonts/TTF/Rajdhani.woff')   format('woff'),
-      url('./fonts/TTF/Rajdhani.ttf')    format('truetype');
+  src: url('./fonts/DEFAULT/Rajdhani.woff2') format('woff2'),
+      url('./fonts/DEFAULT/Rajdhani.woff')   format('woff'),
+      url('./fonts/DEFAULT/Rajdhani.ttf')    format('truetype');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
