@@ -8,11 +8,6 @@
 <template>
   
   <header>
-     <img
-        alt="Vue logo"
-        class="logo"
-        src="@/assets/logo.svg"
-        />
      <div class="wrapper">
         <nav>
            <RouterLink to="/">Home</RouterLink>
@@ -34,14 +29,6 @@
 header {
   line-height: 1.5;
   max-height: 100vh;
-}
-
-.logo {
-  top: 15px;
-  display: block;
-  margin: 0 auto;
-  width: auto;
-  height: 9rem;
 }
 
 nav {
@@ -74,13 +61,6 @@ nav a:first-of-type {
     display: flex;
     place-items: left;
     padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    top: 0;
-    width: auto;
-    height: 5.9rem;
-    margin: 0 2rem 0 0;
   }
 
   header .wrapper {
