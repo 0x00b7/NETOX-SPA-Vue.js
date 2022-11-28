@@ -5,7 +5,6 @@
         <div class="iam">
           <img src="../assets/images/i.jpg">
         </div>
-
         <div class="bio">
           <p>Dedication is where dreams begin..</p>
           <p>I am a 21 year old full stack developer who has been passionate about technology & its evulution since childhood, at the age of 14 i became passionate about programming websites via HTML, CSS & JavaScript</p>
@@ -24,9 +23,13 @@
   .container {
     padding: 3vh 0vh;
   }
-  .iam img {
-    width: 60vh;
+
+  .iam {
   }
+  .iam img {
+    width: 40vh;
+  }
+
   .bio {
     text-align: left;
     font-size: 3vh;
@@ -44,6 +47,9 @@
   @media (min-width: 1024px) {
     .container {
       display: flex;
+    }
+    .iam img {
+      width: 60vh;
     }
   }
 
