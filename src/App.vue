@@ -10,8 +10,8 @@
      <div class="wrapper">
         <nav>
            <RouterLink to="/">Home</RouterLink>
-           <RouterLink to="/about">About</RouterLink>
-           <RouterLink to="/env">Devel</RouterLink>
+           <RouterLink to="/creation">Creation</RouterLink>
+           <RouterLink to="/about">About Us</RouterLink>
         </nav>
      </div>
   </header>
