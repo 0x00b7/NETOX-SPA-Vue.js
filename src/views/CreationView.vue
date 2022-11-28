@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="creation">
-      <p>Lets create a masterpiece together!</p>
+
     </div>
   </div>
 </template>
