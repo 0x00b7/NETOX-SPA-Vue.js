@@ -7,7 +7,7 @@
         </div>
         <div class="bio">
           <p>Dedication is where dreams begin..</p>
-          <p>I am a 21 year old full stack developer who has been passionate about technology & its evulution since childhood, at the age of 14 i became passionate about programming websites via HTML, CSS & JavaScript</p>
+          <p>I am a 21 year old full stack developer who has been passionate about technology & its evolution since childhood, at the age of 14 i became passionate about programming websites via HTML, CSS & JavaScript</p>
         </div>
      </div>
   </div>
