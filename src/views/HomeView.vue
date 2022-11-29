@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="welcome">
-      <h1>MAKE THE WWW YOUR <span id="u" class="blueviolet">TERRITORY!</span>
+      <h1>MAKE THE WWW YOUR <span id="u" class="crimson">TERRITORY!</span>
       </h1>
     </div>
     <div class="definition">
@@ -39,7 +39,7 @@
 </template>
 <style scoped>
   .container {
-    padding: 1vh 1vh;
+    padding: 5vh 5vh;
     font-size: 4vh;
   }
 

@@ -30,15 +30,6 @@
 <script>
 import anime from 'animejs';
 
-export default {
-  methods: {
-    go() {
-      anime({
-        targets: this.$refs.square,
-        translateX: 100
-      });
-    }
-  }
-};
+
 </script>
 

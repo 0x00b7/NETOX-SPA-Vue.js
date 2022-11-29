@@ -18,14 +18,12 @@
   .header {
     text-align: center;
     font-size: 4vh;
-    padding: 3vh 0vh;
   }
+  
   .container {
     padding: 3vh 0vh;
   }
 
-  .iam {
-  }
   .iam img {
     width: 40vh;
   }
