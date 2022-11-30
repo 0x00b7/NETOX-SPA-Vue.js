@@ -1,9 +1,22 @@
-/* MARKER */
-#u {
-  text-decoration: underline;
+/* MISC */
+#CT {
+  text-align: center;
+}
+
+#UL {
+  text-decoration: underline crimson;
+}
+
+#TL {
+  border-top: 1px solid crimson;
+}
+
+#BL {
+  border-bottom: 1px solid crimson;
 }
 
 /* COLOR */
+
 .yellow {
   color: yellow;
 }
@@ -89,3 +102,9 @@
   background-color: red;
   font-size: 14px;
 }
+
+.dbg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ }
