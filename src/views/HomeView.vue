@@ -118,16 +118,15 @@
     border: 1px solid var(--color-border);
     border-radius: 10px 10px 0 0;
     margin: 5vh 0 0 0;
-    padding: 0 9rem;
   }
   .feature-box p:nth-child(1) {
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
   .feature-box p:nth-child(3) {
     font-size: smaller;
     margin-top: 10%;
-    margin-bottom: 20%;
+    margin-bottom: 5%;
   }
   .feature-box svg {
     font-size: 5rem;
