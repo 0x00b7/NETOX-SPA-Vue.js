@@ -6,7 +6,7 @@
      <div class="section">
 
         <div class="welcome">
-           <h1>MAKE THE <br> WWW YOUR <br> <span id="UL" class="crimson">TERRITORY!</span></h1>
+           <h1>MAKE THE <br> WWW YOUR <br> <span id="UL" class="gardient">TERRITORY!</span></h1>
         </div>
 
         <div class="definition">
@@ -103,6 +103,7 @@
 
   /* THE WWW.. */
   .welcome {
+      font-size: 5vh;
       width: 100%;
   }
 

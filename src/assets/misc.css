@@ -32,48 +32,39 @@
   color: blueviolet
 }
 
-.green
-{
+.green {
   color: green;
 }
 
-.red
-{
+.red {
   color: red;
 }
 
-.blue
-{
+.blue {
   color: blue;
 }
 
-.lime
-{
+.lime {
   color: lime;
 }
 
-.crimson
-{
+.crimson {
   color: crimson;
 }
 
-.maroon
-{
+.maroon {
   color: maroon;
 }
 
-.deep-pink
-{
+.deep-pink {
   color: deeppink;
 }
 
-.lightcoral
-{
+.lightcoral {
   color: lightcoral;
 }
 
-.indigo
-{
+.indigo {
   color: indigo;
 }
 
@@ -87,4 +78,25 @@
 
 .tomato {
   color: tomato;
+}
+
+/* GARDIENT */
+
+.gardient {
+  text-align: center;
+  background: linear-gradient(to right, #FFF 20%, crimson 40%, crimson 60%, #FFF 80%);
+  background-size: 200% auto;
+  color: #000;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: gardient 1s linear infinite;
+}
+
+@keyframes gardient {
+  to {
+      background-position: 200% center;
+  }
 }
