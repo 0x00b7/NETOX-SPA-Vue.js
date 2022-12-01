@@ -102,7 +102,7 @@
 
 /* THE WWW.. */
 .welcome {
-    font-size: 5vh;
+    font-size: 42px;
     width: 100%;
 }
 
@@ -124,7 +124,7 @@ li {
 
 /* THE DIFFERENCE */
 .add h1 {
-    font-size: 6vh;
+    font-size: 42px;
 }
 .feature-box {
     width: 100%;
@@ -136,7 +136,7 @@ li {
     padding: 1rem 3rem;
 }
 .feature-box p:nth-child(1) {
-    font-size: 3vh;
+    font-size: 30px;
 }
 .feature-box p:nth-child(3) {
     max-width: 200px;
@@ -144,7 +144,7 @@ li {
 }
 .feature-box svg {
     margin: 1.5rem 0;
-    font-size: 5rem;
+    font-size: 72px;
 }
 
 /* W1024x ~ iPad */
@@ -157,23 +157,32 @@ li {
         grid-template-columns: auto auto;
         grid-column-gap: 10px;
     }
+    .definition {
+        font-size: 16px;
+    }
     .welcome {
-        font-size: 3.5vh;
+        font-size: 42px;
     }
     .feature-box {
-        height: 15rem;
-        margin: 1vh 0 0 0;
+        height: 19rem;
     }
 }
 
 /* W512x ~ iPhone */
 @media (max-width: 32em) {
-    .welcome {
-        font-size: 32px;
-    }
     .section:nth-child(2) {
         display: grid;
         grid-template-columns: inherit;
+    }
+    .welcome {
+        white-space: nowrap;
+        font-size: 4vh;
+    }
+    .definition {
+        font-size: 2vh;
+    }
+    .feature-box {
+        height: 17rem;
     }
 }
 
