@@ -56,22 +56,22 @@
            <div class="feature-box">
               <p id="UL">Handsome</p>
               <i class="fa-sharp fa-glasses"></i>
-              <p>We admire Detail's, keeping our Design as Clean as Possible!</p>
+              <p>We admire details and keeping our Design as Clean as Possible!</p>
             </div>
            <div class="feature-box">
               <p id="UL">Selfmade</p>
               <i class="fa-sharp fa-keyboard"></i>
-              <p>We admire Detail's, keeping our Design as Clean as Possible!</p>
+              <p>Proudly to say we Program and set up our Websites 100% ourselves.</p>
            </div>
            <div class="feature-box">
               <p id="UL">Responsive</p>
               <i class="fa-sharp fa-laptop-mobile"></i>
-              <p>We admire Detail's, keeping our Design as Clean as Possible!</p>
+              <p>We also pay attention to responsiveness on every Device.</p>
            </div>
            <div class="feature-box">
               <p id="UL">Effortless</p>
               <i class="fa-sharp fa-bolt-lightning"></i>
-              <p>We admire Detail's, keeping our Design as Clean as Possible!</p>
+              <p>Our Clients have a Flawless User experience interacting with their finished Website! </p>
            </div>
         </div>
      </div>
@@ -81,7 +81,6 @@
 
 
 <style scoped>
-
 
   /* HEAD-STUB */
   .add {
@@ -104,7 +103,6 @@
 
   /* THE WWW.. */
   .welcome {
-      font-size: 3rem;
       width: 100%;
   }
 
@@ -126,8 +124,9 @@
   }
 
   /* THE DIFFERENCE */
-
   .feature-box {
+      width: 100%;
+      height: 30vh;
       background-color: rgba(10, 10, 10, 1);
       text-align: center;
       border: 1px solid var(--color-border);
@@ -154,6 +153,9 @@
   }
   .section:nth-child(2) {
       display: grid;
+  }
+  .welcome {
+    font-size: 3.5vh;
   }
   .feature-box {
       margin: 1vh 0 0 0;
