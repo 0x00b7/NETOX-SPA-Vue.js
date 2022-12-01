@@ -71,7 +71,7 @@
            <div class="feature-box">
               <p id="UL">Effortless</p>
               <i class="fa-sharp fa-bolt-lightning"></i>
-              <p>Your Clients will have a Flawless User experience interacting with our Products!</p>
+              <p>Your Clients will have a Flawless User experience interacting with your Product!</p>
            </div>
         </div>
      </div>
