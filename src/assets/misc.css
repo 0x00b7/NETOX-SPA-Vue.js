@@ -83,16 +83,12 @@
 /* GARDIENT */
 
 .gardient {
-  text-align: center;
+  animation: gardient 1s linear infinite;
   background: linear-gradient(to right, #FFF 20%, crimson 40%, crimson 60%, #FFF 80%);
   background-size: 200% auto;
-  color: #000;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: gardient 1s linear infinite;
 }
 
 @keyframes gardient {

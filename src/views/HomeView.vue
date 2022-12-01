@@ -116,8 +116,7 @@
     border-bottom: 1px solid var(--color-border);
 }
 ul {
-    padding: 1% 0;
-    left: -1%
+    padding: 2% 0;
 }
 li {
     line-height: 1.5;
@@ -129,7 +128,7 @@ li {
 }
 .feature-box {
     width: 100%;
-    height: 15rem;
+    height: 17rem;
     background-color: rgba(10, 10, 10, 1);
     text-align: center;
     border: 1px solid var(--color-border);
@@ -140,7 +139,6 @@ li {
     font-size: 3vh;
 }
 .feature-box p:nth-child(3) {
-    padding-bottom: 5rem;
     max-width: 200px;
     word-wrap: break-word;
 }
