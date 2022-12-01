@@ -176,10 +176,10 @@ li {
     }
     .welcome {
         white-space: nowrap;
-        font-size: 4vh;
+        font-size: 3.5vh;
     }
     .definition {
-        font-size: 2vh;
+        font-size: 1.5vh;
     }
     .feature-box {
         height: 17rem;
