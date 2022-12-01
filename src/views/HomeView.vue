@@ -148,12 +148,14 @@
   }
 
   /* RESPONSIVE */
-@media (max-width: 64em) { /* 1024x */ 
+@media (max-width: 64em) { /* 1024x ~ iPad */ 
   .section {
       display: grid;
   }
   .section:nth-child(2) {
-      display: grid;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
   }
   .welcome {
     font-size: 3.5vh;
@@ -161,5 +163,13 @@
   .feature-box {
       margin: 1vh 0 0 0;
   }
+}
+
+@media (max-width: 32em) { /* 512 ~ iPhone */ 
+  .section:nth-child(2) {
+    display: grid;
+    grid-template-columns: inherit;
+  }
+
 }
 </style>
