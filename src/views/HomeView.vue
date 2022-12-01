@@ -129,7 +129,7 @@ li {
 }
 .feature-box {
     width: 100%;
-    height: 30vh;
+    height: 15rem;
     background-color: rgba(10, 10, 10, 1);
     text-align: center;
     border: 1px solid var(--color-border);
@@ -163,12 +163,16 @@ li {
         font-size: 3.5vh;
     }
     .feature-box {
+        height: 15rem;
         margin: 1vh 0 0 0;
     }
 }
 
 /* W512x ~ iPhone */
 @media (max-width: 32em) {
+    .welcome {
+        font-size: 32px;
+    }
     .section:nth-child(2) {
         display: grid;
         grid-template-columns: inherit;
@@ -182,17 +186,17 @@ li {
         font-size: large;
     }
 
-    .welcome {
-        font-size: 4vw;
-    }
-
     .add h1 {
         font-size: 9vw;
     }
 
+    .welcome {
+        font-size: 32px;
+    }
+
     .feature-box {
         font-size: 2vw;
-        height: 30vw;
+        height: 19rem;
     }
 
     .feature-box p:nth-child(1) {
