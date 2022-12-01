@@ -185,29 +185,4 @@ li {
         height: 17rem;
     }
 }
-
-/* H624x ~ FLIP */
-@media (max-height: 39em) {
-
-    .section {
-        font-size: large;
-    }
-
-    .add h1 {
-        font-size: 9vw;
-    }
-
-    .welcome {
-        font-size: 32px;
-    }
-
-    .feature-box {
-        font-size: 2vw;
-        height: 19rem;
-    }
-
-    .feature-box p:nth-child(1) {
-        font-size: 3vw;
-    }
-}
 </style>
