@@ -1,15 +1,19 @@
 <template>
   <div class="container">
 
-    <!-- Section I -->
+     <!-- Section I -->
 
      <div class="section">
+
         <div class="welcome">
            <h1>MAKE THE <br> WWW YOUR <br> <span id="UL" class="crimson">TERRITORY!</span></h1>
         </div>
+
         <div class="definition">
+
            <h1>Netox not only creates your presentation but also provides all the other components to deliver your site.</h1>
            <h2>WE ARE RESPONSIBLE FOR</h2>
+
            <ul class="fa-ul">
               <li>
                  <span class="fa-li">
@@ -37,6 +41,7 @@
                  </span>SERVICE PROTECTION
               </li>
            </ul>
+
         </div>
      </div>
 
@@ -48,114 +53,110 @@
         <!-- Section II -->
 
         <div class="section">
-
-          <div class="feature-box">
-            <p id="UL">Love for Detail's</p>
-            <i class="fa-sharp fa-glasses"></i>
-            <p>We admire Detail's, keeping our Design as Clean as Possible!</p>
-          </div>
-
-          <div class="feature-box">
-            <p id="UL">100% Self-made</p>
+           <div class="feature-box">
+              <p id="UL">Handsome</p>
+              <i class="fa-sharp fa-glasses"></i>
+              <p>We admire Detail's, keeping our Design as Clean as Possible!</p>
+            </div>
+           <div class="feature-box">
+              <p id="UL">Selfmade</p>
               <i class="fa-sharp fa-keyboard"></i>
               <p>We admire Detail's, keeping our Design as Clean as Possible!</p>
-          </div>
-
-          <div class="feature-box">
-            <p id="UL">Responsive</p>
+           </div>
+           <div class="feature-box">
+              <p id="UL">Responsive</p>
               <i class="fa-sharp fa-laptop-mobile"></i>
               <p>We admire Detail's, keeping our Design as Clean as Possible!</p>
-          </div>
-
-          <div class="feature-box">
-            <p id="UL">Effortless</p>
+           </div>
+           <div class="feature-box">
+              <p id="UL">Effortless</p>
               <i class="fa-sharp fa-bolt-lightning"></i>
               <p>We admire Detail's, keeping our Design as Clean as Possible!</p>
-          </div>
-
+           </div>
         </div>
      </div>
-
   </div>
 </template>
 
 
+
 <style scoped>
+
+
+  /* HEAD-STUB */
   .add {
-    font-size: 3vh;
-    padding: 5vh 0;
-  } 
-  .container {
-    background-color: rgba(15, 15, 15, 1);
+      padding: 2vh 0;
   }
+  .container {
+      background-color: rgba(15, 15, 15, 1);
+  }
+
+  /* SKELETON */
   .section {
-    padding: 5vh 5vh;
-    font-size: 4vh;
+      display: flex;
+      padding: 5vh 5vh;
   }
   .section:nth-child(2) {
-    justify-content: center;
-    align-items: center;
+      padding: 2vh 2vh;
+      justify-content: center;
+      align-items: center;
   }
+
+  /* THE WWW.. */
   .welcome {
-    font-size: 5vh;
-    width: 100%;
+      font-size: 3rem;
+      width: 100%;
   }
+
+  /* WE ARE RESPONSIBLE FOR.. */
   .definition {
-    width: 100%;
-    font-size: 2vh;
+      width: 100%;
   }
   .definition h2 {
-    margin-top: 1rem;
-    text-align: center;
-    border-bottom: 1px solid var(--color-border);
-  }
-  .feature-box {
-    background-color: rgba(10, 10, 10, 1);
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    font-size: 5vh;
-    border: 1px solid var(--color-border);
-    border-radius: 10px 10px 0 0;
-    margin: 5vh 0 0 0;
-  }
-  .feature-box p:nth-child(1) {
-    margin-top: 5%;
-    margin-bottom: 10%;
-  }
-  .feature-box p:nth-child(3) {
-    font-size: smaller;
-    margin-top: 10%;
-    margin-bottom: 5%;
-  }
-  .feature-box svg {
-    font-size: 5rem;
-  }
-  @media (min-width: 1024px) {
-    .section {
-      display: flex;
-    }
-    .feature-box {
-     width: 25%;
-     text-align: center;
-     font-size: 3vh;
-     margin: 0 1vh 0 0;
-     padding: 0 2rem;
-    }
-    .feature-box p:nth-child(1) {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    }
-    .feature-box p:nth-child(3) {
-    margin-top: 5%;
-    margin-bottom: 5%;
-    }
+      margin-top: 1rem;
+      text-align: center;
+      border-bottom: 1px solid var(--color-border);
   }
   ul {
-    padding: 1% 0;
-    left: -1%
+      padding: 1% 0;
+      left: -1%
   }
   li {
-    line-height: 1.5;
+      line-height: 1.5;
   }
+
+  /* THE DIFFERENCE */
+
+  .feature-box {
+      background-color: rgba(10, 10, 10, 1);
+      text-align: center;
+      border: 1px solid var(--color-border);
+      margin: 0 1vh 0 0;
+      padding: 1rem 3rem;
+  }
+  .feature-box p:nth-child(1) {
+      font-size: 3vh;
+  }
+  .feature-box p:nth-child(3) {
+      padding-bottom: 5rem;
+      max-width: 200px;
+      word-wrap: break-word;
+  }
+  .feature-box svg {
+      margin: 1rem 0;
+      font-size: 5rem;
+  }
+
+  /* RESPONSIVE */
+@media (max-width: 64em) { /* 1024x */ 
+  .section {
+      display: grid;
+  }
+  .section:nth-child(2) {
+      display: grid;
+  }
+  .feature-box {
+      margin: 1vh 0 0 0;
+  }
+}
 </style>
