@@ -111,7 +111,7 @@
     border-bottom: 1px solid var(--color-border);
 }
 ul {
-    padding: 2% 0;
+    padding: 10px 0;
 }
 li {
     line-height: 1.5;
@@ -123,12 +123,12 @@ li {
 }
 .feature-box {
     width: 100%;
-    height: 17rem;
+    height: 270px;
     background-color: rgba(10, 10, 10, 1);
     text-align: center;
     border: 1px solid rgb(5, 5, 5);
-    margin: 0 1vh 0 0;
-    padding: 1rem 3rem;
+    margin: 0 10px 0 0;
+    padding: 20px 50px;
 }
 .feature-box p:nth-child(1) {
     font-size: 30px;
@@ -159,8 +159,8 @@ li {
         font-size: 42px;
     }
     .feature-box {
-        margin: auto 0 2vh;
-        height: 19rem;
+        margin: auto 0 20px;
+        height: 280px;
     }
 }
 
@@ -178,7 +178,7 @@ li {
         font-size: 2vh;
     }
     .feature-box {
-        height: 16.5rem;
+        height: 265px;
     }
 }
 </style>
