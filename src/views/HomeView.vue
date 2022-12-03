@@ -70,8 +70,6 @@
        
     </div>
  </template>
- 
-
 
 
 <style scoped>

@@ -21,6 +21,11 @@
   display: flex;
 }
 
+.picture {
+  display: flex;
+  justify-content: center;
+}
+
 img {
   border: 1px solid rgb(10, 10, 10);
   width: 50vh;
