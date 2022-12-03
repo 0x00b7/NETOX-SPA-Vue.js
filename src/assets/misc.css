@@ -80,7 +80,7 @@
   color: tomato;
 }
 
-/* DETAILS */
+/* ANIMATION */
 .gardient {
   animation: gardient 1s linear infinite;
   background: linear-gradient(to right, #FFF 20%, crimson 40%, crimson 60%, #FFF 80%);
