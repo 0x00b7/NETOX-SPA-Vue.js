@@ -1,82 +1,76 @@
 <template>
-  <div class="container">
+    <div class="container">
+       <!-- Section I -->
+       <div class="section">
+          <div class="home">
+             <h1>MAKE THE <br> WWW YOUR <br> <span id="UL" class="gardient">TERRITORY!</span></h1>
+          </div>
+          <div class="define">
+             <h1>Netox not only creates your presentation but also provides all the other components to deliver your site.</h1>
+             <h2>WE ARE RESPONSIBLE FOR</h2>
+             <ul class="fa-ul">
+                <li>
+                   <span class="fa-li">
+                   <i class="fa-sharp fa-rectangle-code"></i>
+                   </span>PROGRAMMING
+                </li>
+                <li>
+                   <span class="fa-li">
+                   <i class="fa-sharp fa-wifi"></i>
+                   </span>HOSTING
+                </li>
+                <li>
+                   <span class="fa-li">
+                   <i class="fa-sharp fa-link"></i>
+                   </span>DOMAIN-LINKING
+                </li>
+                <li>
+                   <span class="fa-li">
+                   <i class="fa-sharp fa-magnifying-glass-location"></i>
+                   </span>SEARCH-ENGINE-OPTIMIZATION (SEO)
+                </li>
+                <li>
+                   <span class="fa-li">
+                   <i class="fa-sharp fa-shield-keyhole"></i>
+                   </span>SERVICE PROTECTION
+                </li>
+             </ul>
+          </div>
+       </div>
+       <!-- Section-Text -->
+       <div id="TL" class="add">
+          <h1 id="CT">QUALITIES</h1>
+          <!-- Section II -->
+          <div class="section">
+             <div class="feature-box">
+                <p id="UL">Handsome</p>
+                <i class="fa-sharp fa-glasses"></i>
+                <p>We admire details and keeping our Design as Clean as Possible!</p>
+             </div>
+             <div class="feature-box">
+                <p id="UL">Selfmade</p>
+                <i class="fa-sharp fa-keyboard"></i>
+                <p>Proudly to say we Program and set up our Websites 100% ourselves.</p>
+             </div>
+             <div class="feature-box">
+                <p id="UL">Responsive</p>
+                <i class="fa-sharp fa-laptop-mobile"></i>
+                <p>We also pay attention to responsiveness on every Device.</p>
+             </div>
+             <div class="feature-box">
+                <p id="UL">Effortless</p>
+                <i class="fa-sharp fa-bolt-lightning"></i>
+                <p>Your Clients will have a Flawless User experience interacting with your Product!</p>
+             </div>
+          </div>
+       </div>
 
-     <!-- Section I -->
+       <!-- Section-Text -->
 
-     <div class="section">
-
-        <div class="welcome">
-           <h1>MAKE THE <br> WWW YOUR <br> <span id="UL" class="gardient">TERRITORY!</span></h1>
-        </div>
-
-        <div class="definition">
-
-           <h1>Netox not only creates your presentation but also provides all the other components to deliver your site.</h1>
-           <h2>WE ARE RESPONSIBLE FOR</h2>
-
-           <ul class="fa-ul">
-              <li>
-                 <span class="fa-li">
-                 <i class="fa-sharp fa-rectangle-code"></i>
-                 </span>PROGRAMMING
-              </li>
-              <li>
-                 <span class="fa-li">
-                 <i class="fa-sharp fa-wifi"></i>
-                 </span>HOSTING
-              </li>
-              <li>
-                 <span class="fa-li">
-                 <i class="fa-sharp fa-link"></i>
-                 </span>DOMAIN-LINKING
-              </li>
-              <li>
-                 <span class="fa-li">
-                 <i class="fa-sharp fa-magnifying-glass-location"></i>
-                 </span>SEARCH-ENGINE-OPTIMIZATION (SEO)
-              </li>
-              <li>
-                 <span class="fa-li">
-                 <i class="fa-sharp fa-shield-keyhole"></i>
-                 </span>SERVICE PROTECTION
-              </li>
-           </ul>
-
-        </div>
-     </div>
-
-     <!-- Section-Text -->
-
-     <div id="TL" class="add">
-        <h1 id="CT">THE DIFFERENCE</h1>
-
-        <!-- Section II -->
-
-        <div class="section">
-           <div class="feature-box">
-              <p id="UL">Handsome</p>
-              <i class="fa-sharp fa-glasses"></i>
-              <p>We admire details and keeping our Design as Clean as Possible!</p>
-            </div>
-           <div class="feature-box">
-              <p id="UL">Selfmade</p>
-              <i class="fa-sharp fa-keyboard"></i>
-              <p>Proudly to say we Program and set up our Websites 100% ourselves.</p>
-           </div>
-           <div class="feature-box">
-              <p id="UL">Responsive</p>
-              <i class="fa-sharp fa-laptop-mobile"></i>
-              <p>We also pay attention to responsiveness on every Device.</p>
-           </div>
-           <div class="feature-box">
-              <p id="UL">Effortless</p>
-              <i class="fa-sharp fa-bolt-lightning"></i>
-              <p>Your Clients will have a Flawless User experience interacting with your Product!</p>
-           </div>
-        </div>
-     </div>
-  </div>
-</template>
+       
+    </div>
+ </template>
+ 
 
 
 
@@ -86,13 +80,14 @@
     padding: 2vh 0;
 }
 .container {
+    border: 1px solid rgb(10, 10, 10);
     background-color: rgba(15, 15, 15, 1);
 }
 
 /* SKELETON */
 .section {
     display: flex;
-    padding: 5vh 5vh;
+    padding: 2vh 5vh;
 }
 .section:nth-child(2) {
     padding: 2vh 2vh;
@@ -101,16 +96,16 @@
 }
 
 /* THE WWW.. */
-.welcome {
+.home {
     font-size: 42px;
     width: 100%;
 }
 
 /* WE ARE RESPONSIBLE FOR.. */
-.definition {
+.define {
     width: 100%;
 }
-.definition h2 {
+.define h2 {
     margin-top: 1rem;
     text-align: center;
     border-bottom: 1px solid var(--color-border);
@@ -131,7 +126,7 @@ li {
     height: 17rem;
     background-color: rgba(10, 10, 10, 1);
     text-align: center;
-    border: 1px solid var(--color-border);
+    border: 1px solid rgb(5, 5, 5);
     margin: 0 1vh 0 0;
     padding: 1rem 3rem;
 }
@@ -155,15 +150,16 @@ li {
     .section:nth-child(2) {
         display: grid;
         grid-template-columns: auto auto;
-        grid-column-gap: 10px;
+        grid-column-gap: 20px;
     }
-    .definition {
+    .define {
         font-size: 16px;
     }
-    .welcome {
+    .home {
         font-size: 42px;
     }
     .feature-box {
+        margin: auto 0 2vh;
         height: 19rem;
     }
 }
@@ -174,15 +170,15 @@ li {
         display: grid;
         grid-template-columns: inherit;
     }
-    .welcome {
+    .home {
         white-space: nowrap;
-        font-size: 3.5vh;
+        font-size: 4vh;
     }
-    .definition {
-        font-size: 1.5vh;
+    .define {
+        font-size: 2vh;
     }
     .feature-box {
-        height: 17rem;
+        height: 16.5rem;
     }
 }
 </style>
