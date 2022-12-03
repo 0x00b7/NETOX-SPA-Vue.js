@@ -13,42 +13,49 @@
 
           
 <style scoped>
-
 .container {
-  padding: 5vh 5vh;
-  background-color: rgba(15, 15, 15, 1);
-  border: 1px solid rgb(10, 10, 10);
-  display: flex;
+    padding: 5vh 5vh;
+    background-color: rgba(15, 15, 15, 1);
+    border: 1px solid rgb(10, 10, 10);
+    display: flex;
 }
 
 .picture {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 img {
-  border: 1px solid rgb(10, 10, 10);
-  width: 50vh;
+    border: 1px solid rgb(10, 10, 10);
+    width: 50vh;
 }
 
 .bio {
-  padding: 0vh 25px;
+    padding: 0vh 25px;
 }
 
 /* W1024x ~ iPad */
 @media (max-width: 64em) {
-  .container {
-      display: grid;
-  }
-  
-  .bio {
-    padding: 2vh 0px;
-  }
+    .container {
+        display: grid;
+    }
+
+    img {
+        border: 1px solid rgb(10, 10, 10);
+        width: 40vh;
+    }
+
+    .bio {
+        padding: 2vh 0px;
+    }
 
 }
 
 /* W512x ~ iPhone */
 @media (max-width: 32em) {
-
+  img {
+        border: 1px solid rgb(10, 10, 10);
+        width: 30vh;
+    }
 }
 </style>
