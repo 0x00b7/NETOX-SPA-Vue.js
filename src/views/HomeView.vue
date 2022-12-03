@@ -12,7 +12,7 @@
                 <RouterLink to="/creation">
                    <div>
                       <p>ORDER&nbsp;</p>
-                      <p>NOW</p>
+                      <p>NOW</p>!
                    </div>
                 </RouterLink>
 
@@ -110,7 +110,7 @@
  }
  
  .button svg {
-     color: green;
+     color: rgb(150, 255, 0);
  }
  
  .button {
@@ -213,6 +213,9 @@
      }
      .button {
          margin-bottom: 10px;
+     }
+     .button div:hover > p:nth-child(2) {
+        animation: none;
      }
      .feature-box {
          margin: auto 0 20px;
