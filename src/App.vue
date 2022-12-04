@@ -10,7 +10,7 @@
          <nav>
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/creation">Creation</RouterLink>
-            <RouterLink to="/about">About Us</RouterLink>
+            <RouterLink to="/about">About</RouterLink>
          </nav>
       </div>
    </header>
@@ -21,7 +21,15 @@
    </router-view>
    <footer>
       <div>
-         <h3>Navigation</h3>
+         <h3>About Us</h3>
+         <ul class="fa-ul">
+            <li>
+              <span class="fa-li">
+               <i class="fa-solid fa-scale-balanced"></i>
+              </span>
+              <RouterLink to="/legal">Legal & Privacy</RouterLink>
+            </li>
+         </ul>
       </div>
       <div>
          <h3>Social Media</h3>
@@ -79,7 +87,7 @@ nav {
     margin: 15px 0px 15px 0px;
 }
 
-nav a.router-link-exact-active {
+a.router-link-exact-active {
     color: rgba(255, 255, 255, 0.5)
 }
 
