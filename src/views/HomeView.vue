@@ -52,7 +52,7 @@
           </div>
        </div>
        <!-- Section-Text -->
-       <div id="TL" class="add">
+       <hr id="TL">
           <h1 id="CT">QUALITIES</h1>
           <!-- Section II -->
           <div class="section">
@@ -77,7 +77,7 @@
                 <p>Your Clients will have a Flawless User experience interacting with your Product!</p>
              </div>
           </div>
-       </div>
+
        <!-- Section-Text -->
 
     </div>
@@ -86,9 +86,6 @@
 
  <style scoped>
  /* HEAD-STUB */
- .add {
-     padding: 2vh 0;
- }
  .container {
      border: 1px solid rgb(10, 10, 10);
      background-color: rgba(15, 15, 15, 1);
