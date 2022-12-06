@@ -58,7 +58,7 @@
           <div class="section">
              <div class="feature-box">
                 <p id="UL">Handsome</p>
-                <i class="fa-sharp fa-glasses"></i>
+                <i id="MyGradient" class="fa-sharp fa-glasses"></i>
                 <p>We admire details and keeping our Design as Clean as Possible!</p>
              </div>
              <div class="feature-box">
@@ -93,7 +93,7 @@
      border: 1px solid rgb(10, 10, 10);
      background-color: rgba(15, 15, 15, 1);
  }
- 
+
  /* SKELETON */
  .section {
      display: flex;
@@ -104,17 +104,17 @@
      justify-content: center;
      align-items: center;
  }
- 
+
  /* THE WWW.. */
  .home {
      font-size: 42px;
      width: 100%;
  }
- 
+
  .button svg {
      color: rgb(150, 255, 0);
  }
- 
+
  .button {
      margin-top: 10px;
      width: 260px;
@@ -124,14 +124,14 @@
  }
 
  .button div {
-    margin: 0 5px;
-    display: flex;
+     margin: 0 5px;
+     display: flex;
  }
  .button p {
-    top: 1px;
- } 
+     top: 1px;
+ }
 
- .button div:hover > p:nth-child(2) {
+ .button div:hover>p:nth-child(2) {
      animation-name: fa-shake;
      animation-delay: 0s;
      animation-direction: normal;
@@ -155,7 +155,7 @@
      --fa-animation-duration: 2s;
      --fa-fade-opacity: 0.1;
  }
- 
+
  /* WE ARE RESPONSIBLE FOR.. */
  .define {
      width: 100%;
@@ -165,14 +165,16 @@
      text-align: center;
      border-bottom: 1px solid var(--color-border);
  }
+
  ul {
      padding: 10px 0;
  }
+
  li {
      line-height: 1.5;
  }
- 
- /* THE DIFFERENCE */
+
+ /* QUALITIES */
  .add h1 {
      font-size: 42px;
  }
@@ -195,8 +197,9 @@
  .feature-box svg {
      margin: 1.5rem 0;
      font-size: 72px;
+     filter: drop-shadow(0px 0px 3px rgb(255, 255, 255));
  }
- 
+
  /* W1024x ~ iPad */
  @media (max-width: 64em) {
      .section {
@@ -216,15 +219,15 @@
      .button {
          margin-bottom: 10px;
      }
-     .button div:hover > p:nth-child(2) {
-        animation: none;
+     .button div:hover>p:nth-child(2) {
+         animation: none;
      }
      .feature-box {
          margin: auto 0 20px;
          height: 280px;
      }
  }
- 
+
  /* W512x ~ iPhone */
  @media (max-width: 32em) {
      .section:nth-child(2) {

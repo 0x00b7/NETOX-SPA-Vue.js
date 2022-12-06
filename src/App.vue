@@ -80,19 +80,15 @@ header .wrapper {
     flex-wrap: wrap;
 }
 
+a.router-link-exact-active:hover {
+    background-color: transparent;
+}
+
 nav {
     width: 100%;
     font-size: 24px;
     text-align: left;
     margin: 15px 0px 15px 0px;
-}
-
-a.router-link-exact-active {
-    color: rgba(255, 255, 255, 0.5)
-}
-
-nav a.router-link-exact-active:hover {
-    background-color: transparent;
 }
 
 nav a {
@@ -120,11 +116,11 @@ footer div {
 }
 
 ul {
-  margin: 0px 0px 0px 28px;
+    margin: 0px 0px 0px 28px;
 }
 
 li {
-   padding: 5px 0px;
+    padding: 5px 0px;
 }
 
 /* W1024x ~ iPad */
@@ -144,7 +140,7 @@ li {
     }
 
     footer div {
-      margin-bottom: 25px;
+        margin-bottom: 25px;
     }
 }
 </style>

@@ -5,7 +5,6 @@
      </div>
      <div class="bio">
         <p>Dedication is where dreams begin..</p>
-        <br>
         <p>I am a 21 year old full stack developer who has been passionate about technology & its evolution since childhood, at the age of 14 i became passionate about programming websites via HTML, CSS & JavaScript.</p>
      </div>
   </div>
@@ -27,7 +26,7 @@
 
 img {
     border: 1px solid rgb(10, 10, 10);
-    width: 50vh;
+    width: 500px;
 }
 
 .bio {
@@ -53,7 +52,7 @@ img {
 
 /* W512x ~ iPhone */
 @media (max-width: 32em) {
-  img {
+    img {
         border: 1px solid rgb(10, 10, 10);
         width: 30vh;
     }
