@@ -27,10 +27,12 @@
    </body>
 </html>
 <script>
-   window.onload = function(){
-      document.querySelector(".preloader").style.opacity = 0;
-      setTimeout(function(){ document.querySelector(".preloader").remove() }, 500);  
-   }
+window.onload = function() {
+    setTimeout(
+        function() {
+            document.querySelector(".preloader").remove()
+        }, 500);
+}
 </script>
 <style>
    .preloader {
@@ -47,6 +49,7 @@
        animation-duration: 5s;
        animation-iteration-count: infinite;
        animation-direction: forwards;
+       transform: rotateX(0deg) rotateY(-25deg);
        position: absolute;
        margin: auto;
        top: 0;
@@ -66,41 +69,41 @@
        color: #fff;
    }
    .front {
-       background: rgba(255, 0, 85, 0.7);
+       background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
        transform: translateZ(50px);
+       outline: 1px solid transparent;
    }
    .back {
-       background: rgba(255, 238, 0, 0.7);
+       background: linear-gradient(-90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
        transform: rotateY(180deg) translateZ(50px);
+       outline: 1px solid transparent;
    }
    .right {
-       background: rgba(210, 0, 0, 0.7);
+       background: linear-gradient(-90deg, rgba(252,70,107,1) 0%, rgba(252,70,107,1) 100%);
        transform: rotateY(90deg) translateZ(50px);
+       outline: 1px solid transparent;
    }
    .left {
-       background: rgba(157, 255, 0, 0.7);
+       background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(63,94,251,1) 100%);
        transform: rotateY(-90deg) translateZ(50px);
+       outline: 1px solid transparent;
    }
    .top {
-       background: rgba(157, 255, 0, 0.7);
+       background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
        transform: rotateX(90deg) translateZ(50px);
+       outline: 1px solid transparent;
    }
    .bottom {
-       background: rgba(0, 94, 255, 0.7);
+       background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
        transform: rotateX(-90deg) translateZ(50px);
+       outline: 1px solid transparent;
    }
    @keyframes spinner {
        0% {
-           transform: rotate3d(1, 0, 0, 0deg);
-       }
-       40% {
-           transform: rotate3d(0, 1, 0, 320deg);
-       }
-       80% {
-           transform: rotate3d(0, 0, 1, 120deg);
+            transform: rotateX(-45deg) rotateY(0deg);
        }
        100% {
-           transform: rotate3d(0, 0, 0, 380deg);
+            transform: rotateX(45deg) rotateY(720deg);
        }
    }
 </style>

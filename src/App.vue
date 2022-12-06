@@ -68,7 +68,6 @@
    </footer>
 </template>
 
-
 <style scoped>
 header {
     display: grid;
