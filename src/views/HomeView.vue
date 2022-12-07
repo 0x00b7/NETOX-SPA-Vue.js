@@ -74,7 +74,7 @@
              <div class="feature-box">
                 <p id="UL">Effortless</p>
                 <i class="fa-sharp fa-bolt-lightning"></i>
-                <p>Your Clients will have a Flawless User experience interacting with your Product!</p>
+                <p>Have a Flawless User experience interacting with your Product!</p>
              </div>
           </div>
 
@@ -188,7 +188,6 @@
      font-size: 30px;
  }
  .feature-box p:nth-child(3) {
-     max-width: 200px;
      word-wrap: break-word;
  }
  .feature-box svg {
@@ -202,7 +201,7 @@
      .section {
          display: grid;
      }
-     .section:nth-child(2) {
+     .section:nth-child(4) {
          display: grid;
          grid-template-columns: auto auto;
          grid-column-gap: 20px;
@@ -227,7 +226,7 @@
 
  /* W512x ~ iPhone */
  @media (max-width: 32em) {
-     .section:nth-child(2) {
+     .section:nth-child(4) {
          display: grid;
          grid-template-columns: inherit;
      }
