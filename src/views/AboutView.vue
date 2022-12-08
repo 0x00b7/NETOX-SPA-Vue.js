@@ -15,7 +15,6 @@
 .container {
     padding: 5vh 5vh;
     background-color: rgba(15, 15, 15, 1);
-    border: 1px solid rgb(10, 10, 10);
     display: flex;
 }
 

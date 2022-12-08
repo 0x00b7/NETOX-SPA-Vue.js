@@ -44,7 +44,6 @@
   <style scoped>
   /* HEAD-STUB */
   .container {
-      border: 1px solid rgb(10, 10, 10);
       background-color: rgba(15, 15, 15, 1);
   }
 
