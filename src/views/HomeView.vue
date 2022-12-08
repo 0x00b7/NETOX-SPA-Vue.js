@@ -221,9 +221,9 @@
 
  /* W512x ~ iPhone */
  @media (max-width: 32em) {
-    .home {
-        font-size: 32px;
-    }
+     .home {
+         font-size: 32px;
+     }
      .section:nth-child(4) {
          display: grid;
          grid-template-columns: inherit;
