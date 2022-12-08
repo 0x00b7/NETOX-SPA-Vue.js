@@ -104,7 +104,7 @@ footer {
     position: relative;
     display: flex;
     width: 100%;
-    height: 200px;
+    min-height: 30vh;
     background-color: rgb(10, 10, 10);
     padding: 1rem 2rem;
 }

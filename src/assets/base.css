@@ -58,7 +58,7 @@
 body {
   min-height: 100vh;
   color: var(--color-text);
-  background: #131313;
+  background-color: rgba(15, 15, 15, 1);
   transition: color 0.5s, background-color 0.5s;
   line-height: 1;
   font-family: Rajdhani;

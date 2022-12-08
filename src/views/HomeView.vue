@@ -3,7 +3,7 @@
        <!-- Section I -->
        <div class="section">
           <div class="home">
-             <h1>MAKE THE <br> WWW YOUR <br> <span id="UL" class="gardient">TERRITORY!</span></h1>
+             <h1>MAKE THE WWW YOUR <span id="UL" class="gardient">TERRITORY!</span></h1>
              <div class="button">
 
                 <i class="fa-sharp fa-angle-right fa-fade"></i>
@@ -87,14 +87,13 @@
  <style scoped>
  /* HEAD-STUB */
  .container {
-     border: 1px solid rgb(10, 10, 10);
      background-color: rgba(15, 15, 15, 1);
  }
 
  /* SKELETON */
  .section {
      display: flex;
-     padding: 1rem 1.5rem;
+     padding: 1rem;
  }
 
  /* THE WWW.. */
@@ -224,16 +223,6 @@
      .section:nth-child(4) {
          display: grid;
          grid-template-columns: inherit;
-     }
-     .home {
-         white-space: nowrap;
-         font-size: 4vh;
-     }
-     .define {
-         font-size: 2vh;
-     }
-     .feature-box {
-         height: 265px;
      }
  }
  </style>
