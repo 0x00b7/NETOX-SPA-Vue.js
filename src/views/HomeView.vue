@@ -3,7 +3,7 @@
        <!-- Section I -->
        <div class="section">
           <div class="home">
-             <h1>MAKE THE WWW YOUR <span id="UL" class="gardient">TERRITORY!</span></h1>
+             <h1>MAKE THE WWW YOUR <span id="UL" style="text-decoration-style: wavy;" class="gardient">TERRITORY!</span></h1>
              <div class="button">
 
                 <i class="fa-sharp fa-angle-right fa-fade"></i>
@@ -13,7 +13,8 @@
                 <RouterLink to="/creation">
                    <div>
                       <p>ORDER&nbsp;</p>
-                      <p>NOW</p>!
+                      <p>NOW</p>
+                      <p>!</p>
                    </div>
                 </RouterLink>
 
@@ -107,19 +108,19 @@
  }
 
  .button {
-     margin-top: 10px;
+     margin-top: 2rem;
      width: 260px;
      font-size: 80%;
-     padding: 5px 0px;
      display: flex;
  }
 
  .button div {
-     margin: 0 5px;
      display: flex;
- }
- .button p {
+     padding: 0 0.5rem;
      top: 1px;
+ }
+ .button a {
+     left: 0.3rem;
  }
 
  .button div:hover>p:nth-child(2) {
