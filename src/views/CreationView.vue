@@ -1,14 +1,9 @@
 <template>
   <div class="container">
+    <h1 id="CT">Learn more about our product</h1>
      <div class="section">
         <div class="">
-
-        </div>
-     </div>
-
-     <div class="section">
-        <div class="">
-
+            <p>TEST</p>
         </div>
      </div>
   </div>
@@ -19,12 +14,12 @@
 .container {
     border: 1px solid rgb(10, 10, 10);
     background-color: rgba(15, 15, 15, 1);
+    padding: 2vh 5vh;
 }
 
 /* SKELETON */
 .section {
     display: flex;
-    padding: 2vh 5vh;
 }
 
 /* W1024x ~ iPad */

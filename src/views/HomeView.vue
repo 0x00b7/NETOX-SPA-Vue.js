@@ -89,15 +89,16 @@
  .container {
      border: 1px solid rgb(10, 10, 10);
      background-color: rgba(15, 15, 15, 1);
+     padding: 2rem 0;
  }
 
  /* SKELETON */
  .section {
      display: flex;
-     padding: 2vh 5vh;
+     padding: 0 2rem;
  }
- .section:nth-child(2) {
-     padding: 2vh 2vh;
+ .section:nth-child(4) {
+     padding: 1rem;
      justify-content: center;
      align-items: center;
  }
