@@ -107,6 +107,10 @@
     font-weight: 600;
  }
 
+ .home span {
+    font-weight: 700;
+ }
+
  .button svg {
      color: rgb(150, 255, 0);
  }
