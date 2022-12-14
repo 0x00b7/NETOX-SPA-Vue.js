@@ -4,8 +4,12 @@
         <img src="../assets/images/admin.png" alt="Loading..">
      </div>
      <div class="section">
-        <h2>My Name is Gernot</h2>
-     </div>
+        <h1>My Name is Gernot, <br> I'm a 21-Year-Old Web/Software-Developer.</h1>
+        <br>
+        <h2>At the Age of 12 I became Passionate about Technic & it's Journey, Day on –  Day off, learning new capabilities about HTML/CSS3 as well as JavaScript and its wide Spectrum of Features… These days I am running a Website Developing Service, helping hundreds of People visualizing their Products on the World Wide Web!</h2>
+        <br>
+        <h1>I am Always Dedicated and Open for new Projects at every Scale possible!</h1>
+    </div>
   </div>
 </template>
           

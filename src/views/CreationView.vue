@@ -19,6 +19,7 @@
 
 .container h1:nth-child(1) {
     text-align: center;
+    font-weight: 600;
 }
 
 /* SKELETON */
