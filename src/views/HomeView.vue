@@ -3,7 +3,7 @@
        <!-- Section I -->
        <div class="section">
           <div class="home">
-             <h1>MAKE THE <br> WWW YOUR <span id="UL" class="gardient">TERRITORY!</span></h1>
+             <h1>MAKE THE <br> WWW YOUR <br> <span id="UL" class="gardient">TERRITORY!</span></h1>
              <div class="button">
 
                 <i class="fa-sharp fa-angle-right fa-fade"></i>
