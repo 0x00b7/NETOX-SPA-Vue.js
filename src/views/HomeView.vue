@@ -3,7 +3,7 @@
        <!-- Section I -->
        <div class="section">
           <div class="home">
-             <h1>MAKE THE WWW YOUR <span id="UL" class="gardient">TERRITORY!</span></h1>
+             <h1>MAKE THE <br> WWW YOUR <span id="UL" class="gardient">TERRITORY!</span></h1>
              <div class="button">
 
                 <i class="fa-sharp fa-angle-right fa-fade"></i>
@@ -54,7 +54,7 @@
        </div>
        <!-- Section-Text -->
        <hr id="TL">
-          <h1 id="CT">Standard</h1>
+          <h1 id="CT">Our Standard</h1>
           <!-- Section II -->
           <div class="section">
              <div class="feature-box">
@@ -112,7 +112,7 @@
  }
 
  .button {
-     margin-top: 2rem;
+     margin-top: 1rem;
      width: 260px;
      font-size: 80%;
      display: flex;
@@ -182,7 +182,7 @@
  /* STANDARD */
  
  #CT {
-    background-color: red;
+    font-weight: 600;
  }
 
  .feature-box {
