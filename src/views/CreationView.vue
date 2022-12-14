@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1 id="CT">Learn more about our product</h1>
+    <h1>Learn more about our product</h1>
      <div class="section">
         <div class="showcase">
             <h2>Hallo</h2>
@@ -15,6 +15,10 @@
 .container {
     background-color: rgba(15, 15, 15, 1);
     padding: 1rem 0;
+}
+
+.container h1:nth-child(1) {
+    text-align: center;
 }
 
 /* SKELETON */

@@ -1,91 +1,17 @@
 /* MISCELLANEOUS */
-#CT {
-  text-align: center;
-}
-
-#UL {
-  text-decoration: underline crimson;
-}
-
 #TL {
-  margin: 0 0 15px 0;
   border-radius: 100%;
-  border-top: 2px solid crimson;
+  border-top: 3px solid crimson;
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
 }
 
 #BL {
-  border-bottom: 2px solid crimson;
+  border-bottom: 3px solid crimson;
   border-top: 0;
   border-left: 0;
   border-right: 0;
-}
-
-/* COLOR-PLATE */
-.yellow {
-  color: yellow;
-}
-
-.yellow-green {
-  color: yellowgreen;
-}
-
-.green-yellow {
-  color: greenyellow;
-}
-
-.blue-violet {
-  color: blueviolet
-}
-
-.green {
-  color: green;
-}
-
-.red {
-  color: red;
-}
-
-.blue {
-  color: blue;
-}
-
-.lime {
-  color: lime;
-}
-
-.crimson {
-  color: crimson;
-}
-
-.maroon {
-  color: maroon;
-}
-
-.deep-pink {
-  color: deeppink;
-}
-
-.lightcoral {
-  color: lightcoral;
-}
-
-.indigo {
-  color: indigo;
-}
-
-.orange {
-  color: orange;
-}
-
-.magenta {
-  color: magenta;
-}
-
-.tomato {
-  color: tomato;
 }
 
 /* ANIMATION */
@@ -96,6 +22,8 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
+  text-decoration: underline crimson;
+  text-decoration-thickness: 10px;
 }
 
 @keyframes gardient {

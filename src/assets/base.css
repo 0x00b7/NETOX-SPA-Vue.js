@@ -145,7 +145,7 @@
   font-weight: normal;
 }
 
-@media (min-width: 64em) {
+@media (min-width: 64.1em) {
   * {
     scrollbar-gutter: stable both-edges;
   }
