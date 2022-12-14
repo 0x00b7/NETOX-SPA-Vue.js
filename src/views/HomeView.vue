@@ -54,7 +54,7 @@
        </div>
        <!-- Section-Text -->
        <hr id="TL">
-          <h1 id="CT">QUALITIES</h1>
+          <h1 id="CT">Standard</h1>
           <!-- Section II -->
           <div class="section">
              <div class="feature-box">
@@ -103,6 +103,10 @@
      width: 100%;
  }
 
+ .home h1 {
+    font-weight: 600;
+ }
+
  .button svg {
      color: rgb(150, 255, 0);
  }
@@ -117,7 +121,10 @@
  .button div {
      display: flex;
      padding: 0 0.5rem;
-     top: 1px;
+ }
+
+ .button a div p {
+    font-weight: 600;
  }
  .button a {
      left: 0.3rem;
@@ -152,8 +159,13 @@
  .define {
      width: 100%;
  }
+
+ .define h1 {
+    font-weight: 300;
+ }
  .define h2 {
      margin-top: 1rem;
+     font-weight: 600;
      text-align: center;
      border-bottom: 1px solid var(--color-border);
  }
@@ -163,10 +175,16 @@
  }
 
  li {
+    font-weight: 200;
      line-height: 1.5;
  }
 
- /* QUALITIES */
+ /* STANDARD */
+ 
+ #CT {
+    background-color: red;
+ }
+
  .feature-box {
      width: 100%;
      height: 270px;
@@ -180,9 +198,11 @@
     margin: 0px;
  }
  .feature-box p:nth-child(1) {
+     font-weight: 300;
      font-size: 30px;
  }
  .feature-box p:nth-child(3) {
+     font-weight: 200;
      word-wrap: break-word;
  }
  .feature-box svg {

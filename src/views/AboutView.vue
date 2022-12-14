@@ -4,9 +4,7 @@
         <img src="../assets/images/admin.png" alt="Loading..">
      </div>
      <div class="section">
-        <h2>Dedication is where dreams begin..</h2>
-        <br>
-        <h2>I am a 21 year old full stack developer who has been passionate about technology & its evolution since childhood, <br> at the age of 14 i became passionate about programming websites via HTML, CSS & JavaScript.</h2>
+        <h2>My Name is Gernot</h2>
      </div>
   </div>
 </template>
@@ -15,10 +13,6 @@
 .container {
     display: flex;
     padding: 2rem 2rem 0 0;
-    background-image: url("../assets/images/av_bg.JPG");
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-    background-color: rgba(15, 15, 15, 1);
 }
 
 img {
@@ -27,6 +21,7 @@ img {
     margin-left: 5%;
     opacity: 0;
     width: 100%;
+    height: 100%;
 }
 
 div {
@@ -41,10 +36,6 @@ div {
 
     img {
         width: 40%;
-    }
-
-    .bio {
-        padding: 0vh 0px;
     }
 
 }
