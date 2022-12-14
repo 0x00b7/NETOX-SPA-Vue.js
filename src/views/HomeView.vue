@@ -3,7 +3,7 @@
        <!-- Section I -->
        <div class="section">
           <div class="home">
-             <h1>MAKE THE WWW YOUR <span id="UL" style="text-decoration-style: wavy;" class="gardient">TERRITORY!</span></h1>
+             <h1>MAKE THE WWW YOUR <span id="UL" class="gardient">TERRITORY!</span></h1>
              <div class="button">
 
                 <i class="fa-sharp fa-angle-right fa-fade"></i>
@@ -167,17 +167,17 @@
  }
 
  /* QUALITIES */
- .add h1 {
-     font-size: 42px;
- }
  .feature-box {
      width: 100%;
      height: 270px;
      background-color: rgba(10, 10, 10, 1);
      text-align: center;
      border: 1px solid rgb(5, 5, 5);
-     margin: 0 10px 0 0;
-     padding: 20px 50px;
+     margin: 0px 10px 0px 0px;
+     padding: 20px 30px;
+ }
+ .feature-box:nth-child(4) {
+    margin: 0px;
  }
  .feature-box p:nth-child(1) {
      font-size: 30px;

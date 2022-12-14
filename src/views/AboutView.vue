@@ -1,35 +1,36 @@
 <template>
   <div class="container">
-     <div class="picture">
-        <img src="../assets/images/i.jpg" alt="Loading...">
+     <div class="section">
+        <img src="../assets/images/admin.png" alt="Loading..">
      </div>
-     <div class="bio">
-        <p>Dedication is where dreams begin..</p>
-        <p>I am a 21 year old full stack developer who has been passionate about technology & its evolution since childhood, at the age of 14 i became passionate about programming websites via HTML, CSS & JavaScript.</p>
+     <div class="section">
+        <h2>Dedication is where dreams begin..</h2>
+        <br>
+        <h2>I am a 21 year old full stack developer who has been passionate about technology & its evolution since childhood, <br> at the age of 14 i became passionate about programming websites via HTML, CSS & JavaScript.</h2>
      </div>
   </div>
 </template>
-
           
 <style scoped>
 .container {
-    padding: 5vh 5vh;
+    display: flex;
+    padding: 2rem 2rem 0 0;
+    background-image: url("../assets/images/av_bg.JPG");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
     background-color: rgba(15, 15, 15, 1);
-    display: flex;
-}
-
-.picture {
-    display: flex;
-    justify-content: center;
 }
 
 img {
-    border: 1px solid rgb(10, 10, 10);
-    width: 500px;
+    animation: av_admin-fade 500ms linear forwards;
+    animation-delay: 250ms;
+    margin-left: 5%;
+    opacity: 0;
+    width: 100%;
 }
 
-.bio {
-    padding: 0vh 25px;
+div {
+    width: 100%;
 }
 
 /* W1024x ~ iPad */
@@ -39,12 +40,11 @@ img {
     }
 
     img {
-        border: 1px solid rgb(10, 10, 10);
-        width: 40vh;
+        width: 40%;
     }
 
     .bio {
-        padding: 2vh 0px;
+        padding: 0vh 0px;
     }
 
 }
@@ -52,8 +52,21 @@ img {
 /* W512x ~ iPhone */
 @media (max-width: 32em) {
     img {
-        border: 1px solid rgb(10, 10, 10);
-        width: 30vh;
+        width: 40%;
+    }
+    .section {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@keyframes av_admin-fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0%;
     }
 }
 </style>

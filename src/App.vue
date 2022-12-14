@@ -106,7 +106,7 @@ footer {
     width: 100%;
     min-height: 30vh;
     background-color: rgb(10, 10, 10);
-    padding: 1rem 2rem;
+    padding: 1.5rem 0rem 0rem 2rem;
 }
 
 footer div {
