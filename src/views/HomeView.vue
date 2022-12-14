@@ -203,8 +203,12 @@ li {
 	background-color: rgba(10, 10, 10, 1);
 	text-align: center;
 	border: 1px solid rgb(5, 5, 5);
-	margin: 0px 5px 0px 0px;
+	margin: 0px 10px 0px 0px;
 	padding: 20px 30px;
+}
+
+.feature-box:nth-child(4) {
+    margin: 0;
 }
 
 .feature-box p:nth-child(1) {
