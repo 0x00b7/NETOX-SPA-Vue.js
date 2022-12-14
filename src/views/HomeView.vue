@@ -58,22 +58,22 @@
           <!-- Section II -->
           <div class="section">
              <div class="feature-box">
-                <p id="UL">Handsome</p>
+                <p id="UL">HANDSOME</p>
                 <i id="MyGradient" class="fa-sharp fa-glasses"></i>
                 <p>We admire details and keeping our Design as Clean as Possible!</p>
              </div>
              <div class="feature-box">
-                <p id="UL">Selfmade</p>
+                <p id="UL">SELFMADE</p>
                 <i class="fa-sharp fa-keyboard"></i>
                 <p>Proudly to say we Program and set up our Websites 100% ourselves.</p>
              </div>
              <div class="feature-box">
-                <p id="UL">Responsive</p>
+                <p id="UL">RESPONSIVE</p>
                 <i class="fa-sharp fa-laptop-mobile"></i>
                 <p>We also pay attention to responsiveness on every Device.</p>
              </div>
              <div class="feature-box">
-                <p id="UL">Effortless</p>
+                <p id="UL">EFFORTLESS</p>
                 <i class="fa-sharp fa-bolt-lightning"></i>
                 <p>Have a Flawless User experience interacting with your Product!</p>
              </div>
