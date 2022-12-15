@@ -11,6 +11,9 @@
         <h1>I am Always Dedicated and Open for new Projects at every Scale possible!</h1>
         <br>
         <h2>For business inquiries regarding Web-Development, directly Open a Ticket via our Form or Sending an E-Mail to: admin@netox.ws</h2>
+        <div class="scroller">
+
+        </div>
     </div>
   </div>
 </template>

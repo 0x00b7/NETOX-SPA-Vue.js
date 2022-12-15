@@ -1,9 +1,11 @@
 <script setup>
-   import { RouterLink, RouterView } from "vue-router";
-   import { useFadeIn, useFadeOut } from './assets/scripts/AN/route-ts.js'
-   
-   import './assets/scripts/FA/all.min.js'
+import { RouterLink, RouterView } from "vue-router";
+
+import { useFadeIn, useFadeOut } from './assets/scripts/AN/route-ts.js'
+
+import './assets/scripts/FA/all.min.js'
 </script>
+
 <template>
    <header>
       <div class="wrapper">
@@ -19,7 +21,7 @@
          <component :is="Component" />
       </transition>
    </router-view>
-   <footer>
+   <footer class="intersection">
       <div>
          <h3>About Us</h3>
          <ul class="fa-ul">
@@ -69,6 +71,7 @@
 </template>
 
 <style scoped>
+
 header {
     display: grid;
 }

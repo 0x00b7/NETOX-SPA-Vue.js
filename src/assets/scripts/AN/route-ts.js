@@ -1,7 +1,6 @@
 import anime from 'animejs';
 
 function useFadeIn(el, done) {
-    console.log(el)
     anime({
         targets: el,
         opacity: [0, 1],
