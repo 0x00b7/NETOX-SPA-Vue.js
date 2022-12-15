@@ -1,7 +1,7 @@
 <template>
   <div class="container">
      <div class="section">
-        <img src="../assets/images/admin.png" alt="Loading..">
+        <img alt="Loading..">
      </div>
      <div class="section">
         <h1>My Name is Gernot, <br> I'm a 21-Year-Old Web/Software-Developer.</h1>
@@ -16,10 +16,10 @@
 <style scoped>
 .container {
     display: flex;
-    padding: 2rem 2rem 0 0;
 }
 
 img {
+    content:url(../assets/images/admin.png);
     animation: av_admin-fade 500ms linear forwards;
     animation-delay: 250ms;
     margin-left: 5%;
@@ -39,20 +39,24 @@ div {
     }
 
     img {
-        width: 40%;
+        content:url(../assets/images/admin_small.png);
+        width: 75%;
+    }
+
+    .section:nth-child(1) {
+        display: flex;
+        justify-content: center;
+    }
+
+    .section:nth-child(2) {
+        padding: 1rem;
     }
 
 }
 
 /* W512x ~ iPhone */
 @media (max-width: 32em) {
-    img {
-        width: 40%;
-    }
-    .section {
-        display: flex;
-        justify-content: center;
-    }
+
 }
 
 @keyframes av_admin-fade {
