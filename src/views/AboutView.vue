@@ -11,23 +11,6 @@
           <h1>I am Always Dedicated and Open for new Projects at every Scale possible!</h1>
           <br>
           <h2>For business inquiries regarding Web-Development, directly Open a Ticket via our Form or Sending an E-Mail to: admin@netox.ws</h2>
-          <br>
-          <br>
-          <h3>The resources we work with...</h3>
-          <div class="scroll">
-             <div class="resource">
-                <i class="fa-brands fa-html5"></i>
-                <i class="fa-brands fa-css3-alt"></i>
-                <i class="fa-brands fa-sass"></i>
-                <i class="fa-brands fa-vuejs"></i>
-                <i class="fa-brands fa-js"></i>
-                <i class="fa-brands fa-shopify"></i>
-                <i class="fa-brands fa-shopify"></i>
-                <i class="fa-brands fa-shopify"></i>
-                <i class="fa-brands fa-shopify"></i>
-                <i class="fa-brands fa-shopify"></i>
-             </div>
-          </div>
        </div>
     </div>
  </template>
@@ -35,39 +18,6 @@
 <style scoped>
 .container {
     display: flex;
-}
-
-div {
-    width: 100%;
-    max-width: 100%;
-}
-
-.scroll {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    background-color: rgb(10, 10, 10);
-}
-
-.resource {
-    width: 18cm;
-    padding: 0.5rem;
-    font-size: 72px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.resource svg {
-    margin-left: 2rem;
-}
-
-.resource svg:first-of-type {
-    margin-left: 0;
-}
-
-.resource svg:last-of-type {
-    margin-right: 0;
 }
 
 img {
