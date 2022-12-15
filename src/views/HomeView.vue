@@ -58,24 +58,24 @@
           <!-- Section II -->
           <div class="section">
              <div class="feature-box">
-                <p>HANDSOME</p>
-                <i id="MyGradient" class="fa-sharp fa-glasses"></i>
-                <p>We admire details and keeping our Design as Clean as Possible!</p>
+                <p>Awesome</p>
+                <i class="fa-solid fa-sparkles"></i>
+                <p>We admire detail, keeping our Design as Clean as Possible!</p>
              </div>
              <div class="feature-box">
-                <p>SELFMADE</p>
-                <i class="fa-sharp fa-keyboard"></i>
-                <p>Proudly to say we Program and set up our Websites 100% ourselves.</p>
+                <p>Handmade</p>
+                <i class="fa-duotone fa-cubes"></i>
+                <p> Proudly to say, we program and set up our Projects 100% ourselves.</p>
              </div>
              <div class="feature-box">
-                <p>RESPONSIVE</p>
-                <i class="fa-sharp fa-laptop-mobile"></i>
+                <p>Responsive</p>
+                <i class="fa-regular fa-laptop-mobile"></i>
                 <p>We also pay attention to responsiveness on every Device.</p>
              </div>
              <div class="feature-box">
-                <p>EFFORTLESS</p>
-                <i class="fa-sharp fa-bolt-lightning"></i>
-                <p>Have a Flawless User experience interacting with your Product!</p>
+                <p>Effortless</p>
+                <i class="fa-solid fa-feather"></i>
+                <p>We care about a Flawless User experience, programming your Product!</p>
              </div>
           </div>
 
@@ -85,7 +85,7 @@
  </template>
 
 
- <style scoped>
+<style scoped>
 /* HEAD-STUB */
 .container {
 	background-color: rgba(15, 15, 15, 1);
@@ -208,7 +208,7 @@ li {
 }
 
 .feature-box:nth-child(4) {
-    margin: 0;
+	margin: 0;
 }
 
 .feature-box p:nth-child(1) {
@@ -233,7 +233,7 @@ li {
 @media (max-width: 64em) {
 	.section {
 		display: grid;
-        margin: 1rem;
+		margin: 1rem;
 	}
 
 	.section:nth-child(4) {
@@ -275,4 +275,4 @@ li {
 		grid-template-columns: inherit;
 	}
 }
- </style>
+</style>

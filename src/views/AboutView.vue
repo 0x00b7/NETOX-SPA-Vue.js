@@ -9,6 +9,8 @@
         <h2>At the Age of 12 I became Passionate about Technic & it's Journey, Day on –  Day off, learning new capabilities about HTML/CSS3 as well as JavaScript and its wide Spectrum of Features… These days I am running a Website Developing Service, helping hundreds of People visualizing their Products on the World Wide Web!</h2>
         <br>
         <h1>I am Always Dedicated and Open for new Projects at every Scale possible!</h1>
+        <br>
+        <h2>For inquiries/questions regarding Web-Development, directly Open a Ticket via our Form or Sending an E-Mail to: admin@netox.ws</h2>
     </div>
   </div>
 </template>
@@ -19,7 +21,7 @@
 }
 
 img {
-    content:url(../assets/images/admin.png);
+    content: url(../assets/images/admin.png);
     animation: av_admin-fade 500ms linear forwards;
     animation-delay: 250ms;
     margin-left: 5%;
@@ -39,7 +41,7 @@ div {
     }
 
     img {
-        content:url(../assets/images/admin_small.png);
+        content: url(../assets/images/admin_small.png);
         width: 75%;
     }
 
@@ -55,14 +57,13 @@ div {
 }
 
 /* W512x ~ iPhone */
-@media (max-width: 32em) {
-
-}
+@media (max-width: 32em) {}
 
 @keyframes av_admin-fade {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
         margin-left: 0%;

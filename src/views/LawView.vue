@@ -41,46 +41,47 @@
 </template>
 
 
-  <style scoped>
-  /* HEAD-STUB */
-  .container {
-      background-color: rgba(15, 15, 15, 1);
-  }
+<style scoped>
+/* HEAD-STUB */
+.container {
+   background-color: rgba(15, 15, 15, 1);
+}
 
-  .head {
-      margin: 1rem 0rem 0rem 2rem;
-      font-size: 32px;
-  }
+.head {
+   margin: 1rem 0rem 0rem 2rem;
+   font-size: 32px;
+}
 
-  /* SKELETON */
-  .section {
-      display: flex;
-      padding: 2vh 5vh;
-  }
+/* SKELETON */
+.section {
+   display: flex;
+   padding: 2vh 5vh;
+}
 
-  /* LEGAL-CENTER */
-  .select {
-      width: 30%;
-  }
-  .render {
-      width: 70%;
-  }
+/* LEGAL-CENTER */
+.select {
+   width: 30%;
+}
 
-  ul {
-      margin: 0px 0px 0px 28px;
-  }
+.render {
+   width: 70%;
+}
 
-  li {
-      padding: 5px 0px;
-  }
+ul {
+   margin: 0px 0px 0px 28px;
+}
 
-  /* W1024x ~ iPad */
-  @media (max-width: 64em) {
-      .section {
-          display: grid;
-      }
-  }
+li {
+   padding: 5px 0px;
+}
 
-  /* W512x ~ iPhone */
-  @media (max-width: 32em) {}
-  </style>
+/* W1024x ~ iPad */
+@media (max-width: 64em) {
+   .section {
+      display: grid;
+   }
+}
+
+/* W512x ~ iPhone */
+@media (max-width: 32em) {}
+</style>
