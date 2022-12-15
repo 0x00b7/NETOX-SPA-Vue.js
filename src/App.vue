@@ -71,7 +71,6 @@ import './assets/scripts/FA/all.min.js'
 </template>
 
 <style scoped>
-
 header {
     display: grid;
 }

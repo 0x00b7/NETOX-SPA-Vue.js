@@ -203,11 +203,11 @@ li {
 	background-color: rgba(10, 10, 10, 1);
 	text-align: center;
 	border: 1px solid rgb(5, 5, 5);
-	margin: 0px 10px 0px 0px;
+	margin: 0 1rem 0 0;
 	padding: 20px 30px;
 }
 
-.feature-box:nth-child(4) {
+.feature-box:last-child {
 	margin: 0;
 }
 

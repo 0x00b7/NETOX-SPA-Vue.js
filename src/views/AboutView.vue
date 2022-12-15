@@ -1,26 +1,73 @@
 <template>
-  <div class="container">
-     <div class="section">
-        <img alt="Loading..">
-     </div>
-     <div class="section">
-        <h1>My Name is Gernot, <br> I'm a 21-Year-Old Web/Software-Developer.</h1>
-        <br>
-        <h2>At the Age of 12 I became Passionate about Technic & it's Journey, Day on – Day off, learning new capabilities about HTML/CSS3 as well as JavaScript and its wide Spectrum of Features… These days I am running a Website Developing Service, helping hundreds of People visualizing their Products on the World Wide Web!</h2>
-        <br>
-        <h1>I am Always Dedicated and Open for new Projects at every Scale possible!</h1>
-        <br>
-        <h2>For business inquiries regarding Web-Development, directly Open a Ticket via our Form or Sending an E-Mail to: admin@netox.ws</h2>
-        <div class="scroller">
-
-        </div>
+    <div class="container">
+       <div class="section">
+          <img alt="Loading..">
+       </div>
+       <div class="section">
+          <h1>My Name is Gernot, Founder of Netox.ws! <br> I'm a 21-Year-Old Web/Software-Developer.</h1>
+          <br>
+          <h2>At the Age of 12 I became Passionate about Technic & it's Journey, Day on – Day off, learning new capabilities about HTML/CSS3 as well as JavaScript and its wide Spectrum of Features… These days I am running a Website Developing Service, helping hundreds of People visualizing their Products on the World Wide Web!</h2>
+          <br>
+          <h1>I am Always Dedicated and Open for new Projects at every Scale possible!</h1>
+          <br>
+          <h2>For business inquiries regarding Web-Development, directly Open a Ticket via our Form or Sending an E-Mail to: admin@netox.ws</h2>
+          <br>
+          <br>
+          <h3>The resources we work with...</h3>
+          <div class="scroll">
+             <div class="resource">
+                <i class="fa-brands fa-html5"></i>
+                <i class="fa-brands fa-css3-alt"></i>
+                <i class="fa-brands fa-sass"></i>
+                <i class="fa-brands fa-vuejs"></i>
+                <i class="fa-brands fa-js"></i>
+                <i class="fa-brands fa-shopify"></i>
+                <i class="fa-brands fa-shopify"></i>
+                <i class="fa-brands fa-shopify"></i>
+                <i class="fa-brands fa-shopify"></i>
+                <i class="fa-brands fa-shopify"></i>
+             </div>
+          </div>
+       </div>
     </div>
-  </div>
-</template>
-          
+ </template>
+ 
 <style scoped>
 .container {
     display: flex;
+}
+
+div {
+    width: 100%;
+    max-width: 100%;
+}
+
+.scroll {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(10, 10, 10);
+}
+
+.resource {
+    width: 18cm;
+    padding: 0.5rem;
+    font-size: 72px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.resource svg {
+    margin-left: 2rem;
+}
+
+.resource svg:first-of-type {
+    margin-left: 0;
+}
+
+.resource svg:last-of-type {
+    margin-right: 0;
 }
 
 img {
@@ -31,10 +78,6 @@ img {
     opacity: 0;
     width: 100%;
     height: 100%;
-}
-
-div {
-    width: 100%;
 }
 
 /* W1024x ~ iPad */
