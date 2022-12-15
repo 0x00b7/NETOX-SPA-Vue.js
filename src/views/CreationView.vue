@@ -3,8 +3,7 @@
     <h1>Learn more about our product</h1>
      <div class="section">
         <div class="showcase">
-            <h2>Hallo</h2>
-            
+            <h2>Currently in Maintenance...</h2>
         </div>
      </div>
   </div>
