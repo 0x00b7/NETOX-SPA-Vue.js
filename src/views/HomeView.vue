@@ -4,62 +4,44 @@ import anime from 'animejs';
 import { ref, unref, onMounted, onUnmounted } from "vue";
 import { onIntersect } from "../assets/scripts/CA/oIntersect";
 
-const viewportWidth = window.innerWidth;
-
 const one = ref(null);
 const ONE = (el) => {
-	if (viewportWidth < 512 && el.classList.value.includes('is_mobile')) {
 		anime({
 			targets: el,
 			translateX: [-500, 0],
 			opacity: [0, 1],
 			delay: 250,
 		});
-	} else {
-		el.classList.remove("is_mobile");
-	}
 }
 
 const two = ref(null);
 const TWO = (el) => {
-	if (viewportWidth < 512 && el.classList.value.includes('is_mobile')) {
 		anime({
 			targets: el,
 			translateX: [-500, 0],
 			opacity: [0, 1],
 			delay: 250,
 		});
-	} else {
-		el.classList.remove("is_mobile");
-	}
 }
 
 const three = ref(null);
 const THREE = (el) => {
-	if (viewportWidth < 512 && el.classList.value.includes('is_mobile')) {
 		anime({
 			targets: el,
 			translateX: [-500, 0],
 			opacity: [0, 1],
 			delay: 250,
 		});
-	} else {
-		el.classList.remove("is_mobile");
-	}
 }
 
 const four = ref(null);
 const FOUR = (el) => {
-	if (viewportWidth < 512 && el.classList.value.includes('is_mobile')) {
 		anime({
 			targets: el,
 			translateX: [-500, 0],
 			opacity: [0, 1],
-			delay: 1500,
+			delay: 250,
 		});
-	} else {
-		el.classList.remove("is_mobile");
-	}
 }
 
 const onExit = () => {
@@ -108,8 +90,6 @@ onUnmounted(() => {
     unref(element.observer);
   });
 });
-
-
 </script>
 
 <template>
