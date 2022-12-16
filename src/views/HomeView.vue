@@ -1,25 +1,53 @@
 <script setup>
+import anime from 'animejs';
+
 import { ref, unref, onMounted, onUnmounted } from "vue";
 import { onIntersect } from "../assets/scripts/CA/oIntersect";
 
+const viewportWidth = window.innerWidth;
+
 const one = ref(null);
-const ONE = () => {
-		one.value.classList.add("active");
+const ONE = (el) => {
+	if (viewportWidth < 512) {
+		anime({
+			targets: el,
+			translateX: [-500, 0], // from 100 to 250
+			delay: 1500,
+		});
+	}
 }
 
 const two = ref(null);
-const TWO = () => {
-		two.value.classList.add("active");
+const TWO = (el) => {
+	if (viewportWidth < 512) {
+		anime({
+			targets: el,
+			translateX: [-500, 0], // from 100 to 250
+			delay: 1500,
+		});
+	}
 }
 
 const three = ref(null);
-const THREE = () => {
-		three.value.classList.add("active");
+const THREE = (el) => {
+	if (viewportWidth < 512) {
+		anime({
+			targets: el,
+			translateX: [-500, 0], // from 100 to 250
+			delay: 1500,
+		});
+	}
 }
 
 const four = ref(null);
-const FOUR = () => {
-		four.value.classList.add("active");
+const FOUR = (el) => {
+	if (viewportWidth < 512) {
+		anime({
+			targets: el,
+			translateX: [-500, 0], // from 100 to 250
+			delay: 1500,
+		});
+	}
 }
 
 const onExit = () => {
@@ -56,8 +84,8 @@ onMounted(() => {
       element.ref.value,
       element.callback,
       onExit,
-      false,
-      { threshold: 1 }
+      true,
+      { threshold: 0 }
     );
     elements[i].observer = observer;
   }
@@ -68,6 +96,8 @@ onUnmounted(() => {
     unref(element.observer);
   });
 });
+
+
 </script>
 
 <template>
@@ -341,15 +371,6 @@ li {
 @media (max-width: 32em) {
 	.home {
 		font-size: 32px;
-	}
-
-	.feature-box {
-		opacity: 0.5;
-	}
-
-	.active {
-		transition: 500ms all;
-		opacity: 1;
 	}
 
 	.section:nth-child(4) {
