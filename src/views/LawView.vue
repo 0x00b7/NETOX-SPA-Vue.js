@@ -1,6 +1,7 @@
-<script setup>
-   import { useFadeIn, useFadeOut } from '../assets/scripts/AN/route-ts.js'
+<script>
+   import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime.js'
 </script>
+
 <template>
    <div class="container">
       <div class="head">

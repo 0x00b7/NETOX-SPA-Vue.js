@@ -91,10 +91,6 @@
 	background-color: rgba(15, 15, 15, 1);
 }
 
-hr {
-	margin: 0 0 0.5rem 0;
-}
-
 /* SKELETON */
 .section {
 	display: flex;

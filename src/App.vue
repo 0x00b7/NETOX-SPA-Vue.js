@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 
-import { useFadeIn, useFadeOut } from './assets/scripts/AN/route-ts.js'
+import { useFadeIn, useFadeOut } from './assets/scripts/AN/anime.js'
 
 import './assets/scripts/FA/all.min.js'
 </script>
@@ -21,7 +21,7 @@ import './assets/scripts/FA/all.min.js'
          <component :is="Component" />
       </transition>
    </router-view>
-   <footer class="intersection">
+   <footer>
       <div>
          <h3>About Us</h3>
          <ul class="fa-ul">

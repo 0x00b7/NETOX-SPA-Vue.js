@@ -1,4 +1,9 @@
 /* MISCELLANEOUS */
+
+hr {
+	margin: 0 0 0.5rem 0;
+}
+
 #TL {
   border-radius: 100%;
   border-top: 3px solid crimson;
