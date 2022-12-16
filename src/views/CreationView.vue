@@ -1,57 +1,41 @@
 <script setup>
-import anime from 'animejs';
-
-import { ref, onMounted, onUnmounted } from "vue";
-
+import { ref, unref, onMounted, onUnmounted } from "vue";
 import { onIntersect } from "../assets/scripts/CA/oIntersect";
 
-const observer = ref({});
-const scrollRef = ref({});
-
-const onEnter = (el) => {
-  anime({
-  targets: el,
-  translateX: [
-    { value: 250, duration: 1000, delay: 500 },
-    { value: 0, duration: 1000, delay: 500 }
-  ],
-  translateY: [
-    { value: -40, duration: 500 },
-    { value: 40, duration: 500, delay: 1000 },
-    { value: 0, duration: 500, delay: 1000 }
-  ],
-  scaleX: [
-    { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },
-    { value: 1, duration: 900 },
-    { value: 4, duration: 100, delay: 500, easing: 'easeOutExpo' },
-    { value: 1, duration: 900 }
-  ],
-  scaleY: [
-    { value: [1.75, 1], duration: 500 },
-    { value: 2, duration: 50, delay: 1000, easing: 'easeOutExpo' },
-    { value: 1, duration: 450 },
-    { value: 1.75, duration: 50, delay: 1000, easing: 'easeOutExpo' },
-    { value: 1, duration: 450 }
-  ],
-  easing: 'easeOutElastic(1, .8)',
-  loop: true
-});
+const mBox = ref(null);
+const MBOX = () => {
+  mBox.value.classList.add("active");
 }
 
 const onExit = () => {
-
-    console.log("CALLBACK => onExit");
+		console.log("CALLBACK => onExit");
 };
 
+const elements = [
+  {
+    ref: mBox,
+    callback: MBOX,
+  }
+];
+
 onMounted(() => {
-    observer.value = onIntersect(scrollRef.value, onEnter, onExit, false, {
-        threshold: 0.8,
-    });
+  for (let i = 0; i < elements.length; i++) {
+    const element = elements[i];
+    const observer = onIntersect(
+      element.ref.value,
+      element.callback,
+      onExit,
+      false,
+      { threshold: 1 }
+    );
+    elements[i].observer = observer;
+  }
 });
 
-// When the component is removed, disconnect the observer (clean-up step)
 onUnmounted(() => {
-    observer.value.disconnect();
+  elements.forEach((element) => {
+    unref(element.observer);
+  });
 });
 </script>
 
@@ -72,7 +56,7 @@ onUnmounted(() => {
        <h1>Our Vision</h1>
        <div class="section">
           <div class="vision">
-             <div ref="scrollRef" class="box"></div>
+             <div ref="mBox" class="box"></div>
           </div>
        </div>
     </div>

@@ -1,3 +1,75 @@
+<script setup>
+import { ref, unref, onMounted, onUnmounted } from "vue";
+import { onIntersect } from "../assets/scripts/CA/oIntersect";
+
+const one = ref(null);
+const ONE = () => {
+		one.value.classList.add("active");
+}
+
+const two = ref(null);
+const TWO = () => {
+		two.value.classList.add("active");
+}
+
+const three = ref(null);
+const THREE = () => {
+		three.value.classList.add("active");
+}
+
+const four = ref(null);
+const FOUR = () => {
+		four.value.classList.add("active");
+}
+
+const onExit = () => {
+
+};
+
+const elements = [
+  {
+    ref: one,
+    callback: ONE,
+  },
+
+  {
+    ref: two,
+    callback: TWO,
+  },
+
+  {
+    ref: three,
+    callback: THREE,
+  },
+
+  {
+    ref: four,
+    callback: FOUR,
+  },
+
+];
+
+onMounted(() => {
+  for (let i = 0; i < elements.length; i++) {
+    const element = elements[i];
+    const observer = onIntersect(
+      element.ref.value,
+      element.callback,
+      onExit,
+      false,
+      { threshold: 1 }
+    );
+    elements[i].observer = observer;
+  }
+});
+
+onUnmounted(() => {
+  elements.forEach((element) => {
+    unref(element.observer);
+  });
+});
+</script>
+
 <template>
     <div class="container">
        <!-- Section I -->
@@ -57,22 +129,22 @@
           <h1>Our Standard</h1>
           <!-- Section II -->
           <div class="section">
-             <div class="feature-box">
+             <div ref="one" class="feature-box">
                 <p>Awesome</p>
                 <i class="fa-solid fa-sparkles"></i>
                 <p>We admire detail, keeping our Design as Clean as Possible!</p>
              </div>
-             <div class="feature-box">
+             <div ref="two" class="feature-box">
                 <p>Handmade</p>
                 <i class="fa-duotone fa-cubes"></i>
                 <p> Proudly to say, we program and set up our Projects 100% ourselves.</p>
              </div>
-             <div class="feature-box">
+             <div ref="three" class="feature-box">
                 <p>Responsive</p>
                 <i class="fa-regular fa-laptop-mobile"></i>
                 <p>We also pay attention to responsiveness on every Device.</p>
              </div>
-             <div class="feature-box">
+             <div ref="four" class="feature-box">
                 <p>Effortless</p>
                 <i class="fa-solid fa-feather"></i>
                 <p>We care about a Flawless User experience, programming your Product!</p>
@@ -84,8 +156,12 @@
     </div>
  </template>
 
-
 <style scoped>
+
+.mobile {
+	background-color: red;
+}
+
 /* HEAD-STUB */
 .container {
 	background-color: rgba(15, 15, 15, 1);
@@ -197,10 +273,11 @@ li {
 	width: 100%;
 	height: 270px;
 	background-color: rgba(10, 10, 10, 1);
+	border-radius: 15px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 	text-align: center;
-	border: 1px solid rgb(5, 5, 5);
 	margin: 0 1rem 0 0;
-	padding: 20px 30px;
+	padding: 20px 15px;
 }
 
 .feature-box:last-child {
@@ -220,7 +297,7 @@ li {
 }
 
 .feature-box svg {
-	margin: 1.5rem 0;
+	margin: 2rem 0;
 	font-size: 72px;
 	filter: drop-shadow(0px 0px 3px rgb(255, 255, 255));
 }
@@ -264,6 +341,15 @@ li {
 @media (max-width: 32em) {
 	.home {
 		font-size: 32px;
+	}
+
+	.feature-box {
+		opacity: 0.5;
+	}
+
+	.active {
+		transition: 500ms all;
+		opacity: 1;
 	}
 
 	.section:nth-child(4) {
