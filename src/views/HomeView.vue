@@ -8,45 +8,57 @@ const viewportWidth = window.innerWidth;
 
 const one = ref(null);
 const ONE = (el) => {
-	if (viewportWidth < 512) {
+	if (viewportWidth < 512 && el.classList.value.includes('is_mobile')) {
 		anime({
 			targets: el,
-			translateX: [-500, 0], // from 100 to 250
+			translateX: [-500, 0],
+			opacity: [0, 1],
 			delay: 1500,
 		});
+	} else {
+		el.classList.remove("is_mobile");
 	}
 }
 
 const two = ref(null);
 const TWO = (el) => {
-	if (viewportWidth < 512) {
+	if (viewportWidth < 512 && el.classList.value.includes('is_mobile')) {
 		anime({
 			targets: el,
-			translateX: [-500, 0], // from 100 to 250
+			translateX: [-500, 0],
+			opacity: [0, 1],
 			delay: 1500,
 		});
+	} else {
+		el.classList.remove("is_mobile");
 	}
 }
 
 const three = ref(null);
 const THREE = (el) => {
-	if (viewportWidth < 512) {
+	if (viewportWidth < 512 && el.classList.value.includes('is_mobile')) {
 		anime({
 			targets: el,
-			translateX: [-500, 0], // from 100 to 250
+			translateX: [-500, 0],
+			opacity: [0, 1],
 			delay: 1500,
 		});
+	} else {
+		el.classList.remove("is_mobile");
 	}
 }
 
 const four = ref(null);
 const FOUR = (el) => {
-	if (viewportWidth < 512) {
+	if (viewportWidth < 512 && el.classList.value.includes('is_mobile')) {
 		anime({
 			targets: el,
-			translateX: [-500, 0], // from 100 to 250
+			translateX: [-500, 0],
+			opacity: [0, 1],
 			delay: 1500,
 		});
+	} else {
+		el.classList.remove("is_mobile");
 	}
 }
 
@@ -159,22 +171,22 @@ onUnmounted(() => {
           <h1>Our Standard</h1>
           <!-- Section II -->
           <div class="section">
-             <div ref="one" class="feature-box">
+             <div ref="one" class="feature-box is_mobile">
                 <p>Awesome</p>
                 <i class="fa-solid fa-sparkles"></i>
                 <p>We admire detail, keeping our Design as Clean as Possible!</p>
              </div>
-             <div ref="two" class="feature-box">
+             <div ref="two" class="feature-box is_mobile">
                 <p>Handmade</p>
                 <i class="fa-duotone fa-cubes"></i>
                 <p> Proudly to say, we program and set up our Projects 100% ourselves.</p>
              </div>
-             <div ref="three" class="feature-box">
+             <div ref="three" class="feature-box is_mobile">
                 <p>Responsive</p>
                 <i class="fa-regular fa-laptop-mobile"></i>
                 <p>We also pay attention to responsiveness on every Device.</p>
              </div>
-             <div ref="four" class="feature-box">
+             <div ref="four" class="feature-box is_mobile">
                 <p>Effortless</p>
                 <i class="fa-solid fa-feather"></i>
                 <p>We care about a Flawless User experience, programming your Product!</p>
@@ -371,6 +383,10 @@ li {
 @media (max-width: 32em) {
 	.home {
 		font-size: 32px;
+	}
+
+	.is_mobile {
+		opacity: 0;
 	}
 
 	.section:nth-child(4) {
