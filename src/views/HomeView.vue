@@ -13,7 +13,7 @@ const ONE = (el) => {
 			targets: el,
 			translateX: [-500, 0],
 			opacity: [0, 1],
-			delay: 1500,
+			delay: 250,
 		});
 	} else {
 		el.classList.remove("is_mobile");
@@ -27,7 +27,7 @@ const TWO = (el) => {
 			targets: el,
 			translateX: [-500, 0],
 			opacity: [0, 1],
-			delay: 1500,
+			delay: 250,
 		});
 	} else {
 		el.classList.remove("is_mobile");
@@ -41,7 +41,7 @@ const THREE = (el) => {
 			targets: el,
 			translateX: [-500, 0],
 			opacity: [0, 1],
-			delay: 1500,
+			delay: 250,
 		});
 	} else {
 		el.classList.remove("is_mobile");
