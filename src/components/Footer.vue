@@ -50,11 +50,11 @@
 
 <style scoped>
 ul {
-    margin: 0px 0px 0px 28px;
+    margin: 0 0 0 0px;
 }
 
 li {
-    padding: 5px 0px;
+    padding: 5px 0;
 }
 
 footer {
@@ -63,12 +63,16 @@ footer {
     width: 100%;
     min-height: 30vh;
     background-color: rgb(10, 10, 10);
-    padding: 1.5rem 0rem 0rem 2rem;
+    padding: 1rem 0rem 0rem 3rem;
 }
 
 footer div {
     display: block;
     width: 100%;
+}
+
+footer div h3 {
+   font-weight: 600;
 }
 
 /* W1024x ~ iPad */
