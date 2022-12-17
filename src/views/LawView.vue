@@ -1,5 +1,5 @@
 <script>
-   import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime.js'
+   import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 </script>
 
 <template>

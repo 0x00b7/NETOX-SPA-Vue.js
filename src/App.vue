@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 
-import { useFadeIn, useFadeOut } from './assets/scripts/AN/anime.js'
+import { useFadeIn, useFadeOut } from './assets/scripts/AN/anime-route.js'
 
 import './assets/scripts/FA/all.min.js'
 </script>

@@ -6,13 +6,15 @@
  * @param  {Object} options        Intersection Observer API options
  * @return {type} observer
  */
-export const onIntersect = (
-  elementToWatch,
-  callback,
-  outCallback = () => {},
-  once = true,
-  options = { threshold: 1.0 }
-) => {
+import { unref } from "vue";
+export const onIntersect = (elementToWatch, callback, config) => {
+  if (!elementToWatch) return;
+
+  const {
+    outCallback = () => {},
+    once = true,
+    options = { threshold: 1.0 }
+  } = config;
   // Initiate the observer
   const observer = new IntersectionObserver(([entry]) => {
     // If the element to watch is intersecting within the threshold
@@ -33,7 +35,7 @@ export const onIntersect = (
   }, options);
 
   // Observe the element
-  observer.observe(elementToWatch);
+  observer.observe(unref(elementToWatch));
 
   // Returns the observer so it can be further used in the component
   return observer;

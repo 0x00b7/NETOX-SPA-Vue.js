@@ -1,95 +1,16 @@
-<script setup>
-import anime from 'animejs';
-
-import { ref, unref, onMounted, onUnmounted } from "vue";
-import { onIntersect } from "../assets/scripts/CA/oIntersect";
-
-const one = ref(null);
-const ONE = (el) => {
-		anime({
-			targets: el,
-			translateX: [-500, 0],
-			delay: 250,
-		});
-}
-
-const two = ref(null);
-const TWO = (el) => {
-		anime({
-			targets: el,
-			translateX: [500, 0],
-			delay: 250,
-		});
-}
-
-const three = ref(null);
-const THREE = (el) => {
-		anime({
-			targets: el,
-			translateX: [-500, 0],
-			delay: 250,
-		});
-}
-
-const four = ref(null);
-const FOUR = (el) => {
-		anime({
-			targets: el,
-			translateX: [500, 0],
-			delay: 250,
-		});
-}
-
-const onExit = () => {
-
+<script>
+import ScrollSection from "../components/ScrollSection.vue";
+export default {
+  name: "App",
+  components: {
+    ScrollSection: ScrollSection,
+  },
 };
-
-const elements = [
-  {
-    ref: one,
-    callback: ONE,
-  },
-
-  {
-    ref: two,
-    callback: TWO,
-  },
-
-  {
-    ref: three,
-    callback: THREE,
-  },
-
-  {
-    ref: four,
-    callback: FOUR,
-  },
-
-];
-
-onMounted(() => {
-  for (let i = 0; i < elements.length; i++) {
-    const element = elements[i];
-    const observer = onIntersect(
-      element.ref.value,
-      element.callback,
-      onExit,
-      true,
-      { threshold: 0.5 }
-    );
-    elements[i].observer = observer;
-  }
-});
-
-onUnmounted(() => {
-  elements.forEach((element) => {
-    unref(element.observer);
-  });
-});
 </script>
 
 <template>
     <div class="container">
+
        <!-- Section I -->
        <div class="section">
           <div class="home">
@@ -110,6 +31,7 @@ onUnmounted(() => {
 
              </div>
           </div>
+
           <div class="define">
              <h1>Netox not only creates your presentation but also provides all the other components to deliver your site.</h1>
              <h2>WE ARE RESPONSIBLE FOR</h2>
@@ -142,44 +64,43 @@ onUnmounted(() => {
              </ul>
           </div>
        </div>
+
        <!-- Section-Text -->
        <hr id="TL">
           <h1>Our Standard</h1>
+
           <!-- Section II -->
           <div class="section">
-             <div ref="one" class="feature-box">
+
+			<ScrollSection transition="slideDown">
                 <p>Awesome</p>
                 <i class="fa-solid fa-sparkles"></i>
                 <p>We admire detail, keeping our Design as Clean as Possible!</p>
-             </div>
-             <div ref="two" class="feature-box">
-                <p>Handmade</p>
-                <i class="fa-duotone fa-cubes"></i>
-                <p> Proudly to say, we program and set up our Projects 100% ourselves.</p>
-             </div>
-             <div ref="three" class="feature-box">
+			</ScrollSection>
+
+			 <ScrollSection transition="slideDown">
+				<p>Handmade</p>
+				<i class="fa-duotone fa-cubes"></i>
+				<p> Proudly to say, we program and set up our Projects 100% ourselves.</p>
+			</ScrollSection>
+
+			<ScrollSection transition="slideDown">
                 <p>Responsive</p>
                 <i class="fa-regular fa-laptop-mobile"></i>
                 <p>We also pay attention to responsiveness on every Device.</p>
-             </div>
-             <div ref="four" class="feature-box">
+			</ScrollSection>
+			 
+			<ScrollSection transition="slideDown">
                 <p>Effortless</p>
                 <i class="fa-solid fa-feather"></i>
                 <p>We care about a Flawless User experience, programming your Product!</p>
-             </div>
+			</ScrollSection>
           </div>
-
-       <!-- Section-Text -->
 
     </div>
  </template>
 
 <style scoped>
-
-.mobile {
-	background-color: red;
-}
-
 /* HEAD-STUB */
 .container {
 	background-color: rgba(15, 15, 15, 1);
