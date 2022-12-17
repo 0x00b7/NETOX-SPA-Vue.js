@@ -5,35 +5,30 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 
 <template>
    <div class="container">
-
       <div class="header">
-         <p>Legal Center</p>
+         <h1>Legal Center</h1>
       </div>
-      
       <div class="section">
          <div class="select">
-            <ul class="fa-ul">
-               <li>
-                  <span class="fa-li">
-                  <i class="fa-solid fa-book-section"></i>
-                  </span>
-                  <RouterLink :to="'/legal/imprint'">Imprint [TML]</RouterLink>
-               </li>
-               <li>
-                  <span class="fa-li">
-                  <i class="fa-solid fa-lock-keyhole"></i>
-                  </span>
-                  <RouterLink :to="'/legal/privacy'">Privacy [GPR]</RouterLink>
-               </li>
-               <li>
-                  <span class="fa-li">
-                  <i class="fa-solid fa-handshake"></i>
-                  </span>
-                  <RouterLink :to="'/legal/eula'">User Agreement [EULA]</RouterLink>
-               </li>
-            </ul>
+            <li>
+               <span class="fa-li">
+               <i class="fa-solid fa-book-section"></i>
+               </span>
+               <RouterLink :to="'/legal/imprint'">Imprint [TML]</RouterLink>
+            </li>
+            <li>
+               <span class="fa-li">
+               <i class="fa-solid fa-lock-keyhole"></i>
+               </span>
+               <RouterLink :to="'/legal/privacy'">Privacy [GPR]</RouterLink>
+            </li>
+            <li>
+               <span class="fa-li">
+               <i class="fa-solid fa-handshake"></i>
+               </span>
+               <RouterLink :to="'/legal/eula'">User Agreement [EULA]</RouterLink>
+            </li>
          </div>
-
          <div class="render">
             <router-view v-slot="{ Component }">
                <transition @enter="useFadeIn" @leave="useFadeOut" :css="false" mode="out-in">
@@ -41,7 +36,6 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
                </transition>
             </router-view>
          </div>
-
       </div>
    </div>
 </template>
@@ -52,9 +46,8 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
    background-color: rgba(15, 15, 15, 1);
 }
 
-.header {
-   margin: 1rem 0rem 0rem 2rem;
-   font-size: 32px;
+.header h1 {
+   text-align: left;
 }
 
 /* SKELETON */
@@ -65,19 +58,18 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 
 /* LEGAL-CENTER */
 .select {
-   width: 30%;
+   width: 50%;
+   background-color: rgb(10, 10, 10);
 }
 
 .render {
-   width: 70%;
+   width: 100%;
+   background-color: rgb(5, 5, 5);
+   padding: 1rem;
 }
 
-ul {
-   margin: 0px 0px 0px 28px;
-}
-
-li {
-   padding: 5px 0px;
+.select li {
+   padding: 0.5rem 0.5rem;
 }
 
 /* W1024x ~ iPad */
@@ -85,8 +77,32 @@ li {
    .section {
       display: grid;
    }
+
+   .header h1 {
+      text-align: center;
+   }
+
+   .select {
+      width: 100%;
+      display: flex;
+      margin-bottom: 1rem;
+      justify-content: center;
+   }
+
+   .select li {
+      margin-left: 5rem;
+   }
+
+   .select li:first-child {
+      margin-left: 2rem;
+   }
 }
 
 /* W512x ~ iPhone */
-@media (max-width: 32em) {}
+@media (max-width: 32em) {
+   .select li {
+      margin-left: 2rem;
+      font-size: 12px;
+   }
+}
 </style>

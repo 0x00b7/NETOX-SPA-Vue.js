@@ -18,96 +18,87 @@ export default {
 </script>
 
 <template>
-    <div class="container">
-
-       <!-- Section I -->
-       <div class="section">
-          <div class="home">
-             <h1>MAKE THE <br> WWW YOUR <br> <span class="gardient">TERRITORY!</span></h1>
-             <div class="button">
-
-                <i class="fa-sharp fa-angle-right fa-fade"></i>
-                <i class="fa-sharp fa-angle-right fa-fade"></i>
-                <i class="fa-sharp fa-angle-right fa-fade"></i>
-                
-                <RouterLink to="/creation">
-                   <div>
-                      <p>ORDER&nbsp;</p>
-                      <p>NOW</p>
-                      <p>!</p>
-                   </div>
-                </RouterLink>
-
-             </div>
-          </div>
-
-          <div class="define">
-             <h1>Netox not only creates your presentation but also provides all the other components to deliver your site.</h1>
-             <h2>WE ARE RESPONSIBLE FOR</h2>
-             <ul class="fa-ul">
-                <li>
-                   <span class="fa-li">
-                   <i class="fa-sharp fa-rectangle-code"></i>
-                   </span>Programming
-                </li>
-                <li>
-                   <span class="fa-li">
-                   <i class="fa-sharp fa-wifi"></i>
-                   </span>Hosting
-                </li>
-                <li>
-                   <span class="fa-li">
-                   <i class="fa-sharp fa-link"></i>
-                   </span>Domain Linkage
-                </li>
-                <li>
-                   <span class="fa-li">
-                   <i class="fa-sharp fa-magnifying-glass-location"></i>
-                   </span>Search Engine Optimization
-                </li>
-                <li>
-                   <span class="fa-li">
-                   <i class="fa-sharp fa-shield-keyhole"></i>
-                   </span>Service Protection
-                </li>
-             </ul>
-          </div>
-       </div>
-
-       <!-- Section-Text -->
-       <hr id="TL">
-          <h1>Our Standard</h1>
-
-          <!-- Section II -->
-          <div class="section">
-
-			<ScrollSection :transition="getTransition()">
-                <p>Awesome</p>
-                <i class="fa-solid fa-sparkles"></i>
-                <p>We admire detail, keeping our Design as Clean as Possible!</p>
-			</ScrollSection>
-
-			 <ScrollSection :transition="getTransition()">
-				<p>Handmade</p>
-				<i class="fa-duotone fa-cubes"></i>
-				<p> Proudly to say, we program and set up our Projects 100% ourselves.</p>
-			</ScrollSection>
-
-			<ScrollSection :transition="getTransition()">
-                <p>Responsive</p>
-                <i class="fa-regular fa-laptop-mobile"></i>
-                <p>We also pay attention to responsiveness on every Device.</p>
-			</ScrollSection>
-			 
-			<ScrollSection :transition="getTransition()">
-                <p>Effortless</p>
-                <i class="fa-solid fa-feather"></i>
-                <p>We care about a Flawless User experience, programming your Product!</p>
-			</ScrollSection>
-          </div>
-
-    </div>
+	<div class="container">
+	   <!-- Section I -->
+	   <div class="section">
+		  <div class="home">
+			 <h1>MAKE THE <br> WWW YOUR <br> <span class="gardient">TERRITORY!</span></h1>
+			 <div class="button">
+				<i class="fa-sharp fa-angle-right fa-fade"></i>
+				<i class="fa-sharp fa-angle-right fa-fade"></i>
+				<i class="fa-sharp fa-angle-right fa-fade"></i>
+				<RouterLink to="/creation">
+				   <div>
+					  <p>ORDER&nbsp;</p>
+					  <p>NOW</p>
+					  <p>!</p>
+				   </div>
+				</RouterLink>
+			 </div>
+		  </div>
+		  <div class="define">
+			 <h1>Netox not only creates your presentation but also provides all the other components to deliver your site.</h1>
+			 <h2>WE ARE RESPONSIBLE FOR</h2>
+			 <ul class="fa-ul">
+				<li>
+				   <span class="fa-li">
+				   <i class="fa-sharp fa-rectangle-code"></i>
+				   </span>Programming
+				</li>
+				<li>
+				   <span class="fa-li">
+				   <i class="fa-sharp fa-wifi"></i>
+				   </span>Hosting
+				</li>
+				<li>
+				   <span class="fa-li">
+				   <i class="fa-sharp fa-link"></i>
+				   </span>Domain Linkage
+				</li>
+				<li>
+				   <span class="fa-li">
+				   <i class="fa-sharp fa-magnifying-glass-location"></i>
+				   </span>Search Engine Optimization
+				</li>
+				<li>
+				   <span class="fa-li">
+				   <i class="fa-sharp fa-shield-keyhole"></i>
+				   </span>Service Protection
+				</li>
+			 </ul>
+		  </div>
+	   </div>
+	   <!-- Section-Text -->
+	   <hr id="TL">
+	   <div class="header">
+		  <h1>Our Standard</h1>
+	   </div>
+	   <!-- Section II -->
+	   <div class="section">
+		  <ScrollSection :transition="getTransition()">
+			 <p>Awesome</p>
+			 <i class="fa-solid fa-sparkles"></i>
+			 <p>We admire detail, keeping our Design as Clean as Possible!</p>
+		  </ScrollSection>
+		  <ScrollSection :transition="getTransition()">
+			 <p>Handmade</p>
+			 <i class="fa-duotone fa-cubes"></i>
+			 <p> Proudly to say, we program and set up our Projects 100% ourselves.</p>
+		  </ScrollSection>
+		  <ScrollSection :transition="getTransition()">
+			 <p>Responsive</p>
+			 <i class="fa-regular fa-laptop-mobile"></i>
+			 <p>We also pay attention to responsiveness on every Device.</p>
+		  </ScrollSection>
+		  <ScrollSection :transition="getTransition()">
+			 <p>Effortless</p>
+			 <i class="fa-solid fa-feather"></i>
+			 <p>We care about a Flawless User experience, programming your Product!</p>
+		  </ScrollSection>
+	   </div>
+	</div>
  </template>
+ 
 
 <style scoped>
 /* HEAD-STUB */

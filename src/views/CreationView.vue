@@ -5,7 +5,6 @@
         <h1>Learn more about our product</h1>
      </div>
      <div class="section">
-
         <div class="showcase">
            <h2>_CENTER (SHOWCASE)</h2>
         </div>
@@ -13,7 +12,6 @@
         <div class="workflow">
            <h2>_LEFT (WORKFLOW)</h2>
         </div>
-
      </div>
 
      <hr id="TL">
@@ -21,11 +19,9 @@
         <h1>Learn more about our product</h1>
      </div>
      <div class="section">
-
         <div class="vision">
           <p>Lorem Ipsum</p>
         </div>
-
      </div>
 
   </div>

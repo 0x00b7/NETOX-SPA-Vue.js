@@ -6,8 +6,9 @@
   
 <script>
   import { ref, onMounted, onUnmounted } from "vue";
-  import anime from "animejs";
   import { onIntersect } from "../assets/scripts/CA/oIntersect";
+
+  import anime from "animejs";
   import transitions from "../assets/scripts/AN/anime-anims";
   
   export default {

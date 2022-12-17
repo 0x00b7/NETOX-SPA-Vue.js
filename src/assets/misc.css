@@ -1,9 +1,17 @@
 /* MISCELLANEOUS */
 
+/* TEXT-HEADER */
+.header h1 {
+  text-align: center;
+  font-weight: 600;
+}
+
+/* X-LINE */
 hr {
 	margin: 0 0 0.5rem 0;
 }
 
+/* X-TOP */
 #TL {
   border-radius: 100%;
   border-top: 3px solid crimson;
@@ -12,6 +20,7 @@ hr {
   border-bottom: 0;
 }
 
+/* X-BOTTOM */
 #BL {
   border-bottom: 3px solid crimson;
   border-top: 0;
@@ -19,7 +28,7 @@ hr {
   border-right: 0;
 }
 
-/* ANIMATION */
+/* TEXT-GARDIENT */
 .gardient {
   animation: gardient 3s linear infinite;
   background: linear-gradient(to right, #FFF 20%, rgb(0, 100, 255) 40%, crimson 80%, #FFF 100%);
