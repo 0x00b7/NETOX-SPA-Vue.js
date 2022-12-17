@@ -14,19 +14,19 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
                <span class="fa-li">
                <i class="fa-solid fa-book-section"></i>
                </span>
-               <RouterLink :to="'/legal/imprint'">Imprint [TML]</RouterLink>
+               <RouterLink :to="'/legal/imprint'">Imprint</RouterLink>
             </li>
             <li>
                <span class="fa-li">
                <i class="fa-solid fa-lock-keyhole"></i>
                </span>
-               <RouterLink :to="'/legal/privacy'">Privacy [GPR]</RouterLink>
+               <RouterLink :to="'/legal/privacy'">Privacy</RouterLink>
             </li>
             <li>
                <span class="fa-li">
                <i class="fa-solid fa-handshake"></i>
                </span>
-               <RouterLink :to="'/legal/eula'">User Agreement [EULA]</RouterLink>
+               <RouterLink :to="'/legal/eula'">User Agreement</RouterLink>
             </li>
          </div>
          <div class="render">
@@ -91,6 +91,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
    }
 
    .select li {
+      padding: 0.5rem 0rem;
       margin-left: 5rem;
    }
 
@@ -102,7 +103,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 /* W512x ~ iPhone */
 @media (max-width: 32em) {
    .select li {
-      margin-left: 2rem;
+      margin-left: 3rem;
       font-size: 12px;
    }
 }
