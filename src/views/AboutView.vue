@@ -20,6 +20,10 @@
     display: flex;
 }
 
+.section {
+    width: 100%;
+}
+
 img {
     content: url(../assets/images/admin.png);
     animation: av_admin-fade 500ms linear forwards;

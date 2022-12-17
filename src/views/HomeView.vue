@@ -1,9 +1,18 @@
 <script>
 import ScrollSection from "../components/ScrollSection.vue";
+
 export default {
-  name: "App",
   components: {
     ScrollSection: ScrollSection,
+  },
+  methods: {
+    getTransition() {
+      if (window.innerWidth > 512) {
+        return "none";
+      } else {
+        return "slideDown";
+      }
+    },
   },
 };
 </script>
@@ -72,25 +81,25 @@ export default {
           <!-- Section II -->
           <div class="section">
 
-			<ScrollSection transition="slideDown">
+			<ScrollSection :transition="getTransition()">
                 <p>Awesome</p>
                 <i class="fa-solid fa-sparkles"></i>
                 <p>We admire detail, keeping our Design as Clean as Possible!</p>
 			</ScrollSection>
 
-			 <ScrollSection transition="slideDown">
+			 <ScrollSection :transition="getTransition()">
 				<p>Handmade</p>
 				<i class="fa-duotone fa-cubes"></i>
 				<p> Proudly to say, we program and set up our Projects 100% ourselves.</p>
 			</ScrollSection>
 
-			<ScrollSection transition="slideDown">
+			<ScrollSection :transition="getTransition()">
                 <p>Responsive</p>
                 <i class="fa-regular fa-laptop-mobile"></i>
                 <p>We also pay attention to responsiveness on every Device.</p>
 			</ScrollSection>
 			 
-			<ScrollSection transition="slideDown">
+			<ScrollSection :transition="getTransition()">
                 <p>Effortless</p>
                 <i class="fa-solid fa-feather"></i>
                 <p>We care about a Flawless User experience, programming your Product!</p>

@@ -1,6 +1,6 @@
 <template>
     <div class=privacy>
-       GPR.. (SOON)
+      <p>GPR.. (SOON)</p>
     </div>
  </template>
  

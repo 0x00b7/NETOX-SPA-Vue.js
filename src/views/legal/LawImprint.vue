@@ -1,6 +1,6 @@
 <template>
     <div class=imprint>
-        TML.. (SOON)
+        <p>TML.. (SOON)</p>
     </div>
  </template>
   

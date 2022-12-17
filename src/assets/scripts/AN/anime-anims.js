@@ -1,4 +1,13 @@
 const transitions = {
+  none: {
+    in: {
+      opacity: [1]
+    },
+    out: {
+      opacity: [1]
+    }
+  },
+
     fade: {
       in: {
         opacity: [0, 1]

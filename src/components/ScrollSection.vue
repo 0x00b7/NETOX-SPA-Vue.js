@@ -1,8 +1,8 @@
 <template>
-      <div ref="root" class="feature-box">
-        <slot></slot>
-      </div>
-  </template>
+  <div ref="root" class="feature-box">
+    <slot></slot>
+  </div>
+</template>
   
 <script>
   import { ref, onMounted, onUnmounted } from "vue";
@@ -85,39 +85,3 @@
     },
   };
   </script>
-  
-<style>
-.feature-box {
-	width: 100%;
-	height: 270px;
-	background-color: rgba(10, 10, 10, 1);
-	border-radius: 15px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-	text-align: center;
-	margin: 0 1rem 0 0;
-	padding: 20px 15px;
-}
-
-.feature-box:last-child {
-	margin: 0;
-}
-
-.feature-box p:nth-child(1) {
-	font-weight: 600;
-	font-size: 30px;
-	text-decoration: underline crimson;
-	text-decoration-thickness: 3px;
-}
-
-.feature-box p:nth-child(3) {
-	font-weight: 200;
-	word-wrap: break-word;
-}
-
-.feature-box svg {
-	margin: 2rem 0;
-	font-size: 72px;
-	filter: drop-shadow(0px 0px 3px rgb(255, 255, 255));
-}
-
-</style>
