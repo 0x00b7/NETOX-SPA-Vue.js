@@ -70,6 +70,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 
 .select li {
    padding: 0.5rem 0.5rem;
+   list-style-type: none;
 }
 
 /* W1024x ~ iPad */
