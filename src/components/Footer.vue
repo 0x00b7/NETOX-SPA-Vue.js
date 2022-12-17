@@ -80,6 +80,8 @@ footer div h3 {
     footer {
         height: 300px;
         display: grid;
+        border-top-left-radius: 50px 25px;
+        border-top-right-radius: 50px 25px;
     }
 
     footer div {
