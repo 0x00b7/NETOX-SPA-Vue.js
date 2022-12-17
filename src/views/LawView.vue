@@ -1,5 +1,6 @@
-<script>
-   import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
+<script setup>
+import { RouterLink, RouterView } from "vue-router";
+import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 </script>
 
 <template>
@@ -40,7 +41,6 @@
       </div>
    </div>
 </template>
-
 
 <style scoped>
 /* HEAD-STUB */
