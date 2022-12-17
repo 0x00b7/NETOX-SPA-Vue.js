@@ -9,7 +9,6 @@ const ONE = (el) => {
 		anime({
 			targets: el,
 			translateX: [-500, 0],
-			opacity: [0, 1],
 			delay: 250,
 		});
 }
@@ -18,8 +17,7 @@ const two = ref(null);
 const TWO = (el) => {
 		anime({
 			targets: el,
-			translateX: [-500, 0],
-			opacity: [0, 1],
+			translateX: [500, 0],
 			delay: 250,
 		});
 }
@@ -29,7 +27,6 @@ const THREE = (el) => {
 		anime({
 			targets: el,
 			translateX: [-500, 0],
-			opacity: [0, 1],
 			delay: 250,
 		});
 }
@@ -38,8 +35,7 @@ const four = ref(null);
 const FOUR = (el) => {
 		anime({
 			targets: el,
-			translateX: [-500, 0],
-			opacity: [0, 1],
+			translateX: [500, 0],
 			delay: 250,
 		});
 }
@@ -79,7 +75,7 @@ onMounted(() => {
       element.callback,
       onExit,
       true,
-      { threshold: 0 }
+      { threshold: 0.5 }
     );
     elements[i].observer = observer;
   }
@@ -151,22 +147,22 @@ onUnmounted(() => {
           <h1>Our Standard</h1>
           <!-- Section II -->
           <div class="section">
-             <div ref="one" class="feature-box is_mobile">
+             <div ref="one" class="feature-box">
                 <p>Awesome</p>
                 <i class="fa-solid fa-sparkles"></i>
                 <p>We admire detail, keeping our Design as Clean as Possible!</p>
              </div>
-             <div ref="two" class="feature-box is_mobile">
+             <div ref="two" class="feature-box">
                 <p>Handmade</p>
                 <i class="fa-duotone fa-cubes"></i>
                 <p> Proudly to say, we program and set up our Projects 100% ourselves.</p>
              </div>
-             <div ref="three" class="feature-box is_mobile">
+             <div ref="three" class="feature-box">
                 <p>Responsive</p>
                 <i class="fa-regular fa-laptop-mobile"></i>
                 <p>We also pay attention to responsiveness on every Device.</p>
              </div>
-             <div ref="four" class="feature-box is_mobile">
+             <div ref="four" class="feature-box">
                 <p>Effortless</p>
                 <i class="fa-solid fa-feather"></i>
                 <p>We care about a Flawless User experience, programming your Product!</p>
@@ -363,10 +359,6 @@ li {
 @media (max-width: 32em) {
 	.home {
 		font-size: 32px;
-	}
-
-	.is_mobile {
-		opacity: 0;
 	}
 
 	.section:nth-child(4) {
