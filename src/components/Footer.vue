@@ -1,0 +1,85 @@
+<template>
+   <footer>
+      <div>
+         <h3>Resources</h3>
+         <ul class="fa-ul">
+            <li>
+               <span class="fa-li">
+               <i class="fa-solid fa-scale-balanced"></i>
+               </span>
+               <RouterLink to="/legal">Legal Center</RouterLink>
+            </li>
+         </ul>
+      </div>
+      <div>
+         <h3>Social Media</h3>
+         <ul class="fa-ul">
+            <li>
+               <span class="fa-li">
+               <i class="fa-brands fa-tiktok"></i>
+               </span>
+               <a href="https://www.tiktok.com/@netox.ws" target="_blank" rel="noopener noreferrer">TikTok</a>
+            </li>
+            <li>
+               <span class="fa-li">
+               <i class="fa-brands fa-instagram"></i>
+               </span>
+               <a href="https://www.instagram.com/netox.ws/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            </li>
+         </ul>
+      </div>
+      <div>
+         <h3>Contact</h3>
+         <ul class="fa-ul">
+            <li>
+               <span class="fa-li">
+               <i class="fa-solid fa-at"></i>
+               </span>
+               <a href="mailto:admin@netox.ws" target="_blank" rel="noopener noreferrer">E-Mail</a>
+            </li>
+            <li>
+               <span class="fa-li">
+               <i class="fa-brands fa-whatsapp"></i>
+               </span>
+               <a href="https://wa.me/message/I2C4ETTGL33HB1" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+            </li>
+         </ul>
+      </div>
+   </footer>
+</template>
+
+<style scoped>
+ul {
+    margin: 0px 0px 0px 28px;
+}
+
+li {
+    padding: 5px 0px;
+}
+
+footer {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-height: 30vh;
+    background-color: rgb(10, 10, 10);
+    padding: 1.5rem 0rem 0rem 2rem;
+}
+
+footer div {
+    display: block;
+    width: 100%;
+}
+
+/* W1024x ~ iPad */
+@media (max-width: 64em) {
+    footer {
+        height: 300px;
+        display: grid;
+    }
+
+    footer div {
+        margin-bottom: 25px;
+    }
+}
+</style>

@@ -5,9 +5,11 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 
 <template>
    <div class="container">
-      <div class="head">
-         Legal Center
+
+      <div class="header">
+         <p>Legal Center</p>
       </div>
+      
       <div class="section">
          <div class="select">
             <ul class="fa-ul">
@@ -31,6 +33,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
                </li>
             </ul>
          </div>
+
          <div class="render">
             <router-view v-slot="{ Component }">
                <transition @enter="useFadeIn" @leave="useFadeOut" :css="false" mode="out-in">
@@ -38,6 +41,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
                </transition>
             </router-view>
          </div>
+
       </div>
    </div>
 </template>
@@ -48,7 +52,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
    background-color: rgba(15, 15, 15, 1);
 }
 
-.head {
+.header {
    margin: 1rem 0rem 0rem 2rem;
    font-size: 32px;
 }

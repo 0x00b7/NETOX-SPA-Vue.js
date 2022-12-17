@@ -1,54 +1,47 @@
 <template>
-    <div class="container">
-       <h1>Learn more about our product</h1>
+  <div class="container">
 
-       <div class="section">
-          <div class="showcase">
-             <h2>_CENTER (SHOWCASE)</h2>
-          </div>
-          <div class="workflow">
-             <h2>_LEFT (WORKFLOW)</h2>
-          </div>
-       </div>
+     <div class="header">
+        <h1>Learn more about our product</h1>
+     </div>
+     <div class="section">
 
-       <hr id="TL">
-       <h1>Our Vision</h1>
-       <div class="section">
-          <div class="vision">
-             <div ref="mBox" class="box"></div>
-          </div>
-       </div>
-    </div>
- </template>
+        <div class="showcase">
+           <h2>_CENTER (SHOWCASE)</h2>
+        </div>
+
+        <div class="workflow">
+           <h2>_LEFT (WORKFLOW)</h2>
+        </div>
+
+     </div>
+
+     <hr id="TL">
+     <div class="header">
+        <h1>Learn more about our product</h1>
+     </div>
+     <div class="section">
+
+        <div class="vision">
+          <p>Lorem Ipsum</p>
+        </div>
+
+     </div>
+
+  </div>
+</template>
+
  
 <style scoped>
-.box {
-  background-color: lime;
-  width: 20px;
-  top: 25%;
-}
-
-
 .container {
   background-color: rgba(15, 15, 15, 1);
   padding: 0rem;
-}
-
-.container h1:nth-child(1) {
-  text-align: center;
-  font-weight: 600;
-}
-
-.container h1:nth-child(4) {
-  text-align: center;
-  font-weight: 600;
 }
 
 .section {
   display: flex;
   margin-top: 1rem;
 }
-
 .section:nth-child(5) {
   background-color: red;
 }
