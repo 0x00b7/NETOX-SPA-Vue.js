@@ -21,6 +21,14 @@
     width: 100%;
 }
 
+.section h1 {
+    margin-bottom: 0.5rem;
+}
+
+.section h2 {
+    margin-bottom: 2rem;
+}
+
 img {
     content: url(../assets/images/admin.png);
     animation: av_admin-fade 500ms linear forwards;
