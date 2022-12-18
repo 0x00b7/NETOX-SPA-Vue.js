@@ -1,6 +1,5 @@
  <template>
     <div class="container">
-<<<<<<< HEAD
        <div class="section">
           <img alt="Loading..">
        </div>
@@ -10,22 +9,6 @@
           <h1>I am Always Dedicated and Open for new Projects at every Scale possible!</h1>
           <h2>For business inquiries regarding Web-Development, directly Open a Ticket via our Form or Sending an E-Mail to: admin@netox.ws</h2>
        </div>
-=======
-        <Suspense>
-            <template #default>
-                <AboutFetch />
-            </template>
-            <template #fallback>
-                <Loading/>
-            </template>
-        </Suspense>
-        <div class="section">
-            <h1>My Name is Gernot, Founder of Netox.ws! <br> I'm a 21-Year-Old Web/Software-Developer.</h1>
-            <h2>At the Age of 12 I became Passionate about Technic & it's Journey, Day on – Day off, learning new capabilities about HTML/CSS3 as well as JavaScript and its wide Spectrum of Features… These days I am running a Website Developing Service, helping hundreds of People visualizing their Products on the World Wide Web!</h2>
-            <h1>I am Always Dedicated and Open for new Projects at every Scale possible!</h1>
-            <h2>For business inquiries regarding Web-Development, directly Open a Ticket via our Form or Sending an E-Mail to: admin@netox.ws</h2>
-        </div>
->>>>>>> aa30f7fbf0f72ed4d58e1928bfc7cc61ad132662
     </div>
  </template>
 
@@ -52,7 +35,6 @@ export default {
 
 .section h1 {
     margin-bottom: 0.5rem;
-<<<<<<< HEAD
 }
 
 .section h2 {
@@ -67,8 +49,6 @@ img {
     opacity: 0;
     width: 100%;
     height: 100%;
-=======
->>>>>>> aa30f7fbf0f72ed4d58e1928bfc7cc61ad132662
 }
 
 .section h2 {

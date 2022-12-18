@@ -4,10 +4,6 @@ import AboutView from "../views/AboutView.vue";
 import CreationView from "../views/CreationView.vue";
 
 import LawView from "../views/LawView.vue";
-<<<<<<< HEAD
-=======
-
->>>>>>> aa30f7fbf0f72ed4d58e1928bfc7cc61ad132662
 import LawPrivacy from "../views/Law/LawPrivacy.vue";
 import LawImprint from "../views/Law/LawImprint.vue";
 import LawEula from "../views/Law/LawEula.vue";
@@ -33,11 +29,7 @@ const router = createRouter({
     },
     {
       path: "/Law",
-<<<<<<< HEAD
       name: "Law",
-=======
-      name: "Law-Center",
->>>>>>> aa30f7fbf0f72ed4d58e1928bfc7cc61ad132662
       component: LawView,
       children: [
         {
