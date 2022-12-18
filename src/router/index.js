@@ -4,9 +4,10 @@ import AboutView from "../views/AboutView.vue";
 import CreationView from "../views/CreationView.vue";
 
 import LawView from "../views/LawView.vue";
-import LawPrivacy from "../views/legal/LawPrivacy.vue";
-import LawImprint from "../views/legal/LawImprint.vue";
-import LawEula from "../views/legal/LawEula.vue";
+
+import LawPrivacy from "../views/Law/LawPrivacy.vue";
+import LawImprint from "../views/Law/LawImprint.vue";
+import LawEula from "../views/Law/LawEula.vue";
 
 
 const router = createRouter({
@@ -28,8 +29,8 @@ const router = createRouter({
       component: AboutView
     },
     {
-      path: "/legal",
-      name: "legal",
+      path: "/Law",
+      name: "Law-Center",
       component: LawView,
       children: [
         {

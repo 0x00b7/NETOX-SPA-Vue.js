@@ -6,7 +6,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 <template>
    <div class="container">
       <div class="header">
-         <h1>Legal Center</h1>
+         <h1>Law Center</h1>
       </div>
       <div class="section">
          <div class="select">
@@ -14,19 +14,19 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
                <span class="fa-li">
                <i class="fa-solid fa-book-section"></i>
                </span>
-               <RouterLink :to="'/legal/imprint'">Imprint</RouterLink>
+               <RouterLink :to="'/Law/imprint'">Imprint</RouterLink>
             </li>
             <li>
                <span class="fa-li">
                <i class="fa-solid fa-lock-keyhole"></i>
                </span>
-               <RouterLink :to="'/legal/privacy'">Privacy</RouterLink>
+               <RouterLink :to="'/Law/privacy'">Privacy</RouterLink>
             </li>
             <li>
                <span class="fa-li">
                <i class="fa-solid fa-handshake"></i>
                </span>
-               <RouterLink :to="'/legal/eula'">User Agreement</RouterLink>
+               <RouterLink :to="'/Law/eula'">User Agreement</RouterLink>
             </li>
          </div>
          <div class="render">
