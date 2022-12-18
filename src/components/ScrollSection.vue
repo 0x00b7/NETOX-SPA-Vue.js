@@ -58,6 +58,7 @@
       });
   
       const onEnter = () => {
+        
         if (hasEnteredOnce) {
           // clean up from the exit transition
           _.motion.pause(); // if the exit transition is currently running, pause it.
@@ -69,17 +70,17 @@
           // allow exit transitions to run.
           hasEnteredOnce = true;
         }
-        console.log("onEnter Called")
+
       };
   
       const onExit = () => {
 
         if (hasEnteredOnce) {
-//          _.motion.pause(); // if the enter transition is currently running, pause it.
+          _.motion.pause(); // if the enter transition is currently running, pause it.
           _.motion.reverse(); // change the direction of the transition
           _.motion.play(); // run the new reversed transition.
         }
-        console.log("onExit Called")
+
       };
   
       return {
