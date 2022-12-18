@@ -6,7 +6,7 @@ export default {
     ScrollSection: ScrollSection,
   },
   methods: {
-    getTransition() {
+    Transition() {
       if (window.innerWidth > 512) {
         return "none";
       } else {
@@ -75,22 +75,22 @@ export default {
 	   </div>
 	   <!-- Section II -->
 	   <div class="section">
-		  <ScrollSection :transition="getTransition()">
+		  <ScrollSection :transition="Transition()">
 			 <p>Awesome</p>
 			 <i class="fa-solid fa-sparkles"></i>
 			 <p>We admire detail, keeping our Design as Clean as Possible!</p>
 		  </ScrollSection>
-		  <ScrollSection :transition="getTransition()">
+		  <ScrollSection :transition="Transition()">
 			 <p>Handmade</p>
 			 <i class="fa-duotone fa-cubes"></i>
 			 <p> Proudly to say, we program and set up our Projects 100% ourselves.</p>
 		  </ScrollSection>
-		  <ScrollSection :transition="getTransition()">
+		  <ScrollSection :transition="Transition()">
 			 <p>Responsive</p>
 			 <i class="fa-regular fa-laptop-mobile"></i>
 			 <p>We also pay attention to responsiveness on every Device.</p>
 		  </ScrollSection>
-		  <ScrollSection :transition="getTransition()">
+		  <ScrollSection :transition="Transition()">
 			 <p>Effortless</p>
 			 <i class="fa-solid fa-feather"></i>
 			 <p>We care about a Flawless User experience, programming your Product!</p>
