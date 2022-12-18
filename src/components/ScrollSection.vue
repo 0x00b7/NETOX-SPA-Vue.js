@@ -10,7 +10,7 @@
 
   import anime from "animejs";
   import transitions from "../assets/scripts/AN/anime-anims";
-  
+
   export default {
     props: {
       transition: {
@@ -25,7 +25,7 @@
         observer: {},
         motion: {},
       };
-  
+
       const root = ref(null);
   
       const animeTransition = transitions[`${props.transition}`]["in"];
@@ -36,7 +36,7 @@
           outCallback: onExit,
           once: true,
           options: {
-            threshold: 0.1,
+            threshold: 0.25,
           },
         });
   
@@ -69,15 +69,17 @@
           // allow exit transitions to run.
           hasEnteredOnce = true;
         }
+        console.log("onEnter Called")
       };
   
       const onExit = () => {
-        // keeps exit transition from running before the first entrance.
+
         if (hasEnteredOnce) {
-          _.motion.pause(); // if the enter transition is currently running, pause it.
+//          _.motion.pause(); // if the enter transition is currently running, pause it.
           _.motion.reverse(); // change the direction of the transition
           _.motion.play(); // run the new reversed transition.
         }
+        console.log("onExit Called")
       };
   
       return {

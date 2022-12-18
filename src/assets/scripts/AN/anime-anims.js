@@ -1,10 +1,10 @@
 const transitions = {
   none: {
     in: {
-      opacity: [1]
+
     },
     out: {
-      opacity: [1]
+
     }
   },
 
@@ -16,7 +16,7 @@ const transitions = {
         opacity: [1, 0]
       }
     },
-  
+
     slideDown: {
       in: {
         opacity: [0, 1],
@@ -27,6 +27,7 @@ const transitions = {
         translateY: [0, "20vh"]
       }
     },
+
     slideLeft: {
       in: {
         opacity: [0, 1],
@@ -37,6 +38,7 @@ const transitions = {
         translateX: [0, "-20vw"]
       }
     },
+
     slideRight: {
       in: {
         opacity: [0, 1],
@@ -47,6 +49,7 @@ const transitions = {
         translateX: [0, "20vw"]
       }
     },
+
     slideUp: {
       in: {
         opacity: [0, 1],
@@ -122,6 +125,7 @@ const transitions = {
         translateY: [0, "20vh"]
       }
     },
+
     bounceLeft: {
       in: {
         easing: "easeOutBounce",
@@ -134,6 +138,7 @@ const transitions = {
         translateX: [0, "-20vw"]
       }
     },
+
     bounceRight: {
       in: {
         easing: "easeOutBounce",
@@ -146,6 +151,7 @@ const transitions = {
         translateX: [0, "20vw"]
       }
     },
+
     bounceUp: {
       in: {
         easing: "easeOutBounce",
@@ -227,7 +233,19 @@ const transitions = {
         opacity: [1, 0],
         rotate: [0, -360]
       }
-    }
+    },
+
+    custom: {
+      in: {
+        opacity: [0, 1],
+        translateY: ["20vh", 0]
+      },
+      out: {
+        opacity: [1, 0],
+        translateY: [0, "20vh"]
+      }
+    },
+
   };
   
   export default transitions;

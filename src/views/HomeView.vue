@@ -10,7 +10,7 @@ export default {
       if (window.innerWidth > 512) {
         return "none";
       } else {
-        return "slideDown";
+        return "custom";
       }
     },
   },
@@ -267,7 +267,7 @@ li {
 	}
 
 	.button div:hover>p:nth-child(2) {
-		animation: none;
+		animation-name: none;
 	}
 
 	.feature-box {
