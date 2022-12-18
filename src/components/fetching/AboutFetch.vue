@@ -1,6 +1,6 @@
 <template>
     <div class="section">
-       <img :src="about.img"> 
+       <img> 
     </div>
     <div class="section">
        <h1>My Name is Gernot, Founder of Netox.ws! <br> I'm a 21-Year-Old Web/Software-Developer.</h1>
@@ -15,10 +15,11 @@ import { ref } from "vue";
 
 const about = ref(null);
 const getAboutImage = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 2000));
+    await new Promise((resolve) => setTimeout(resolve, 1500));
 
     about.value = {
-        img: 'src/assets/images/admin.png'
+        img: './../../assets/images/admin.png',
+        cache: './../../assets/images/admin_small.png',
     };
 }
 
@@ -39,6 +40,7 @@ await getAboutImage();
 }
 
 img {
+    content: url(./../../assets/images/admin.png);
     animation: av_admin-fade 500ms linear forwards;
     animation-delay: 250ms;
     margin-left: 5%;
@@ -54,7 +56,7 @@ img {
     }
 
     img {
-        content: url(src/assets/images/admin_small.png);
+        content: url(./../../assets/images/admin_small.png);
         width: 75%;
     }
 
