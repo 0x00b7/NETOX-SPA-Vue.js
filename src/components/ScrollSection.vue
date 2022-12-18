@@ -74,11 +74,13 @@
       };
   
       const onExit = () => {
+
         if (hasEnteredOnce) {
           _.motion.pause(); // if the enter transition is currently running, pause it.
           _.motion.reverse(); // change the direction of the transition
           _.motion.play(); // run the new reversed transition.
         }
+
       };
   
       return {
