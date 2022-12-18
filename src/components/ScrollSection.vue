@@ -36,7 +36,7 @@
           outCallback: onExit,
           once: true,
           options: {
-            threshold: 0.25,
+            threshold: 1,
           },
         });
   
@@ -51,6 +51,7 @@
           // based on the transition prop provided.
           ...animeTransition,
         });
+
       });
   
       onUnmounted(() => {
@@ -73,13 +74,11 @@
       };
   
       const onExit = () => {
-
         if (hasEnteredOnce) {
           _.motion.pause(); // if the enter transition is currently running, pause it.
           _.motion.reverse(); // change the direction of the transition
           _.motion.play(); // run the new reversed transition.
         }
-
       };
   
       return {
