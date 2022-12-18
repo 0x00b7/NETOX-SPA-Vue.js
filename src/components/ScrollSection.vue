@@ -58,7 +58,6 @@
       });
   
       const onEnter = () => {
-        
         if (hasEnteredOnce) {
           // clean up from the exit transition
           _.motion.pause(); // if the exit transition is currently running, pause it.
