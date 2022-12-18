@@ -9,7 +9,7 @@ import { ref } from "vue";
 
 const about = ref(null);
 const getAboutImage = async () => {
-    const response = await fetch('src/assets/images/admin.png')
+    const response = await fetch('./../../assets/images/admin.png')
     const imageBlob = await response.blob()
     await new Promise((resolve) => setTimeout(resolve, 2500));
 
