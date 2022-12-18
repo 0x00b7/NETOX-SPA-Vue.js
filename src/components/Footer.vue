@@ -7,7 +7,7 @@
                <span class="fa-li">
                <i class="fa-solid fa-scale-balanced"></i>
                </span>
-               <RouterLink to="/legal">Legal Center</RouterLink>
+               <RouterLink to="/Law">Law Center</RouterLink>
             </li>
          </ul>
       </div>
