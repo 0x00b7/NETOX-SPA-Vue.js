@@ -4,7 +4,6 @@ import anime from "animejs";
 export default {
     mounted() {
         var emblem = document.querySelectorAll('.N, .E, .T, .O, .X')
-        var emblemstr = document.querySelectorAll('.sN, .sE, .sT, .sO, .sX')
         anime({
             targets: emblem,
             opacity: [0, 1],
@@ -71,27 +70,13 @@ export default {
     <header>
        <div class="sign">
           <div class="sign-background">
-             <div class="N">
-                <div class="sN">N</div>
-             </div>
-             <div class="E">
-                <div class="sE">E</div>
-             </div>
-             <div class="T">
-                <div class="sT">T</div>
-             </div>
-             <div class="O">
-                <div class="sO">O</div>
-             </div>
-             <div class="X">
-                <div class="sX">X</div>
-             </div>
-             <div class="dot">
-                <div class="sdot">.</div>
-             </div>
-             <div class="ws">
-                <div class="sws">ws</div>
-             </div>
+             <div class="N">N</div>
+             <div class="E">E</div>
+             <div class="T">T</div>
+             <div class="O">O</div>
+             <div class="X">X</div>
+             <div class="dot">.</div>
+             <div class="ws">ws</div>
           </div>
        </div>
        <div class="wrapper">
