@@ -120,8 +120,7 @@ header .sign {
 
 header .sign .sign-background {
     display: flex;
-    border-radius: 10px;
-    padding-left: 15px;
+    padding-left: 10px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
