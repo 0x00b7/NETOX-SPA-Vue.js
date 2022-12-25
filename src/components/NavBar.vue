@@ -83,21 +83,21 @@ export default {
                    <span class="fa-li">
                     <i class="fa-solid fa-golf-flag-hole"></i>
                    </span>
-                   <RouterLink to="/">Home</RouterLink>
+                   <RouterLink to="/" @click="showMenu = !showMenu">Home</RouterLink>
                 </li>
 
                 <li>
                    <span class="fa-li">
                     <i class="fa-solid fa-bolt"></i>
                    </span>
-                   <RouterLink to="/creation">Creation</RouterLink>
+                   <RouterLink to="/creation" @click="showMenu = !showMenu">Creation</RouterLink>
                 </li>
                 
                 <li>
                    <span class="fa-li">
                     <i class="fa-solid fa-book-user"></i>
                    </span>
-                   <RouterLink to="/about">About</RouterLink>
+                   <RouterLink to="/about" @click="showMenu = !showMenu">About</RouterLink>
                 </li>
              </ul>
           </div>
