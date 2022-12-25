@@ -2,9 +2,30 @@
 import anime from "animejs";
 
 export default {
-    data() {
-        return {
-            showMenu: false
+    methods: {
+        toggleNavbar() {
+            const navbar = document.querySelector('.mobile-nav')
+            if (navbar.style.display === 'block') {
+                anime({
+                    targets: navbar,
+                    height: 0,
+                    easing: 'easeInOutQuad',
+                    duration: 200,
+                    opacity: [1, 0],
+                    complete: () => {
+                        navbar.style.display = 'none'
+                    }
+                })
+            } else {
+                navbar.style.display = 'block'
+                anime({
+                    targets: navbar,
+                    height: '50%',
+                    opacity: [0, 1],
+                    easing: 'easeInOutQuad',
+                    duration: 200
+                })
+            }
         }
     },
     mounted() {
@@ -74,30 +95,30 @@ export default {
 <template>
     <header>
        <div class="mobile-wrapper">
-          <button class="mobile-nav-toggle" @click="showMenu = !showMenu">
+          <button class="mobile-nav-toggle" @click="toggleNavbar">
           <i class="fa-regular fa-square-list"></i>
           </button>
-          <div class="mobile-nav" v-if="showMenu">
+          <div class="mobile-nav">
              <ul class="fa-ul">
                 <li>
                    <span class="fa-li">
                     <i class="fa-solid fa-golf-flag-hole"></i>
                    </span>
-                   <RouterLink to="/" @click="showMenu = !showMenu">Home</RouterLink>
+                   <RouterLink @click="toggleNavbar" to="/">Home</RouterLink>
                 </li>
 
                 <li>
                    <span class="fa-li">
                     <i class="fa-solid fa-bolt"></i>
                    </span>
-                   <RouterLink to="/creation" @click="showMenu = !showMenu">Creation</RouterLink>
+                   <RouterLink @click="toggleNavbar" to="/creation">Creation</RouterLink>
                 </li>
                 
                 <li>
                    <span class="fa-li">
                     <i class="fa-solid fa-book-user"></i>
                    </span>
-                   <RouterLink to="/about" @click="showMenu = !showMenu">About</RouterLink>
+                   <RouterLink @click="toggleNavbar" to="/about">About</RouterLink>
                 </li>
              </ul>
           </div>
@@ -166,7 +187,7 @@ a.router-link-exact-active:hover {
 
 .mobile-nav-toggle {
     background-color: transparent;
-    position: absolute;
+    position: fixed;
     border: 0;
     font-size: 42px;
     z-index: 2;
@@ -182,13 +203,12 @@ a.router-link-exact-active:hover {
     background: linear-gradient(180deg, rgba(15, 15, 15, 1) 50%, rgba(0, 0, 0, 0) 100%);
     padding: 1.5rem 0rem;
     z-index: 1;
-    height: 35%;
+    display: none;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
 }
-
 .mobile-nav ul li {
     margin-bottom: 1rem;
 }
