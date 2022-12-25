@@ -2,6 +2,11 @@
 import anime from "animejs";
 
 export default {
+    data() {
+        return {
+            showMenu: false
+        }
+    },
     mounted() {
         var emblem = document.querySelectorAll('.N, .E, .T, .O, .X')
         anime({
@@ -68,6 +73,35 @@ export default {
 
 <template>
     <header>
+       <div class="mobile-wrapper">
+          <button class="mobile-nav-toggle" @click="showMenu = !showMenu">
+          <i class="fa-regular fa-square-list"></i>
+          </button>
+          <div class="mobile-nav" v-if="showMenu">
+             <ul class="fa-ul">
+                <li>
+                   <span class="fa-li">
+                    <i class="fa-solid fa-golf-flag-hole"></i>
+                   </span>
+                   <RouterLink to="/">Home</RouterLink>
+                </li>
+
+                <li>
+                   <span class="fa-li">
+                    <i class="fa-solid fa-bolt"></i>
+                   </span>
+                   <RouterLink to="/creation">Creation</RouterLink>
+                </li>
+                
+                <li>
+                   <span class="fa-li">
+                    <i class="fa-solid fa-book-user"></i>
+                   </span>
+                   <RouterLink to="/about">About</RouterLink>
+                </li>
+             </ul>
+          </div>
+       </div>
        <div class="sign">
           <div class="sign-background">
              <div class="N">N</div>
@@ -77,18 +111,17 @@ export default {
              <div class="X">X</div>
              <div class="dot">.</div>
              <div class="ws">ws</div>
+             <div class="wrapper">
+                <nav>
+                   <RouterLink to="/">Home</RouterLink>
+                   <RouterLink to="/creation">Creation</RouterLink>
+                   <RouterLink to="/about">About</RouterLink>
+                </nav>
+             </div>
           </div>
-       </div>
-       <div class="wrapper">
-          <nav>
-             <RouterLink to="/">Home</RouterLink>
-             <RouterLink to="/creation">Creation</RouterLink>
-             <RouterLink to="/about">About</RouterLink>
-          </nav>
        </div>
     </header>
  </template>
-
  
 <style scoped>
 header {
@@ -96,9 +129,6 @@ header {
 }
 
 header .sign {
-    display: flex;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
     white-space: nowrap;
     font-size: 3rem;
 }
@@ -127,11 +157,47 @@ a.router-link-exact-active:hover {
     background-color: transparent;
 }
 
+.mobile-wrapper {
+    display: none;
+    margin-left: auto;
+    margin-right: 3.5rem;
+    top: 0.5rem;
+}
+
+.mobile-nav-toggle {
+    background-color: transparent;
+    position: absolute;
+    border: 0;
+    font-size: 42px;
+    z-index: 2;
+}
+
+.mobile-nav-toggle svg {
+    color: white;
+}
+
+.mobile-nav {
+    font-size: 1.5rem;
+    position: fixed;
+    background: linear-gradient(180deg, rgba(15, 15, 15, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    padding: 1.5rem 0rem;
+    z-index: 1;
+    height: 35%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.mobile-nav ul li {
+    margin-bottom: 1rem;
+}
+
 nav {
     width: 100%;
-    font-size: 24px;
-    text-align: left;
-    margin: 5px 0px 10px 0px;
+    font-size: 26px;
+    margin: 13px 0px 0px 15px;
+    font-style: normal;
 }
 
 nav a {
@@ -150,12 +216,22 @@ nav a:first-of-type {
         line-height: 1.2;
         max-height: 100vh;
     }
+
     header .sign {
         justify-content: center;
+        padding-bottom: 0.5rem;
+    }
+
+    header .wrapper {
+        display: none;
     }
 
     nav {
         text-align: center;
+    }
+
+    .mobile-wrapper {
+        display: block;
     }
 }
 </style>

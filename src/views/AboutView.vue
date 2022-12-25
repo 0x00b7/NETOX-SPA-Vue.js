@@ -20,6 +20,9 @@
 .section {
     width: 100%;
 }
+.section:nth-child(2) {
+    margin-top: 1rem;
+}
 
 .section h1 {
     margin-bottom: 0.5rem;
