@@ -8,10 +8,10 @@ export default {
             if (navbar.style.display === 'block') {
                 anime({
                     targets: navbar,
-                    height: 0,
                     easing: 'easeInOutQuad',
-                    duration: 200,
+                    height: '0px',
                     opacity: [1, 0],
+                    duration: 250,
                     complete: () => {
                         navbar.style.display = 'none'
                     }
@@ -20,10 +20,10 @@ export default {
                 navbar.style.display = 'block'
                 anime({
                     targets: navbar,
-                    height: '50%',
+                    height: '350px',
                     opacity: [0, 1],
                     easing: 'easeInOutQuad',
-                    duration: 200
+                    duration: 250
                 })
             }
         }
@@ -196,16 +196,20 @@ a.router-link-exact-active:hover {
 }
 
 .mobile-nav {
+    background: linear-gradient(180deg, rgba(15, 15, 15, 1) 50%, rgba(0, 0, 0, 0) 100%);
     font-size: 1.5rem;
     position: fixed;
-    background: linear-gradient(180deg, rgba(15, 15, 15, 1) 50%, rgba(0, 0, 0, 0) 100%);
-    padding: 1.5rem 0rem;
-    z-index: 1;
-    display: none;
     top: 0;
     left: 0;
-    bottom: 0;
     right: 0;
+    height: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+}
+
+.mobile-nav ul {
+    margin: 1.5rem 4rem;
 }
 
 .mobile-nav ul li {
@@ -243,10 +247,6 @@ nav a:first-of-type {
 
     header .wrapper {
         display: none;
-    }
-
-    nav {
-        text-align: center;
     }
 
     .mobile-wrapper {

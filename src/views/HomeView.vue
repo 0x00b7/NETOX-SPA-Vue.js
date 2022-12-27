@@ -6,7 +6,7 @@ export default {
     ScrollSection: ScrollSection,
   },
   methods: {
-    Transition() {
+    transition() {
       if (window.innerWidth > 512) {
         return "none";
       } else {
@@ -75,22 +75,22 @@ export default {
 	   </div>
 	   <!-- Section II -->
 	   <div class="section">
-		  <ScrollSection :transition="Transition()">
+		  <ScrollSection :transition="transition()">
 			 <p>Awesome</p>
 			 <i class="fa-solid fa-sparkles"></i>
 			 <p>We admire detail, keeping our Design as Clean as Possible!</p>
 		  </ScrollSection>
-		  <ScrollSection :transition="Transition()">
+		  <ScrollSection :transition="transition()">
 			 <p>Handmade</p>
 			 <i class="fa-duotone fa-cubes"></i>
 			 <p> Proudly to say, we program and set up our Projects 100% ourselves.</p>
 		  </ScrollSection>
-		  <ScrollSection :transition="Transition()">
+		  <ScrollSection :transition="transition()">
 			 <p>Responsive</p>
 			 <i class="fa-regular fa-laptop-mobile"></i>
 			 <p>We also pay attention to responsiveness on every Device.</p>
 		  </ScrollSection>
-		  <ScrollSection :transition="Transition()">
+		  <ScrollSection :transition="transition()">
 			 <p>Effortless</p>
 			 <i class="fa-solid fa-feather"></i>
 			 <p>We care about a Flawless User experience, programming your Product!</p>
@@ -101,15 +101,22 @@ export default {
  
 
 <style scoped>
-/* HEAD-STUB */
 .container {
 	background-color: rgba(15, 15, 15, 1);
 }
 
-/* SKELETON */
+.header{
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+}
+
 .section {
-	display: flex;
 	margin: 1rem;
+	display: flex;
+}
+
+.section:nth-child(4) {
+	margin: 0rem 1rem 1rem 1rem;
 }
 
 /* THE WWW.. */

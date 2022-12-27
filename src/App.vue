@@ -7,7 +7,6 @@ import './assets/scripts/FA/all.min.js'
 
 import Footer from "./components/Footer.vue";
 import NavBar from "./components/NavBar.vue";
-
 </script>
 
 <template>
