@@ -94,32 +94,27 @@ export default {
 
 <template>
     <header>
-       <div class="mobile-wrapper">
-          <button class="mobile-nav-toggle" @click="toggleNavbar">
-          <i class="fa-regular fa-square-list"></i>
-          </button>
-          <div class="mobile-nav">
-             <ul class="fa-ul">
-                <li>
-                   <span class="fa-li">
-                   <i class="fa-solid fa-golf-flag-hole"></i>
-                   </span>
-                   <RouterLink @click="toggleNavbar" to="/">Home</RouterLink>
-                </li>
-                <li>
-                   <span class="fa-li">
-                   <i class="fa-solid fa-bolt"></i>
-                   </span>
-                   <RouterLink @click="toggleNavbar" to="/creation">Creation</RouterLink>
-                </li>
-                <li>
-                   <span class="fa-li">
-                   <i class="fa-solid fa-book-user"></i>
-                   </span>
-                   <RouterLink @click="toggleNavbar" to="/about">About</RouterLink>
-                </li>
-             </ul>
-          </div>
+       <div class="mobile-nav">
+          <ul class="fa-ul">
+             <li>
+                <span class="fa-li">
+                <i class="fa-solid fa-golf-flag-hole"></i>
+                </span>
+                <RouterLink @click="toggleNavbar" to="/">Home</RouterLink>
+             </li>
+             <li>
+                <span class="fa-li">
+                <i class="fa-solid fa-bolt"></i>
+                </span>
+                <RouterLink @click="toggleNavbar" to="/creation">Creation</RouterLink>
+             </li>
+             <li>
+                <span class="fa-li">
+                <i class="fa-solid fa-book-user"></i>
+                </span>
+                <RouterLink @click="toggleNavbar" to="/about">About</RouterLink>
+             </li>
+          </ul>
        </div>
        <div class="sign">
           <div class="sign-background">
@@ -136,6 +131,11 @@ export default {
                    <RouterLink to="/creation">Creation</RouterLink>
                    <RouterLink to="/about">About</RouterLink>
                 </nav>
+             </div>
+             <div class="mobile-wrapper">
+                <button class="mobile-nav-toggle" @click="toggleNavbar">
+                    <i class="fa-regular fa-square-list"></i>
+                </button>
              </div>
           </div>
        </div>
@@ -178,17 +178,16 @@ a.router-link-exact-active:hover {
 
 .mobile-wrapper {
     display: none;
-    margin-left: auto;
-    margin-right: 3.5rem;
-    top: 0.5rem;
 }
 
 .mobile-nav-toggle {
     background-color: transparent;
     position: fixed;
-    border: 0;
     font-size: 42px;
     z-index: 2;
+    border: 0;
+    right: 0;
+    padding-right: 1rem;
 }
 
 .mobile-nav-toggle svg {
@@ -233,7 +232,6 @@ nav a:first-of-type {
     border: 0;
 }
 
-/* W1024x ~ iPad */
 @media (max-width: 64em) {
     header {
         line-height: 1.2;

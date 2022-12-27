@@ -41,7 +41,6 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 </template>
 
 <style scoped>
-/* HEAD-STUB */
 .container {
    background-color: rgba(15, 15, 15, 1);
 }
@@ -50,13 +49,11 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
    text-align: left;
 }
 
-/* SKELETON */
 .section {
    display: flex;
    padding: 2vh 5vh;
 }
 
-/* LEGAL-CENTER */
 .select {
    width: 50%;
    background-color: rgb(10, 10, 10);
@@ -73,7 +70,6 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
    list-style-type: none;
 }
 
-/* W1024x ~ iPad */
 @media (max-width: 64em) {
    .section {
       display: grid;
@@ -100,7 +96,6 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
    }
 }
 
-/* W512x ~ iPhone */
 @media (max-width: 32em) {
    .select li {
       margin-left: 3rem;

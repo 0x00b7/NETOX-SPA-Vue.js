@@ -1,12 +1,9 @@
 <script setup>
 import { RouterView } from "vue-router";
-
 import { useFadeIn, useFadeOut } from './assets/scripts/AN/anime-route.js'
-
-import './assets/scripts/FA/all.min.js'
-
 import Footer from "./components/Footer.vue";
 import NavBar from "./components/NavBar.vue";
+import './assets/scripts/FA/all.min.js'
 </script>
 
 <template>

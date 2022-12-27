@@ -20,6 +20,7 @@
 .section {
     width: 100%;
 }
+
 .section:nth-child(2) {
     margin-top: 1rem;
 }
@@ -42,7 +43,6 @@ img {
     height: 100%;
 }
 
-/* W1024x ~ iPad */
 @media (max-width: 64em) {
     .container {
         display: grid;
@@ -64,7 +64,6 @@ img {
 
 }
 
-/* W512x ~ iPhone */
 @media (max-width: 32em) {}
 
 @keyframes av_admin-fade {

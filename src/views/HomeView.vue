@@ -105,7 +105,7 @@ export default {
 	background-color: rgba(15, 15, 15, 1);
 }
 
-.header{
+.header {
 	margin-top: 0.5rem;
 	margin-bottom: 1rem;
 }
@@ -248,7 +248,6 @@ li {
 	filter: drop-shadow(0px 0px 3px rgb(255, 255, 255));
 }
 
-/* W1024x ~ iPad */
 @media (max-width: 64em) {
 	.section {
 		display: grid;
@@ -283,7 +282,6 @@ li {
 	}
 }
 
-/* W512x ~ iPhone */
 @media (max-width: 32em) {
 	.home {
 		font-size: 32px;

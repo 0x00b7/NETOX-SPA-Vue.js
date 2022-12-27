@@ -50,42 +50,41 @@
 
 <style scoped>
 ul {
-    margin: 0 0 0 0px;
+   margin: 0 0 0 0px;
 }
 
 li {
-    padding: 5px 0;
+   padding: 5px 0;
 }
 
 footer {
-    position: relative;
-    display: flex;
-    width: 100%;
-    min-height: 30vh;
-    background-color: rgb(10, 10, 10);
-    padding: 1rem 0rem 0rem 3rem;
+   position: relative;
+   display: flex;
+   width: 100%;
+   min-height: 30vh;
+   background-color: rgb(10, 10, 10);
+   padding: 1rem 0rem 0rem 3rem;
 }
 
 footer div {
-    display: block;
-    width: 100%;
+   display: block;
+   width: 100%;
 }
 
 footer div h3 {
    font-weight: 600;
 }
 
-/* W1024x ~ iPad */
 @media (max-width: 64em) {
-    footer {
-        height: 300px;
-        display: grid;
-        border-top-left-radius: 50px 25px;
-        border-top-right-radius: 50px 25px;
-    }
+   footer {
+      height: 300px;
+      display: grid;
+      border-top-left-radius: 50px 25px;
+      border-top-right-radius: 50px 25px;
+   }
 
-    footer div {
-        margin-bottom: 25px;
-    }
+   footer div {
+      margin-bottom: 25px;
+   }
 }
 </style>

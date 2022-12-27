@@ -4,14 +4,9 @@
     </div>
  </template>
   
-  <style scoped>
-  /* HEAD-STUB */
+<style scoped>
+  
+@media (max-width: 64em) {}
 
-  /* W1024x ~ iPad */
-  @media (max-width: 64em) {
-
-  }
-
-  /* W512x ~ iPhone */
-  @media (max-width: 32em) {}
-  </style>
+@media (max-width: 32em) {}
+</style>
