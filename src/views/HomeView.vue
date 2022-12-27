@@ -109,7 +109,7 @@ export default {
 /* SKELETON */
 .section {
 	display: flex;
-	margin: 1rem 0 1rem 0;
+	margin: 1rem;
 }
 
 /* THE WWW.. */

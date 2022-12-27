@@ -102,21 +102,19 @@ export default {
              <ul class="fa-ul">
                 <li>
                    <span class="fa-li">
-                    <i class="fa-solid fa-golf-flag-hole"></i>
+                   <i class="fa-solid fa-golf-flag-hole"></i>
                    </span>
                    <RouterLink @click="toggleNavbar" to="/">Home</RouterLink>
                 </li>
-
                 <li>
                    <span class="fa-li">
-                    <i class="fa-solid fa-bolt"></i>
+                   <i class="fa-solid fa-bolt"></i>
                    </span>
                    <RouterLink @click="toggleNavbar" to="/creation">Creation</RouterLink>
                 </li>
-                
                 <li>
                    <span class="fa-li">
-                    <i class="fa-solid fa-book-user"></i>
+                   <i class="fa-solid fa-book-user"></i>
                    </span>
                    <RouterLink @click="toggleNavbar" to="/about">About</RouterLink>
                 </li>
@@ -209,6 +207,7 @@ a.router-link-exact-active:hover {
     bottom: 0;
     right: 0;
 }
+
 .mobile-nav ul li {
     margin-bottom: 1rem;
 }
