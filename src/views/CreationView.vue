@@ -25,16 +25,18 @@
  
 <style scoped>
 .container {
-  background-color: rgba(15, 15, 15, 1);
-  padding: 0rem;
+  margin-top: 1rem;
 }
 
 .section {
   display: flex;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
-.section:nth-child(5) {
-  background-color: red;
+
+.header {
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
 }
 
 .section div {
@@ -46,10 +48,12 @@
   display: grid;
   justify-content: center;
   height: 800px;
+  background-color: red;
 }
 
 .workflow {
   width: 100%;
+  background-color: green;
 }
 
 .vision {
