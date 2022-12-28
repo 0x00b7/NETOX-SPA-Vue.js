@@ -57,7 +57,7 @@ img {
     display: none;
     content: url(../assets/images/admin.png);
     animation: av_admin-fade 500ms linear forwards;
-    animation-delay: 250ms;
+    animation-delay: 500ms;
     margin-left: 5%;
     opacity: 0;
     width: 100%;
