@@ -11,8 +11,8 @@ export default {
         image.src = imageSrc;
 
         image.onload = () => {
-            this.$refs.loading.style.display = 'none';
-            this.$refs.image.style.display = 'block';
+        //    this.$refs.loading.style.display = 'none';
+        //    this.$refs.image.style.display = 'block';
         };
 
     },
@@ -22,7 +22,9 @@ export default {
 <template>
     <div class="container">
        <div class="section">
-          <div class="loader" ref="loading"></div>
+          <div class="loader" ref="loading">
+            <div class="placeholder"></div>
+          </div>
           <img ref="image">
        </div>
        <div class="section">
@@ -44,7 +46,8 @@ export default {
 }
 
 .section:nth-child(2) {
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 1rem;
 }
 
 .section h1 {
@@ -73,14 +76,19 @@ img {
     -webkit-animation: placeholder-wave 2s linear infinite;
     animation: placeholder-wave 2s linear infinite;
     width: 100%;
-    height: 100%;
-    background-color: rgb(25, 25, 25);
+}
+
+.placeholder {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    opacity: .5;
+    height: 690px;
 }
 
 @keyframes placeholder-wave {
-  100% {
-    mask-position: -200% 0%;
-  }
+    100% {
+        mask-position: -600% 0%;
+    }
 }
 
 @media (max-width: 64em) {
@@ -92,10 +100,6 @@ img {
         content: url(../assets/images/admin_small.png);
         width: 95%;
         top: 0.5rem;
-    }
-
-    .loader {
-        padding-top: 600px;
     }
 
     .section:nth-child(1) {
