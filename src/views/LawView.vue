@@ -43,7 +43,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 <style scoped>
 .header {
 	margin-top: 0.5rem;
-	margin-bottom: 1rem;
+	margin-bottom: 0.5rem;
 }
 
 .header h1 {
@@ -53,6 +53,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 
 .section {
    display: flex;
+   margin-bottom: 1rem;
 }
 
 .select {
@@ -84,25 +85,16 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 
    .select {
       width: 100%;
-      display: flex;
-      margin-bottom: 1rem;
-      justify-content: center;
+      display: grid;
+      padding: 0.5rem 3.5rem;
    }
 
    .select li {
       padding: 0.5rem 0rem;
-      margin-left: 5rem;
-   }
-
-   .select li:first-child {
-      margin-left: 2rem;
    }
 }
 
 @media (max-width: 32em) {
-   .select li {
-      margin-left: 3rem;
-      font-size: 12px;
-   }
+
 }
 </style>
