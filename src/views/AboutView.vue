@@ -11,8 +11,8 @@ export default {
         image.src = imageSrc;
 
         image.onload = () => {
-         //   this.$refs.loading.style.display = 'none';
-         //   this.$refs.image.style.display = 'block';
+            this.$refs.loading.style.display = 'none';
+            this.$refs.image.style.display = 'block';
         };
 
     },
