@@ -2,7 +2,7 @@
 export default {
     mounted() {
 
-        const computedStyle = window.getComputedStyle(this.$refs.admin);
+        const computedStyle = window.getComputedStyle(this.$refs.image);
 
         const imageSrc = computedStyle.content.slice(5, -2);
 
@@ -11,7 +11,8 @@ export default {
         image.src = imageSrc;
 
         image.onload = () => {
-            this.$refs.admin.style.display = 'block';
+            this.$refs.loading.style.display = 'none';
+            this.$refs.image.style.display = 'block';
         };
 
     },
@@ -21,7 +22,8 @@ export default {
 <template>
     <div class="container">
        <div class="section">
-         <img ref="admin">
+          <div class="loader" ref="loading"></div>
+          <img ref="image">
        </div>
        <div class="section">
           <h1>My Name is Gernot, Founder of Netox.ws! <br> I'm a 21-Year-Old Web/Software-Developer.</h1>
@@ -64,8 +66,21 @@ img {
     height: 100%;
 }
 
-.load {
-    display: none;
+.loader {
+    mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
+    -webkit-mask-size: 200% 100%;
+    mask-size: 200% 100%;
+    -webkit-animation: placeholder-wave 2s linear infinite;
+    animation: placeholder-wave 2s linear infinite;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(25, 25, 25);
+}
+
+@keyframes placeholder-wave {
+  100% {
+    mask-position: -200% 0%;
+  }
 }
 
 @media (max-width: 64em) {
@@ -78,6 +93,10 @@ img {
         width: 75%;
     }
 
+    .loader {
+        padding-top: 600px;
+    }
+
     .section:nth-child(1) {
         display: flex;
         justify-content: center;
@@ -86,7 +105,6 @@ img {
     .section:nth-child(2) {
         padding: 1rem;
     }
-
 }
 
 @media (max-width: 32em) {}
