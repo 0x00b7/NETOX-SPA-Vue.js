@@ -77,7 +77,7 @@ export default {
 }
 
 .section {
-  display: flex;
+  display: grid;
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
@@ -92,20 +92,17 @@ export default {
 }
 
 .showcase {
-  width: 100%;
   display: grid;
   justify-content: center;
   height: 800px;
-  background-color: rgba(255, 0, 0, 0.1);
+
 }
 
 .workflow {
-  width: 100%;
-  background-color: rgba(0, 255, 0, 0.1);
+
 }
 
 .vision {
-  background-color: rgba(0, 0, 255, 0.1);
   height: 200px;
   width: 100%;
 }

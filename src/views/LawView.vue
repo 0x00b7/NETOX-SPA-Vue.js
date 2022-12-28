@@ -20,7 +20,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
                <span class="fa-li">
                <i class="fa-solid fa-lock-keyhole"></i>
                </span>
-               <RouterLink :to="'/Law/privacy'">Privacy</RouterLink>
+               <RouterLink :to="'/Law/privacy'">Privacy Policy</RouterLink>
             </li>
             <li>
                <span class="fa-li">
@@ -41,33 +41,36 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 </template>
 
 <style scoped>
-.container {
-   background-color: rgba(15, 15, 15, 1);
+.header {
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
 }
 
 .header h1 {
    text-align: left;
+   margin-left: 1rem;
 }
 
 .section {
    display: flex;
-   padding: 2vh 5vh;
 }
 
 .select {
-   width: 50%;
+   width: 20%;
+   padding: 0.5rem 3rem;
    background-color: rgb(10, 10, 10);
-}
-
-.render {
-   width: 100%;
-   background-color: rgb(5, 5, 5);
-   padding: 1rem;
 }
 
 .select li {
    padding: 0.5rem 0.5rem;
    list-style-type: none;
+}
+
+.render {
+   width: 100%;
+   background-color: rgb(5, 5, 5);
+   padding: 0.5rem 1rem 1rem 1rem;
+   font-size: 16px;
 }
 
 @media (max-width: 64em) {
