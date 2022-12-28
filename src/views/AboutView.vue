@@ -108,7 +108,7 @@ img {
 
     .section:nth-child(2) {
         margin: 0;
-        padding-left: 0.5rem;
+        padding: 1rem 0 0 1rem;
     }
 }
 
