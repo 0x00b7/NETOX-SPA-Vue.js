@@ -11,8 +11,8 @@ export default {
         image.src = imageSrc;
 
         image.onload = () => {
-            this.$refs.loading.style.display = 'none';
-            this.$refs.image.style.display = 'block';
+         //   this.$refs.loading.style.display = 'none';
+         //   this.$refs.image.style.display = 'block';
         };
 
     },
@@ -70,21 +70,18 @@ img {
 
 .loader {
     mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
-    -webkit-mask-size: 200% 100%;
     mask-size: 200% 100%;
-    -webkit-animation: placeholder-wave 2s linear infinite;
-    animation: placeholder-wave 2s linear infinite;
+    animation: placeholder 2s linear infinite;
     width: 100%;
 }
 
 .placeholder {
-    display: flex;
     background-color: rgb(0, 0, 0);
     opacity: .5;
     height: 690px;
 }
 
-@keyframes placeholder-wave {
+@keyframes placeholder {
     100% {
         mask-position: -600% 0%;
     }

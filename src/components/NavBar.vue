@@ -158,7 +158,7 @@ header .sign .sign-background {
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2)100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 
 header .sign .sign-background div {
@@ -235,11 +235,6 @@ nav a:first-of-type {
     header {
         line-height: 1.2;
         max-height: 100vh;
-    }
-
-    header .sign {
-        justify-content: center;
-        padding-bottom: 0.5rem;
     }
 
     header .wrapper {
