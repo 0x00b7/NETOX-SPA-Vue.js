@@ -60,7 +60,7 @@ export default {
 img {
     display: none;
     content: url(../assets/images/admin.png);
-    animation: av_admin-fade 500ms linear forwards;
+    animation: image_fade 500ms linear forwards;
     animation-delay: 500ms;
     margin-left: 5%;
     opacity: 0;
@@ -114,7 +114,7 @@ img {
 
 @media (max-width: 32em) {}
 
-@keyframes av_admin-fade {
+@keyframes image_fade {
     from {
         opacity: 0;
     }
