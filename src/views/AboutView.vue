@@ -90,7 +90,8 @@ img {
 
     img {
         content: url(../assets/images/admin_small.png);
-        width: 75%;
+        width: 95%;
+        top: 0.5rem;
     }
 
     .loader {
@@ -103,7 +104,7 @@ img {
     }
 
     .section:nth-child(2) {
-        padding: 1rem;
+        padding-left: 0.5rem;
     }
 }
 
