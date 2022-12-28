@@ -1,7 +1,27 @@
+<script>
+export default {
+    mounted() {
+
+        const computedStyle = window.getComputedStyle(this.$refs.admin);
+
+        const imageSrc = computedStyle.content.slice(5, -2);
+
+        const image = new Image();
+
+        image.src = imageSrc;
+
+        image.onload = () => {
+            this.$refs.admin.style.display = 'block';
+        };
+
+    },
+};
+</script>
+
 <template>
     <div class="container">
        <div class="section">
-          <img alt="Loading..">
+         <img ref="admin">
        </div>
        <div class="section">
           <h1>My Name is Gernot, Founder of Netox.ws! <br> I'm a 21-Year-Old Web/Software-Developer.</h1>
@@ -34,6 +54,7 @@
 }
 
 img {
+    display: none;
     content: url(../assets/images/admin.png);
     animation: av_admin-fade 500ms linear forwards;
     animation-delay: 250ms;
@@ -41,6 +62,10 @@ img {
     opacity: 0;
     width: 100%;
     height: 100%;
+}
+
+.load {
+    display: none;
 }
 
 @media (max-width: 64em) {
