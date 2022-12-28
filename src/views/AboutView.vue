@@ -41,13 +41,12 @@ export default {
     display: flex;
 }
 
-.section {
-    width: 100%;
+.section:nth-child(2) {
+    margin: 0.5rem 1rem
 }
 
-.section:nth-child(2) {
-    margin-top: 0.5rem;
-    margin-left: 1rem;
+.section {
+    width: 100%;
 }
 
 .section h1 {
@@ -108,6 +107,7 @@ img {
     }
 
     .section:nth-child(2) {
+        margin: 0;
         padding-left: 0.5rem;
     }
 }
