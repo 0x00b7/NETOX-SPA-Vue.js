@@ -1,3 +1,37 @@
+<script>
+import anime from 'animejs'
+
+export default {
+    mounted() {
+        anime({
+            targets: '.function-based .el',
+            translateX: function(el) {
+                return el.getAttribute('data-x');
+            },
+            translateY: function(el, i) {
+              return el.getAttribute('data-y');
+            },
+            scale: function(el, i, l) {
+                return (l - i);
+            },
+            rotate: function() {
+                return anime.random(-360, 360);
+            },
+            borderRadius: function() {
+                return ['50%', anime.random(10, 50) + '%'];
+            },
+            duration: function() {
+                return anime.random(1200, 5000);
+            },
+            delay: function() {
+                return anime.random(0, 200);
+            },
+            easing: 'easeOutElastic(1, .8)',
+        });
+    }
+}
+</script>
+
 <template>
   <div class="container">
      <div class="header">
@@ -5,7 +39,15 @@
      </div>
      <div class="section">
         <div class="showcase">
-           <h2>_CENTER (SHOWCASE)</h2>
+           <div class="function-based">
+
+              <div data-x="0" data-y="100" class="circle el"></div>
+              <div data-x="0" data-y="250" class="circle el"></div>
+              <div data-x="0" data-y="370" class="circle el"></div>
+              <div data-x="0" data-y="450" class="circle el"></div>
+              <div data-x="0" data-y="500" class="circle el"></div>
+
+           </div>
         </div>
         <div class="workflow">
            <h2>_LEFT (WORKFLOW)</h2>
@@ -22,8 +64,14 @@
      </div>
   </div>
 </template>
- 
+
 <style scoped>
+.circle {
+  background-color: red;
+}
+
+/*_______*/
+
 .container {
   margin-top: 1rem;
 }
@@ -48,16 +96,16 @@
   display: grid;
   justify-content: center;
   height: 800px;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.1);
 }
 
 .workflow {
   width: 100%;
-  background-color: green;
+  background-color: rgba(0, 255, 0, 0.1);
 }
 
 .vision {
-  background-color: blue;
+  background-color: rgba(0, 0, 255, 0.1);
   height: 200px;
   width: 100%;
 }
