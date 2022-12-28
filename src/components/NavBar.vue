@@ -186,7 +186,7 @@ a.router-link-exact-active:hover {
     font-size: 42px;
     z-index: 2;
     border: 0;
-    right: 0;
+    right: 0.5rem;
 }
 
 .mobile-nav-toggle svg {
