@@ -46,12 +46,17 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
    display: flex;
 }
 
+.header {
+   background: linear-gradient(135deg, rgba(0, 90, 255, 0.5) 0%, rgba(37, 9, 121, 1) 65%, rgba(2, 0, 36, 1) 100%);
+   padding: 2rem
+}
+
 .header h1 {
    text-align: left;
 }
 
-.header {
-   padding: 2rem
+.header h2 {
+   font-weight: 400;
 }
 
 .select {
@@ -66,12 +71,11 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 }
 
 .select a {
-   font-weight: 600;
+   font-weight: 300;
 }
 
 .render {
    width: 100%;
-   background-color: rgb(5, 5, 5);
    padding: 0 1rem 0 1rem;
    font-size: 16px;
 }
@@ -79,6 +83,10 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 @media (max-width: 64em) {
    .section {
       display: grid;
+   }
+
+   .header {
+      padding: 1rem;
    }
 
    .select {
@@ -92,7 +100,5 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
    }
 }
 
-@media (max-width: 32em) {
-
-}
+@media (max-width: 32em) {}
 </style>
