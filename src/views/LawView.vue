@@ -62,8 +62,12 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 }
 
 .select li {
-   padding: 0.5rem 0.5rem;
+   padding: 0.5rem 0rem;
    list-style-type: none;
+}
+
+.select a {
+   font-weight: 600;
 }
 
 .render {
@@ -85,7 +89,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
    .select {
       width: 100%;
       display: grid;
-      padding: 0.5rem 3.5rem;
+      padding: 0.5rem 2.5rem;
    }
 
    .select li {
