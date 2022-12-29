@@ -73,8 +73,7 @@ export default {
 img {
     display: none;
     content: url(../assets/images/admin.png);
-    animation: image_fade 500ms linear forwards;
-    animation-delay: 500ms;
+    animation: image_fade 250ms linear forwards;
     margin-left: 5%;
     opacity: 0;
     width: 100%;
