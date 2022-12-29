@@ -80,6 +80,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 @media (max-width: 64em) {
    .section {
       display: grid;
+      margin-bottom: 1.5rem;
    }
 
    .header h1 {
