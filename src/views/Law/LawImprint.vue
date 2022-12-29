@@ -1,6 +1,6 @@
 <template>
     <div>
-      <h1>Information according to § 5 TMG</h1>
+      <h1>According to § 5 TMG</h1>
       <h3 style="font-weight: bolder;">NETOX</h3>
       <h3>Gernot Lehle</h3>
       <h3>Einsteinstraße 1</h3>
