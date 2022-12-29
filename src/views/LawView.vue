@@ -4,7 +4,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 </script>
 
 <template>
-   <div class="container">
+   <div id="footer" class="container">
       <div class="header">
          <h1>Law Center</h1>
          <h2>Protecting the security and privacy of our users is our top priority.</h2>

@@ -26,7 +26,7 @@ export default {
                     duration: 250
                 })
             }
-        }
+        },
     },
     mounted() {
         var emblem = document.querySelectorAll('.N, .E, .T, .O, .X')
