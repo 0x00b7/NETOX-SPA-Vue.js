@@ -53,13 +53,12 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 
 .section {
    display: flex;
-   margin-bottom: 1rem;
 }
 
 .select {
    width: 20%;
    padding: 0.5rem 3rem;
-   background-color: rgb(10, 10, 10);
+   background-color: rgba(0, 90, 255, 0.5);
 }
 
 .select li {
@@ -70,7 +69,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 .render {
    width: 100%;
    background-color: rgb(5, 5, 5);
-   padding: 0.5rem 1rem 1rem 1rem;
+   padding: 0 1rem 0 1rem;
    font-size: 16px;
 }
 

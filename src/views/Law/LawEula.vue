@@ -1,9 +1,8 @@
 <template>
-    <div class=eula>
-        <p>EULA.. (SOON)</p>
+    <div>
+        
     </div>
- </template>
-  
+</template>
 <style scoped>
 
 @media (max-width: 64em) {}
