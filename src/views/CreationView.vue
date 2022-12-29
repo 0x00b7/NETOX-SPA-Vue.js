@@ -82,11 +82,6 @@ export default {
   margin-bottom: 1rem;
 }
 
-.header {
-	margin-top: 0.5rem;
-	margin-bottom: 1rem;
-}
-
 .section div {
   padding: 1rem;
 }

@@ -7,6 +7,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
    <div class="container">
       <div class="header">
          <h1>Law Center</h1>
+         <h2>Protecting the security and privacy of our users is our top priority.</h2>
       </div>
       <div class="section">
          <div class="select">
@@ -41,18 +42,16 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 </template>
 
 <style scoped>
-.header {
-	margin-top: 0.5rem;
-	margin-bottom: 0.5rem;
+.section {
+   display: flex;
 }
 
 .header h1 {
    text-align: left;
-   margin-left: 1rem;
 }
 
-.section {
-   display: flex;
+.header {
+   padding: 2rem
 }
 
 .select {
@@ -80,11 +79,6 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 @media (max-width: 64em) {
    .section {
       display: grid;
-      margin-bottom: 1.5rem;
-   }
-
-   .header h1 {
-      text-align: center;
    }
 
    .select {

@@ -105,11 +105,6 @@ export default {
 	background-color: rgba(15, 15, 15, 1);
 }
 
-.header {
-	margin-top: 0.5rem;
-	margin-bottom: 1rem;
-}
-
 .section {
 	margin: 1rem;
 	display: flex;

@@ -6,6 +6,10 @@
   font-weight: 600;
 }
 
+.header {
+  padding: 0.5rem 0 1rem 0;
+}
+
 /* X-TOP */
 #TL {
   border-radius: 100%;

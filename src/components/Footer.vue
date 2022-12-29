@@ -7,7 +7,7 @@
                <span class="fa-li">
                <i class="fa-solid fa-scale-balanced"></i>
                </span>
-               <RouterLink to="/Law">Law Center</RouterLink>
+               <RouterLink to="/Law">Legal & Privacy</RouterLink>
             </li>
          </ul>
       </div>
@@ -79,12 +79,6 @@ footer div h3 {
    footer {
       height: 300px;
       display: grid;
-      border-top-left-radius: 50px 25px;
-      border-top-right-radius: 50px 25px;
-   }
-
-   footer div {
-      margin-bottom: 25px;
    }
 }
 </style>
