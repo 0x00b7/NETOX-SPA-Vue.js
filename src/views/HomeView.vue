@@ -101,12 +101,8 @@ export default {
  
 
 <style scoped>
-.container {
-	background-color: rgba(15, 15, 15, 1);
-}
-
 .section {
-	margin: 1rem;
+	margin: 1rem 2rem;
 	display: flex;
 }
 
@@ -205,11 +201,6 @@ li {
 }
 
 /* OUR STANDARD */
-.container h1:nth-child(3) {
-	text-align: center;
-	font-weight: 600;
-}
-
 .feature-box {
 	width: 100%;
 	height: 270px;
@@ -255,12 +246,12 @@ li {
 		grid-column-gap: 20px;
 	}
 
-	.define {
-		font-size: 16px;
-	}
-
 	.home {
 		font-size: 42px;
+	}
+
+	.define {
+		font-size: 16px;
 	}
 
 	.button {
@@ -278,13 +269,13 @@ li {
 }
 
 @media (max-width: 32em) {
-	.home {
-		font-size: 32px;
-	}
-
 	.section:nth-child(4) {
 		display: grid;
 		grid-template-columns: inherit;
+	}
+
+	.home {
+		font-size: 32px;
 	}
 }
 </style>

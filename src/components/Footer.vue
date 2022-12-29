@@ -49,14 +49,6 @@
 </template>
 
 <style scoped>
-ul {
-   margin: 0 0 0 0px;
-}
-
-li {
-   padding: 5px 0;
-}
-
 footer {
    position: relative;
    display: flex;
@@ -73,6 +65,14 @@ footer div {
 
 footer div h3 {
    font-weight: 600;
+}
+
+ul {
+   margin: 0 0 0 0px;
+}
+
+li {
+   padding: 5px 0;
 }
 
 @media (max-width: 64em) {

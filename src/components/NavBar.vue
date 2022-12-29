@@ -29,9 +29,9 @@ export default {
         },
     },
     mounted() {
-        var emblem = document.querySelectorAll('.N, .E, .T, .O, .X')
+        var sign = document.querySelectorAll('.N, .E, .T, .O, .X')
         anime({
-            targets: emblem,
+            targets: sign,
             opacity: [0, 1],
             translateX: [-270, 0],
             easing: 'easeOutElastic(1, 1)',
@@ -172,8 +172,21 @@ header .wrapper {
     flex-wrap: wrap;
 }
 
-a.router-link-exact-active:hover {
-    background-color: transparent;
+nav {
+    width: 100%;
+    font-size: 26px;
+    margin: 13px 0px 0px 15px;
+    font-style: normal;
+}
+
+nav a {
+    display: inline-block;
+    padding: 0 1.5rem;
+    border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+    border: 0;
 }
 
 .mobile-wrapper {
@@ -212,23 +225,6 @@ a.router-link-exact-active:hover {
 
 .mobile-nav ul li {
     margin-bottom: 1rem;
-}
-
-nav {
-    width: 100%;
-    font-size: 26px;
-    margin: 13px 0px 0px 15px;
-    font-style: normal;
-}
-
-nav a {
-    display: inline-block;
-    padding: 0 1.5rem;
-    border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-    border: 0;
 }
 
 @media (max-width: 64em) {

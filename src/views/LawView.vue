@@ -4,7 +4,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 </script>
 
 <template>
-   <div id="footer" class="container">
+   <div class="container">
       <div class="header">
          <h1>Law Center</h1>
          <h2>Protecting the security and privacy of our users is our top priority.</h2>
@@ -81,12 +81,12 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 }
 
 @media (max-width: 64em) {
-   .section {
-      display: grid;
-   }
-
    .header {
       padding: 1rem;
+   }
+
+   .section {
+      display: grid;
    }
 
    .select {

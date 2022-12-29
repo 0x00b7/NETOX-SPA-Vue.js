@@ -41,10 +41,6 @@ export default {
     display: flex;
 }
 
-.section:nth-child(2) {
-    margin: 0.5rem 1rem
-}
-
 .section {
     width: 100%;
 }
@@ -57,15 +53,8 @@ export default {
     margin-bottom: 2rem;
 }
 
-img {
-    display: none;
-    content: url(../assets/images/admin.png);
-    animation: image_fade 500ms linear forwards;
-    animation-delay: 500ms;
-    margin-left: 5%;
-    opacity: 0;
-    width: 100%;
-    height: 100%;
+.section:nth-child(2) {
+    margin: 0.5rem 1rem
 }
 
 .loader {
@@ -79,6 +68,17 @@ img {
     background-color: rgb(0, 0, 0);
     opacity: .5;
     height: 690px;
+}
+
+img {
+    display: none;
+    content: url(../assets/images/admin.png);
+    animation: image_fade 500ms linear forwards;
+    animation-delay: 500ms;
+    margin-left: 5%;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @keyframes placeholder {
@@ -104,8 +104,8 @@ img {
     }
 
     .section:nth-child(2) {
-        margin: 0;
         padding: 1rem 0 0 1rem;
+        margin: 0;
     }
 }
 

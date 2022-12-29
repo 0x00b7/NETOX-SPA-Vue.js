@@ -1,37 +1,3 @@
-<script>
-import anime from 'animejs'
-
-export default {
-    mounted() {
-        anime({
-            targets: '.function-based .el',
-            translateX: function(el) {
-                return el.getAttribute('data-x');
-            },
-            translateY: function(el, i) {
-              return el.getAttribute('data-y');
-            },
-            scale: function(el, i, l) {
-                return (l - i);
-            },
-            rotate: function() {
-                return anime.random(-360, 360);
-            },
-            borderRadius: function() {
-                return ['50%', anime.random(10, 50) + '%'];
-            },
-            duration: function() {
-                return anime.random(1200, 5000);
-            },
-            delay: function() {
-                return anime.random(0, 200);
-            },
-            easing: 'easeOutElastic(1, .8)',
-        });
-    }
-}
-</script>
-
 <template>
   <div class="container">
      <div class="header">
@@ -39,15 +5,7 @@ export default {
      </div>
      <div class="section">
         <div class="showcase">
-           <div class="function-based">
-
-              <div data-x="0" data-y="100" class="circle el"></div>
-              <div data-x="0" data-y="250" class="circle el"></div>
-              <div data-x="0" data-y="370" class="circle el"></div>
-              <div data-x="0" data-y="450" class="circle el"></div>
-              <div data-x="0" data-y="500" class="circle el"></div>
-
-           </div>
+          <h2>_CENTER (SHOWCASE)</h2>
         </div>
         <div class="workflow">
            <h2>_LEFT (WORKFLOW)</h2>
@@ -66,20 +24,12 @@ export default {
 </template>
 
 <style scoped>
-.circle {
-  background-color: red;
-}
-
-/*_______*/
-
 .container {
-  margin-top: 1rem;
+  display: grid;
 }
 
-.section {
-  display: grid;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.header {
+  background-color: red;
 }
 
 .section div {
@@ -87,26 +37,19 @@ export default {
 }
 
 .showcase {
-  display: grid;
-  justify-content: center;
   height: 800px;
-
 }
 
 .workflow {
-
+  height: 800px;
 }
 
 .vision {
   height: 200px;
-  width: 100%;
+  background-color: black;
 }
 
-@media (max-width: 64em) {
-  .section {
-    display: grid;
-  }
-}
+@media (max-width: 64em) {}
 
 @media (max-width: 32em) {}
 </style>

@@ -1,6 +1,5 @@
 /* MISCELLANEOUS */
 
-/* TEXT-HEADER */
 .header h1 {
   text-align: center;
   font-weight: 600;
@@ -10,24 +9,20 @@
   padding: 0.5rem 0 1rem 0;
 }
 
-/* X-TOP */
 #TL {
-  border-radius: 100%;
-  border-top: 3px solid crimson;
+  border-top: 1rem solid crimson;
   border-left: 0;
   border-right: 0;
   border-bottom: 0;
 }
 
-/* X-BOTTOM */
 #BL {
-  border-bottom: 3px solid crimson;
+  border-bottom: 1rem solid crimson;
   border-top: 0;
   border-left: 0;
   border-right: 0;
 }
 
-/* TEXT-GARDIENT */
 .gardient {
   animation: gardient 3s linear infinite;
   background: linear-gradient(to right, #FFF 20%, rgb(0, 100, 255) 40%, crimson 80%, #FFF 100%);
@@ -36,7 +31,7 @@
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   text-decoration: underline crimson;
-  text-decoration-thickness: 10px;
+  text-decoration-thickness: 0.5rem;
 }
 
 @keyframes gardient {
