@@ -235,7 +235,7 @@ const transitions = {
       }
   },
 
-  custom: {
+  cards: {
       in: {
           opacity: [0, 1],
           translateY: ["20vh", 0]

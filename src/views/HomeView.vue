@@ -10,7 +10,7 @@ export default {
       if (window.innerWidth > 512) {
         return "none";
       } else {
-        return "custom";
+        return "cards";
       }
     },
   },
@@ -27,7 +27,7 @@ export default {
 				<i class="fa-sharp fa-angle-right fa-fade"></i>
 				<i class="fa-sharp fa-angle-right fa-fade"></i>
 				<i class="fa-sharp fa-angle-right fa-fade"></i>
-				<RouterLink to="/creation">
+				<RouterLink to="/order-now">
 				   <div>
 					  <p>ORDER&nbsp;</p>
 					  <p>NOW</p>
