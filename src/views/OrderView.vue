@@ -25,7 +25,7 @@ export default {
               'background': 'linear-gradient(20deg, rgba(60,90,250,0.7) 0%, rgba(250,70,150,0.7) 100%)',
               delay: anime.stagger(150),
             });
-        }, 150);
+        }, 100);
     }
 }
 </script>
@@ -40,8 +40,8 @@ export default {
            <div class="feature-box">
               <h1>OnePager</h1>
               <span class="fa-stack fa-4x">
-                <i class="fa-sharp fa-square-1 fa-stack-1x"></i>
                 <i class="fa-solid fa-browser fa-stack-2x "></i>
+                <i class="fa-sharp fa-1 fa-stack-1x"></i>
               </span>
               <div>
                 <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</h3>
@@ -135,21 +135,18 @@ export default {
 
 .feature-box .fa-stack-2x {
   color: rgb(255, 255, 255);
+  filter: drop-shadow(0px 0px 25px rgb(0, 160, 255));
 }
 
-.feature-box .fa-stack-1x {
-  color: rgb(100, 255, 0);
-}
-
-.fa-square-1.fa-stack-1x {
-  left: 65px;
-  transform: scale(0.7) translateY(-112px);
+.fa-1.fa-stack-1x {
+  color: rgb(0, 120, 255);
+  transform: scale(0.8) translateY(20px);
 }
 
 .fa-arrow-up-9-1.fa-stack-1x {
   color: rgb(0, 120, 255);
   left: -24.5px;
-  transform: scale(0.8);
+  transform: scale(0.8)  translateY(5px);
 }
 
 .fa-cart-shopping.fa-stack-1x {
