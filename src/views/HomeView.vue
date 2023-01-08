@@ -213,7 +213,7 @@ li {
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 	text-align: center;
 	margin: 0 2vw 0 0;
-	padding: 20px 15px;
+	padding: 15px 15px;
 	justify-content: center;
 }
 
@@ -234,7 +234,7 @@ li {
 }
 
 .feature-box svg {
-	margin: 2rem 0;
+	margin: 2.5rem 0;
 	font-size: 72px;
 	filter: drop-shadow(0px 0px 3px rgb(255, 255, 255));
 }
