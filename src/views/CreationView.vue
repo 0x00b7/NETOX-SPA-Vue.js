@@ -11,7 +11,7 @@
            <h2>_LEFT (WORKFLOW)</h2>
         </div>
      </div>
-     <hr id="TL">
+     <hr id="T_LINE">
      <div class="header">
         <h1>Learn more about our product</h1>
      </div>

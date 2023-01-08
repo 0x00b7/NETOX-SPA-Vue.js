@@ -48,10 +48,7 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 
 .header {
    background: linear-gradient(135deg, rgba(0, 90, 255, 0.5) 0%, rgba(37, 9, 121, 1) 65%, rgba(2, 0, 36, 1) 100%);
-   padding: 2rem
-}
-
-.header h1 {
+   padding: 2rem;
    text-align: left;
 }
 

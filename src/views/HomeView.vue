@@ -20,7 +20,7 @@ export default {
 <template>
 	<div class="container">
 	   <!-- Section I -->
-	   <div class="section">
+	   <div class="section one">
 		  <div class="home">
 			 <h1>MAKE THE <br> WWW YOUR <br> <span class="gardient">TERRITORY!</span></h1>
 			 <div class="button">
@@ -69,12 +69,12 @@ export default {
 		  </div>
 	   </div>
 	   <!-- Section-Text -->
-	   <hr id="TL">
+	   <hr id="T_LINE">
 	   <div class="header">
 		  <h1>Our Standard</h1>
 	   </div>
 	   <!-- Section II -->
-	   <div class="section">
+	   <div class="section two">
 		  <ScrollSection :transition="transition()">
 			 <p>Awesome</p>
 			 <i class="fa-solid fa-sparkles"></i>
@@ -102,12 +102,16 @@ export default {
 
 <style scoped>
 .section {
-	margin: 1rem 2rem;
 	display: flex;
 }
 
-.section:nth-child(4) {
-	margin: 0rem 1rem 1rem 1rem;
+.section.one {
+	margin: 1rem 1rem;
+}
+
+.section.two {
+	margin: 0 1.5vw 1rem;
+	justify-content: center;
 }
 
 /* THE WWW.. */
@@ -205,11 +209,12 @@ li {
 	width: 100%;
 	height: 270px;
 	background-color: rgba(10, 10, 10, 1);
-	border-radius: 15px;
+	border-radius: 5px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 	text-align: center;
-	margin: 0 1rem 0 0;
+	margin: 0 2vw 0 0;
 	padding: 20px 15px;
+	justify-content: center;
 }
 
 .feature-box:last-child {
@@ -235,15 +240,16 @@ li {
 }
 
 @media (max-width: 64em) {
-	.section {
+	.section.one {
 		display: grid;
-		margin: 1rem;
+		margin: 0.5rem;
 	}
 
-	.section:nth-child(4) {
+	.section.two {
 		display: grid;
 		grid-template-columns: auto auto;
 		grid-column-gap: 20px;
+		margin: 0rem 1rem;
 	}
 
 	.home {
@@ -269,9 +275,10 @@ li {
 }
 
 @media (max-width: 32em) {
-	.section:nth-child(4) {
+	.section.two {
 		display: grid;
 		grid-template-columns: inherit;
+		margin: 0rem 1rem 1rem;
 	}
 
 	.home {
