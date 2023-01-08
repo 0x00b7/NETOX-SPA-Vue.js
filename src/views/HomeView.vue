@@ -106,7 +106,7 @@ export default {
 }
 
 .section.one {
-	margin: 1rem 1rem;
+	margin: 0.5rem 1.5rem 0rem;
 }
 
 .section.two {
@@ -242,7 +242,7 @@ li {
 @media (max-width: 64em) {
 	.section.one {
 		display: grid;
-		margin: 0.5rem;
+		margin: 0rem 0.5rem 0rem;
 	}
 
 	.section.two {
