@@ -122,11 +122,14 @@ export default {
 .feature-box {
   padding: 1rem;
   height: 550px;
-  margin-bottom: 0.5rem;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
   background-color: rgb(10, 10, 10);
   width: 100%;
   text-align: center;
+}
+
+.feature-box:last-child {
+  margin: 0;
 }
 
 .feature-box svg {
@@ -146,7 +149,7 @@ export default {
 .fa-arrow-up-9-1.fa-stack-1x {
   color: rgb(0, 120, 255);
   left: -24.5px;
-  transform: scale(0.8)  translateY(5px);
+  transform: scale(0.8) translateY(5px);
 }
 
 .fa-cart-shopping.fa-stack-1x {
@@ -173,17 +176,17 @@ export default {
   .order-panel {
     display: grid;
     grid-template-columns: auto auto;
-    grid-column-gap: 0.5rem;
+    grid-column-gap: 1rem;
+  }
+
+  .feature-box {
+    margin-bottom: 1rem;
   }
 }
 
 @media (max-width: 32em) {
   .container {
     margin-bottom: 108rem;
-  }
-
-  .section .header h1 {
-
   }
 
   .order-panel {
