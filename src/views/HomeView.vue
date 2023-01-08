@@ -71,7 +71,7 @@ export default {
 	   <!-- Section-Text -->
 	   <hr id="T_LINE">
 	   <div class="header">
-		  <h1>Our Standard</h1>
+		  <h1>The Standard</h1>
 	   </div>
 	   <!-- Section II -->
 	   <div class="section two">
