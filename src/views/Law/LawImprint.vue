@@ -28,7 +28,6 @@
  
   
 <style scoped>
-
 h1 {
    font-weight: 100;
    margin: 1rem 0;

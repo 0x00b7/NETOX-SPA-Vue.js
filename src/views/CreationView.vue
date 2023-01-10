@@ -24,8 +24,6 @@
 </template>
 
 <style scoped>
-
-
 .container {
   display: -ms-grid;
   display: grid;

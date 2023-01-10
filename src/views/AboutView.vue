@@ -37,8 +37,6 @@ export default {
  </template>
  
 <style scoped>
-
-
 .container {
     display: -webkit-box;
     display: -webkit-flex;

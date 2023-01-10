@@ -3,31 +3,31 @@ import anime from 'animejs';
 import OrderOpt from '../components/OrderOpt.vue';
 
 export default {
-  components: {
-    OrderOpt: OrderOpt,
-  },
-  data() {
-    return {
-      step: 1,
-      selection: ''
-    }
-  },
-  methods: {
-    incrementStep(name) {
-      anime({
-            targets: '.order-opt',
-            opacity: [1, 0],
-            duration: 100,
-            direction: 'linear',
-            easing: 'easeInQuad',
-        });
-      setTimeout(() => {
-        this.step++;
-      }, 100);
-      this.selection = name;
-      console.log(this.selection);
-    }
-  },
+    components: {
+        OrderOpt: OrderOpt,
+    },
+    data() {
+        return {
+            step: 1,
+            selection: ''
+        }
+    },
+    methods: {
+        incrementStep(name) {
+            anime({
+                targets: '.order-opt',
+                opacity: [1, 0],
+                duration: 100,
+                direction: 'linear',
+                easing: 'easeInQuad',
+            });
+            setTimeout(() => {
+                this.step++;
+            }, 100);
+            this.selection = name;
+            console.log(this.selection);
+        }
+    },
     mounted() {
         anime({
             targets: '.order-opt',
@@ -44,9 +44,14 @@ export default {
 
 <template>
   <div class="container">
+    <form
+      name="contact"
+      action="/pages/success"
+      method="POST"
+      data-netlify="true"> <input type="text" name="informations" :placeholder="selection"> </form>
      <div class="section">
         <div class="header">
-           <h1>Our Product's</h1>
+           <h1>{{ step }}/3</h1>
         </div>
         <div class="order-now">
            <div class="pSelect" v-show="step === 1">
@@ -70,12 +75,14 @@ export default {
            <div class="uInput" v-show="step === 2">
               <div class="uInterface">
                  <div class="order-inf">
-                    <label>Forename</label>
-                    <input type="text" name="lastname" placeholder=" ...">
+                    <label>Forename
+                      <input @input="updateTextBox" type="text" name="forename" placeholder=" ...">
+                    </label>
                  </div>
                  <div class="order-inf">
-                    <label>Surname</label>
-                    <input type="text" name="lastname" placeholder=" ...">
+                    <label>Surname
+                      <input @input="updateTextBox" type="text" name="surname" placeholder=" ...">
+                    </label>
                  </div>
               </div>
            </div>
@@ -85,8 +92,9 @@ export default {
 </template>
 
 <style scoped>
+form {
 
-
+}
 .container {
   display: -ms-grid;
   display: grid;
@@ -109,17 +117,9 @@ export default {
 /* Container */
 .order-now {
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  text-align: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          -webkit-justify-content: center;
-             -moz-box-pack: center;
-          justify-content: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .order-now .pSelect {
@@ -133,59 +133,49 @@ export default {
 }
 
 .order-now .uInput {
-  padding: 2rem;
-  height: 700px;
+  width: 90%;
+  padding-top: 1rem;
 }
 
-.order-now .uInterface {
-  height: 100%;
-}
-
-.uInterface label, input {
+.order-now .uInterface, .uInput {
   margin: 0 auto;
 }
 
 .uInterface label {
+  position: static;
   display: block;
-  text-align: left;
-  -webkit-transform: translateX(-150px);
-      -ms-transform: translateX(-150px);
-          -moz-transform: translateX(-150px);
-            -o-transform: translateX(-150px);
-       transform: translateX(-150px);
-  width: 200px;
-  font-size: 32px;
-  background-color: rgb(0, 0, 0);
-  -webkit-border-top-left-radius: 5px;
-     -moz-border-radius-topleft: 5px;
-          border-top-left-radius: 5px;
-  padding: 0.5rem;
-  top: 4px;
+  border-radius: 15px;
+  font-size: 18px;
+  height: 65px;
+  padding: 0.5rem 1rem;
+  width: auto;
   text-decoration: underline;
+  background: linear-gradient(10deg, rgba(255, 147, 147, 1) 10%, rgba(15, 129, 255, 1) 100%);
+  text-decoration-color: crimson;
+  text-decoration-thickness: 2px;
 }
+
 .uInterface input {
-  font-size: 1.5rem;
-  -webkit-border-radius: 5px;
-     -moz-border-radius: 5px;
-          border-radius: 5px;
+  display: grid;
+  margin-left: 0;
+  font-size: 24px;
   height: 0;
-  width: 500px;
-  background-color: rgb(0, 0, 0);
+  background: transparent;
   outline: none;
-  color: white;
+  color: rgb(255, 255, 255);
   border: 0;
-  padding: 1rem 0.5rem 1rem 0.5rem;
+  padding: 1rem 0rem 1rem 0.5rem;
 }
 
 .order-inf {
   margin-bottom: 1rem;
 }
+
 .order-opt {
   padding: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
   width: 100%;
-  text-align: center;
 }
 
 .order-opt h1 {
@@ -227,6 +217,19 @@ export default {
     grid-template-columns: auto auto;
     grid-column-gap: 1rem;
   }
+
+  .order-now .uInterface {
+    width: auto
+  }
+
+  .uInterface label {
+    width: auto;
+  }
+
+  .uInterface input {
+    width: auto;
+  }
+
 }
 
 @media (max-width: 32em) {
@@ -240,6 +243,11 @@ export default {
     -ms-grid-columns: inherit;
     grid-template-columns: inherit;
   }
+
+  .uInterface input {
+    width: auto;
+  }
+
 }
 </style>
 

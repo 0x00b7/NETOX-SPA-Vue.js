@@ -42,8 +42,6 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 </template>
 
 <style scoped>
-
-
 .section {
    display: -webkit-box;
    display: -ms-flexbox;
