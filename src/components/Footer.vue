@@ -49,8 +49,14 @@
 </template>
 
 <style scoped>
+
+
 footer {
    position: relative;
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -moz-box;
+   display: -ms-flexbox;
    display: flex;
    width: 100%;
    min-height: 50vh;
@@ -78,6 +84,7 @@ li {
 @media (max-width: 64em) {
    footer {
       height: 300px;
+      display: -ms-grid;
       display: grid;
    }
 }

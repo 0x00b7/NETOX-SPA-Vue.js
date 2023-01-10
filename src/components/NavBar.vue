@@ -143,7 +143,10 @@ export default {
  </template>
  
 <style scoped>
+
+
 header {
+    display: -ms-grid;
     display: grid;
 }
 
@@ -153,11 +156,19 @@ header .sign {
 }
 
 header .sign .sign-background {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     padding-left: 10px;
     padding-right: 15px;
     padding-top: 5px;
     padding-bottom: 5px;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.2)), to(rgba(255, 255, 255, 0.2)));
+    background: -webkit-linear-gradient(bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+    background: -moz-linear-gradient(bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+    background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 
@@ -167,9 +178,15 @@ header .sign .sign-background div {
 }
 
 header .wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
     place-items: flex-start;
-    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 }
 
 nav {
@@ -207,6 +224,10 @@ nav a:first-of-type {
 }
 
 .mobile-nav {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, rgba(15, 15, 15, 1)), to(rgba(0, 0, 0, 0)));
+    background: -webkit-linear-gradient(top, rgba(15, 15, 15, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    background: -moz-linear-gradient(top, rgba(15, 15, 15, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    background: -o-linear-gradient(top, rgba(15, 15, 15, 1) 50%, rgba(0, 0, 0, 0) 100%);
     background: linear-gradient(180deg, rgba(15, 15, 15, 1) 50%, rgba(0, 0, 0, 0) 100%);
     font-size: 1.5rem;
     position: fixed;

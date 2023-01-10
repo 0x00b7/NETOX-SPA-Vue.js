@@ -102,6 +102,10 @@ export default {
 
 <style scoped>
 .section {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
@@ -111,7 +115,11 @@ export default {
 
 .section.two {
 	margin: 0 1.5vw 1rem;
-	justify-content: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 /* THE WWW.. */
@@ -136,10 +144,18 @@ export default {
 	margin-top: 1.5rem;
 	width: 260px;
 	font-size: 80%;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 
 .button div {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -ms-flexbox;
 	display: flex;
 	padding: 0 0.2rem;
 }
@@ -153,28 +169,55 @@ export default {
 }
 
 .button div:hover>p:nth-child(2) {
-	animation-name: fa-shake;
-	animation-delay: 0s;
-	animation-direction: normal;
-	animation-duration: 2000ms;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
+	-webkit-animation-name: fa-shake;
+	   -moz-animation-name: fa-shake;
+	     -o-animation-name: fa-shake;
+	        animation-name: fa-shake;
+	-webkit-animation-delay: 0s;
+	   -moz-animation-delay: 0s;
+	     -o-animation-delay: 0s;
+	        animation-delay: 0s;
+	-webkit-animation-direction: normal;
+	   -moz-animation-direction: normal;
+	     -o-animation-direction: normal;
+	        animation-direction: normal;
+	-webkit-animation-duration: 2000ms;
+	   -moz-animation-duration: 2000ms;
+	     -o-animation-duration: 2000ms;
+	        animation-duration: 2000ms;
+	-webkit-animation-iteration-count: infinite;
+	   -moz-animation-iteration-count: infinite;
+	     -o-animation-iteration-count: infinite;
+	        animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+	   -moz-animation-timing-function: linear;
+	     -o-animation-timing-function: linear;
+	        animation-timing-function: linear;
 }
 
 .button svg:nth-child(1) {
-	animation-delay: 500ms;
+	-webkit-animation-delay: 500ms;
+	   -moz-animation-delay: 500ms;
+	     -o-animation-delay: 500ms;
+	        animation-delay: 500ms;
 	--fa-animation-duration: 2s;
 	--fa-fade-opacity: 0.1;
 }
 
 .button svg:nth-child(2) {
-	animation-delay: 1000ms;
+	-webkit-animation-delay: 1000ms;
+	   -moz-animation-delay: 1000ms;
+	     -o-animation-delay: 1000ms;
+	        animation-delay: 1000ms;
 	--fa-animation-duration: 2s;
 	--fa-fade-opacity: 0.1;
 }
 
 .button svg:nth-child(3) {
-	animation-delay: 1500ms;
+	-webkit-animation-delay: 1500ms;
+	   -moz-animation-delay: 1500ms;
+	     -o-animation-delay: 1500ms;
+	        animation-delay: 1500ms;
 	--fa-animation-duration: 2s;
 	--fa-fade-opacity: 0.1;
 }
@@ -209,12 +252,20 @@ li {
 	width: 100%;
 	height: 270px;
 	background-color: rgba(10, 10, 10, 1);
-	border-radius: 5px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+	-webkit-border-radius: 5px;
+	   -moz-border-radius: 5px;
+	        border-radius: 5px;
+	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+	   -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+	        box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
 	text-align: center;
 	margin: 0 2vw 0 0;
 	padding: 15px 15px;
-	justify-content: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	   -moz-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 .feature-box:last-child {
@@ -224,7 +275,9 @@ li {
 .feature-box p:nth-child(1) {
 	font-weight: 600;
 	font-size: 30px;
-	text-decoration: underline crimson;
+	-webkit-text-decoration: underline crimson;
+	   -moz-text-decoration: underline crimson;
+	        text-decoration: underline crimson;
 	text-decoration-thickness: 3px;
 }
 
@@ -236,17 +289,21 @@ li {
 .feature-box svg {
 	margin: 2.5rem 0;
 	font-size: 72px;
-	filter: drop-shadow(0px 0px 3px rgb(255, 255, 255));
+	-webkit-filter: drop-shadow(0px 0px 3px rgb(255, 255, 255));
+	        filter: drop-shadow(0px 0px 3px rgb(255, 255, 255));
 }
 
 @media (max-width: 64em) {
 	.section.one {
+		display: -ms-grid;
 		display: grid;
 		margin: 0rem 0.5rem 0rem;
 	}
 
 	.section.two {
+		display: -ms-grid;
 		display: grid;
+		-ms-grid-columns: auto 20px auto;
 		grid-template-columns: auto auto;
 		grid-column-gap: 20px;
 		margin: 0rem 1rem;
@@ -265,7 +322,10 @@ li {
 	}
 
 	.button div:hover>p:nth-child(2) {
-		animation-name: none;
+		-webkit-animation-name: none;
+		   -moz-animation-name: none;
+		     -o-animation-name: none;
+		        animation-name: none;
 	}
 
 	.feature-box {
@@ -276,7 +336,9 @@ li {
 
 @media (max-width: 32em) {
 	.section.two {
+		display: -ms-grid;
 		display: grid;
+		-ms-grid-columns: inherit;
 		grid-template-columns: inherit;
 		margin: 0rem 1rem 1rem;
 	}

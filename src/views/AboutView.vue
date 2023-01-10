@@ -37,7 +37,13 @@ export default {
  </template>
  
 <style scoped>
+
+
 .container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -58,9 +64,14 @@ export default {
 }
 
 .loader {
-    mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
-    mask-size: 200% 100%;
-    animation: placeholder 2s linear infinite;
+    -webkit-mask-image: -webkit-linear-gradient(320deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
+            mask-image: linear-gradient(130deg, #000 55%, rgba(0, 0, 0, 0.8) 75%, #000 95%);
+    -webkit-mask-size: 200% 100%;
+            mask-size: 200% 100%;
+    -webkit-animation: placeholder 2s linear infinite;
+       -moz-animation: placeholder 2s linear infinite;
+         -o-animation: placeholder 2s linear infinite;
+            animation: placeholder 2s linear infinite;
     width: 100%;
 }
 
@@ -73,21 +84,45 @@ export default {
 img {
     display: none;
     content: url(../assets/images/admin.png);
-    animation: image_fade 250ms linear forwards;
+    -webkit-animation: image_fade 250ms linear forwards;
+       -moz-animation: image_fade 250ms linear forwards;
+         -o-animation: image_fade 250ms linear forwards;
+            animation: image_fade 250ms linear forwards;
     margin-left: 5%;
     opacity: 0;
     width: 100%;
     height: 100%;
 }
 
-@keyframes placeholder {
+@-webkit-keyframes placeholder {
+    100% {
+        -webkit-mask-position: -600% 0%;
+                mask-position: -600% 0%;
+    }
+}
+
+@-moz-keyframes placeholder {
     100% {
         mask-position: -600% 0%;
     }
 }
 
+@-o-keyframes placeholder {
+    100% {
+        mask-position: -600% 0%;
+    }
+}
+
+@keyframes placeholder {
+    100% {
+        -webkit-mask-position: -600% 0%;
+                mask-position: -600% 0%;
+    }
+}
+
 @media (max-width: 64em) {
     .container {
+        display: -ms-grid;
         display: grid;
     }
 
@@ -98,8 +133,16 @@ img {
     }
 
     .section:nth-child(1) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     .section:nth-child(2) {
@@ -109,6 +152,39 @@ img {
 }
 
 @media (max-width: 32em) {}
+
+@-webkit-keyframes image_fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0%;
+    }
+}
+
+@-moz-keyframes image_fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0%;
+    }
+}
+
+@-o-keyframes image_fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+        margin-left: 0%;
+    }
+}
 
 @keyframes image_fade {
     from {

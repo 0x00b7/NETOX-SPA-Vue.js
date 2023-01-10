@@ -42,11 +42,20 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
 </template>
 
 <style scoped>
+
+
 .section {
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: -webkit-flex;
+   display: -moz-box;
    display: flex;
 }
 
 .header {
+   background: -o-linear-gradient(315deg, rgba(0, 90, 255, 0.5) 0%, rgba(37, 9, 121, 1) 65%, rgba(2, 0, 36, 1) 100%);
+   background: -webkit-linear-gradient(315deg, rgba(0, 90, 255, 0.5) 0%, rgba(37, 9, 121, 1) 65%, rgba(2, 0, 36, 1) 100%);
+   background: -moz-linear-gradient(315deg, rgba(0, 90, 255, 0.5) 0%, rgba(37, 9, 121, 1) 65%, rgba(2, 0, 36, 1) 100%);
    background: linear-gradient(135deg, rgba(0, 90, 255, 0.5) 0%, rgba(37, 9, 121, 1) 65%, rgba(2, 0, 36, 1) 100%);
    padding: 2rem;
    text-align: left;
@@ -83,11 +92,13 @@ import { useFadeIn, useFadeOut } from '../assets/scripts/AN/anime-route.js'
    }
 
    .section {
+      display: -ms-grid;
       display: grid;
    }
 
    .select {
       width: 100%;
+      display: -ms-grid;
       display: grid;
       padding: 0.5rem 2.5rem;
    }
