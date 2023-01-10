@@ -203,7 +203,8 @@ export default {
   text-align: center;
   font-weight: 500;
   font-size: 22px;
-  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .order-opt .pSelect:last-child {
