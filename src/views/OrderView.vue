@@ -66,9 +66,9 @@ export default {
 
 <template>
   <div class="container">
-    <form name="contact" method="POST" data-netlify="true">
-    <textarea v-model="combinedValues"></textarea>
-    <input type="text" name="data" v-model="combinedValues">
+    <form name="contact" method="POST" netlify>
+      <textarea v-model="combinedValues"></textarea>
+      <input type="text" name="data" v-model="combinedValues">
     </form>
      <div class="section">
         <div class="header">
