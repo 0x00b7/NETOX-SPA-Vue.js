@@ -93,7 +93,7 @@ export default {
                       <input type="text" :name="input.label" v-model="input.value" placeholder=" ...">
                     </label>
                  </div>
-                 <button @click="step++">Go Next</button>
+                 <button @click="step++">Next</button>
               </div>
            </div>
            <div class="uInput" v-show="step === 3">
