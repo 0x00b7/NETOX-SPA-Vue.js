@@ -67,11 +67,13 @@ export default {
 <template>
   <div class="container">
     <form
-    ref="form"
+      ref="form"
       name="contact"
       method="POST"
       data-netlify="true"> 
       
+    <input type="hidden" name="form-name" value="contact">
+    
     <textarea name="data" v-model="combinedValues"></textarea>
     
     </form>
