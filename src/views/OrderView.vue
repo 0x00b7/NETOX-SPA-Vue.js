@@ -66,16 +66,11 @@ export default {
 
 <template>
   <div class="container">
-    <form
-      ref="form"
-      name="contact"
-      method="POST"
-      data-netlify="true"> 
-      
-    <input type="hidden" name="form-name" value="contact">
-    
+    <form name="contact" method="POST" data-netlify="true">
+
     <textarea name="data" v-model="combinedValues"></textarea>
     
+    <button type="submit">Send</button>
     </form>
      <div class="section">
         <div class="header">
@@ -99,7 +94,7 @@ export default {
               </div>
            </div>
            <div class="uInput" v-show="step === 3">
-            <button @click="submitForm">Submit</button>
+
            </div>
         </div>
      </div>
