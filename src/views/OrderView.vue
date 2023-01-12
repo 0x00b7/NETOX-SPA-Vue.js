@@ -9,23 +9,45 @@ export default {
     data() {
         return {
             step: 1,
-            selection: ''
+            items: [{
+                h1: 'Onepager',
+                h3: 'A beautiful One-Page Website for information of all kinds, whether for business or private purposes.',
+                value: 1
+            }, {
+                h1: 'Multipager',
+                h3: 'Whenever you need a little extra space, this Website offers up to 9 pages with extensive info about your product, service & its benefits.',
+                value: 2
+            }, {
+                h1: 'Shop',
+                h3: 'Your sales will be a breeze, whether using Shopify, Etsy or a payment system of your choice, your customers will LOVE the design!',
+                value: 3
+            }, {
+                h1: 'Renew',
+                h3: 'Your old site needs a new polish, but you dont know how? then this selection is the right one for you!',
+                value: 4
+            }, ],
+            inputs: [{
+                label: 'Forename',
+                value: '',
+            }, {
+                label: 'Surname',
+                value: '',
+            }],
+            inputValue: null,
         }
     },
     methods: {
-        incrementStep(name) {
-            anime({
-                targets: '.order-opt',
-                opacity: [1, 0],
-                duration: 100,
-                direction: 'linear',
-                easing: 'easeInQuad',
-            });
-            setTimeout(() => {
-                this.step++;
-            }, 100);
-            this.selection = name;
-            console.log(this.selection);
+        saveValue(value) {
+            this.inputValue = value;
+            this.step++;
+        },
+    },
+    computed: {
+        combinedValues() {
+            return `Forename: ${this.inputs[0].value}, Surname: ${this.inputs[1].value}, Selection: ${this.inputValue}`;
+        },
+        submitForm() {
+            this.$refs.form.submit();
         }
     },
     mounted() {
@@ -45,46 +67,37 @@ export default {
 <template>
   <div class="container">
     <form
+    ref="form"
       name="contact"
-      action="/pages/success"
       method="POST"
-      data-netlify="true"> <input type="text" name="informations" :placeholder="selection"> </form>
+      data-netlify="true"> 
+      
+    <textarea name="data" v-model="combinedValues"></textarea>
+    
+    </form>
      <div class="section">
         <div class="header">
            <h1>{{ step }}/3</h1>
         </div>
         <div class="order-now">
            <div class="pSelect" v-show="step === 1">
-              <div class="order-opt" @click="incrementStep('Onepager')">
-                 <h1>Onepager</h1>
-                 <h3>A beautiful One-Page Website for information of all kinds, whether for business or private purposes.</h3>
-              </div>
-              <div class="order-opt" @click="incrementStep('Multipager')">
-                 <h1>Multipager</h1>
-                 <h3>Whenever you need a little extra space, this Website offers up to 9 pages with extensive info about your product, service & it's benefits.</h3>
-              </div>
-              <div class="order-opt" @click="incrementStep('Shop')">
-                 <h1>Shop</h1>
-                 <h3>Your sales will be a breeze, whether using Shopify, Etsy or a payment system of your choice, your customers will LOVE the design!</h3>
-              </div>
-              <div class="order-opt" @click="incrementStep('Renew')">
-                 <h1>Renew</h1>
-                 <h3>Your old site needs a new polish, but you don't know how? then this selection is the right one for you!</h3>
+              <div class="order-opt" v-for="(item, index) in items" :key="index" v-on:click="saveValue(item.value)">
+                 <h1>{{ item.h1 }}</h1>
+                 <h3>{{ item.h3 }}</h3>
               </div>
            </div>
            <div class="uInput" v-show="step === 2">
               <div class="uInterface">
-                 <div class="order-inf">
-                    <label>Forename
-                      <input @input="updateTextBox" type="text" name="forename" placeholder=" ...">
+                 <div class="order-inf" v-for="(input, index) in inputs" :key="index">
+                    <label>{{ input.label }}
+                      <input type="text" :name="input.label" v-model="input.value" placeholder=" ...">
                     </label>
                  </div>
-                 <div class="order-inf">
-                    <label>Surname
-                      <input @input="updateTextBox" type="text" name="surname" placeholder=" ...">
-                    </label>
-                 </div>
+                 <button @click="step++">Go Next</button>
               </div>
+           </div>
+           <div class="uInput" v-show="step === 3">
+            <button @click="submitForm">Submit</button>
            </div>
         </div>
      </div>
@@ -92,6 +105,14 @@ export default {
 </template>
 
 <style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+  position: absolute;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
 form {
 
 }
