@@ -46,9 +46,6 @@ export default {
         combinedValues() {
             return `Forename: ${this.inputs[0].value}, Surname: ${this.inputs[1].value}, Selection: ${this.inputValue}`;
         },
-        submitForm() {
-            this.$refs.form.submit();
-        }
     },
     mounted() {
         anime({
@@ -66,10 +63,6 @@ export default {
 
 <template>
   <div class="container">
-    <form name="contact" method="POST" netlify>
-      <textarea v-model="combinedValues"></textarea>
-      <input type="text" name="data" v-model="combinedValues">
-    </form>
      <div class="section">
         <div class="header">
            <h1>{{ step }}/3</h1>

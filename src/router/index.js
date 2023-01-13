@@ -8,6 +8,7 @@ import LawView from "../views/LawView.vue";
 import LawPrivacy from "../views/Law/LawPrivacy.vue";
 import LawImprint from "../views/Law/LawImprint.vue";
 import LawEula from "../views/Law/LawEula.vue";
+import Dev from "../views/Dev.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -21,6 +22,11 @@ const router = createRouter({
       path: "/creation",
       name: "creation",
       component: CreationView
+    },
+    {
+      path: "/dev",
+      name: "dev",
+      component: Dev
     },
     {
       path: "/order-now",
