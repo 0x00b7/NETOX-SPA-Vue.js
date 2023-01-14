@@ -7,6 +7,10 @@ export default {
             const navbar = document.querySelector('.mobile-nav')
             if (navbar.style.display === 'block') {
                 anime({
+                    targets: '.fa-compass',
+                    rotate: 0,
+                }),
+                anime({
                     targets: navbar,
                     easing: 'easeInOutQuad',
                     height: '0px',
@@ -18,6 +22,10 @@ export default {
                 })
             } else {
                 navbar.style.display = 'block'
+                anime({
+                    targets: '.fa-compass',
+                    rotate: 360,
+                }),
                 anime({
                     targets: navbar,
                     height: '350px',
@@ -134,7 +142,7 @@ export default {
              </div>
              <div class="mobile-wrapper">
                 <button class="mobile-nav-toggle" @click="toggleNavbar">
-                    <i class="fa-regular fa-square-list"></i>
+                    <i class="fa-sharp fa-solid fa-compass"></i>
                 </button>
              </div>
           </div>
