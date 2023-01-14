@@ -1,6 +1,6 @@
 <template>
     <div class="sorry">
-       <h1>Fehlgeschlagen, Versuche es später erneut!</h1>
+       <h1>Argh.. Something failed, please consider contacting us via email.</h1>
     </div>
  </template>
 

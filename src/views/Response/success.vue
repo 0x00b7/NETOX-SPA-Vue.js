@@ -1,6 +1,6 @@
 <template>
     <div class="success">
-       <h1>Vielen Dank für deine Submission!</h1>
+       <h1>Thank you! your Submission got applied! :-)</h1>
     </div>
  </template>
 
