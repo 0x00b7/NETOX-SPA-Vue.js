@@ -1,6 +1,6 @@
 <template>
     <div class="success">
-       <h1>Fehlgeschlagen, Versuche es später erneut!</h1>
+       <h1>Vielen Dank für deine Submission!</h1>
     </div>
  </template>
 
