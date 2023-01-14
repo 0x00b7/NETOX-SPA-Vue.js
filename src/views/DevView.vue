@@ -11,19 +11,13 @@
 import axios from "axios";
 
 export default {
-
-
-	data() {
-		return {
-			form: {
-				askPerson: ''
-			}
-		}
-	},
-
-	mounted() {
-		setTimeout(()=>{console.log(this.form.askPerson)}, 5000)
-	},
+    data() {
+        return {
+            form: {
+                askPerson: ''
+            }
+        }
+    },
 
     methods: {
         encode(data) {
@@ -47,7 +41,13 @@ export default {
                     ...this.form
                 }),
                 axiosConfig
-            );
+            )
+			.then(() => {
+				this.$router.push('thanks')
+			})
+			.catch(() => {
+				this.$router.push('404')
+			})
         }
     }
 }
