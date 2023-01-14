@@ -3,8 +3,7 @@
     name="ask-question"
     method="post"
     data-netlify="true"
-    data-netlify-honeypot="bot-field"
-    >
+    data-netlify-honeypot="bot-field">
     <input type="hidden" name="form-name" value="ask-question" />
     <label v-for="(panelist, index) in panelists" :key="index">
       <input
@@ -20,6 +19,7 @@
     <button>Submit</button>
   </form>
 </template>
+
 <script>
 export default {
   name: "QAForm",
