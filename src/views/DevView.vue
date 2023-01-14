@@ -1,10 +1,10 @@
 <template>
-	<form name="order-now" netlify netlify-honeypot="bot-field" @submit.prevent="handleSubmit">
-	   <textarea v-model="form.message" name="message"></textarea>
-	   <button @click="handleSubmit()">Send</button>
-	</form>
-</template> 
-
+<form name="order-now" @submit.prevent="handleSubmit">
+	<textarea v-model="form.message" name="message"></textarea>
+	<button @click="handleSubmit()">Send</button>
+</form>
+</template>
+ 
 <script>
 import axios from "axios";
 
@@ -33,19 +33,13 @@ export default {
                 }
             };
             axios.post(
-                    "/",
-                    this.encode({
-                        "form-name": "ask-question",
-                        ...this.form
-                    }),
-                    axiosConfig
-                )
-                .then(() => {
-                    this.$router.push('thanks')
-                })
-                .catch(() => {
-                    this.$router.push('sorry')
-                })
+                "/",
+                this.encode({
+                    "form-name": "order-now",
+                    ...this.form
+                }),
+                axiosConfig
+            );
         }
     }
 }
