@@ -1,5 +1,5 @@
 <template>
-	<form name="order-now" @submit.prevent="handleSubmit">
+	<form name="order-now" netlify netlify-honeypot="bot-field" @submit.prevent="handleSubmit">
 	   <textarea v-model="form.message" name="message"></textarea>
 	   <button @click="handleSubmit()">Send</button>
 	</form>
@@ -45,7 +45,7 @@ export default {
                 })
                 .catch(() => {
                     this.$router.push('sorry')
-                });
+                })
         }
     }
 }
