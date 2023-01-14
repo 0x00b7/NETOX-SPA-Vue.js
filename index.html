@@ -24,9 +24,10 @@
       </div>
       <div id="app"></div>
       <script type="module" src="/src/main.js"></script>
-      <form name="main-form" netlify netlify-honeypot="bot-field" hidden>
-        <input type="text" name="firstname" />
-        <input type="text" name="lastname" />
+      <form name="ask-question" netlify netlify-honeypot="bot-field" hidden>
+        <input type="text" name="name" />
+        <input type="radio" name="panelist" />
+        <textarea name="question"></textarea>
       </form>
    </body>
 </html>
