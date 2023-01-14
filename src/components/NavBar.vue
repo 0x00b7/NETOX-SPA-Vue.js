@@ -11,7 +11,7 @@ export default {
                     easing: 'easeInOutQuad',
                     height: '0px',
                     opacity: [1, 0],
-                    duration: 250,
+                    duration: 150,
                     complete: () => {
                         navbar.style.display = 'none'
                     }
@@ -23,7 +23,7 @@ export default {
                     height: '350px',
                     opacity: [0, 1],
                     easing: 'easeInOutQuad',
-                    duration: 250
+                    duration: 150
                 })
             }
         },
