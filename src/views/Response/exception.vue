@@ -1,11 +1,11 @@
 <template>
-    <div class="success">
+    <div class="sorry">
        <h1>Fehlgeschlagen, Versuche es später erneut!</h1>
     </div>
  </template>
 
 <style>
-.success {
+.sorry {
     padding: 2rem;
 }
 </style>
