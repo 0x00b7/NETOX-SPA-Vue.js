@@ -98,19 +98,19 @@ export default {
           <ul class="fa-ul">
              <li>
                 <span class="fa-li">
-                <i class="fa-solid fa-golf-flag-hole"></i>
+                <i class="fa-sharp fa-golf-flag-hole"></i>
                 </span>
                 <RouterLink @click="toggleNavbar" to="/">Home</RouterLink>
              </li>
              <li>
                 <span class="fa-li">
-                <i class="fa-solid fa-bolt"></i>
+                <i class="fa-sharp fa-bolt"></i>
                 </span>
                 <RouterLink @click="toggleNavbar" to="/creation">Creation</RouterLink>
              </li>
              <li>
                 <span class="fa-li">
-                <i class="fa-solid fa-book-user"></i>
+                <i class="fa-sharp fa-book-user"></i>
                 </span>
                 <RouterLink @click="toggleNavbar" to="/about">About</RouterLink>
              </li>

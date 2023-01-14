@@ -77,22 +77,22 @@ export default {
 	   <div class="section two">
 		  <ScrollSection :transition="transition()">
 			 <p>Awesome</p>
-			 <i class="fa-solid fa-sparkles"></i>
+			 <i class="fa-sharp fa-sparkles"></i>
 			 <p>We admire detail, keeping our Design as Clean as Possible!</p>
 		  </ScrollSection>
 		  <ScrollSection :transition="transition()">
 			 <p>Handmade</p>
-			 <i class="fa-duotone fa-cubes"></i>
+			 <i class="fa-sharp fa-cubes"></i>
 			 <p> Proudly to say, we program and set up our Projects 100% ourselves.</p>
 		  </ScrollSection>
 		  <ScrollSection :transition="transition()">
 			 <p>Responsive</p>
-			 <i class="fa-regular fa-laptop-mobile"></i>
+			 <i class="fa-sharp fa-laptop-mobile"></i>
 			 <p>We also pay attention to responsiveness on every Device.</p>
 		  </ScrollSection>
 		  <ScrollSection :transition="transition()">
 			 <p>Effortless</p>
-			 <i class="fa-solid fa-feather"></i>
+			 <i class="fa-sharp fa-feather"></i>
 			 <p>We care about a Flawless User experience, programming your Product!</p>
 		  </ScrollSection>
 	   </div>

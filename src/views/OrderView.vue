@@ -1,11 +1,7 @@
 <script>
 import anime from 'animejs';
-import OrderOpt from '../components/OrderOpt.vue';
 
 export default {
-    components: {
-        OrderOpt: OrderOpt,
-    },
     data() {
         return {
             step: 1,

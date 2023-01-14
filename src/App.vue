@@ -3,7 +3,10 @@ import { RouterView } from "vue-router";
 import { useFadeIn, useFadeOut } from './assets/scripts/AN/anime-route.js'
 import Footer from "./components/Footer.vue";
 import NavBar from "./components/NavBar.vue";
-import './assets/scripts/FA/all.min.js'
+
+import './assets/scripts/FA/fontawesome.min.js'
+import './assets/scripts/FA/sharp-solid.min.js'
+import './assets/scripts/FA/brands.min.js'
 </script>
 
 <template>
