@@ -7,10 +7,6 @@ export default {
             const navbar = document.querySelector('.mobile-nav')
             if (navbar.style.display === 'block') {
                 anime({
-                    targets: '.fa-compass',
-                    rotate: 0,
-                }),
-                anime({
                     targets: navbar,
                     easing: 'easeInOutQuad',
                     height: '0px',
@@ -22,10 +18,6 @@ export default {
                 })
             } else {
                 navbar.style.display = 'block'
-                anime({
-                    targets: '.fa-compass',
-                    rotate: 360,
-                }),
                 anime({
                     targets: navbar,
                     height: '350px',
@@ -140,19 +132,18 @@ export default {
                    <RouterLink to="/about">About</RouterLink>
                 </nav>
              </div>
-             <div class="mobile-wrapper">
-                <button class="mobile-nav-toggle" @click="toggleNavbar">
-                    <i class="fa-sharp fa-solid fa-compass"></i>
-                </button>
-             </div>
+          </div>
+          <div class="mobile-wrapper">
+             <button class="mobile-nav-toggle" @click="toggleNavbar">
+                <i class="fa-sharp fa-solid fa-compass"></i>
+             </button>
           </div>
        </div>
     </header>
  </template>
  
+ 
 <style scoped>
-
-
 header {
     display: -ms-grid;
     display: grid;
@@ -220,11 +211,8 @@ nav a:first-of-type {
 
 .mobile-nav-toggle {
     background-color: transparent;
-    position: fixed;
     font-size: 42px;
-    z-index: 2;
     border: 0;
-    right: 0.5rem;
 }
 
 .mobile-nav-toggle svg {
@@ -267,7 +255,12 @@ nav a:first-of-type {
     }
 
     .mobile-wrapper {
+        position: fixed;
         display: block;
+        right: 0;
+        top: 0;
+        padding: 5px;
+        z-index: 999;
     }
 }
 </style>
