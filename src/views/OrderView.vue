@@ -5,7 +5,9 @@ import axios from "axios";
 export default {
     data() {
         return {
+
             step: 1,
+
             items: [{
                 h1: 'Onepager',
                 h3: 'A beautiful One-Page Website for information of all kinds, whether for business or private purposes.',
@@ -23,21 +25,30 @@ export default {
                 h3: 'Your old site needs a new polish, but you dont know how? then this selection is the right one for you!',
                 value: 4
             }, ],
+
             inputs: [{
                 label: 'Forename',
-                value: '',
+                value: ''
             }, {
                 label: 'Surname',
-                value: '',
+                value: ''
             }],
+
             form: {
-              message: ''
+                message: '',
+                pId: 0,
             },
+
         }
     },
+    computed: {
+        message() {
+            this.form.message = `Forename: ${this.inputs[0].value}, Surname: ${this.inputs[1].value}`;
+        },
+    },
     methods: {
-        saveValue(value) {
-            this.form.message = value;
+        select(value) {
+            this.form.pId = value;
             this.step++;
         },
         encode(data) {
@@ -49,6 +60,7 @@ export default {
         },
 
         handleSubmit() {
+            this.message;
             const axiosConfig = {
                 header: {
                     "Content-Type": "application/x-www-form-urlencoded"
@@ -69,11 +81,6 @@ export default {
                     this.$router.push('sorry')
                 });
         }
-    },
-    computed: {
-        combinedValues() {
-            return `Forename: ${this.inputs[0].value}, Surname: ${this.inputs[1].value}, Selection: ${this.form.message}`;
-        },
     },
     mounted() {
         anime({
@@ -97,7 +104,7 @@ export default {
         </div>
         <div class="order-now">
            <div class="pSelect" v-show="step === 1">
-              <div class="order-opt" v-for="(item, index) in items" :key="index" v-on:click="saveValue(item.value)">
+              <div class="order-opt" v-for="(item, index) in items" :key="index" v-on:click="select(item.value)">
                  <h1>{{ item.h1 }}</h1>
                  <h3>{{ item.h3 }}</h3>
               </div>
@@ -114,8 +121,8 @@ export default {
            </div>
            <div class="uInput" v-show="step === 3">
               <form name="order-now" @submit.prevent="handleSubmit">
-                 <textarea v-model="combinedValues" name="message"></textarea>
-                 <button @click="handleSubmit()">Send</button>
+                 <textarea v-model="this.message" name="message"></textarea>
+                 <button>Send</button>
               </form>
            </div>
         </div>

@@ -1,7 +1,7 @@
 <template>
 	<form name="order-now" @submit.prevent="handleSubmit">
 		<textarea v-model="form.message" name="message"></textarea>
-		<button @click="handleSubmit()">Send</button>
+		<button>Send</button>
 	</form>
 	</template>
 	 
