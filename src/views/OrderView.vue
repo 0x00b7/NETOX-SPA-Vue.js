@@ -11,19 +11,15 @@ export default {
             items: [{
                 h1: 'Onepager',
                 h3: 'A beautiful One-Page Website for information of all kinds, whether for business or private purposes.',
-                value: 1
             }, {
                 h1: 'Multipager',
                 h3: 'Whenever you need a little extra space, this Website offers up to 9 pages with extensive info about your product, service & its benefits.',
-                value: 2
             }, {
                 h1: 'Shop',
                 h3: 'Your sales will be a breeze, whether using Shopify, Etsy or a payment system of your choice, your customers will LOVE the design!',
-                value: 3
             }, {
                 h1: 'Renew',
                 h3: 'Your old site needs a new polish, but you dont know how? then this selection is the right one for you!',
-                value: 4
             }, ],
 
             inputs: [{
@@ -36,21 +32,29 @@ export default {
 
             form: {
                 message: '',
-                pId: 0,
             },
 
         }
     },
     computed: {
+
         message() {
-            this.form.message = `Forename: ${this.inputs[0].value}, Surname: ${this.inputs[1].value}`;
+            this.form.message = `Product: ${this.form.message}\nForename: ${this.inputs[0].value}\nSurname: ${this.inputs[1].value}`;
         },
+
     },
     methods: {
+
         select(value) {
-            this.form.pId = value;
+            this.form.message = value;
             this.step++;
         },
+
+        next() {
+            this.message;
+            this.step++;
+        },
+
         encode(data) {
             return Object.keys(data)
                 .map(
@@ -60,7 +64,6 @@ export default {
         },
 
         handleSubmit() {
-            this.message;
             const axiosConfig = {
                 header: {
                     "Content-Type": "application/x-www-form-urlencoded"
@@ -104,7 +107,7 @@ export default {
         </div>
         <div class="order-now">
            <div class="pSelect" v-show="step === 1">
-              <div class="order-opt" v-for="(item, index) in items" :key="index" v-on:click="select(item.value)">
+              <div class="order-opt" v-for="(item, index) in items" :key="index" v-on:click="select(item.h1)">
                  <h1>{{ item.h1 }}</h1>
                  <h3>{{ item.h3 }}</h3>
               </div>
@@ -116,12 +119,12 @@ export default {
                     <input type="text" :name="input.label" v-model="input.value" placeholder=" ...">
                     </label>
                  </div>
-                 <button @click="step++">Next</button>
+                 <button @click="next">Next</button>
               </div>
            </div>
            <div class="uInput" v-show="step === 3">
               <form name="order-now" @submit.prevent="handleSubmit">
-                 <textarea v-model="this.message" name="message"></textarea>
+                 <textarea v-model="form.message" name="message"></textarea>
                  <button>Send</button>
               </form>
            </div>
