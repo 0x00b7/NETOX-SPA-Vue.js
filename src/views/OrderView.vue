@@ -22,35 +22,17 @@ export default {
                 h3: 'Your old site needs a new polish, but you dont know how? then this selection is the right one for you!',
             }, ],
 
-            inputs: [{
-                label: 'Forename',
-                value: ''
-            }, {
-                label: 'Surname',
-                value: ''
-            }, {
-                label: 'E-Mail',
-                value: ''
-            }, {
-                label: 'Phone number (optional)',
-                value: ''
-            }],
-
             form: {
-                message: '',
+                product: '',
+                forename: '',
+                description: '',
             },
         }
     },
 
-    computed: {
-        message() {
-            this.form.message = `Product: ${this.form.message}\nForename: ${this.inputs[0].value}\nSurname: ${this.inputs[1].value}\nE-Mail: ${this.inputs[2].value}\nPhone number: ${this.inputs[3].value}`;
-        },
-    },
-
     methods: {
         select(value) {
-            this.form.message = value;
+            this.form.product = value;
             anime({
                 targets: '.order-now',
                 opacity: [1, 0],
@@ -78,7 +60,6 @@ export default {
                 direction: 'linear',
                 easing: 'easeInQuad',
                 complete: () => {
-                    this.message;
                     this.step++;
                     anime({
                         targets: '.order-now',
@@ -91,7 +72,7 @@ export default {
             });
         },
 
-        re() {
+        back() {
             anime({
                 targets: '.order-now',
                 opacity: [1, 0],
@@ -99,8 +80,7 @@ export default {
                 direction: 'linear',
                 easing: 'easeInQuad',
                 complete: () => {
-                    this.step = 1;
-                    this.form.message = '';
+                    this.step--;
                     anime({
                         targets: '.order-now',
                         opacity: [0, 1],
@@ -145,7 +125,7 @@ export default {
 
     mounted() {
         anime({
-            targets: '.order-opt',
+            targets: '.order-btn',
             opacity: [0, 1],
             duration: 100,
             translateX: [-50, 0],
@@ -160,34 +140,49 @@ export default {
 <template>
   <div class="container">
      <div class="section">
+
         <div class="header">
-           <h1>{{ step }}/3</h1>
+           <h1>{{ step }}/4</h1>
         </div>
+
         <div class="order-now">
-           <div class="pSelect" v-show="step === 1">
-              <div class="order-opt" v-for="(item, index) in items" :key="index" v-on:click="select(item.h1)">
+           <div class="select" v-show="step === 1">
+              <div class="order-btn" v-for="(item, index) in items" :key="index" v-on:click="select(item.h1)">
                  <h1>{{ item.h1 }}</h1>
                  <h3>{{ item.h3 }}</h3>
               </div>
            </div>
-           <div class="uInput" v-show="step === 2">
-              <div class="uInterface">
-                 <div class="order-inf" v-for="(input, index) in inputs" :key="index">
-                    <label>{{ input.label }}
-                    <input type="text" :name="input.label" v-model="input.value" placeholder=" ...">
+
+           <div class="input" v-show="step === 2">
+              <div class="interface">
+                 <div class="user-input">
+                    <label>Name
+                    <input type="text" v-model="form.forename" placeholder=" ...">
                     </label>
                  </div>
               </div>
               <button class="next" @click="next">Procede</button>
-              <button class="correction" @click="re">Re-enter</button>
+              <button class="correction" @click="back">Back</button>
            </div>
-           <div class="uSubmit" v-show="step === 3">
+
+           <div class="input" v-show="step === 3">
+              <div class="interface">
+                 <label class="area">Describe your Website in a few Words
+                 <textarea v-model="form.description"></textarea>
+                 </label>
+              </div>
+              <button class="next" @click="next">Procede</button>
+              <button class="correction" @click="back">Back</button>
+           </div>
+
+           <div class="submit" v-show="step === 4">
               <form name="order-now" @submit.prevent="handleSubmit">
-                 <textarea v-model="form.message" name="message" disabled></textarea>
+                 <textarea name="message" disabled></textarea>
                  <button class="next">Send</button>
-                 <button type="button" class="correction" @click="re">Re-enter</button>
+                 <button type="button" class="correction" @click="back">Back</button>
               </form>
            </div>
+
         </div>
      </div>
   </div>
@@ -237,7 +232,7 @@ button.correction {
   user-select: none;
 }
 
-.pSelect {
+.select {
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,20 +242,20 @@ button.correction {
   height: auto;
 }
 
-.uInput {
+.input {
   display: grid;
   padding: 1rem;
   height: 100%;
 }
 
-.uSubmit,
+.submit,
 form {
   display: grid;
   text-align: center;
   padding: 0.5rem 0.5rem;
 }
 
-.uSubmit textarea {
+.submit textarea {
   background-color: rgba(30, 30, 30, 0.5);
   font-family: inherit;
   color: white;
@@ -274,11 +269,11 @@ form {
   border: 0;
 }
 
-.uInterface {
+.interface {
   display: grid;
 }
 
-.uInterface label {
+.interface label {
   position: static;
   display: block;
   border-radius: 5px;
@@ -289,7 +284,7 @@ form {
   background: linear-gradient(10deg, rgb(27, 27, 27) 10%, rgba(15, 129, 255, 1) 100%);
 }
 
-.uInterface input {
+.interface input {
   background: rgba(20, 20, 20, 0.3);
   color: rgb(255, 255, 255);
   padding: 1rem 0rem 1rem 0.5rem;
@@ -303,15 +298,43 @@ form {
   border: 0;
 }
 
-.order-inf {
+.interface label.area {
+  position: static;
+  display: block;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 500px;
+  padding: 0.5rem 1rem;
+  width: auto;
+  background: linear-gradient(10deg, rgb(27, 27, 27) 10%, rgb(255, 0, 100) 100%);
+  margin-bottom: 0.5rem;
+}
+
+.interface textarea {
+  background: rgba(20, 20, 20, 0.3);
+  color: rgb(255, 255, 255);
+  padding: 0rem 0rem 1rem 0.5rem;
+  display: grid;
+  border-radius: 5px;
+  font-size: 24px;
+  height: 460px;
+  top: 5px;
+  width: 100%;
+  outline: none;
+  border: 0;
+  resize: none;
+}
+
+
+.user-input {
   margin-bottom: 1rem;
 }
 
-.pSelect svg {
+.select svg {
   margin: 5rem;
 }
 
-.order-opt {
+.order-btn {
   background: linear-gradient(20deg, rgba(60, 90, 250, 0.7) 0%, rgba(250, 70, 150, 0.7) 100%);
   padding: 1rem;
   margin-right: 1rem;
@@ -319,12 +342,12 @@ form {
   width: 100%;
 }
 
-.order-opt h1 {
+.order-btn h1 {
   text-align: left;
   font-weight: 300;
 }
 
-.order-opt h3 {
+.order-btn h3 {
   min-width: 100%;
   word-wrap: break-word;
   text-align: center;
@@ -334,7 +357,7 @@ form {
   margin-bottom: 0.5rem;
 }
 
-.order-opt .pSelect:last-child {
+.order-btn .select:last-child {
   margin: 0;
 }
 
@@ -344,7 +367,7 @@ form {
     text-align: center;
   }
 
-  .pSelect {
+  .select {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto 1rem auto;
@@ -355,7 +378,7 @@ form {
 }
 
 @media (max-width: 32em) {
-  .pSelect {
+  .select {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: inherit;
