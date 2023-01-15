@@ -140,11 +140,9 @@ export default {
 <template>
   <div class="container">
      <div class="section">
-
         <div class="header">
            <h1>{{ step }}/4</h1>
         </div>
-
         <div class="order-now">
            <div class="select" v-show="step === 1">
               <div class="order-btn" v-for="(item, index) in items" :key="index" v-on:click="select(item.h1)">
@@ -152,7 +150,6 @@ export default {
                  <h3>{{ item.h3 }}</h3>
               </div>
            </div>
-
            <div class="input" v-show="step === 2">
               <div class="interface">
                  <div class="user-input">
@@ -164,7 +161,6 @@ export default {
               <button class="next" @click="next">Procede</button>
               <button class="correction" @click="back">Back</button>
            </div>
-
            <div class="input" v-show="step === 3">
               <div class="interface">
                  <label class="area">Describe your Website in a few Words
@@ -174,15 +170,15 @@ export default {
               <button class="next" @click="next">Procede</button>
               <button class="correction" @click="back">Back</button>
            </div>
-
            <div class="submit" v-show="step === 4">
               <form name="order-now" @submit.prevent="handleSubmit">
-                 <textarea name="message" disabled></textarea>
+                 <input name="product">
+                 <input name="forename">
+                 <input name="description">
                  <button class="next">Send</button>
                  <button type="button" class="correction" @click="back">Back</button>
               </form>
            </div>
-
         </div>
      </div>
   </div>
