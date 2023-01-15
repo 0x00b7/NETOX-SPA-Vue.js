@@ -22,17 +22,32 @@ export default {
                 h3: 'Your old site needs a new polish, but you dont know how? then this selection is the right one for you!',
             }, ],
 
+            inputs: [{
+                label: 'Forename',
+                value: ''
+            }, {
+                label: 'Surname',
+                value: ''
+            }, {
+                label: 'E-Mail',
+                value: ''
+            }],
+
             form: {
-                product: '',
-                forename: '',
-                description: '',
+                message: '',
             },
         }
     },
 
+    computed: {
+        message() {
+            this.form.message = `Product: ${this.form.message}\nForename: ${this.inputs[0].value}\nSurname: ${this.inputs[1].value}\nE-Mail: ${this.inputs[2].value}`;
+        },
+    },
+
     methods: {
         select(value) {
-            this.form.product = value;
+            this.form.message = value;
             anime({
                 targets: '.order-now',
                 opacity: [1, 0],
@@ -60,6 +75,7 @@ export default {
                 direction: 'linear',
                 easing: 'easeInQuad',
                 complete: () => {
+                    this.message;
                     this.step++;
                     anime({
                         targets: '.order-now',
@@ -109,7 +125,7 @@ export default {
             axios.post(
                     "/",
                     this.encode({
-                        "form-name": "order",
+                        "form-name": "order-now",
                         ...this.form
                     }),
                     axiosConfig
@@ -125,7 +141,7 @@ export default {
 
     mounted() {
         anime({
-            targets: '.order-btn',
+            targets: '.order-opt',
             opacity: [0, 1],
             duration: 100,
             translateX: [-50, 0],
@@ -141,42 +157,31 @@ export default {
   <div class="container">
      <div class="section">
         <div class="header">
-           <h1>{{ step }}/4</h1>
+           <h1>{{ step }}/3</h1>
         </div>
         <div class="order-now">
            <div class="select" v-show="step === 1">
-              <div class="order-btn" v-for="(item, index) in items" :key="index" v-on:click="select(item.h1)">
+              <div class="order-opt" v-for="(item, index) in items" :key="index" v-on:click="select(item.h1)">
                  <h1>{{ item.h1 }}</h1>
                  <h3>{{ item.h3 }}</h3>
               </div>
            </div>
-           <div class="input" v-show="step === 2">
+           <div class="uInput" v-show="step === 2">
               <div class="interface">
-                 <div class="user-input">
-                    <label>Name
-                    <input type="text" v-model="form.forename" placeholder=" ...">
+                 <div class="order-inf" v-for="(input, index) in inputs" :key="index">
+                    <label>{{ input.label }}
+                      <input type="text" :name="input.label" v-model="input.value" placeholder=" ...">
                     </label>
                  </div>
               </div>
               <button class="next" @click="next">Procede</button>
-              <button class="correction" @click="back">Back</button>
+              <button class="correction" @click="back">back</button>
            </div>
-           <div class="input" v-show="step === 3">
-              <div class="interface">
-                 <label class="area">Describe your Website in a few Words
-                 <textarea v-model="form.description"></textarea>
-                 </label>
-              </div>
-              <button class="next" @click="next">Procede</button>
-              <button class="correction" @click="back">Back</button>
-           </div>
-           <div class="submit" v-show="step === 4">
-              <form name="order" @submit.prevent="handleSubmit">
-                 <input name="product">
-                 <input name="forename">
-                 <input name="description">
+           <div class="submit" v-show="step === 3">
+              <form name="order-now" @submit.prevent="handleSubmit">
+                 <textarea v-model="form.message" name="message" disabled></textarea>
                  <button class="next">Send</button>
-                 <button type="button" class="correction" @click="back">Back</button>
+                 <button type="button" class="correction" @click="back">back</button>
               </form>
            </div>
         </div>
@@ -238,7 +243,7 @@ button.correction {
   height: auto;
 }
 
-.input {
+.uInput {
   display: grid;
   padding: 1rem;
   height: 100%;
@@ -322,7 +327,7 @@ form {
 }
 
 
-.user-input {
+.order-inf {
   margin-bottom: 1rem;
 }
 
@@ -330,7 +335,7 @@ form {
   margin: 5rem;
 }
 
-.order-btn {
+.order-opt {
   background: linear-gradient(20deg, rgba(60, 90, 250, 0.7) 0%, rgba(250, 70, 150, 0.7) 100%);
   padding: 1rem;
   margin-right: 1rem;
@@ -338,12 +343,12 @@ form {
   width: 100%;
 }
 
-.order-btn h1 {
+.order-opt h1 {
   text-align: left;
   font-weight: 300;
 }
 
-.order-btn h3 {
+.order-opt h3 {
   min-width: 100%;
   word-wrap: break-word;
   text-align: center;
@@ -353,7 +358,7 @@ form {
   margin-bottom: 0.5rem;
 }
 
-.order-btn .select:last-child {
+.order-opt .select:last-child {
   margin: 0;
 }
 
