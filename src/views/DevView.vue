@@ -47,6 +47,7 @@
 					this.$router.push('404')
 				});
 			}
+			
 		}
 	}
 	</script>

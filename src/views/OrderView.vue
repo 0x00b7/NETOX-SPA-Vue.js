@@ -1,5 +1,6 @@
 <script>
 import anime from 'animejs';
+import axios from "axios";
 
 export default {
     data() {
@@ -29,18 +30,49 @@ export default {
                 label: 'Surname',
                 value: '',
             }],
-            inputValue: null,
+            form: {
+              message: ''
+            },
         }
     },
     methods: {
         saveValue(value) {
-            this.inputValue = value;
+            this.form.message = value;
             this.step++;
         },
+        encode(data) {
+            return Object.keys(data)
+                .map(
+                    key => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+                )
+                .join("&");
+        },
+
+        handleSubmit() {
+            const axiosConfig = {
+                header: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                }
+            };
+            axios.post(
+                    "/",
+                    this.encode({
+                        "form-name": "order-now",
+                        ...this.form
+                    }),
+                    axiosConfig
+                )
+                .then(() => {
+                    this.$router.push('thanks')
+                })
+                .catch(() => {
+                    this.$router.push('404')
+                });
+        }
     },
     computed: {
         combinedValues() {
-            return `Forename: ${this.inputs[0].value}, Surname: ${this.inputs[1].value}, Selection: ${this.inputValue}`;
+            return `Forename: ${this.inputs[0].value}, Surname: ${this.inputs[1].value}, Selection: ${this.form.message}`;
         },
     },
     mounted() {
@@ -74,13 +106,17 @@ export default {
               <div class="uInterface">
                  <div class="order-inf" v-for="(input, index) in inputs" :key="index">
                     <label>{{ input.label }}
-                      <input type="text" :name="input.label" v-model="input.value" placeholder=" ...">
+                    <input type="text" :name="input.label" v-model="input.value" placeholder=" ...">
                     </label>
                  </div>
+                 <button @click="step++">Next</button>
               </div>
            </div>
            <div class="uInput" v-show="step === 3">
-
+              <form name="order-now" @submit.prevent="handleSubmit">
+                 <textarea v-model="combinedValues" name="message"></textarea>
+                 <button @click="handleSubmit()">Send</button>
+              </form>
            </div>
         </div>
      </div>
