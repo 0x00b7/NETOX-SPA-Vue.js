@@ -109,7 +109,7 @@ export default {
             axios.post(
                     "/",
                     this.encode({
-                        "form-name": "order-now",
+                        "form-name": "order",
                         ...this.form
                     }),
                     axiosConfig
@@ -171,7 +171,7 @@ export default {
               <button class="correction" @click="back">Back</button>
            </div>
            <div class="submit" v-show="step === 4">
-              <form name="order-now" @submit.prevent="handleSubmit">
+              <form name="order" @submit.prevent="handleSubmit">
                  <input name="product">
                  <input name="forename">
                  <input name="description">
