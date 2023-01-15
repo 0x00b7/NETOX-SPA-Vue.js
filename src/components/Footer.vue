@@ -58,10 +58,8 @@ footer {
    display: -moz-box;
    display: -ms-flexbox;
    display: flex;
-   width: 100%;
-   min-height: 50vh;
-   background-color: rgb(10, 10, 10);
    padding: 1rem 0rem 0rem 3rem;
+   height: 500px;
 }
 
 footer div {

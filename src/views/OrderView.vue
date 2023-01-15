@@ -3,9 +3,9 @@ import anime from 'animejs';
 import axios from "axios";
 
 export default {
+
     data() {
         return {
-
             step: 1,
 
             items: [{
@@ -28,31 +28,88 @@ export default {
             }, {
                 label: 'Surname',
                 value: ''
+            }, {
+                label: 'E-Mail',
+                value: ''
+            }, {
+                label: 'Phone number (optional)',
+                value: ''
             }],
 
             form: {
                 message: '',
             },
-
         }
     },
+
     computed: {
-
         message() {
-            this.form.message = `Product: ${this.form.message}\nForename: ${this.inputs[0].value}\nSurname: ${this.inputs[1].value}`;
+            this.form.message = `Product: ${this.form.message}\nForename: ${this.inputs[0].value}\nSurname: ${this.inputs[1].value}\nE-Mail: ${this.inputs[2].value}\nPhone number: ${this.inputs[3].value}`;
         },
-
     },
-    methods: {
 
+    methods: {
         select(value) {
             this.form.message = value;
-            this.step++;
+            anime({
+                targets: '.order-now',
+                opacity: [1, 0],
+                duration: 100,
+                direction: 'linear',
+                easing: 'easeInQuad',
+                complete: () => {
+                    this.step++;
+                    anime({
+                        targets: '.order-now',
+                        opacity: [0, 1],
+                        duration: 100,
+                        direction: 'linear',
+                        easing: 'easeInQuad',
+                    });
+                }
+            });
         },
 
         next() {
-            this.message;
-            this.step++;
+            anime({
+                targets: '.order-now',
+                opacity: [1, 0],
+                duration: 100,
+                direction: 'linear',
+                easing: 'easeInQuad',
+                complete: () => {
+                    this.message;
+                    this.step++;
+                    anime({
+                        targets: '.order-now',
+                        opacity: [0, 1],
+                        duration: 100,
+                        direction: 'linear',
+                        easing: 'easeInQuad',
+                    });
+                }
+            });
+        },
+
+        re() {
+            anime({
+                targets: '.order-now',
+                opacity: [1, 0],
+                duration: 100,
+                direction: 'linear',
+                easing: 'easeInQuad',
+                complete: () => {
+                    this.step = 1;
+                    this.form.message = '';
+                    anime({
+                        targets: '.order-now',
+                        opacity: [0, 1],
+                        duration: 100,
+                        direction: 'linear',
+                        easing: 'easeInQuad',
+                    })
+                }
+            })
         },
 
         encode(data) {
@@ -85,17 +142,18 @@ export default {
                 });
         }
     },
+
     mounted() {
         anime({
             targets: '.order-opt',
             opacity: [0, 1],
-            duration: 150,
+            duration: 100,
+            translateX: [-50, 0],
             direction: 'linear',
-            'background': 'linear-gradient(20deg, rgba(60,90,250,0.7) 0%, rgba(250,70,150,0.7) 100%)',
             easing: 'easeInQuad',
-            delay: anime.stagger(150),
+            delay: anime.stagger(100),
         });
-    }
+    },
 }
 </script>
 
@@ -119,13 +177,15 @@ export default {
                     <input type="text" :name="input.label" v-model="input.value" placeholder=" ...">
                     </label>
                  </div>
-                 <button @click="next">Next</button>
               </div>
+              <button class="next" @click="next">Procede</button>
+              <button class="correction" @click="re">Re-enter</button>
            </div>
-           <div class="uInput" v-show="step === 3">
+           <div class="uSubmit" v-show="step === 3">
               <form name="order-now" @submit.prevent="handleSubmit">
-                 <textarea v-model="form.message" name="message"></textarea>
-                 <button>Send</button>
+                 <textarea v-model="form.message" name="message" disabled></textarea>
+                 <button class="next">Send</button>
+                 <button type="button" class="correction" @click="re">Re-enter</button>
               </form>
            </div>
         </div>
@@ -134,24 +194,30 @@ export default {
 </template>
 
 <style scoped>
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .5s;
-  position: absolute;
-}
-.fade-enter, .fade-leave-to {
-  opacity: 0;
+button {
+  margin-bottom: 0.5rem;
 }
 
-form {
-
+button.next {
+  background-color: rgb(98, 0, 255);
+  font-family: inherit;
+  color: white;
+  font-size: 28px;
+  border: 0;
 }
+
+button.correction {
+  background-color: rgba(255, 187, 0, 1);
+  font-family: inherit;
+  color: white;
+  font-size: 28px;
+  border: 0;
+}
+
+
 .container {
   display: -ms-grid;
   display: grid;
-}
-
-.section {
-  height: 650px;
 }
 
 .section .header {
@@ -164,7 +230,6 @@ form {
   text-align: left;
 }
 
-/* Container */
 .order-now {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -172,8 +237,8 @@ form {
   user-select: none;
 }
 
-.order-now .pSelect {
-  margin: 1rem;
+.pSelect {
+  padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;
@@ -182,46 +247,72 @@ form {
   height: auto;
 }
 
-.order-now .uInput {
-  width: 90%;
-  padding-top: 1rem;
+.uInput {
+  display: grid;
+  padding: 1rem;
+  height: 100%;
 }
 
-.order-now .uInterface, .uInput {
-  margin: 0 auto;
+.uSubmit,
+form {
+  display: grid;
+  text-align: center;
+  padding: 0.5rem 0.5rem;
+}
+
+.uSubmit textarea {
+  background-color: rgba(30, 30, 30, 0.5);
+  font-family: inherit;
+  color: white;
+  resize: none;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 24px;
+  padding: 0.5rem 1rem;
+  height: 500px;
+  outline: 0;
+  border: 0;
+}
+
+.uInterface {
+  display: grid;
 }
 
 .uInterface label {
   position: static;
   display: block;
-  border-radius: 15px;
-  font-size: 18px;
-  height: 65px;
+  border-radius: 5px;
+  font-size: 14px;
+  height: 70px;
   padding: 0.5rem 1rem;
   width: auto;
-  text-decoration: underline;
-  background: linear-gradient(10deg, rgba(255, 147, 147, 1) 10%, rgba(15, 129, 255, 1) 100%);
-  text-decoration-color: crimson;
-  text-decoration-thickness: 2px;
+  background: linear-gradient(10deg, rgb(27, 27, 27) 10%, rgba(15, 129, 255, 1) 100%);
 }
 
 .uInterface input {
-  display: grid;
-  margin-left: 0;
-  font-size: 24px;
-  height: 0;
-  background: transparent;
-  outline: none;
+  background: rgba(20, 20, 20, 0.3);
   color: rgb(255, 255, 255);
-  border: 0;
   padding: 1rem 0rem 1rem 0.5rem;
+  display: grid;
+  border-radius: 5px;
+  font-size: 24px;
+  top: 5px;
+  width: 100%;
+  outline: none;
+  height: 0;
+  border: 0;
 }
 
 .order-inf {
   margin-bottom: 1rem;
 }
 
+.pSelect svg {
+  margin: 5rem;
+}
+
 .order-opt {
+  background: linear-gradient(20deg, rgba(60, 90, 250, 0.7) 0%, rgba(250, 70, 150, 0.7) 100%);
   padding: 1rem;
   margin-right: 1rem;
   margin-bottom: 1rem;
@@ -231,10 +322,6 @@ form {
 .order-opt h1 {
   text-align: left;
   font-weight: 300;
-}
-
-.order-now .pSelect svg {
-  margin: 5rem;
 }
 
 .order-opt h3 {
@@ -252,15 +339,12 @@ form {
 }
 
 @media (max-width: 64em) {
-  .container {
-    margin-bottom: 35rem;
-  }
 
   .section .header h1 {
     text-align: center;
   }
 
-  .order-now .pSelect {
+  .pSelect {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: auto 1rem auto;
@@ -268,36 +352,15 @@ form {
     grid-column-gap: 1rem;
   }
 
-  .order-now .uInterface {
-    width: auto
-  }
-
-  .uInterface label {
-    width: auto;
-  }
-
-  .uInterface input {
-    width: auto;
-  }
-
 }
 
 @media (max-width: 32em) {
-  .container {
-    margin-bottom: 108rem;
-  }
-
-  .order-now .pSelect {
+  .pSelect {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: inherit;
     grid-template-columns: inherit;
   }
-
-  .uInterface input {
-    width: auto;
-  }
-
 }
 </style>
 

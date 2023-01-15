@@ -17,10 +17,6 @@
         type: String,
         default: "fade",
       },
-      delay: {
-        type: Number,
-        default: "0",
-      },
     },
     setup(props) {
       let hasEnteredOnce = false;
@@ -54,7 +50,6 @@
           // here we spread in our custom transition properties
           // based on the transition prop provided.
           ...animeTransition,
-          delay: props.delay
         });
 
       });

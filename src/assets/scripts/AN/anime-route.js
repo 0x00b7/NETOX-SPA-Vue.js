@@ -15,7 +15,7 @@ function useFadeOut(el, done) {
     anime({
         targets: el,
         opacity: [1, 0],
-        duration: 50,
+        duration: 100,
         easing: 'easeInOutSine',
         complete: done,
     })
