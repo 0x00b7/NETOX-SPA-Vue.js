@@ -22,32 +22,25 @@ export default {
                 h3: 'Your old site needs a new polish, but you dont know how? then this selection is the right one for you!',
             }, ],
 
-            inputs: [{
-                label: 'Forename',
-                value: ''
-            }, {
-                label: 'Surname',
-                value: ''
-            }, {
-                label: 'E-Mail',
-                value: ''
-            }],
-
             form: {
-                message: '',
+                type: '',
+                forename: '',
+                surname: '',
+                email: '',
+                imagination: '',
             },
         }
     },
 
     computed: {
-        message() {
-            this.form.message = `Product: ${this.form.message}\nForename: ${this.inputs[0].value}\nSurname: ${this.inputs[1].value}\nE-Mail: ${this.inputs[2].value}`;
-        },
+      allFormValues: function() {
+        return `Type: ${this.form.type}\nForename: ${this.form.forename}\nSurname: ${this.form.surname}\nEmail: ${this.form.email}\nImagination: ${this.form.imagination}`
+      }
     },
 
     methods: {
         select(value) {
-            this.form.message = value;
+            this.form.type = value;
             anime({
                 targets: '.order-now',
                 opacity: [1, 0],
@@ -157,7 +150,7 @@ export default {
   <div class="container">
      <div class="section">
         <div class="header">
-           <h1>{{ step }}/3</h1>
+           <h1>{{ step }}/4</h1>
         </div>
         <div class="order-now">
            <div class="select" v-show="step === 1">
@@ -166,20 +159,41 @@ export default {
                  <h3>{{ item.h3 }}</h3>
               </div>
            </div>
-           <div class="uInput" v-show="step === 2">
+           <div class="input" v-show="step === 2">
               <div class="interface">
-                 <div class="order-inf" v-for="(input, index) in inputs" :key="index">
-                    <label>{{ input.label }}
-                      <input type="text" :name="input.label" v-model="input.value" placeholder=" ...">
+                 <div class="order-input">
+                    <label>Forename
+                    <input type="text" :name="form.forename" v-model="form.forename" placeholder="...">
+                    </label>
+                 </div>
+                 <div class="order-input">
+                    <label>Surname
+                    <input type="text" :name="form.surname" v-model="form.surname" placeholder="...">
+                    </label>
+                 </div>
+                 <div class="order-input">
+                    <label>E-Mail
+                    <input type="text" :name="form.email" v-model="form.email" placeholder="...">
                     </label>
                  </div>
               </div>
               <button class="next" @click="next">Procede</button>
               <button class="correction" @click="back">back</button>
            </div>
-           <div class="submit" v-show="step === 3">
+           <div class="input" v-show="step === 3">
+              <div class="interface">
+                 <div class="order-input">
+                    <label class="area">Describe your Website in a few words!
+                    <textarea :name="form.imagination" v-model="form.imagination" type="text" placeholder="..."></textarea>
+                    </label>
+                 </div>
+              </div>
+              <button class="next" @click="next">Procede</button>
+              <button class="correction" @click="back">back</button>
+           </div>
+           <div class="submit" v-show="step === 4">
               <form name="order-now" @submit.prevent="handleSubmit">
-                 <textarea v-model="form.message" name="message" disabled></textarea>
+                 <textarea v-model="allFormValues" disabled></textarea>
                  <button class="next">Send</button>
                  <button type="button" class="correction" @click="back">back</button>
               </form>
@@ -209,7 +223,6 @@ button.correction {
   font-size: 28px;
   border: 0;
 }
-
 
 .container {
   display: -ms-grid;
@@ -243,7 +256,7 @@ button.correction {
   height: auto;
 }
 
-.uInput {
+.input {
   display: grid;
   padding: 1rem;
   height: 100%;
@@ -282,7 +295,7 @@ form {
   height: 70px;
   padding: 0.5rem 1rem;
   width: auto;
-  background: linear-gradient(10deg, rgb(27, 27, 27) 10%, rgba(15, 129, 255, 1) 100%);
+  background: linear-gradient(20deg, rgba(60, 90, 250, 0.7) 0%, rgba(250, 70, 150, 0.7) 100%);
 }
 
 .interface input {
@@ -305,10 +318,8 @@ form {
   border-radius: 5px;
   font-size: 14px;
   height: 500px;
-  padding: 0.5rem 1rem;
   width: auto;
-  background: linear-gradient(10deg, rgb(27, 27, 27) 10%, rgb(255, 0, 100) 100%);
-  margin-bottom: 0.5rem;
+  background: linear-gradient(20deg, rgba(60, 90, 250, 0.7) 0%, rgba(250, 70, 150, 0.7) 100%);
 }
 
 .interface textarea {
@@ -327,8 +338,8 @@ form {
 }
 
 
-.order-inf {
-  margin-bottom: 1rem;
+.order-input {
+  margin-bottom: 1rem
 }
 
 .select svg {
