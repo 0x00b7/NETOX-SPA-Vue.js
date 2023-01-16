@@ -1,10 +1,12 @@
 <script>
 import anime from 'animejs';
 import axios from "axios";
+import { ColorPicker } from "vue3-colorpicker";
+import "vue3-colorpicker/style.css";
 
 export default {
-
-    data() {
+  components: { ColorPicker },
+  data() {
         return {
             step: 1,
 
@@ -27,6 +29,8 @@ export default {
                 forename: '',
                 surname: '',
                 email: '',
+                number: '',
+                scheme: 'black',
                 imagination: '',
             },
         }
@@ -34,7 +38,7 @@ export default {
 
     computed: {
       allFormValues: function() {
-        return `Type: ${this.form.type}\nForename: ${this.form.forename}\nSurname: ${this.form.surname}\nEmail: ${this.form.email}\nImagination: ${this.form.imagination}`
+        return `Type: ${this.form.type}\nForename: ${this.form.forename}\nSurname: ${this.form.surname}\nE-Mail: ${this.form.email}\nPhone number: ${this.form.number}\nColor Scheme: ${this.form.scheme}\nDescription*\n${this.form.imagination}`
       }
     },
 
@@ -149,9 +153,11 @@ export default {
 <template>
   <div class="container">
      <div class="section">
+
         <div class="header">
-           <h1>{{ step }}/4</h1>
+           <h1>{{ step }}/5</h1>
         </div>
+
         <div class="order-now">
            <div class="select" v-show="step === 1">
               <div class="order-opt" v-for="(item, index) in items" :key="index" v-on:click="select(item.h1)">
@@ -159,6 +165,7 @@ export default {
                  <h3>{{ item.h3 }}</h3>
               </div>
            </div>
+
            <div class="input" v-show="step === 2">
               <div class="interface">
                  <div class="order-input">
@@ -176,11 +183,27 @@ export default {
                     <input type="text" :name="form.email" v-model="form.email" placeholder="...">
                     </label>
                  </div>
+                 <div class="order-input">
+                    <label>Phone number
+                    <input type="text" :name="form.number" v-model="form.number" placeholder="...">
+                    </label>
+                 </div>
               </div>
               <button class="next" @click="next">Procede</button>
               <button class="correction" @click="back">back</button>
            </div>
+
            <div class="input" v-show="step === 3">
+              <div :style="{ 'background-color': form.scheme }" class="color-scheme">
+                <div class="color-picker">
+                  <color-picker isWidget="true" v-model:pureColor="form.scheme"/>
+                </div>
+              </div>
+              <button class="next" @click="next">Procede</button>
+              <button class="correction" @click="back">back</button>
+           </div>
+
+           <div class="input" v-show="step === 4">
               <div class="interface">
                  <div class="order-input">
                     <label class="area">Describe your Website in a few words!
@@ -191,13 +214,15 @@ export default {
               <button class="next" @click="next">Procede</button>
               <button class="correction" @click="back">back</button>
            </div>
-           <div class="submit" v-show="step === 4">
+
+           <div class="submit" v-show="step === 5">
               <form name="order-now" @submit.prevent="handleSubmit">
                  <textarea v-model="allFormValues" disabled></textarea>
                  <button class="next">Send</button>
                  <button type="button" class="correction" @click="back">back</button>
               </form>
            </div>
+
         </div>
      </div>
   </div>
@@ -210,18 +235,18 @@ button {
 
 button.next {
   background-color: rgb(98, 0, 255);
-  font-family: inherit;
-  color: white;
-  font-size: 28px;
   border: 0;
+  color: white;
+  font-family: inherit;
+  font-size: 28px;
 }
 
 button.correction {
   background-color: rgba(255, 187, 0, 1);
-  font-family: inherit;
-  color: white;
-  font-size: 28px;
   border: 0;
+  color: white;
+  font-family: inherit;
+  font-size: 28px;
 }
 
 .container {
@@ -230,7 +255,6 @@ button.correction {
 }
 
 .section .header {
-  padding: 1rem;
   padding-bottom: 0;
 }
 
@@ -240,47 +264,47 @@ button.correction {
 }
 
 .order-now {
-  -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  -webkit-user-select: none;
   user-select: none;
 }
 
 .select {
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
   display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
   display: flex;
   height: auto;
+  padding: 1rem;
 }
 
 .input {
   display: grid;
-  padding: 1rem;
   height: 100%;
+  padding: 1rem;
 }
 
 .submit,
 form {
   display: grid;
-  text-align: center;
   padding: 0.5rem 0.5rem;
+  text-align: center;
 }
 
 .submit textarea {
   background-color: rgba(30, 30, 30, 0.5);
-  font-family: inherit;
-  color: white;
-  resize: none;
-  margin-bottom: 1rem;
-  line-height: 1.5;
-  font-size: 24px;
-  padding: 0.5rem 1rem;
-  height: 500px;
-  outline: 0;
   border: 0;
+  color: white;
+  font-family: inherit;
+  font-size: 24px;
+  height: 500px;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  outline: 0;
+  padding: 0.5rem 1rem;
+  resize: none;
 }
 
 .interface {
@@ -288,55 +312,54 @@ form {
 }
 
 .interface label {
-  position: static;
-  display: block;
+  background: linear-gradient(20deg, rgba(60, 90, 250, 0.7) 0%, rgba(250, 70, 150, 0.7) 100%);
   border-radius: 5px;
+  display: block;
   font-size: 14px;
   height: 70px;
   padding: 0.5rem 1rem;
+  position: static;
   width: auto;
-  background: linear-gradient(20deg, rgba(60, 90, 250, 0.7) 0%, rgba(250, 70, 150, 0.7) 100%);
 }
 
 .interface input {
   background: rgba(20, 20, 20, 0.3);
-  color: rgb(255, 255, 255);
-  padding: 1rem 0rem 1rem 0.5rem;
-  display: grid;
   border-radius: 5px;
+  border: 0;
+  color: rgb(255, 255, 255);
+  display: grid;
   font-size: 24px;
+  height: 0;
+  outline: none;
+  padding: 1rem 0rem 1rem 0.5rem;
   top: 5px;
   width: 100%;
-  outline: none;
-  height: 0;
-  border: 0;
 }
 
 .interface label.area {
-  position: static;
-  display: block;
+  background: linear-gradient(20deg, rgba(60, 90, 250, 0.7) 0%, rgba(250, 70, 150, 0.7) 100%);
   border-radius: 5px;
+  display: block;
   font-size: 14px;
   height: 500px;
+  position: static;
   width: auto;
-  background: linear-gradient(20deg, rgba(60, 90, 250, 0.7) 0%, rgba(250, 70, 150, 0.7) 100%);
 }
 
 .interface textarea {
   background: rgba(20, 20, 20, 0.3);
-  color: rgb(255, 255, 255);
-  padding: 0rem 0rem 1rem 0.5rem;
-  display: grid;
   border-radius: 5px;
+  border: 0;
+  color: rgb(255, 255, 255);
+  display: grid;
   font-size: 24px;
   height: 460px;
+  outline: none;
+  padding: 0rem 0rem 1rem 0.5rem;
+  resize: none;
   top: 5px;
   width: 100%;
-  outline: none;
-  border: 0;
-  resize: none;
 }
-
 
 .order-input {
   margin-bottom: 1rem
@@ -346,27 +369,39 @@ form {
   margin: 5rem;
 }
 
+.color-scheme {
+  display: grid;
+  height: 500px;
+  margin-bottom: 1rem;
+}
+
+.color-scheme .color-picker {
+  justify-self: center;
+  margin: auto 0;
+  z-index: 0;
+}
+
 .order-opt {
   background: linear-gradient(20deg, rgba(60, 90, 250, 0.7) 0%, rgba(250, 70, 150, 0.7) 100%);
-  padding: 1rem;
-  margin-right: 1rem;
   margin-bottom: 1rem;
+  margin-right: 1rem;
+  padding: 1rem;
   width: 100%;
 }
 
 .order-opt h1 {
-  text-align: left;
   font-weight: 300;
+  text-align: left;
 }
 
 .order-opt h3 {
-  min-width: 100%;
-  word-wrap: break-word;
-  text-align: center;
-  font-weight: 500;
   font-size: 22px;
-  margin-top: 1.5rem;
+  font-weight: 500;
   margin-bottom: 0.5rem;
+  margin-top: 1.5rem;
+  min-width: 100%;
+  text-align: center;
+  word-wrap: break-word;
 }
 
 .order-opt .select:last-child {
@@ -374,26 +409,24 @@ form {
 }
 
 @media (max-width: 64em) {
-
   .section .header h1 {
     text-align: center;
   }
 
   .select {
+    -ms-grid-columns: auto 1rem auto;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto 1rem auto;
-    grid-template-columns: auto auto;
     grid-column-gap: 1rem;
+    grid-template-columns: auto auto;
   }
-
 }
 
 @media (max-width: 32em) {
   .select {
+    -ms-grid-columns: inherit;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: inherit;
     grid-template-columns: inherit;
   }
 }
