@@ -194,7 +194,7 @@ export default {
                  </div>
               </div>
               <button class="next" @click="next" :disabled="!uIsValid">Procede</button>
-              <button class="correction" @click="back">back</button>
+              <button class="correction" @click="back">Back</button>
            </div>
            <div class="input" v-show="step === 3">
               <div :style="{ 'background-color': form.scheme }" class="color-scheme">
@@ -203,7 +203,7 @@ export default {
                  </div>
               </div>
               <button class="next" @click="next">Procede</button>
-              <button class="correction" @click="back">back</button>
+              <button class="correction" @click="back">Back</button>
            </div>
            <div class="input" v-show="step === 4">
               <div class="interface">
@@ -214,13 +214,13 @@ export default {
                  </div>
               </div>
               <button class="next" @click="next" :disabled="!form.imagination">Procede</button>
-              <button class="correction" @click="back">back</button>
+              <button class="correction" @click="back">Back</button>
            </div>
            <div class="submit" v-show="step === 5">
               <form name="order-now" @submit.prevent="handleSubmit">
                  <textarea v-model="allAnswers" disabled></textarea>
                  <button class="next">Send</button>
-                 <button type="button" class="correction" @click="back">back</button>
+                 <button type="button" class="correction" @click="back">Back</button>
               </form>
            </div>
         </div>
