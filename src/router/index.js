@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import OrderView from "../views/OrderView.vue";
@@ -16,16 +17,6 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: "/thanks",
-      name: "success",
-      component: success
-    },
-    {
-      path: "/sorry",
-      name: "exception",
-      component: exception
-    },
-    {
       path: "/",
       name: "home",
       component: HomeView
@@ -39,6 +30,16 @@ const router = createRouter({
       path: "/order-now",
       name: "order-now",
       component: OrderView,
+    },
+    {
+      path: "/thanks",
+      name: "success",
+      component: success
+    },
+    {
+      path: "/sorry",
+      name: "exception",
+      component: exception
     },
     {
       path: "/about",

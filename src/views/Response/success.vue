@@ -1,3 +1,20 @@
+<script>
+import anime from 'animejs';
+
+export default {
+    mounted() {
+        anime({
+            targets: '.success',
+            opacity: [0, 1],
+            scale: [0, 1],
+            duration: 500,
+            direction: 'linear',
+            easing: 'easeInQuad',
+        })
+    }
+}
+</script>
+
 <template>
     <div class="success">
         <div class="notify">
@@ -8,17 +25,16 @@
      </div>
 </template>
 
-<style>
+<style scoped>
 .success {
     display: grid;
     height: 300px;
-    margin: 2rem;
 }
 
 .notify {
     text-align: center;
     justify-self: center;
-    margin: auto 0;
+    margin: auto 0.5rem;
 }
 
 .notify h1 {
@@ -26,6 +42,8 @@
 }
 
 .notify svg {
+    color: green;
+    filter: hue-rotate(20deg);
     padding: 2rem;
     font-size: 5rem;
 }

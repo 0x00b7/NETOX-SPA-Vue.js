@@ -1,11 +1,53 @@
+<script>
+import anime from 'animejs';
+
+export default {
+    mounted() {
+        anime({
+            targets: '.sorry',
+            opacity: [0, 1, 0, 1],
+            duration: 700,
+            direction: 'linear',
+            easing: 'easeInQuad',
+        })
+    }
+}
+</script>
+
 <template>
     <div class="sorry">
-       <h1>Argh.. Something failed, please consider contacting us via email.</h1>
-    </div>
- </template>
+        <div class="notify">
+            <h1>Argh!</h1>
+            <i class="fa-sharp fa-solid fa-hexagon-xmark"></i>
+            <h3>Something got wrong..<br/>Please consider contacting us via E-Mail or WhatsApp!</h3>
+        </div>
+     </div>
+</template>
 
-<style>
+<style scoped>
 .sorry {
+    display: grid;
+    height: 300px;
+}
+
+.notify {
+    text-align: center;
+    justify-self: center;
+    margin: auto 0.5rem;
+}
+
+.notify h1 {
+    font-weight: 700;
+}
+
+.notify svg {
+    color: red;
+    filter: hue-rotate(20deg);
     padding: 2rem;
+    font-size: 5rem;
+}
+
+.notify h3 {
+    font-weight: 200;
 }
 </style>
