@@ -160,11 +160,9 @@ export default {
 <template>
   <div class="container">
      <div class="section">
-
         <div class="header">
            <h1>{{ step }}/5</h1>
         </div>
-
         <div class="order-now">
            <div class="select" v-show="step === 1">
               <div class="order-opt" v-for="(item, index) in items" :key="index" v-on:click="select(item.h1)">
@@ -172,7 +170,6 @@ export default {
                  <h3>{{ item.h3 }}</h3>
               </div>
            </div>
-
            <div class="input" v-show="step === 2">
               <div class="interface">
                  <div class="order-input">
@@ -199,17 +196,15 @@ export default {
               <button class="next" @click="next" :disabled="!uIsValid">Procede</button>
               <button class="correction" @click="back">back</button>
            </div>
-
            <div class="input" v-show="step === 3">
               <div :style="{ 'background-color': form.scheme }" class="color-scheme">
-                <div class="color-picker">
-                  <color-picker isWidget="true" v-model:pureColor="form.scheme"/>
-                </div>
+                 <div class="color-picker">
+                    <color-picker isWidget="true" v-model:pureColor="form.scheme"/>
+                 </div>
               </div>
               <button class="next" @click="next">Procede</button>
               <button class="correction" @click="back">back</button>
            </div>
-
            <div class="input" v-show="step === 4">
               <div class="interface">
                  <div class="order-input">
@@ -221,7 +216,6 @@ export default {
               <button class="next" @click="next" :disabled="!form.imagination">Procede</button>
               <button class="correction" @click="back">back</button>
            </div>
-
            <div class="submit" v-show="step === 5">
               <form name="order-now" @submit.prevent="handleSubmit">
                  <textarea v-model="allAnswers" disabled></textarea>
@@ -229,7 +223,6 @@ export default {
                  <button type="button" class="correction" @click="back">back</button>
               </form>
            </div>
-
         </div>
      </div>
   </div>
@@ -247,6 +240,7 @@ button.next {
   font-family: inherit;
   font-size: 28px;
 }
+
 button.next:disabled {
   background-color: rgba(98, 0, 255, 0.5);
   color: rgba(255, 255, 255, 0.5)
