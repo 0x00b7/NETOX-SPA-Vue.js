@@ -79,7 +79,6 @@ export default {
                 direction: 'linear',
                 easing: 'easeInQuad',
                 complete: () => {
-                    this.message;
                     this.step++;
                     anime({
                         targets: '.order-now',
