@@ -9,7 +9,6 @@ import LawPrivacy from "../views/Law/LawPrivacy.vue";
 import LawImprint from "../views/Law/LawImprint.vue";
 import LawEula from "../views/Law/LawEula.vue";
 
-import DevView from "../views/DevView.vue";
 import success from "../views/Response/success.vue";
 import exception from "../views/Response/exception.vue";
 
@@ -25,11 +24,6 @@ const router = createRouter({
       path: "/sorry",
       name: "exception",
       component: exception
-    },
-    {
-      path: "/dev",
-      name: "dev",
-      component: DevView
     },
     {
       path: "/",
