@@ -398,6 +398,11 @@ form {
   margin-right: 1rem;
   padding: 1rem;
   width: 100%;
+  transition: 0.3s background-color;
+}
+
+.order-opt:hover {
+  background-color: red;
 }
 
 .order-opt h1 {
