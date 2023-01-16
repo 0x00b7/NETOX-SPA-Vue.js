@@ -1,12 +1,15 @@
 <script>
 import anime from 'animejs';
 import axios from "axios";
+
 import { ColorPicker } from "vue3-colorpicker";
 import "vue3-colorpicker/style.css";
 
 export default {
-  components: { ColorPicker },
-  data() {
+    components: {
+        ColorPicker
+    },
+    data() {
         return {
             step: 1,
 
@@ -30,16 +33,20 @@ export default {
                 surname: '',
                 email: '',
                 number: '',
-                scheme: 'black',
+                scheme: '#42a5f6',
                 imagination: '',
             },
         }
     },
 
     computed: {
-      allFormValues: function() {
-        return `Type: ${this.form.type}\nForename: ${this.form.forename}\nSurname: ${this.form.surname}\nE-Mail: ${this.form.email}\nPhone number: ${this.form.number}\nColor Scheme: ${this.form.scheme}\nDescription*\n${this.form.imagination}`
-      }
+        uIsValid() {
+            return this.form.forename && this.form.surname && this.form.email;
+        },
+
+        allAnswers: function() {
+            return `Type: ${this.form.type}\nForename: ${this.form.forename}\nSurname: ${this.form.surname}\nE-Mail: ${this.form.email}\nPhone number: ${this.form.number}\nColor Scheme: ${this.form.scheme}\nDescription*\n${this.form.imagination}`
+        }
     },
 
     methods: {
@@ -169,17 +176,17 @@ export default {
            <div class="input" v-show="step === 2">
               <div class="interface">
                  <div class="order-input">
-                    <label>Forename
+                    <label>Forename <span>*</span>
                     <input type="text" :name="form.forename" v-model="form.forename" placeholder="...">
                     </label>
                  </div>
                  <div class="order-input">
-                    <label>Surname
+                    <label>Surname <span>*</span>
                     <input type="text" :name="form.surname" v-model="form.surname" placeholder="...">
                     </label>
                  </div>
                  <div class="order-input">
-                    <label>E-Mail
+                    <label>E-Mail <span>*</span>
                     <input type="text" :name="form.email" v-model="form.email" placeholder="...">
                     </label>
                  </div>
@@ -189,7 +196,7 @@ export default {
                     </label>
                  </div>
               </div>
-              <button class="next" @click="next">Procede</button>
+              <button class="next" @click="next" :disabled="!uIsValid">Procede</button>
               <button class="correction" @click="back">back</button>
            </div>
 
@@ -211,13 +218,13 @@ export default {
                     </label>
                  </div>
               </div>
-              <button class="next" @click="next">Procede</button>
+              <button class="next" @click="next" :disabled="!form.imagination">Procede</button>
               <button class="correction" @click="back">back</button>
            </div>
 
            <div class="submit" v-show="step === 5">
               <form name="order-now" @submit.prevent="handleSubmit">
-                 <textarea v-model="allFormValues" disabled></textarea>
+                 <textarea v-model="allAnswers" disabled></textarea>
                  <button class="next">Send</button>
                  <button type="button" class="correction" @click="back">back</button>
               </form>
@@ -239,6 +246,10 @@ button.next {
   color: white;
   font-family: inherit;
   font-size: 28px;
+}
+button.next:disabled {
+  background-color: rgba(98, 0, 255, 0.5);
+  color: rgba(255, 255, 255, 0.5)
 }
 
 button.correction {
@@ -320,6 +331,13 @@ form {
   padding: 0.5rem 1rem;
   position: static;
   width: auto;
+}
+
+.interface label span {
+  color: rgba(255, 20, 20, 0.7);
+  font-size: 2rem;
+  position: absolute;
+  margin: -3px 0 0 3px;
 }
 
 .interface input {
