@@ -11,9 +11,9 @@ export default {
             targets: '.fa-angle-right',
             opacity: [1, 1, 0.5, 0.5, 1, 1],
 			easing: 'easeInQuad',
-            duration: 1000,
+            duration: 800,
 			loop: true,
-			delay: anime.stagger(100)
+			delay: anime.stagger(250)
         })
     },
     methods: {
