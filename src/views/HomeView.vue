@@ -79,7 +79,7 @@ export default {
 	   </div>
 	   <!-- Section-Text -->
 	   <div class="header">
-		  <h1>The Standard</h1>
+		  <h1>Features</h1>
 	   </div>
 	   <!-- Section II -->
 	   <div class="section">
@@ -121,8 +121,8 @@ export default {
 	padding: 1rem;
 }
 
-.section:last-child {
-	
+.header {
+	background-color: rgba(10, 10, 10, 0.2);
 }
 
 /* THE WWW.. */
@@ -151,10 +151,10 @@ export default {
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	background-color: rgb(26, 26, 26);
+	background: linear-gradient(145deg, rgba(255,0,50,0.2) 0%, rgba(160, 0, 255, 0.2) 100%);
 	width: fit-content;
 	padding: 0.5rem;
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 }
 
 .button div {
@@ -213,7 +213,7 @@ export default {
 	margin-top: 1rem;
 	font-weight: 600;
 	text-align: center;
-	border-bottom: 1px solid var(--color-border);
+	border-bottom: 2px solid var(--color-border);
 }
 
 ul {
