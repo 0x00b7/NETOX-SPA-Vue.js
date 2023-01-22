@@ -1,3 +1,15 @@
+<script>
+import anime from 'animejs';
+
+export default {
+  mounted() {
+    anime({
+      targets: '.fa-fire-flame-simple',
+    })
+  }
+}
+</script>
+
 <template>
   <div class="container">
      <div class="header">
@@ -5,10 +17,12 @@
      </div>
      <div class="section">
         <div class="showcase">
-          <h2>_CENTER (SHOWCASE)</h2>
+          <div class="anim">
+            <i class="fa-brands fa-space-awesome"></i>
+          </div>
         </div>
         <div class="workflow">
-           <h2>_LEFT (WORKFLOW)</h2>
+           <h3>_LEFT (WORKFLOW)</h3>
         </div>
      </div>
      <hr id="T_LINE">
@@ -17,7 +31,7 @@
      </div>
      <div class="section">
         <div class="vision">
-           <p>Lorem Ipsum</p>
+          <h3>_CENTER (VISION)</h3>
         </div>
      </div>
   </div>
@@ -29,28 +43,30 @@
   display: grid;
 }
 
-.header {
-  background-color: red;
+.showcase, .workflow {
+  display: grid;
+  height: 500px;
+  padding: 20vw;
 }
 
-.section div {
-  padding: 1rem;
-}
-
-.showcase {
-  height: 800px;
+.showcase .anim {
+  display: grid;
+  font-size: 12rem;
 }
 
 .workflow {
-  height: 800px;
+  justify-content: end;
 }
 
 .vision {
-  height: 200px;
-  background-color: black;
+  justify-content: center;
 }
 
-@media (max-width: 64em) {}
+@media (max-width: 64em) {
+  .showcase, .workflow  {
+    justify-content: center;
+  }
+}
 
 @media (max-width: 32em) {}
 </style>

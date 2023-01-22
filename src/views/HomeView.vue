@@ -1,19 +1,17 @@
 <script>
-import ScrollSection from "../components/ScrollSection.vue";
+import OS from "../components/OS.vue";
 
 export default {
-  components: {
-    ScrollSection: ScrollSection,
-  },
-  methods: {
-    transition() {
-      if (window.innerWidth > 512) {
-        return "none";
-      } else {
-        return "cards";
-      }
+    components: {
+        OS: OS,
     },
-  },
+    methods: {
+        mobile() {
+            if (window.innerWidth > 512) {
+                return "none";
+            }
+        },
+    },
 };
 </script>
 
@@ -75,26 +73,26 @@ export default {
 	   </div>
 	   <!-- Section II -->
 	   <div class="section two">
-		  <ScrollSection :transition="transition()">
+		  <OS class="feature-box" :anim="mobile()">
 			 <p>Awesome</p>
 			 <i class="fa-sharp fa-sparkles"></i>
 			 <p>We admire detail, keeping our Design as Clean as Possible!</p>
-		  </ScrollSection>
-		  <ScrollSection :transition="transition()">
+		  </OS>
+		  <OS class="feature-box" :anim="mobile()">
 			 <p>Handmade</p>
 			 <i class="fa-sharp fa-cubes"></i>
 			 <p> Proudly to say, we program and set up our Projects 100% ourselves.</p>
-		  </ScrollSection>
-		  <ScrollSection :transition="transition()">
+		  </OS>
+		  <OS class="feature-box" :anim="mobile()">
 			 <p>Responsive</p>
 			 <i class="fa-sharp fa-laptop-mobile"></i>
 			 <p>We also pay attention to responsiveness on every Device.</p>
-		  </ScrollSection>
-		  <ScrollSection :transition="transition()">
+		  </OS>
+		  <OS class="feature-box" :anim="mobile()">
 			 <p>Effortless</p>
 			 <i class="fa-sharp fa-feather"></i>
 			 <p>We care about a Flawless User experience, programming your Product!</p>
-		  </ScrollSection>
+		  </OS>
 	   </div>
 	</div>
  </template>
