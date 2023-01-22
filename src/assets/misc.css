@@ -9,14 +9,6 @@
 	font-weight: 600;
 }
 
-#T_LINE {
-  top: 10px;
-  border-top: 0.5rem solid crimson;
-  border-left: 0;
-  border-right: 0;
-  border-bottom: 0;
-}
-
 .gardient {
   -webkit-animation: gardient 3s linear infinite;
      -moz-animation: gardient 3s linear infinite;
@@ -34,9 +26,6 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  -webkit-text-decoration: underline crimson;
-     -moz-text-decoration: underline crimson;
-          text-decoration: underline crimson;
   text-decoration-thickness: 0.5rem;
 }
 

@@ -25,7 +25,6 @@ export default {
            <h3>_LEFT (WORKFLOW)</h3>
         </div>
      </div>
-     <hr id="T_LINE">
      <div class="header">
         <h1>Learn more about our product</h1>
      </div>

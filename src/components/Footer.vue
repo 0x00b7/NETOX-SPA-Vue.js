@@ -52,6 +52,8 @@
 
 
 footer {
+   box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 1);
+   z-index: 0;
    position: relative;
    display: -webkit-box;
    display: -webkit-flex;
@@ -60,6 +62,7 @@ footer {
    display: flex;
    padding: 1rem 0rem 0rem 3rem;
    height: 500px;
+   background: linear-gradient(164deg, rgb(0, 16, 40) 0%, rgb(40, 0, 50) 100%); 
 }
 
 footer div {

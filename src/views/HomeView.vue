@@ -1,9 +1,20 @@
 <script>
 import OS from "../components/OS.vue";
+import anime from "animejs";
 
 export default {
     components: {
         OS: OS,
+    },
+    mounted() {
+        anime({
+            targets: '.fa-angle-right',
+            opacity: [1, 1, 0.5, 0.5, 1, 1],
+			easing: 'easeInQuad',
+            duration: 1000,
+			loop: true,
+			delay: anime.stagger(100)
+        })
     },
     methods: {
         mobile() {
@@ -18,18 +29,18 @@ export default {
 <template>
 	<div class="container">
 	   <!-- Section I -->
-	   <div class="section one">
+	   <div class="section">
 		  <div class="home">
-			 <h1>MAKE THE <br> WWW YOUR <br> <span class="gardient">TERRITORY!</span></h1>
+			 <h1>WE'LL BUILD YOUR VISION, START YOUR <span class="gardient">JOURNEY</span> NOW!</h1>
 			 <div class="button">
-				<i class="fa-sharp fa-angle-right fa-fade"></i>
-				<i class="fa-sharp fa-angle-right fa-fade"></i>
-				<i class="fa-sharp fa-angle-right fa-fade"></i>
+				<svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path></svg>
+				<svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path></svg>
+				<svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path></svg>
 				<RouterLink to="/order-now">
 				   <div>
 					  <p>ORDER&nbsp;</p>
 					  <p>NOW</p>
-					  <p>!</p>
+					  <p>!&nbsp;</p>
 				   </div>
 				</RouterLink>
 			 </div>
@@ -67,12 +78,11 @@ export default {
 		  </div>
 	   </div>
 	   <!-- Section-Text -->
-	   <hr id="T_LINE">
 	   <div class="header">
 		  <h1>The Standard</h1>
 	   </div>
 	   <!-- Section II -->
-	   <div class="section two">
+	   <div class="section">
 		  <OS class="feature-box" :anim="mobile()">
 			 <p>Awesome</p>
 			 <i class="fa-sharp fa-sparkles"></i>
@@ -107,17 +117,12 @@ export default {
 	display: flex;
 }
 
-.section.one {
-	margin: 0.5rem 1.5rem 0rem;
+.section {
+	padding: 1rem;
 }
 
-.section.two {
-	margin: 0 1.5vw 1rem;
-	-webkit-box-pack: center;
-	-webkit-justify-content: center;
-	-moz-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
+.section:last-child {
+	
 }
 
 /* THE WWW.. */
@@ -139,14 +144,17 @@ export default {
 }
 
 .button {
-	margin-top: 1.5rem;
-	width: 260px;
-	font-size: 80%;
+	margin-top: 1rem;
+	font-size: 100%;
 	display: -webkit-box;
 	display: -webkit-flex;
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
+	background-color: rgb(26, 26, 26);
+	width: fit-content;
+	padding: 0.5rem;
+	border-radius: 1rem;
 }
 
 .button div {
@@ -155,7 +163,6 @@ export default {
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
-	padding: 0 0.2rem;
 }
 
 .button a div p {
@@ -193,33 +200,6 @@ export default {
 	animation-timing-function: linear;
 }
 
-.button svg:nth-child(1) {
-	-webkit-animation-delay: 500ms;
-	-moz-animation-delay: 500ms;
-	-o-animation-delay: 500ms;
-	animation-delay: 500ms;
-	--fa-animation-duration: 2s;
-	--fa-fade-opacity: 0.1;
-}
-
-.button svg:nth-child(2) {
-	-webkit-animation-delay: 1000ms;
-	-moz-animation-delay: 1000ms;
-	-o-animation-delay: 1000ms;
-	animation-delay: 1000ms;
-	--fa-animation-duration: 2s;
-	--fa-fade-opacity: 0.1;
-}
-
-.button svg:nth-child(3) {
-	-webkit-animation-delay: 1500ms;
-	-moz-animation-delay: 1500ms;
-	-o-animation-delay: 1500ms;
-	animation-delay: 1500ms;
-	--fa-animation-duration: 2s;
-	--fa-fade-opacity: 0.1;
-}
-
 /* WE ARE RESPONSIBLE FOR.. */
 .define {
 	width: 100%;
@@ -250,14 +230,9 @@ li {
 	width: 100%;
 	height: 270px;
 	background-color: rgba(10, 10, 10, 1);
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
-	-webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-	-moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+	border: 0.3rem solid crimson;
 	text-align: center;
-	margin: 0 2vw 0 0;
+	margin: 0 0.5rem 0 0;
 	padding: 15px 15px;
 	-webkit-box-pack: center;
 	-webkit-justify-content: center;
@@ -292,19 +267,15 @@ li {
 }
 
 @media (max-width: 64em) {
-	.section.one {
+	.section {
 		display: -ms-grid;
 		display: grid;
-		margin: 0rem 0.5rem 0rem;
 	}
 
-	.section.two {
-		display: -ms-grid;
-		display: grid;
+	.section:last-child {
 		-ms-grid-columns: auto 20px auto;
 		grid-template-columns: auto auto;
 		grid-column-gap: 20px;
-		margin: 0rem 1rem;
 	}
 
 	.home {
@@ -333,12 +304,9 @@ li {
 }
 
 @media (max-width: 32em) {
-	.section.two {
-		display: -ms-grid;
-		display: grid;
+	.section:last-child {
 		-ms-grid-columns: inherit;
 		grid-template-columns: inherit;
-		margin: 0rem 1rem 1rem;
 	}
 
 	.home {
