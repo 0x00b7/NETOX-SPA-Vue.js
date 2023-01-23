@@ -7,13 +7,6 @@ export default {
         OS: OS,
     },
     mounted() {
-        anime({
-                targets: '.home-text',
-                opacity: [0, 1],
-                duration: 250,
-                translateX: ["-20vh", 0],
-                easing: 'easeOutSine',
-            }),
             anime({
                 targets: '.fa-angle-right',
                 opacity: [1, 0.2, 1],
@@ -38,7 +31,7 @@ export default {
 	   <!-- Section I -->
 	   <div class="section">
 		  <div class="home">
-			 <h1 class="home-text">WE'LL BUILD YOUR VISION, START YOUR JOURNEY NOW!</h1>
+			 <h1>WE'LL BUILD YOUR VISION, START YOUR JOURNEY NOW!</h1>
 			 <div class="button">
 				<svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path></svg>
 				<svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path></svg>
