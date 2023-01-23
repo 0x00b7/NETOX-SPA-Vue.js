@@ -244,7 +244,7 @@ li {
 	height: 270px;
 	background-color: rgba(10, 10, 10, 1);
 	text-align: center;
-	border-radius: 1rem;
+	border-radius: 0.5rem;
 	margin: 0 0.5rem 0 0;
 	padding: 15px 15px;
 	-webkit-box-pack: center;
