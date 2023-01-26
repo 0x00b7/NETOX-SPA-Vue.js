@@ -23,7 +23,7 @@ export default {
     <div class="container">
        <div class="section">
           <div class="loader" ref="loading">
-            <div class="placeholder"></div>
+             <div class="placeholder"></div>
           </div>
           <img ref="image">
        </div>
@@ -34,7 +34,7 @@ export default {
           <h2>For business inquiries regarding Web-Development, directly Open a Ticket via our Form or Sending an E-Mail to: admin@netox.ws</h2>
        </div>
     </div>
- </template>
+ </template> 
  
 <style scoped>
 .container {

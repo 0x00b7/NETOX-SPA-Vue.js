@@ -49,8 +49,6 @@
 </template>
 
 <style scoped>
-
-
 footer {
    position: relative;
    display: -webkit-box;

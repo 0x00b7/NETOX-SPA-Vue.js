@@ -135,15 +135,21 @@ export default {
           </div>
           <div class="mobile-wrapper">
              <button class="mobile-nav-toggle" @click="toggleNavbar">
-                <i class="fa-sharp fa-solid fa-compass"></i>
+             <i class="fa-sharp fa-solid fa-compass"></i>
              </button>
           </div>
        </div>
     </header>
- </template>
- 
+ </template> 
  
 <style scoped>
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 99999999 version
+*/
+
 header {
     display: -ms-grid;
     display: grid;

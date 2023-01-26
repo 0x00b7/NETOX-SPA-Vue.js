@@ -7,14 +7,14 @@ export default {
         OS: OS,
     },
     mounted() {
-            anime({
-                targets: '.fa-angle-right',
-                opacity: [1, 0.2, 1],
-                easing: 'easeInCubic',
-                duration: 1000,
-                loop: true,
-                delay: anime.stagger(200)
-            })
+        anime({
+            targets: '.fa-angle-right',
+            opacity: [1, 0.2, 1],
+            easing: 'easeInCubic',
+            duration: 1000,
+            loop: true,
+            delay: anime.stagger(200)
+        })
     },
     methods: {
         mobile() {
@@ -33,9 +33,15 @@ export default {
 		  <div class="home">
 			 <h1>WE'LL BUILD YOUR VISION, START YOUR JOURNEY NOW!</h1>
 			 <div class="button">
-				<svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path></svg>
-				<svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path></svg>
-				<svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg=""><path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path></svg>
+				<svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+				   <path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path>
+				</svg>
+				<svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+				   <path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path>
+				</svg>
+				<svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+				   <path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path>
+				</svg>
 				<RouterLink to="/order-now">
 				   <div>
 					  <p>ORDER&nbsp;</p>
@@ -105,8 +111,7 @@ export default {
 		  </OS>
 	   </div>
 	</div>
- </template>
- 
+ </template> 
 
 <style scoped>
 .section {
@@ -151,10 +156,17 @@ export default {
 	display: -moz-box;
 	display: -ms-flexbox;
 	display: flex;
+	background: -webkit-linear-gradient(305deg, rgba(255,0,50,0.2) 0%, rgba(160, 0, 255, 0.2) 100%);
+	background: -moz-linear-gradient(305deg, rgba(255,0,50,0.2) 0%, rgba(160, 0, 255, 0.2) 100%);
+	background: -o-linear-gradient(305deg, rgba(255,0,50,0.2) 0%, rgba(160, 0, 255, 0.2) 100%);
 	background: linear-gradient(145deg, rgba(255,0,50,0.2) 0%, rgba(160, 0, 255, 0.2) 100%);
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
 	width: fit-content;
 	padding: 0.5rem;
-	border-radius: 0.5rem;
+	-webkit-border-radius: 0.5rem;
+	   -moz-border-radius: 0.5rem;
+	        border-radius: 0.5rem;
 }
 
 .button div {
@@ -231,7 +243,9 @@ li {
 	height: 270px;
 	background-color: rgba(10, 10, 10, 1);
 	text-align: center;
-	border-radius: 0.5rem;
+	-webkit-border-radius: 0.5rem;
+	   -moz-border-radius: 0.5rem;
+	        border-radius: 0.5rem;
 	margin: 0 0.5rem 0 0;
 	padding: 15px 15px;
 	-webkit-box-pack: center;

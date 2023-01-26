@@ -17,23 +17,25 @@ export default {
 
 <template>
     <div class="success">
-        <div class="notify">
-            <h1>Thanks!</h1>
-            <i class="fa-sharp fa-solid fa-thumbs-up"></i>
-            <h3>We will contact you shortly regarding further steps. :)</h3>
-        </div>
-     </div>
-</template>
+       <div class="notify">
+          <h1>Thanks!</h1>
+          <i class="fa-sharp fa-solid fa-thumbs-up"></i>
+          <h3>We will contact you shortly regarding further steps. :)</h3>
+       </div>
+    </div>
+ </template> 
 
 <style scoped>
 .success {
+    display: -ms-grid;
     display: grid;
     height: 300px;
 }
 
 .notify {
     text-align: center;
-    justify-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
     margin: auto 0.5rem;
 }
 
@@ -43,7 +45,8 @@ export default {
 
 .notify svg {
     color: green;
-    filter: hue-rotate(20deg);
+    -webkit-filter: hue-rotate(20deg);
+            filter: hue-rotate(20deg);
     padding: 2rem;
     font-size: 5rem;
 }

@@ -1,8 +1,8 @@
 <template>
-  <div ref="root">
-    <slot></slot>
-  </div>
-</template>
+    <div ref="root">
+       <slot></slot>
+    </div>
+ </template> 
   
 <script>
 import {
@@ -29,8 +29,8 @@ export default {
             default: 1500,
         },
         easing: {
-          type: String,
-          default: "easeOutExpo",
+            type: String,
+            default: "easeOutExpo",
         }
     },
     setup(props) {
