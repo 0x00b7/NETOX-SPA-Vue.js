@@ -12,27 +12,19 @@ export default {
 
 <template>
   <div class="container">
-    <div class="header">
-      <h1>Learn more about our product</h1>
-    </div>
-    <div class="section">
-      <div class="showcase">
-        <div class="anim">
-          <i class="fa-solid fa-space-awesome"></i>
+     <div class="header">
+        <h1>Learn more about our product</h1>
+     </div>
+     <div class="section">
+        <div class="showcase">
+           <div class="hero-showcase">
+              <i class="fa-solid fa-space-awesome"></i>
+           </div>
+           <div class="hero-text">
+              <h1>hdshgda</h1>
+           </div>
         </div>
-      </div>
-      <div class="workflow">
-        <h3>_LEFT (WORKFLOW)</h3>
-      </div>
-    </div>
-    <div class="header">
-      <h1>Learn more about our product</h1>
-    </div>
-    <div class="section">
-      <div class="vision">
-        <h3>_CENTER (VISION)</h3>
-      </div>
-    </div>
+     </div>
   </div>
 </template>
 
@@ -44,16 +36,25 @@ export default {
 
 .showcase,
 .workflow {
-  display: -ms-grid;
-  display: grid;
-  height: 500px;
-  padding: 20vw;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  height: 400px;
+  margin: 5rem;
 }
 
-.showcase .anim {
-  display: -ms-grid;
-  display: grid;
-  font-size: 12rem;
+.showcase .hero-showcase {
+  padding: 5rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: 10rem;
+}
+
+.showcase .hero-text {
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 100%;
 }
 
 .workflow {
@@ -64,17 +65,12 @@ export default {
   justify-content: end;
 }
 
-.vision {
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
 @media (max-width: 64em) {
   .showcase,
   .workflow {
+    margin: 0;
+    display: -ms-grid;
+    display: grid;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -moz-box-pack: center;
@@ -83,6 +79,5 @@ export default {
   }
 }
 
-@media (max-width: 32em) {
-}
+@media (max-width: 32em) {}
 </style>
