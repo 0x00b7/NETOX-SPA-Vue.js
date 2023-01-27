@@ -170,6 +170,7 @@ export default {
                     this.$router.push("sorry");
                 });
         },
+        
     },
 
     mounted() {
@@ -255,7 +256,7 @@ export default {
              <div class="input" v-show="step === 3">
                 <div :style="{background: form.color}" class="color-scheme">
                    <div class="color-picker">
-                    <ColorPicker style="width: 218px;" theme="light" :color="form.color" :sucker-hide="true" @changeColor="changeColor"/>
+                    <ColorPicker v-touch:hold style="width: 218px;" theme="light" :color="form.color" :sucker-hide="true" @changeColor="changeColor"/>
                    </div>
                 </div>
              </div>

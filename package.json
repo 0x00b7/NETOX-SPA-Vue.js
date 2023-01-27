@@ -16,7 +16,8 @@
     "vue": "^3.2.45",
     "vue-axios": "^3.5.2",
     "vue-color-kit": "^1.0.5",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "vue3-touch-events": "^4.1.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.30.0",
