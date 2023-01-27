@@ -8,10 +8,10 @@ export default {
       if (navbar.style.display === "block") {
         anime({
           targets: navbar,
-          easing: "easeInOutQuad",
+          easing: 'easeInOutQuad',
           height: "0px",
           opacity: [1, 0],
-          duration: 150,
+          duration: 350,
           complete: () => {
             navbar.style.display = "none";
           },
@@ -20,10 +20,10 @@ export default {
         navbar.style.display = "block";
         anime({
           targets: navbar,
-          height: "350px",
+          height: "180px",
           opacity: [0, 1],
-          easing: "easeInOutQuad",
-          duration: 150,
+          easing: 'easeInOutQuad',
+          duration: 350,
         });
       }
     },
@@ -148,13 +148,6 @@ export default {
 </template>
 
 <style scoped>
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 99999999 version
-*/
-
 header {
   display: -ms-grid;
   display: grid;
@@ -260,11 +253,7 @@ nav a:first-of-type {
 }
 
 .mobile-nav {
-  background: linear-gradient(
-    180deg,
-    rgb(29, 27, 38) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
+  background: linear-gradient(45deg, rgba(22,32,82,1) 0%, rgba(70,22,31,1) 100%);
   font-size: 1.2rem;
   position: fixed;
   top: 0;
@@ -274,6 +263,7 @@ nav a:first-of-type {
   bottom: 0;
   z-index: 1;
   display: none;
+  border-radius: 0 0 5rem 5rem;
 }
 
 .mobile-nav ul {
