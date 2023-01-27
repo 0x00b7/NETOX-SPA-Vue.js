@@ -59,8 +59,6 @@ export default {
                 case 5:
                     return "Submit your request";
             }
-
-            return 0;
         },
     },
 
@@ -289,8 +287,16 @@ export default {
 
 <style scoped>
 .button {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 1rem;
+}
+
+button > * {
+  pointer-events: none;
 }
 
 button {
@@ -438,9 +444,9 @@ form {
 
 .order-input label span {
   color: rgba(255, 20, 20, 0.7);
-  font-size: 2rem;
+  font-size: 1.5rem;
   position: absolute;
-  margin: -3px 0 0 3px;
+  margin: -3px 0 0 1px;
 }
 
 .order-input label.textarea {
