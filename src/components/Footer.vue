@@ -5,7 +5,7 @@
       <ul class="fa-ul">
         <li>
           <span class="fa-li">
-            <i class="fa-sharp fa-scale-balanced"></i>
+            <i class="fa-solid fa-scale-balanced"></i>
           </span>
           <RouterLink to="/Law/imprint">Legal & Privacy</RouterLink>
         </li>
@@ -43,7 +43,7 @@
       <ul class="fa-ul">
         <li>
           <span class="fa-li">
-            <i class="fa-sharp fa-at"></i>
+            <i class="fa-solid fa-at"></i>
           </span>
           <a
             href="mailto:admin@netox.ws"

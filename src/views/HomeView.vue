@@ -99,24 +99,24 @@ export default {
         <ul class="fa-ul">
           <li>
             <span class="fa-li">
-              <i class="fa-sharp fa-rectangle-code"></i> </span
+              <i class="fa-solid fa-rectangle-code"></i> </span
             >Programming
           </li>
           <li>
-            <span class="fa-li"> <i class="fa-sharp fa-wifi"></i> </span>Hosting
+            <span class="fa-li"> <i class="fa-solid fa-wifi"></i> </span>Hosting
           </li>
           <li>
-            <span class="fa-li"> <i class="fa-sharp fa-link"></i> </span>Domain
+            <span class="fa-li"> <i class="fa-solid fa-link"></i> </span>Domain
             Linkage
           </li>
           <li>
             <span class="fa-li">
-              <i class="fa-sharp fa-magnifying-glass-location"></i> </span
+              <i class="fa-solid fa-magnifying-glass-location"></i> </span
             >Search Engine Optimization
           </li>
           <li>
             <span class="fa-li">
-              <i class="fa-sharp fa-shield-keyhole"></i> </span
+              <i class="fa-solid fa-shield-keyhole"></i> </span
             >Service Protection
           </li>
         </ul>
@@ -130,24 +130,24 @@ export default {
     <div class="section">
       <OS class="feature-box" :anim="mobile()">
         <p>Awesome</p>
-        <i class="fa-sharp fa-sparkles"></i>
+        <i class="fa-solid fa-sparkles"></i>
         <p>We admire detail, keeping our Design as Clean as Possible!</p>
       </OS>
       <OS class="feature-box" :anim="mobile()">
         <p>Handmade</p>
-        <i class="fa-sharp fa-cubes"></i>
+        <i class="fa-solid fa-cubes"></i>
         <p>
           Proudly to say, we program and set up our Projects 100% ourselves.
         </p>
       </OS>
       <OS class="feature-box" :anim="mobile()">
         <p>Responsive</p>
-        <i class="fa-sharp fa-laptop-mobile"></i>
+        <i class="fa-solid fa-laptop-mobile"></i>
         <p>We also pay attention to responsiveness on every Device.</p>
       </OS>
       <OS class="feature-box" :anim="mobile()">
         <p>Effortless</p>
-        <i class="fa-sharp fa-feather"></i>
+        <i class="fa-solid fa-feather"></i>
         <p>
           We care about a Flawless User experience, programming your Product!
         </p>

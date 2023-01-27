@@ -19,7 +19,7 @@ export default {
   <div class="success">
     <div class="notify">
       <h1>Thanks!</h1>
-      <i class="fa-sharp fa-solid fa-thumbs-up"></i>
+      <i class="fa-solid fa-solid fa-thumbs-up"></i>
       <h3>We will contact you shortly regarding further steps. :)</h3>
     </div>
   </div>

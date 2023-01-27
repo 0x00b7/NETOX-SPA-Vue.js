@@ -18,7 +18,7 @@ export default {
   <div class="sorry">
     <div class="notify">
       <h1>Argh!</h1>
-      <i class="fa-sharp fa-solid fa-hexagon-xmark"></i>
+      <i class="fa-solid fa-solid fa-hexagon-xmark"></i>
       <h3>
         Something got wrong..<br />Please consider contacting us via E-Mail or
         WhatsApp!

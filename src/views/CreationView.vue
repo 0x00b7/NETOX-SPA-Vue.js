@@ -18,7 +18,7 @@ export default {
     <div class="section">
       <div class="showcase">
         <div class="anim">
-          <i class="fa-brands fa-space-awesome"></i>
+          <i class="fa-solid fa-space-awesome"></i>
         </div>
       </div>
       <div class="workflow">
