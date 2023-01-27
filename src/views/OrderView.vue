@@ -275,7 +275,7 @@ export default {
                     <i class="fa-duotone fa-hand-point-left"></i>
                 </button>
                 <button v-if="step === 5" class="next" @click="handleSubmit">
-                    Send
+                    <i class="fa-duotone fa-paper-plane"></i>
                 </button>
                 <button v-else-if="step" id="next-btn" class="next" @click="btn">
                     <i class="fa-duotone fa-hand-point-right"></i>
@@ -301,7 +301,6 @@ button > * {
 
 button {
   width: 100%;
-  margin-bottom: 1rem;
 }
 
 button.next {
@@ -562,6 +561,9 @@ form {
   margin-right: 1rem;
   padding: 1rem;
   width: 100%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   -webkit-transition: 0.3s background-color;
   -o-transition: 0.3s background-color;
   -moz-transition: 0.3s background-color;

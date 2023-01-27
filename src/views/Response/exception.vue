@@ -20,7 +20,7 @@ export default {
       <h1>Argh!</h1>
       <i class="fa-solid fa-solid fa-hexagon-xmark"></i>
       <h3>
-        Something got wrong..<br />Please consider contacting us via E-Mail or
+        Something went wrong..<br />Please consider contacting us via E-Mail or
         WhatsApp!
       </h3>
     </div>
