@@ -13,7 +13,7 @@ export default {
 <template>
   <div class="container">
      <div class="header">
-        <h1>Learn more about our product</h1>
+        <h1>Get to know our vision</h1>
      </div>
      <div class="section">
         <div class="showcase">
@@ -21,7 +21,8 @@ export default {
               <i class="fa-solid fa-space-awesome"></i>
            </div>
            <div class="hero-text">
-              <h1>hdshgda</h1>
+              <h1>Not just a simple website!</h1>
+              <h2>We create innovative web-applications and UX designs at an affordable price. Our code, primarily based on Vue.js and JavaScript, is highly professional and uses the best solutions to create a masterpiece for our clients. We also use Font-Awesome, a top-notch SVG icon library, to enhance the overall look and feel of our designs.</h2>
            </div>
         </div>
      </div>
@@ -34,6 +35,10 @@ export default {
   display: grid;
 }
 
+.header {
+  background-color: rgba(10, 10, 10, 0.2);
+}
+
 .showcase,
 .workflow {
   display: -ms-flexbox;
@@ -41,7 +46,6 @@ export default {
   display: -webkit-flex;
   display: -moz-box;
   display: flex;
-  height: 400px;
   margin: 5rem;
 }
 
@@ -52,22 +56,22 @@ export default {
 }
 
 .showcase .hero-text {
-  padding: 2rem;
+  padding: 1rem;
   background-color: rgba(0, 0, 0, 0.1);
   width: 100%;
 }
 
-.workflow {
-  -webkit-box-pack: end;
-  -webkit-justify-content: end;
-  -moz-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
+.showcase .hero-text h1 {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.showcase .hero-text h2 {
+  font-weight: 100;
 }
 
 @media (max-width: 64em) {
-  .showcase,
-  .workflow {
+  .showcase {
     margin: 0;
     display: -ms-grid;
     display: grid;
@@ -76,6 +80,7 @@ export default {
     -moz-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    text-align: center;
   }
 }
 
