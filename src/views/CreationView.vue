@@ -44,6 +44,9 @@
 
 .showcase .hero-showcase svg {
   font-size: 12rem;
+  color: blue;
+  filter: sepia(60%) saturate(1000%) hue-rotate(90deg) drop-shadow(0px 0px 25px rgba(0, 119, 255, 0.2));
+
 }
 
 .showcase .hero-text {
