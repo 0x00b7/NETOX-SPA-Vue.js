@@ -252,7 +252,6 @@ nav a:first-of-type {
   background-color: transparent;
   font-size: 48px;
   left: 0;
-  bottom: 2px;
   border: 0;
 }
 
@@ -266,7 +265,7 @@ nav a:first-of-type {
     rgb(29, 27, 38) 50%,
     rgba(0, 0, 0, 0) 100%
   );
-  font-size: 2rem;
+  font-size: 1.2rem;
   position: fixed;
   top: 0;
   left: 0;
