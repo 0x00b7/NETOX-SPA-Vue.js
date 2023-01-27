@@ -2,316 +2,337 @@
 import anime from "animejs";
 import axios from "axios";
 
+import {
+    ColorPicker
+} from 'vue-color-kit'
+import 'vue-color-kit/dist/vue-color-kit.css'
+
 export default {
-  data() {
-    return {
-      step: 1,
-
-      items: [
-        {
-          h1: "Onepager",
-          h3: "A beautiful One-Page Website for information of all kinds, whether for business or private purposes.",
-        },
-        {
-          h1: "Multipager",
-          h3: "Whenever you need a little extra space, this Website offers up to 9 pages with extensive info about your product, service & its benefits.",
-        },
-        {
-          h1: "Shop",
-          h3: "Your sales will be a breeze, whether using Shopify, Etsy or a payment system of your choice, your customers will LOVE the design!",
-        },
-        {
-          h1: "Renew",
-          h3: "Your old site needs a new polish, but you dont know how? then this selection is the right one for you!",
-        },
-      ],
-
-      form: {
-        type: "",
-        forename: "",
-        surname: "",
-        email: "",
-        number: "",
-        scheme: "#42a5f6",
-        imagination: "",
-      },
-    };
-  },
-
-  computed: {
-    stepText() {
-      switch (this.step) {
-        case 1:
-          return "Choose your product";
-        case 2:
-          return "Add your contact info";
-        case 3:
-          return "Select a preferred color";
-        case 4:
-          return "Describe your website in a few words";
-        case 5:
-          return "Submit your request";
-      }
+    components: {
+        ColorPicker,
     },
-  },
+    data() {
+        return {
+            step: 1,
 
-  methods: {
-    btn(event) {
-      if (event.target.id === "next-btn") {
-        const formElements = [
-          this.form.forename,
-          this.form.surname,
-          this.form.email,
-        ];
-        const formIds = ["forename", "surname", "email"];
-        let x = false;
-        for (let i = 0; i < formElements.length; i++) {
-          if (this.step === 2 && formElements[i].length < 2) {
-            x = true;
-            document.getElementById(formIds[i]).style.border = "1px solid red";
-          }
-          if (this.step === 4 && this.form.imagination.length < 12) {
-            x = true;
-            document.getElementById("description").style.border =
-              "1px solid orange";
-          }
-        }
-        if (x) return;
-        anime({
-          targets: ".order-now",
-          opacity: [1, 0],
-          easing: "linear",
-          duration: 125,
-          complete: () => {
-            this.step++;
-            anime({
-              targets: ".order-now",
-              opacity: [0, 1],
-              easing: "linear",
-              duration: 125,
+            items: [{
+                    h1: "Onepager",
+                    h3: "A beautiful One-Page Website for information of all kinds, whether for business or private purposes.",
+                },
+                {
+                    h1: "Multipager",
+                    h3: "Whenever you need a little extra space, this Website offers up to 9 pages with extensive info about your product, service & its benefits.",
+                },
+                {
+                    h1: "Shop",
+                    h3: "Your sales will be a breeze, whether using Shopify, Etsy or a payment system of your choice, your customers will LOVE the design!",
+                },
+                {
+                    h1: "Renew",
+                    h3: "Your old site needs a new polish, but you dont know how? then this selection is the right one for you!",
+                },
+            ],
+
+            form: {
+                type: "",
+                forename: "",
+                surname: "",
+                email: "",
+                number: "",
+                color: "#007FFF",
+                imagination: "",
+            },
+        };
+    },
+
+    computed: {
+        stepText() {
+            switch (this.step) {
+                case 1:
+                    return "Choose your product";
+                case 2:
+                    return "Add your contact info";
+                case 3:
+                    return "Select a preferred color";
+                case 4:
+                    return "Describe your website in a few words";
+                case 5:
+                    return "Submit your request";
+            }
+
+            return 0;
+        },
+    },
+
+    methods: {
+        btn(event) {
+            if (event.target.id === "next-btn") {
+                const formElements = [
+                    this.form.forename,
+                    this.form.surname,
+                    this.form.email,
+                ];
+                const formIds = ["forename", "surname", "email"];
+                let x = false;
+                for (let i = 0; i < formElements.length; i++) {
+                    if (this.step === 2 && formElements[i].length < 2) {
+                        x = true;
+                        document.getElementById(formIds[i]).style.border = "1px solid red";
+                    }
+                    if (this.step === 4 && this.form.imagination.length < 12) {
+                        x = true;
+                        document.getElementById("description").style.border =
+                            "1px solid orange";
+                    }
+                }
+                if (x) return;
+                anime({
+                    targets: ".order-now",
+                    opacity: [1, 0],
+                    easing: "linear",
+                    duration: 125,
+                    complete: () => {
+                        this.step++;
+                        anime({
+                            targets: ".order-now",
+                            opacity: [0, 1],
+                            easing: "linear",
+                            duration: 125,
+                        });
+                    },
+                });
+            }
+            if (event.target.id === "prev-btn") {
+                anime({
+                    targets: ".order-now",
+                    opacity: [1, 0],
+                    easing: "linear",
+                    duration: 125,
+                    complete: () => {
+                        this.step--;
+                        anime({
+                            targets: ".order-now",
+                            opacity: [0, 1],
+                            easing: "linear",
+                            duration: 125,
+                        });
+                    },
+                });
+            }
+        },
+
+        select(x) {
+            this.form.type = x;
+            this.btn({
+                target: {
+                    id: "next-btn",
+                },
             });
-          },
-        });
-      }
-      if (event.target.id === "prev-btn") {
+        },
+
+        changeColor(color) {
+            const {
+                r,
+                g,
+                b,
+                a
+            } = color.rgba
+            this.form.color = `rgba(${r}, ${g}, ${b}, ${a})`
+        },
+
+        encode(data) {
+            return Object.keys(data)
+                .map(
+                    (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+                )
+                .join("&");
+        },
+
+        handleSubmit() {
+            const axiosConfig = {
+                header: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+            };
+            axios
+                .post(
+                    "/",
+                    this.encode({
+                        "form-name": "order-now",
+                        ...this.form,
+                    }),
+                    axiosConfig
+                )
+                .then(() => {
+                    this.$router.push("thanks");
+                })
+                .catch(() => {
+                    this.$router.push("sorry");
+                });
+        },
+    },
+
+    mounted() {
         anime({
-          targets: ".order-now",
-          opacity: [1, 0],
-          easing: "linear",
-          duration: 125,
-          complete: () => {
-            this.step--;
-            anime({
-              targets: ".order-now",
-              opacity: [0, 1],
-              easing: "linear",
-              duration: 125,
-            });
-          },
-        });
-      }
-    },
-
-    select(x) {
-      this.form.type = x;
-      this.btn({
-        target: {
-          id: "next-btn",
-        },
-      });
-    },
-
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join("&");
-    },
-
-    handleSubmit() {
-      const axiosConfig = {
-        header: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      };
-      axios
-        .post(
-          "/",
-          this.encode({
-            "form-name": "order-now",
-            ...this.form,
-          }),
-          axiosConfig
-        )
-        .then(() => {
-          this.$router.push("thanks");
-        })
-        .catch(() => {
-          this.$router.push("sorry");
+            targets: ".order-opt",
+            opacity: [0, 1],
+            duration: 100,
+            translateX: [-50, 0],
+            direction: "linear",
+            easing: "easeInQuad",
+            delay: anime.stagger(100),
         });
     },
-  },
-
-  mounted() {
-    anime({
-      targets: ".order-opt",
-      opacity: [0, 1],
-      duration: 100,
-      translateX: [-50, 0],
-      direction: "linear",
-      easing: "easeInQuad",
-      delay: anime.stagger(100),
-    });
-  },
 };
 </script>
 
 <template>
-  <div class="container">
-    <div class="section">
-      <div class="header">
-        <h1>{{ stepText }}</h1>
-      </div>
-      <div class="order-now">
-        <div class="select" v-show="step === 1">
+    <div class="container">
+       <div class="section">
+          <div class="header">
+             <h1>{{ stepText }}</h1>
+          </div>
+          <div class="order-now">
+             <div class="select" v-show="step === 1">
+                <div
+                   class="order-opt"
+                   v-for="(item, index) in items"
+                   :key="index"
+                   v-on:click="select(item.h1)"
+                   >
+                   <h1>{{ item.h1 }}</h1>
+                   <h3>{{ item.h3 }}</h3>
+                </div>
+             </div>
+             <div class="input" v-show="step === 2">
+                <div class="interface">
+                   <div class="order-input">
+                      <label
+                         >Forename<span>*</span>
+                      <input
+                         type="text"
+                         id="forename"
+                         v-model="form.forename"
+                         placeholder="..."
+                         />
+                      </label>
+                   </div>
+                   <div class="order-input">
+                      <label
+                         >Surname<span>*</span>
+                      <input
+                         type="text"
+                         id="surname"
+                         v-model="form.surname"
+                         placeholder="..."
+                         />
+                      </label>
+                   </div>
+                   <div class="order-input">
+                      <label
+                         >E-Mail<span>*</span>
+                      <input
+                         type="text"
+                         id="email"
+                         v-model="form.email"
+                         placeholder="..."
+                         />
+                      </label>
+                   </div>
+                   <div class="order-input">
+                      <label
+                         >Phone number
+                      <input
+                         type="text"
+                         id="number"
+                         v-model="form.number"
+                         placeholder="..."
+                         />
+                      </label>
+                   </div>
+                </div>
+             </div>
+             <div class="input" v-show="step === 3">
+                <div :style="{background: form.color}" class="color-scheme">
+                   <div class="color-picker">
+                    <ColorPicker style="width: 218px;" theme="light" :color="form.color" :sucker-hide="true" @changeColor="changeColor"/>
+                   </div>
+                </div>
+             </div>
+             <div class="input" v-show="step === 4">
+                <div class="interface">
+                   <div class="order-input">
+                      <label class="textarea"
+                         >Description <span>*</span>
+                      <textarea
+                         id="description"
+                         v-model="form.imagination"
+                         type="text"
+                         placeholder="..."
+                         ></textarea>
+                      </label>
+                   </div>
+                </div>
+             </div>
+             <div class="submit" v-show="step === 5">
+                <form name="order-now" @submit.prevent="handleSubmit">
+                   <label>Type</label>
+                   <input v-model="form.type" disabled type="text" placeholder="..." />
+                   <label>Forename</label>
+                   <input
+                      v-model="form.forename"
+                      disabled
+                      type="text"
+                      placeholder="..."
+                      />
+                   <label>Surname</label>
+                   <input
+                      v-model="form.surname"
+                      disabled
+                      type="text"
+                      placeholder="..."
+                      />
+                   <label>E-Mail</label>
+                   <input
+                      v-model="form.email"
+                      disabled
+                      type="text"
+                      placeholder="..."
+                      />
+                   <label>Phone number</label>
+                   <input v-model="form.number" disabled type="text" placeholder="—" />
+                   <label>Color-Scheme</label>
+                   <input
+                      v-model="form.color"
+                      disabled
+                      type="text"
+                      placeholder="..."
+                      />
+                   <label>Description</label>
+                   <textarea
+                      v-model="form.imagination"
+                      disabled
+                      type="text"
+                      placeholder="..."
+                      ></textarea>
+                </form>
+             </div>
+          </div>
           <div
-            class="order-opt"
-            v-for="(item, index) in items"
-            :key="index"
-            v-on:click="select(item.h1)"
-          >
-            <h1>{{ item.h1 }}</h1>
-            <h3>{{ item.h3 }}</h3>
+             class="button"
+             v-if="step === 2 || step === 3 || step === 4 || step === 5"
+             >
+             <button v-if="step === 5" class="next" @click="handleSubmit">
+             Send
+             </button>
+             <button v-else-if="step" id="next-btn" class="next" @click="btn">
+             Next
+             </button>
+             <button id="prev-btn" class="prev" @click="btn">Back</button>
           </div>
-        </div>
-        <div class="input" v-show="step === 2">
-          <div class="interface">
-            <div class="order-input">
-              <label
-                >Forename<span>*</span>
-                <input
-                  type="text"
-                  id="forename"
-                  v-model="form.forename"
-                  placeholder="..."
-                />
-              </label>
-            </div>
-            <div class="order-input">
-              <label
-                >Surname<span>*</span>
-                <input
-                  type="text"
-                  id="surname"
-                  v-model="form.surname"
-                  placeholder="..."
-                />
-              </label>
-            </div>
-            <div class="order-input">
-              <label
-                >E-Mail<span>*</span>
-                <input
-                  type="text"
-                  id="email"
-                  v-model="form.email"
-                  placeholder="..."
-                />
-              </label>
-            </div>
-            <div class="order-input">
-              <label
-                >Phone number
-                <input
-                  type="text"
-                  id="number"
-                  v-model="form.number"
-                  placeholder="..."
-                />
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="input" v-show="step === 3">
-          <div class="color-scheme">
-            <div class="color-picker"></div>
-          </div>
-        </div>
-        <div class="input" v-show="step === 4">
-          <div class="interface">
-            <div class="order-input">
-              <label class="textarea"
-                >Description <span>*</span>
-                <textarea
-                  id="description"
-                  v-model="form.imagination"
-                  type="text"
-                  placeholder="..."
-                ></textarea>
-              </label>
-            </div>
-          </div>
-        </div>
-        <div class="submit" v-show="step === 5">
-          <form name="order-now" @submit.prevent="handleSubmit">
-            <label>Type</label>
-            <input v-model="form.type" disabled type="text" placeholder="..." />
-            <label>Forename</label>
-            <input
-              v-model="form.forename"
-              disabled
-              type="text"
-              placeholder="..."
-            />
-            <label>Surname</label>
-            <input
-              v-model="form.surname"
-              disabled
-              type="text"
-              placeholder="..."
-            />
-            <label>E-Mail</label>
-            <input
-              v-model="form.email"
-              disabled
-              type="text"
-              placeholder="..."
-            />
-            <label>Phone number</label>
-            <input v-model="form.number" disabled type="text" placeholder="—" />
-            <label>Color-Scheme</label>
-            <input
-              v-model="form.scheme"
-              disabled
-              type="text"
-              placeholder="..."
-            />
-            <label>Description</label>
-            <textarea
-              v-model="form.imagination"
-              disabled
-              type="text"
-              placeholder="..."
-            ></textarea>
-          </form>
-        </div>
-      </div>
-      <div
-        class="button"
-        v-if="step === 2 || step === 3 || step === 4 || step === 5"
-      >
-        <button v-if="step === 5" class="next" @click="handleSubmit">
-          Send
-        </button>
-        <button v-else-if="step" id="next-btn" class="next" @click="btn">
-          Next
-        </button>
-        <button id="prev-btn" class="prev" @click="btn">Back</button>
-      </div>
+       </div>
     </div>
-  </div>
-</template>
+ </template> 
 
 <style scoped>
 .button {
