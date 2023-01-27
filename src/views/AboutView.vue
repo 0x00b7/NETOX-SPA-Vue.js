@@ -62,10 +62,12 @@ export default {
 }
 
 .section h1 {
+  font-weight: 300;
   margin-bottom: 0.5rem;
 }
 
 .section h2 {
+  font-weight: 200;
   margin-bottom: 2rem;
 }
 
