@@ -1,38 +1,38 @@
 <script>
-import anime from 'animejs';
+import anime from "animejs";
 
 export default {
-    mounted() {
-        anime({
-            targets: '.fa-fire-flame-simple',
-        })
-    }
-}
+  mounted() {
+    anime({
+      targets: ".fa-fire-flame-simple",
+    });
+  },
+};
 </script>
 
 <template>
   <div class="container">
-     <div class="header">
-        <h1>Learn more about our product</h1>
-     </div>
-     <div class="section">
-        <div class="showcase">
-           <div class="anim">
-              <i class="fa-brands fa-space-awesome"></i>
-           </div>
+    <div class="header">
+      <h1>Learn more about our product</h1>
+    </div>
+    <div class="section">
+      <div class="showcase">
+        <div class="anim">
+          <i class="fa-brands fa-space-awesome"></i>
         </div>
-        <div class="workflow">
-           <h3>_LEFT (WORKFLOW)</h3>
-        </div>
-     </div>
-     <div class="header">
-        <h1>Learn more about our product</h1>
-     </div>
-     <div class="section">
-        <div class="vision">
-           <h3>_CENTER (VISION)</h3>
-        </div>
-     </div>
+      </div>
+      <div class="workflow">
+        <h3>_LEFT (WORKFLOW)</h3>
+      </div>
+    </div>
+    <div class="header">
+      <h1>Learn more about our product</h1>
+    </div>
+    <div class="section">
+      <div class="vision">
+        <h3>_CENTER (VISION)</h3>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -42,7 +42,8 @@ export default {
   display: grid;
 }
 
-.showcase, .workflow {
+.showcase,
+.workflow {
   display: -ms-grid;
   display: grid;
   height: 500px;
@@ -58,29 +59,30 @@ export default {
 .workflow {
   -webkit-box-pack: end;
   -webkit-justify-content: end;
-     -moz-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
 }
 
 .vision {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 @media (max-width: 64em) {
-  .showcase, .workflow  {
+  .showcase,
+  .workflow {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
-       -moz-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
 }
 
-@media (max-width: 32em) {}
+@media (max-width: 32em) {
+}
 </style>
-

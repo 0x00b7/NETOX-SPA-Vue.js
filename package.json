@@ -12,24 +12,23 @@
   },
   "dependencies": {
     "animejs": "^3.2.1",
-    "pinia": "^2.0.28",
+    "pinia": "^2.0.29",
     "vue": "^3.2.45",
     "vue-axios": "^3.5.2",
-    "vue-router": "^4.1.6",
-    "vue3-colorpicker": "^2.1.2"
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
-    "@playwright/test": "^1.29.2",
+    "@playwright/test": "^1.30.0",
     "@rushstack/eslint-patch": "^1.2.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vitejs/plugin-vue-jsx": "^3.0.0",
     "@vue/eslint-config-prettier": "^7.0.0",
-    "@vue/test-utils": "^2.2.7",
-    "eslint": "^8.31.0",
+    "@vue/test-utils": "^2.2.8",
+    "eslint": "^8.32.0",
     "eslint-plugin-vue": "^9.9.0",
-    "jsdom": "^21.0.0",
+    "jsdom": "^21.1.0",
     "prettier": "^2.8.3",
     "vite": "^4.0.4",
-    "vitest": "^0.27.1"
+    "vitest": "^0.28.3"
   }
 }

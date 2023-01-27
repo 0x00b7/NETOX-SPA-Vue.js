@@ -1,20 +1,25 @@
 <script setup>
 import { RouterView } from "vue-router";
-import { useFadeIn, useFadeOut } from './assets/scripts/AN/anime-route.js'
+import { useFadeIn, useFadeOut } from "./assets/scripts/AN/anime-route.js";
 import Footer from "./components/Footer.vue";
 import NavBar from "./components/NavBar.vue";
 
-import './assets/scripts/FA/fontawesome.min.js'
-import './assets/scripts/FA/sharp-solid.min.js'
-import './assets/scripts/FA/brands.min.js'
+import "./assets/scripts/FA/fontawesome.min.js";
+import "./assets/scripts/FA/sharp-solid.min.js";
+import "./assets/scripts/FA/brands.min.js";
 </script>
 
 <template>
-    <NavBar/>
-        <router-view v-slot="{ Component }">
-            <transition @enter="useFadeIn" @leave="useFadeOut" :css="false" mode="out-in">
-                <component :is="Component" />
-            </transition>
-        </router-view>
-        <Footer/>
+  <NavBar />
+  <router-view v-slot="{ Component }">
+    <transition
+      @enter="useFadeIn"
+      @leave="useFadeOut"
+      :css="false"
+      mode="out-in"
+    >
+      <component :is="Component" />
+    </transition>
+  </router-view>
+  <Footer />
 </template>

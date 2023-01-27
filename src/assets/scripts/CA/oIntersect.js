@@ -13,7 +13,7 @@ export const onIntersect = (elementToWatch, callback, config) => {
   const {
     outCallback = () => {},
     once = true,
-    options = { threshold: 1.0 }
+    options = { threshold: 1.0 },
   } = config;
   // Initiate the observer
   const observer = new IntersectionObserver(([entry]) => {

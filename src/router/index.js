@@ -19,12 +19,12 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: HomeView
+      component: HomeView,
     },
     {
       path: "/creation",
       name: "creation",
-      component: CreationView
+      component: CreationView,
     },
     {
       path: "/order-now",
@@ -34,17 +34,17 @@ const router = createRouter({
     {
       path: "/thanks",
       name: "success",
-      component: success
+      component: success,
     },
     {
       path: "/sorry",
       name: "exception",
-      component: exception
+      component: exception,
     },
     {
       path: "/about",
       name: "about",
-      component: AboutView
+      component: AboutView,
     },
     {
       path: "/Law",
@@ -52,23 +52,23 @@ const router = createRouter({
       component: LawView,
       children: [
         {
-          path: 'imprint',
+          path: "imprint",
           component: LawImprint,
         },
         {
-          path: 'privacy',
+          path: "privacy",
           component: LawPrivacy,
         },
         {
-          path: 'eula',
+          path: "eula",
           component: LawEula,
-        }
+        },
       ],
     },
   ],
   scrollBehavior() {
-    document.getElementById('app').scrollIntoView();
-}
+    document.getElementById("app").scrollIntoView();
+  },
 });
 
 export default router;
