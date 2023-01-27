@@ -140,7 +140,7 @@ export default {
       </div>
       <div class="mobile-wrapper">
         <button class="mobile-nav-toggle" @click="toggleNavbar">
-          <i class="fa-solid fa-solid fa-compass"></i>
+          <i class="fa-duotone fa-bars"></i>
         </button>
       </div>
     </div>
@@ -197,6 +197,12 @@ header .sign .sign-background {
     rgba(255, 255, 255, 0.2) 0%,
     rgba(255, 255, 255, 0.2) 100%
   );
+  background: -webkit-gradient(
+    linear,
+    left bottom, left top,
+    from(rgba(255, 255, 255, 0.2)),
+    to(rgba(255, 255, 255, 0.2))
+  );
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 0.2) 0%,
@@ -230,8 +236,8 @@ nav {
 
 nav a {
   display: inline-block;
-  padding: 0 1.5rem;
-  border-left: 1px solid var(--color-border);
+  padding: 0 4rem;
+  border-left: 2px solid var(--color-border);
 }
 
 nav a:first-of-type {
@@ -244,7 +250,9 @@ nav a:first-of-type {
 
 .mobile-nav-toggle {
   background-color: transparent;
-  font-size: 42px;
+  font-size: 48px;
+  left: 0;
+  bottom: 2px;
   border: 0;
 }
 
@@ -253,34 +261,12 @@ nav a:first-of-type {
 }
 
 .mobile-nav {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    color-stop(50%, rgba(15, 15, 15, 1)),
-    to(rgba(0, 0, 0, 0))
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(15, 15, 15, 1) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  background: -moz-linear-gradient(
-    top,
-    rgba(15, 15, 15, 1) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  background: -o-linear-gradient(
-    top,
-    rgba(15, 15, 15, 1) 50%,
-    rgba(0, 0, 0, 0) 100%
-  );
   background: linear-gradient(
     180deg,
-    rgba(15, 15, 15, 1) 50%,
+    rgb(29, 27, 38) 50%,
     rgba(0, 0, 0, 0) 100%
   );
-  font-size: 1.5rem;
+  font-size: 2rem;
   position: fixed;
   top: 0;
   left: 0;
@@ -292,7 +278,7 @@ nav a:first-of-type {
 }
 
 .mobile-nav ul {
-  margin: 1.5rem 4rem;
+  top: 1rem;
 }
 
 .mobile-nav ul li {
