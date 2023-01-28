@@ -6,11 +6,11 @@ export default {
         return {
             sliderCount: 0,
             slider: [{
-                    path: 'src\\assets\\images\\pH\\SF.png',
+                    path: 'images/SF.png',
                     name: "Netox has the experience and expertise to create a custom web-application on Shopify that fits the unique needs of your business. Whether you're just starting out or looking to take your existing business to the next level, Netox can help. With Netox, you can have a professional, user-friendly online store up and running in no time."
                 },
                 {
-                    path: 'src\\assets\\images\\pH\\Lorem.png',
+                    path: 'images/Lorem.png',
                     name: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
                 }
             ]
@@ -208,9 +208,8 @@ button {
 
 #prev-btn {
   position: absolute;
-  left: 0px;
-  top: 0%;
-  transform: translateY(0%);
+  left: 0;
+  top: 0;
   z-index: 1;
 }
 
