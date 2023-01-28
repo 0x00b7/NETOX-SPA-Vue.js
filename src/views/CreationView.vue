@@ -17,7 +17,6 @@ export default {
         }
     },
     methods: {
-
         sliderSwipe_L() {
           this.sliderBtn({
                 target: {
@@ -85,10 +84,10 @@ export default {
            </div>
         </div>
         <div class="showcase">
-           <div class="carousel" @scroll.prevent v-touch:swipe.left="sliderSwipe_L" v-touch:swipe.right="sliderSwipe_R">
-              <div class="steps">
-                 <div class="percentage" :style="{ width: (100 * (sliderCount + 1) / slider.length) + '%' }"></div>
-              </div>
+           <div class="carousel" v-touch:swipe.left="sliderSwipe_L" v-touch:swipe.right="sliderSwipe_R">
+            <div class="steps">
+              <div class="percentage" :style="{ width: (100 * (sliderCount + 1) / slider.length) + '%' }"></div>
+            </div>
               <button id="prev-btn" @click="sliderBtn">
               <i class="fa-solid fa-left"></i>
               </button>
@@ -106,7 +105,6 @@ export default {
      </div>
   </div>
 </template>
-
 
 <style scoped>
 .container {
@@ -162,16 +160,16 @@ export default {
 }
 
 .showcase .carousel .steps {
-  padding: 0.1rem;
   position: absolute;
   top: 0;
   width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .showcase .carousel .steps .percentage {
   background-color: rgb(170, 255, 0);
-  padding: 0.1rem;
-  transition: width 1s;
+  padding: 0.2rem;
+  transition: width 500ms;
 }
 
 .showcase .carousel .image {
@@ -210,17 +208,16 @@ button {
 
 #prev-btn {
   position: absolute;
-  left: 25px;
-  top: 10%;
-  transform: translateY(-10%);
+  left: 0px;
+  top: 0%;
+  transform: translateY(0%);
   z-index: 1;
 }
 
 #next-btn {
   position: absolute;
-  right: 25px;
-  top: 10%;
-  transform: translateY(-10%);
+  right: 0;
+  top: 0;
   z-index: 1;
 }
 

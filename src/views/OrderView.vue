@@ -484,6 +484,7 @@ form {
   display: grid;
   height: 500px;
   margin-bottom: 1rem;
+  border-radius: 5px;
 }
 
 .color-scheme .color-picker {
