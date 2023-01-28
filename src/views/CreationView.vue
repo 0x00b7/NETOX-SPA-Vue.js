@@ -5,10 +5,9 @@ export default {
     data() {
         return {
             sliderCount: 0,
-            slider: [
-                {
-                  path: 'src\\assets\\images\\pH\\SF.png',
-                  name: "Netox has the experience and expertise to create a custom web-application on Shopify that fits the unique needs of your business. Whether you're just starting out or looking to take your existing business to the next level, Netox can help. With Netox, you can have a professional, user-friendly online store up and running in no time."
+            slider: [{
+                    path: 'src\\assets\\images\\pH\\SF.png',
+                    name: "Netox has the experience and expertise to create a custom web-application on Shopify that fits the unique needs of your business. Whether you're just starting out or looking to take your existing business to the next level, Netox can help. With Netox, you can have a professional, user-friendly online store up and running in no time."
                 },
                 {
                     path: 'src\\assets\\images\\pH\\Lorem.png',
@@ -18,6 +17,23 @@ export default {
         }
     },
     methods: {
+
+        sliderSwipe_L() {
+          this.sliderBtn({
+                target: {
+                    id: "prev-btn",
+                },
+            });
+        },
+
+        sliderSwipe_R() {
+          this.sliderBtn({
+                target: {
+                    id: "next-btn",
+                },
+            });
+        },
+
         sliderBtn(event) {
             anime({
                 targets: '.image > *',
@@ -69,7 +85,7 @@ export default {
            </div>
         </div>
         <div class="showcase">
-           <div class="carousel">
+           <div class="carousel" @scroll.prevent v-touch:swipe.left="sliderSwipe_L" v-touch:swipe.right="sliderSwipe_R">
               <div class="steps">
                  <div class="percentage" :style="{ width: (100 * (sliderCount + 1) / slider.length) + '%' }"></div>
               </div>
@@ -184,8 +200,7 @@ export default {
 button {
   background-color: transparent;
   color: white;
-  border: 0.3em solid white;
-  border-radius: 100%;
+  border: 0;
   width: 64px;
   height: 64px;
   text-align: center;
