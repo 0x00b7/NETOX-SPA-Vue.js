@@ -229,13 +229,13 @@ export default {
             </div>
             <div class="button" v-if="step === 2 || step === 3 || step === 4 || step === 5">
                 <button id="prev-btn" class="prev" @click="btn">
-                    <i class="fa-duotone fa-hand-point-left"></i>
+                    <i class="fa-solid fa-hand-point-left"></i>
                 </button>
                 <button v-if="step === 5" class="next" @click="handleSubmit">
-                    <i class="fa-duotone fa-paper-plane"></i>
+                    <i class="fa-solid fa-paper-plane"></i>
                 </button>
                 <button v-else-if="step" id="next-btn" class="next" @click="btn">
-                    <i class="fa-duotone fa-hand-point-right"></i>
+                    <i class="fa-solid fa-hand-point-right"></i>
                 </button>
             </div>
         </div>

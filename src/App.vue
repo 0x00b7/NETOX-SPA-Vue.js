@@ -5,9 +5,7 @@ import Footer from "./components/Footer.vue";
 import NavBar from "./components/NavBar.vue";
 
 import "./assets/scripts/FA/fontawesome.min.js";
-import "./assets/scripts/FA/regular.min.js";
 import "./assets/scripts/FA/solid.min.js";
-import "./assets/scripts/FA/duotone.min.js";
 import "./assets/scripts/FA/brands.min.js";
 </script>
 

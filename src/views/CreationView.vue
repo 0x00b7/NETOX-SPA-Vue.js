@@ -5,12 +5,13 @@ export default {
     data() {
         return {
             sliderCount: 0,
-            slider: [{
-                    path: 'images/SF.png',
+            slider: [
+                {
+                    path: 'src\\assets\\images\\SF.png',
                     name: "Netox has the experience and expertise to create a custom web-application on Shopify that fits the unique needs of your business. Whether you're just starting out or looking to take your existing business to the next level, Netox can help. With Netox, you can have a professional, user-friendly online store up and running in no time."
                 },
                 {
-                    path: 'images/Lorem.png',
+                    path: 'src\\assets\\images\\LM.png',
                     name: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
                 }
             ]
@@ -76,7 +77,7 @@ export default {
      <div class="section">
         <div class="showcase">
            <div class="hero-showcase">
-              <i class="fa-duotone fa-star-shooting"></i>
+              <i class="fa-solid fa-star-shooting"></i>
            </div>
            <div class="hero-text">
               <h1>Not just a simple website!</h1>

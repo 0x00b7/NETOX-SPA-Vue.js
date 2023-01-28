@@ -135,7 +135,7 @@ export default {
       </div>
       <div class="mobile-wrapper">
         <button class="mobile-nav-toggle" @click="toggleNavbar">
-          <i class="fa-duotone fa-bars"></i>
+          <i class="fa-solid fa-bars"></i>
         </button>
       </div>
     </div>
