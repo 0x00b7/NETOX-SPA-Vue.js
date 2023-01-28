@@ -64,68 +64,25 @@ export default {
 
     methods: {
         btn(event) {
-            if (event.target.id === "next-btn") {
-                const formElements = [
-                    this.form.forename,
-                    this.form.surname,
-                    this.form.email,
-                ];
-                const formIds = ["forename", "surname", "email"];
-                let x = false;
-                for (let i = 0; i < formElements.length; i++) {
-                    if (this.step === 2 && formElements[i].length < 2) {
-                        x = true;
-                        anime({
-                            targets: '#' + formIds[i],
-                            scale: [1.005, 1, 1.005, 1],
-                            opacity: [0.5, 1, 0.5, 1],
-                            duration: 750,
-                        })
+            anime({
+                targets: ".order-now",
+                opacity: [1, 0],
+                easing: "linear",
+                duration: 125,
+                complete: () => {
+                    if (event.target.id === "next-btn") {
+                        this.step++
+                    } else if (event.target.id === "prev-btn") {
+                        this.step--
                     }
-                    if (this.step === 4 && this.form.imagination.length < 12) {
-                        x = true;
-                        anime({
-                            targets: '#description',
-                            scale: [1.005, 1, 1.005, 1],
-                            opacity: [0.5, 1, 0.5, 1],
-                            duration: 750,
-                        })
-                    }
-                }
-                if (x) return;
-                anime({
-                    targets: ".order-now",
-                    opacity: [1, 0],
-                    easing: "linear",
-                    duration: 125,
-                    complete: () => {
-                        this.step++;
-                        anime({
-                            targets: ".order-now",
-                            opacity: [0, 1],
-                            easing: "linear",
-                            duration: 125,
-                        });
-                    },
-                });
-            }
-            if (event.target.id === "prev-btn") {
-                anime({
-                    targets: ".order-now",
-                    opacity: [1, 0],
-                    easing: "linear",
-                    duration: 125,
-                    complete: () => {
-                        this.step--;
-                        anime({
-                            targets: ".order-now",
-                            opacity: [0, 1],
-                            easing: "linear",
-                            duration: 125,
-                        });
-                    },
-                });
-            }
+                    anime({
+                        targets: ".order-now",
+                        opacity: [0, 1],
+                        easing: "linear",
+                        duration: 125,
+                    });
+                },
+            });
         },
 
         select(x) {

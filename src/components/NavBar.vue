@@ -2,98 +2,93 @@
 import anime from "animejs";
 
 export default {
-  methods: {
-    toggleNavbar() {
-      const navbar = document.querySelector(".mobile-nav");
-      if (navbar.style.display === "block") {
-        anime({
-          targets: navbar,
-          easing: 'easeInOutQuad',
-          height: "0px",
-          opacity: [1, 0],
-          duration: 350,
-          complete: () => {
-            navbar.style.display = "none";
-          },
-        });
-      } else {
-        navbar.style.display = "block";
-        anime({
-          targets: navbar,
-          height: "180px",
-          opacity: [0, 1],
-          easing: 'easeInOutQuad',
-          duration: 350,
-        });
-      }
+    methods: {
+        toggleNavbar() {
+            const navbar = document.querySelector(".mobile-nav");
+            if (navbar.style.display === "block") {
+                anime({
+                    targets: navbar,
+                    easing: 'easeInOutQuad',
+                    height: "0px",
+                    opacity: [1, 0],
+                    duration: 350,
+                    complete: () => {
+                        navbar.style.display = "none";
+                    },
+                });
+            } else {
+                navbar.style.display = "block";
+                anime({
+                    targets: navbar,
+                    height: "180px",
+                    opacity: [0, 1],
+                    easing: 'easeInOutQuad',
+                    duration: 350,
+                });
+            }
+        },
     },
-  },
-  mounted() {
-    var sign = document.querySelectorAll(".N, .E, .T, .O, .X");
-    anime({
-      targets: sign,
-      opacity: [0, 1],
-      translateX: [-270, 0],
-      easing: "easeOutElastic(1, 1)",
-      scaleX: [
-        {
-          value: 5,
-          duration: 25,
-          easing: "easeOutExpo",
-        },
-        {
-          value: 1,
-          duration: 900,
-        },
-      ],
-      scaleY: [
-        {
-          value: [1.75, 1],
-          duration: 450,
-        },
-        {
-          value: 2,
-          duration: 100,
-          delay: 750,
-          easing: "easeOutExpo",
-        },
-        {
-          value: 1,
-          duration: 450,
-        },
-      ],
-      delay: anime.stagger(100, {
-        direction: "reverse",
-      }),
-    });
-    anime({
-      targets: ".dot",
-      easing: "spring(0, 20, 10, 0)",
-      delay: 250,
-      opacity: [0, 1],
-      translateX: [100, 0],
-      scaleY: [
-        {
-          value: [2, 1],
-          duration: 450,
-        },
-      ],
-    });
-    anime({
-      targets: ".ws",
-      easing: "spring(0, 20, 10, 0)",
-      delay: 900,
-      opacity: [0, 1],
-    });
-    anime({
-      targets: ".sign-background",
-      background:
-        "linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)",
-      delay: 1000,
-      duration: 800,
-      easing: "easeOutElastic(1, 1)",
-    });
-  },
+    mounted() {
+        var sign = document.querySelectorAll(".N, .E, .T, .O, .X");
+        anime({
+            targets: sign,
+            opacity: [0, 1],
+            translateX: [-270, 0],
+            easing: "easeOutElastic(1, 1)",
+            scaleX: [{
+                    value: 5,
+                    duration: 25,
+                    easing: "easeOutExpo",
+                },
+                {
+                    value: 1,
+                    duration: 900,
+                },
+            ],
+            scaleY: [{
+                    value: [1.75, 1],
+                    duration: 450,
+                },
+                {
+                    value: 2,
+                    duration: 100,
+                    delay: 750,
+                    easing: "easeOutExpo",
+                },
+                {
+                    value: 1,
+                    duration: 450,
+                },
+            ],
+            delay: anime.stagger(100, {
+                direction: "reverse",
+            }),
+        });
+        anime({
+            targets: ".dot",
+            easing: "spring(0, 20, 10, 0)",
+            delay: 250,
+            opacity: [0, 1],
+            translateX: [100, 0],
+            scaleY: [{
+                value: [2, 1],
+                duration: 450,
+            }, ],
+        });
+        anime({
+            targets: ".ws",
+            easing: "spring(0, 20, 10, 0)",
+            delay: 900,
+            opacity: [0, 1],
+        });
+        anime({
+            targets: ".sign-background",
+            background: "linear-gradient(45deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)",
+            delay: 1000,
+            duration: 800,
+            easing: "easeOutElastic(1, 1)",
+        });
+    },
 };
 </script>
 
