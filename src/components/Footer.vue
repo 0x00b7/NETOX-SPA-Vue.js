@@ -30,19 +30,19 @@
               <span id="section">Legal Center</span>
               <li>
                   <span class="fa-li">
-                    <i class="fa-solid fa-person-rays"></i>
+                    <i class="fa-solid fa-solid fa-trademark"></i>
                   </span>
                   <RouterLink to="/Legal-Center/Trademark">Trademark</RouterLink>
               </li>
               <li>
                   <span class="fa-li">
-                    <i class="fa-solid fa-person-rays"></i>
+                    <i class="fa-solid fa-signature-lock"></i>
                   </span>
                   <RouterLink to="/Legal-Center/Privacy">Privacy</RouterLink>
               </li>
               <li>
                   <span class="fa-li">
-                    <i class="fa-solid fa-person-rays"></i>
+                    <i class="fa-solid fa-handshake"></i>
                   </span>
                   <RouterLink to="/Legal-Center/Eula">Eula</RouterLink>
               </li>
