@@ -239,7 +239,7 @@ nav a {
 }
 
 .mobile-nav-toggle {
-  background-color: transparent;
+  background: transparent;
   font-size: 48px;
   left: 0;
   border: 0;

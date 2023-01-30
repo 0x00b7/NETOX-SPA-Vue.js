@@ -261,7 +261,7 @@ button {
 }
 
 button.next {
-  background-color: rgb(98, 0, 255);
+  background-color: rgb(100, 0, 255);
   border: 0;
   color: white;
   font-family: inherit;
@@ -269,12 +269,12 @@ button.next {
 }
 
 button.next:disabled {
-  background-color: rgba(98, 0, 255, 0.5);
+  background-color: rgba(100, 0, 255, 0.5);
   color: rgba(255, 255, 255, 0.5);
 }
 
 button.prev {
-  background-color: rgba(255, 187, 0, 1);
+  background-color: rgba(255, 185, 0, 1);
   border: 0;
   color: white;
   font-family: inherit;
@@ -433,7 +433,7 @@ form {
 }
 
 .order-input input {
-  background: rgba(20, 20, 20, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -450,7 +450,7 @@ form {
 }
 
 .order-input textarea {
-  background: rgba(20, 20, 20, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;

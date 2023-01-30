@@ -88,7 +88,7 @@ import { useFadeIn, useFadeOut } from "../assets/scripts/AN/anime-route.js";
 .select {
   width: 20%;
   padding: 0.5rem 3rem;
-  background-color: rgba(0, 90, 255, 0.5);
+  background: rgba(0, 90, 255, 0.5);
 }
 
 .select li {

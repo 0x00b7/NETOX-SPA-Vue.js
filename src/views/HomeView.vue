@@ -250,7 +250,7 @@ li {
 .feature-box {
   width: 100%;
   height: 270px;
-  background-color: rgba(10, 10, 10, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   text-align: center;
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;

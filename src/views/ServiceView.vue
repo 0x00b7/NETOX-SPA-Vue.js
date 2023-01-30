@@ -203,7 +203,7 @@ export default {
 }
 
 button {
-  background-color: transparent;
+  background: transparent;
   color: white;
   border: 0;
   width: 64px;

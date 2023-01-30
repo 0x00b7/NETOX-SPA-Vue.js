@@ -71,8 +71,12 @@ export default {
   margin-bottom: 2rem;
 }
 
+.section h2:last-child {
+  margin-bottom: 0;
+}
+
 .section:nth-child(2) {
-  margin: 0.5rem 1rem;
+  margin: 2rem;
 }
 
 .loader {
@@ -106,12 +110,6 @@ export default {
 img {
   display: none;
   content: url(../assets/images/admin.png);
-  -webkit-animation: image_fade 250ms linear forwards;
-  -moz-animation: image_fade 250ms linear forwards;
-  -o-animation: image_fade 250ms linear forwards;
-  animation: image_fade 250ms linear forwards;
-  margin-left: 5%;
-  opacity: 0;
   width: 100%;
   height: 100%;
 }
@@ -150,8 +148,8 @@ img {
 
   img {
     content: url(../assets/images/admin_small.png);
-    width: 95%;
-    top: 0.5rem;
+    width: 100%;
+    padding: 0.5rem;
   }
 
   .section:nth-child(1) {
@@ -168,55 +166,10 @@ img {
   }
 
   .section:nth-child(2) {
-    padding: 1rem 0 0 1rem;
+    padding: 1rem;
     margin: 0;
   }
 }
 
-@media (max-width: 32em) {
-}
-
-@-webkit-keyframes image_fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-    margin-left: 0%;
-  }
-}
-
-@-moz-keyframes image_fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-    margin-left: 0%;
-  }
-}
-
-@-o-keyframes image_fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-    margin-left: 0%;
-  }
-}
-
-@keyframes image_fade {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-    margin-left: 0%;
-  }
-}
+@media (max-width: 32em) {}
 </style>
