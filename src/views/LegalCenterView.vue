@@ -5,46 +5,41 @@ import { useFadeIn, useFadeOut } from "../assets/scripts/AN/anime-route.js";
 
 <template>
   <div class="container">
-    <div class="header">
-      <h1>Law Center</h1>
-      <h2>
-        Protecting the security and privacy of our users is our top priority.
-      </h2>
-    </div>
-    <div class="section">
-      <div class="select">
-        <li>
-          <span class="fa-li">
-            <i class="fa-solid fa-solid fa-trademark"></i>
-          </span>
-          <RouterLink :to="'/Legal-Center/Trademark'">Trademark</RouterLink>
-        </li>
-        <li>
-          <span class="fa-li">
-            <i class="fa-solid fa-signature-lock"></i>
-          </span>
-          <RouterLink :to="'/Legal-Center/Privacy'">Privacy</RouterLink>
-        </li>
-        <li>
-          <span class="fa-li">
-            <i class="fa-solid fa-handshake"></i>
-          </span>
-          <RouterLink :to="'/Legal-Center/Eula'">Eula</RouterLink>
-        </li>
+      <div class="header">
+          <h1>Law Center</h1>
+          <h2>
+              Protecting the security and privacy of our users is our top priority.
+          </h2>
       </div>
-      <div class="render">
-        <router-view v-slot="{ Component }">
-          <transition
-            @enter="useFadeIn"
-            @leave="useFadeOut"
-            :css="false"
-            mode="out-in"
-          >
-            <component :is="Component" />
-          </transition>
-        </router-view>
+      <div class="section">
+          <div class="select">
+              <li>
+                  <span class="fa-li">
+                      <i class="fa-solid fa-solid fa-trademark"></i>
+                  </span>
+                  <RouterLink :to="'/Legal-Center/Trademark'">Trademark</RouterLink>
+              </li>
+              <li>
+                  <span class="fa-li">
+                      <i class="fa-solid fa-signature-lock"></i>
+                  </span>
+                  <RouterLink :to="'/Legal-Center/Privacy'">Privacy</RouterLink>
+              </li>
+              <li>
+                  <span class="fa-li">
+                      <i class="fa-solid fa-handshake"></i>
+                  </span>
+                  <RouterLink :to="'/Legal-Center/Eula'">Eula</RouterLink>
+              </li>
+          </div>
+          <div class="render">
+              <router-view v-slot="{ Component }">
+                  <transition @enter="useFadeIn" @leave="useFadeOut" :css="false" mode="out-in">
+                      <component :is="Component" />
+                  </transition>
+              </router-view>
+          </div>
       </div>
-    </div>
   </div>
 </template>
 

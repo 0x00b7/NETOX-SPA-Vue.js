@@ -1,50 +1,50 @@
 <script>
 export default {
-  mounted() {
-    const computedStyle = window.getComputedStyle(this.$refs.image);
+    mounted() {
+        const computedStyle = window.getComputedStyle(this.$refs.image);
 
-    const imageSrc = computedStyle.content.slice(5, -2);
+        const imageSrc = computedStyle.content.slice(5, -2);
 
-    const image = new Image();
+        const image = new Image();
 
-    image.src = imageSrc;
+        image.src = imageSrc;
 
-    image.onload = () => {
-      this.$refs.loading.style.display = "none";
-      this.$refs.image.style.display = "block";
-    };
-  },
+        image.onload = () => {
+            this.$refs.loading.style.display = "none";
+            this.$refs.image.style.display = "block";
+        };
+    },
 };
 </script>
 
 <template>
   <div class="container">
-    <div class="section">
-      <div class="loader" ref="loading">
-        <div class="placeholder"></div>
+      <div class="section">
+          <div class="loader" ref="loading">
+              <div class="placeholder"></div>
+          </div>
+          <img ref="image" />
       </div>
-      <img ref="image" />
-    </div>
-    <div class="section">
-      <h1>
-        My Name is Gernot, Founder of Netox.ws! <br />
-        I'm a 21-Year-Old Web/Software-Developer.
-      </h1>
-      <h2>
-        At the Age of 12 I became Passionate about Technic & it's Journey, Day
-        on – Day off, learning new capabilities about HTML/CSS3 as well as
-        JavaScript and its wide Spectrum of Features… These days I am running a
-        Website Developing Service, helping hundreds of People visualizing their
-        Products on the World Wide Web!
-      </h2>
-      <h1>
-        I am Always Dedicated and Open for new Projects at every Scale possible!
-      </h1>
-      <h2>
-        For business inquiries regarding Web-Development, directly Open a Ticket
-        via our Form or Sending an E-Mail to: admin@netox.ws
-      </h2>
-    </div>
+      <div class="section">
+          <h1>
+              My Name is Gernot, Founder of Netox.ws! <br />
+              I'm a 21-Year-Old Web/Software-Developer.
+          </h1>
+          <h2>
+              At the Age of 12 I became Passionate about Technic & it's Journey, Day
+              on – Day off, learning new capabilities about HTML/CSS3 as well as
+              JavaScript and its wide Spectrum of Features… These days I am running a
+              Website Developing Service, helping hundreds of People visualizing their
+              Products on the World Wide Web!
+          </h2>
+          <h1>
+              I am Always Dedicated and Open for new Projects at every Scale possible!
+          </h1>
+          <h2>
+              For business inquiries regarding Web-Development, directly Open a Ticket
+              via our Form or Sending an E-Mail to: admin@netox.ws
+          </h2>
+      </div>
   </div>
 </template>
 

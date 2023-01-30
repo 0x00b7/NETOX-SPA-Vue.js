@@ -5,8 +5,7 @@ export default {
     data() {
         return {
             sliderCount: 0,
-            slider: [
-                {
+            slider: [{
                     path: new URL('../assets/images/SF.png', import.meta.url).href,
                     name: "Netox has the experience and expertise to create a custom web-application on Shopify that fits the unique needs of your business. Whether you're just starting out or looking to take your existing business to the next level, Netox can help. With Netox, you can have a professional, user-friendly online store up and running in no time."
                 },
@@ -19,7 +18,7 @@ export default {
     },
     methods: {
         sliderSwipe_L() {
-          this.sliderBtn({
+            this.sliderBtn({
                 target: {
                     id: "prev-btn",
                 },
@@ -27,7 +26,7 @@ export default {
         },
 
         sliderSwipe_R() {
-          this.sliderBtn({
+            this.sliderBtn({
                 target: {
                     id: "next-btn",
                 },
@@ -71,39 +70,39 @@ export default {
 
 <template>
   <div class="container">
-     <div class="header">
-        <h1>Know our vision</h1>
-     </div>
-     <div class="section">
-        <div class="showcase">
-           <div class="hero-showcase">
-              <i class="fa-solid fa-star-shooting"></i>
-           </div>
-           <div class="hero-text">
-              <h1>Not just a simple website!</h1>
-              <h2>We create innovative web-applications and UX designs at an affordable price. <br/><br/> Our code, primarily based on Vue.js and JavaScript, is highly professional and uses the best solutions to create a masterpiece for our clients. <br/><br/> We also use Font-Awesome, a top-notch SVG icon library, to enhance the overall look and feel of our designs.</h2>
-           </div>
-        </div>
-        <div class="showcase">
-           <div class="carousel" v-touch:swipe.left="sliderSwipe_L" v-touch:swipe.right="sliderSwipe_R">
-            <div class="steps">
-              <div class="percentage" :style="{ width: (100 * (sliderCount + 1) / slider.length) + '%' }"></div>
-            </div>
-              <button id="prev-btn" @click="sliderBtn">
-              <i class="fa-solid fa-left"></i>
-              </button>
-              <div class="image" v-show="sliderCount === index" v-for="(img, index) in slider" :key="index">
-                 <img :src="img.path">
-                 <div class="text-wrapper">
-                    <h2>{{ img.name }}</h2>
-                 </div>
+      <div class="header">
+          <h1>Know our vision</h1>
+      </div>
+      <div class="section">
+          <div class="showcase">
+              <div class="hero-showcase">
+                  <i class="fa-solid fa-star-shooting"></i>
               </div>
-              <button id="next-btn" @click="sliderBtn">
-              <i class="fa-solid fa-right"></i>
-              </button>
-           </div>
-        </div>
-     </div>
+              <div class="hero-text">
+                  <h1>Not just a simple website!</h1>
+                  <h2>We create innovative web-applications and UX designs at an affordable price. <br /><br /> Our code, primarily based on Vue.js and JavaScript, is highly professional and uses the best solutions to create a masterpiece for our clients. <br /><br /> We also use Font-Awesome, a top-notch SVG icon library, to enhance the overall look and feel of our designs.</h2>
+              </div>
+          </div>
+          <div class="showcase">
+              <div class="carousel" v-touch:swipe.left="sliderSwipe_L" v-touch:swipe.right="sliderSwipe_R">
+                  <div class="steps">
+                      <div class="percentage" :style="{ width: (100 * (sliderCount + 1) / slider.length) + '%' }"></div>
+                  </div>
+                  <button id="prev-btn" @click="sliderBtn">
+                      <i class="fa-solid fa-left"></i>
+                  </button>
+                  <div class="image" v-show="sliderCount === index" v-for="(img, index) in slider" :key="index">
+                      <img :src="img.path">
+                      <div class="text-wrapper">
+                          <h2>{{ img.name }}</h2>
+                      </div>
+                  </div>
+                  <button id="next-btn" @click="sliderBtn">
+                      <i class="fa-solid fa-right"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
   </div>
 </template>
 
@@ -124,12 +123,13 @@ export default {
 
 .showcase .hero-showcase {
   padding: 2rem;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .showcase .hero-showcase svg {
   font-size: 12rem;
   color: blue;
-  filter: sepia(60%) saturate(1000%) hue-rotate(90deg) drop-shadow(0px 0px 25px rgba(0, 119, 255, 0.2));
+  -webkit-filter: sepia(60%) saturate(1000%) hue-rotate(90deg) drop-shadow(0px 0px 25px rgba(0, 119, 255, 0.2));
+          filter: sepia(60%) saturate(1000%) hue-rotate(90deg) drop-shadow(0px 0px 25px rgba(0, 119, 255, 0.2));
 }
 
 .showcase .hero-text {
@@ -150,9 +150,21 @@ export default {
 .showcase .carousel {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 2.5rem 1.5rem;
 }
 
@@ -166,15 +178,20 @@ export default {
 .showcase .carousel .steps .percentage {
   background-color: rgb(170, 255, 0);
   padding: 0.2rem;
+  -webkit-transition: width 500ms;
+  -o-transition: width 500ms;
+  -moz-transition: width 500ms;
   transition: width 500ms;
 }
 
 .showcase .carousel .image {
+  display: -ms-grid;
   display: grid;
 }
 
 .showcase .carousel .image img {
-  justify-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
   width: 75vw;
   bottom: 5px;
 }
@@ -192,7 +209,11 @@ button {
   width: 64px;
   height: 64px;
   text-align: center;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 100%;
 }
 

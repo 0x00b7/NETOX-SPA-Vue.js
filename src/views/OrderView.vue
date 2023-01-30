@@ -17,7 +17,7 @@ export default {
 
             items: [{
                     h1: "Onepager",
-                    h3: "A beautiful One-Page Website for information of all kinds, whether for business or private purposes.",
+                    h3: "A beautiful one-page website for providing information of all types, whether for business or personal use.",
                 },
                 {
                     h1: "Multipager",
@@ -25,11 +25,11 @@ export default {
                 },
                 {
                     h1: "Shop",
-                    h3: "Your sales will be a breeze, whether using Shopify, Etsy or a payment system of your choice, your customers will LOVE the design!",
+                    h3: "Your sales will be effortless with your choice of Shopify, Etsy, or any other payment system. Your customers will love the design!",
                 },
                 {
                     h1: "Renew",
-                    h3: "Your old site needs a new polish, but you dont know how? then this selection is the right one for you!",
+                    h3: "If you need to give your old website a fresh look but don't know how, this option is perfect for you.",
                 },
             ],
 
@@ -330,7 +330,7 @@ form {
 }
 
 .submit input {
-  background-color: rgba(15, 15, 15, 1);
+  background-color: rgba(0, 0, 0, 0.2);
   border: 0;
   color: white;
   font-family: inherit;
@@ -344,7 +344,7 @@ form {
 }
 
 .submit textarea {
-  background-color: rgba(15, 15, 15, 1);
+  background-color: rgba(0, 0, 0, 0.2);
   border: 0;
   color: white;
   font-family: inherit;

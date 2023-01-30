@@ -3,156 +3,110 @@ import OS from "../components/OS.vue";
 import anime from "animejs";
 
 export default {
-  components: {
-    OS: OS,
-  },
-  mounted() {
-    anime({
-      targets: ".fa-angle-right",
-      opacity: [1, 0.2, 1],
-      easing: "easeInCubic",
-      duration: 1000,
-      loop: true,
-      delay: anime.stagger(200),
-    });
-  },
-  methods: {
-    mobile() {
-      if (window.innerWidth > 512) {
-        return "none";
-      }
+    components: {
+        OS: OS,
     },
-  },
+    mounted() {
+        anime({
+            targets: ".fa-angle-right",
+            opacity: [1, 0.2, 1],
+            easing: "easeInCubic",
+            duration: 1000,
+            loop: true,
+            delay: anime.stagger(200),
+        });
+    },
+    methods: {
+        mobile() {
+            if (window.innerWidth > 512) {
+                return "none";
+            }
+        },
+    },
 };
 </script>
 
 <template>
   <div class="container">
-    <!-- Section I -->
-    <div class="section">
-      <div class="home">
-        <h1>WE'LL BUILD YOUR VISION, START YOUR JOURNEY NOW!</h1>
-        <div class="button">
-          <svg
-            class="svg-inline--fa fa-angle-right"
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fass"
-            data-icon="angle-right"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 320 512"
-            data-fa-i2svg=""
-          >
-            <path
-              fill="currentColor"
-              d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"
-            ></path>
-          </svg>
-          <svg
-            class="svg-inline--fa fa-angle-right"
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fass"
-            data-icon="angle-right"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 320 512"
-            data-fa-i2svg=""
-          >
-            <path
-              fill="currentColor"
-              d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"
-            ></path>
-          </svg>
-          <svg
-            class="svg-inline--fa fa-angle-right"
-            aria-hidden="true"
-            focusable="false"
-            data-prefix="fass"
-            data-icon="angle-right"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 320 512"
-            data-fa-i2svg=""
-          >
-            <path
-              fill="currentColor"
-              d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"
-            ></path>
-          </svg>
-          <RouterLink to="/Order-Now">
-            <div>
-              <p>ORDER&nbsp;</p>
-              <p>NOW</p>
-              <p>!&nbsp;</p>
-            </div>
-          </RouterLink>
-        </div>
+      <!-- Section I -->
+      <div class="section">
+          <div class="home">
+              <h1>WE'LL BUILD YOUR VISION, START YOUR JOURNEY NOW!</h1>
+              <div class="button">
+                  <svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                      <path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path>
+                  </svg>
+                  <svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                      <path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path>
+                  </svg>
+                  <svg class="svg-inline--fa fa-angle-right" aria-hidden="true" focusable="false" data-prefix="fass" data-icon="angle-right" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" data-fa-i2svg="">
+                      <path fill="currentColor" d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"></path>
+                  </svg>
+                  <RouterLink to="/Order-Now">
+                      <div>
+                          <p>ORDER&nbsp;</p>
+                          <p>NOW</p>
+                          <p>!&nbsp;</p>
+                      </div>
+                  </RouterLink>
+              </div>
+          </div>
+          <div class="define">
+              <h1>
+                  Netox not only creates your presentation but also provides all the
+                  other components to deliver your site.
+              </h1>
+              <h2>WE ARE RESPONSIBLE FOR</h2>
+              <ul class="fa-ul">
+                  <li>
+                      <span class="fa-li">
+                          <i class="fa-solid fa-rectangle-code"></i> </span>Programming
+                  </li>
+                  <li>
+                      <span class="fa-li"> <i class="fa-solid fa-wifi"></i> </span>Hosting
+                  </li>
+                  <li>
+                      <span class="fa-li"> <i class="fa-solid fa-link"></i> </span>Domain
+                      Linkage
+                  </li>
+                  <li>
+                      <span class="fa-li">
+                          <i class="fa-solid fa-magnifying-glass-location"></i> </span>Search Engine Optimization
+                  </li>
+                  <li>
+                      <span class="fa-li">
+                          <i class="fa-solid fa-shield-keyhole"></i> </span>Service Protection
+                  </li>
+              </ul>
+          </div>
       </div>
-      <div class="define">
-        <h1>
-          Netox not only creates your presentation but also provides all the
-          other components to deliver your site.
-        </h1>
-        <h2>WE ARE RESPONSIBLE FOR</h2>
-        <ul class="fa-ul">
-          <li>
-            <span class="fa-li">
-              <i class="fa-solid fa-rectangle-code"></i> </span
-            >Programming
-          </li>
-          <li>
-            <span class="fa-li"> <i class="fa-solid fa-wifi"></i> </span>Hosting
-          </li>
-          <li>
-            <span class="fa-li"> <i class="fa-solid fa-link"></i> </span>Domain
-            Linkage
-          </li>
-          <li>
-            <span class="fa-li">
-              <i class="fa-solid fa-magnifying-glass-location"></i> </span
-            >Search Engine Optimization
-          </li>
-          <li>
-            <span class="fa-li">
-              <i class="fa-solid fa-shield-keyhole"></i> </span
-            >Service Protection
-          </li>
-        </ul>
+      <!-- Section-Text -->
+      <div class="header">
+          <h1>Features</h1>
       </div>
-    </div>
-    <!-- Section-Text -->
-    <div class="header">
-      <h1>Features</h1>
-    </div>
-    <!-- Section II -->
-    <div class="section">
-      <OS class="feature-box" :anim="mobile()">
-        <p>Awesome</p>
-        <i class="fa-solid fa-sparkles"></i>
-        <p>We admire detail, keeping our Design as Clean as Possible!</p>
-      </OS>
-      <OS class="feature-box" :anim="mobile()">
-        <p>Handmade</p>
-        <i class="fa-solid fa-cubes"></i>
-        <p>
-          Proudly to say, we program and set up our Projects 100% ourselves.
-        </p>
-      </OS>
-      <OS class="feature-box" :anim="mobile()">
-        <p>Responsive</p>
-        <i class="fa-solid fa-laptop-mobile"></i>
-        <p>We also pay attention to responsiveness on every Device.</p>
-      </OS>
-      <OS class="feature-box" :anim="mobile()">
-        <p>Effortless</p>
-        <i class="fa-solid fa-feather"></i>
-        <p>
-          We care about a Flawless User experience, programming your Product!
-        </p>
-      </OS>
-    </div>
+      <!-- Section II -->
+      <div class="section">
+          <OS class="feature-box" :anim="mobile()">
+              <p>Awesome</p>
+              <i class="fa-solid fa-sparkles"></i>
+              <p>We admire detail and strive to keep our design as clean as possible.</p>
+          </OS>
+          <OS class="feature-box" :anim="mobile()">
+              <p>Handmade</p>
+              <i class="fa-solid fa-cubes"></i>
+              <p>We are proud to say that we program and set up our projects 100% ourselves.</p>
+          </OS>
+          <OS class="feature-box" :anim="mobile()">
+              <p>Responsive</p>
+              <i class="fa-solid fa-laptop-mobile"></i>
+              <p>We pay close attention to ensuring responsiveness on every device.</p>
+          </OS>
+          <OS class="feature-box" :anim="mobile()">
+              <p>Effortless</p>
+              <i class="fa-solid fa-feather"></i>
+              <p>We are dedicated to providing a flawless user experience while programming your product.</p>
+          </OS>
+      </div>
   </div>
 </template>
 
