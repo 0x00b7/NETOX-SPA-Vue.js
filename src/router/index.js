@@ -3,12 +3,13 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import OrderView from "../views/OrderView.vue";
-import CreationView from "../views/CreationView.vue";
+import ServiceView from "../views/ServiceView.vue";
+import FaqsView from "../views/FaqsView.vue";
 
-import LawView from "../views/LawView.vue";
-import LawPrivacy from "../views/Law/LawPrivacy.vue";
-import LawImprint from "../views/Law/LawImprint.vue";
-import LawEula from "../views/Law/LawEula.vue";
+import LegalCenterView from "../views/LegalCenterView.vue";
+import PrivacyView from "../views/Legal-Center/Privacy.vue";
+import TrademarkView from "../views/Legal-Center/Trademark.vue";
+import EulaView from "../views/Legal-Center/Eula.vue";
 
 import success from "../views/Response/success.vue";
 import exception from "../views/Response/exception.vue";
@@ -18,50 +19,55 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "Home",
       component: HomeView,
     },
     {
-      path: "/creation",
-      name: "creation",
-      component: CreationView,
+      path: "/Service",
+      name: "Service",
+      component: ServiceView,
     },
     {
-      path: "/order-now",
-      name: "order-now",
+      path: "/FAQs",
+      name: "FAQs",
+      component: FaqsView,
+    },
+    {
+      path: "/Order-Now",
+      name: "Order-Now",
       component: OrderView,
     },
     {
-      path: "/thanks",
-      name: "success",
+      path: "/Thanks",
+      name: "Success",
       component: success,
     },
     {
-      path: "/sorry",
-      name: "exception",
+      path: "/Sorry",
+      name: "Exception",
       component: exception,
     },
     {
-      path: "/about",
-      name: "about",
+      path: "/About",
+      name: "About",
       component: AboutView,
     },
     {
-      path: "/Law",
-      name: "Law",
-      component: LawView,
+      path: "/Legal-Center",
+      name: "Legal-Center",
+      component: LegalCenterView,
       children: [
         {
-          path: "imprint",
-          component: LawImprint,
+          path: "Trademark",
+          component: TrademarkView,
         },
         {
-          path: "privacy",
-          component: LawPrivacy,
+          path: "Privacy",
+          component: PrivacyView,
         },
         {
-          path: "eula",
-          component: LawEula,
+          path: "Eula",
+          component: EulaView,
         },
       ],
     },

@@ -98,19 +98,25 @@ export default {
       <ul class="fa-ul">
         <li>
           <span class="fa-li">
-            <i class="fa-solid fa-golf-flag-hole"></i>
+            <i class="fa-solid fa-earth-americas"></i>
           </span>
           <RouterLink @click="toggleNavbar" to="/">Home</RouterLink>
         </li>
         <li>
           <span class="fa-li">
-            <i class="fa-solid fa-bolt"></i>
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
           </span>
-          <RouterLink @click="toggleNavbar" to="/creation">Creation</RouterLink>
+          <RouterLink @click="toggleNavbar" to="/service">Service</RouterLink>
         </li>
         <li>
           <span class="fa-li">
             <i class="fa-solid fa-book-user"></i>
+          </span>
+          <RouterLink @click="toggleNavbar" to="/faqs">FAQs</RouterLink>
+        </li>
+        <li>
+          <span class="fa-li">
+            <i class="fa-solid fa-person-rays"></i>
           </span>
           <RouterLink @click="toggleNavbar" to="/about">About</RouterLink>
         </li>
@@ -128,8 +134,9 @@ export default {
         <div class="wrapper">
           <nav>
             <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/creation">Creation</RouterLink>
-            <RouterLink to="/about">About</RouterLink>
+            <RouterLink to="/Service">Service</RouterLink>
+            <RouterLink to="/FAQs">FAQs</RouterLink>
+            <RouterLink to="/About">About</RouterLink>
           </nav>
         </div>
       </div>
@@ -217,19 +224,14 @@ header .wrapper {
 
 nav {
   width: 100%;
-  font-size: 26px;
-  margin: 13px 0px 0px 15px;
+  font-size: 24px;
+  top: 14px;
   font-style: normal;
 }
 
 nav a {
   display: inline-block;
-  padding: 0 4rem;
-  border-left: 2px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
+  padding: 0 3rem;
 }
 
 .mobile-wrapper {
@@ -258,7 +260,6 @@ nav a:first-of-type {
   bottom: 0;
   z-index: 1;
   display: none;
-  border-radius: 0 0 5rem 5rem;
 }
 
 .mobile-nav ul {

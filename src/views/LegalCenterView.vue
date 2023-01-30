@@ -17,19 +17,19 @@ import { useFadeIn, useFadeOut } from "../assets/scripts/AN/anime-route.js";
           <span class="fa-li">
             <i class="fa-solid fa-book-section"></i>
           </span>
-          <RouterLink :to="'/Law/imprint'">Imprint</RouterLink>
+          <RouterLink :to="'/Legal-Center/Trademark'">Trademark</RouterLink>
         </li>
         <li>
           <span class="fa-li">
             <i class="fa-solid fa-lock-keyhole"></i>
           </span>
-          <RouterLink :to="'/Law/privacy'">Privacy Policy</RouterLink>
+          <RouterLink :to="'/Legal-Center/Privacy'">Privacy Policy</RouterLink>
         </li>
         <li>
           <span class="fa-li">
             <i class="fa-solid fa-handshake"></i>
           </span>
-          <RouterLink :to="'/Law/eula'">User Agreement</RouterLink>
+          <RouterLink :to="'/Legal-Center/Eula'">User Agreement</RouterLink>
         </li>
       </div>
       <div class="render">

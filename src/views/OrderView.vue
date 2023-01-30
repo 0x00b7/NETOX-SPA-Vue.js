@@ -286,10 +286,6 @@ button.prev {
   display: grid;
 }
 
-.section .header {
-  padding-bottom: 0;
-}
-
 .section .header h1 {
   font-weight: 600;
   text-align: left;

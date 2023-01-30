@@ -113,10 +113,6 @@ export default {
   display: grid;
 }
 
-.header {
-  background-color: rgba(10, 10, 10, 0.2);
-}
-
 .showcase {
   display: -ms-flexbox;
   display: -webkit-box;
@@ -127,8 +123,8 @@ export default {
 }
 
 .showcase .hero-showcase {
-  padding: 3rem;
-  background-color: rgba(0, 0, 0, 0.4);
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 .showcase .hero-showcase svg {
   font-size: 12rem;
@@ -138,7 +134,7 @@ export default {
 
 .showcase .hero-text {
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   width: 100%;
 }
 
@@ -153,11 +149,11 @@ export default {
 
 .showcase .carousel {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 2.5rem 1.5rem;
 }
 
 .showcase .carousel .steps {
@@ -179,21 +175,14 @@ export default {
 
 .showcase .carousel .image img {
   justify-self: center;
-  width: 50%;
+  width: 75vw;
   bottom: 5px;
 }
 
-.showcase .carousel .text-wrapper {
-  background-color: rgba(0, 0, 0, 0.2);
-  padding: 2.5rem;
-  border-radius: 1rem;
-  top: 20px;
-}
-
 .showcase .carousel .text-wrapper h2 {
-  font-size: 100%;
+  font-size: larger;
   text-align: left;
-  font-weight: 600;
+  font-weight: 100;
 }
 
 button {
