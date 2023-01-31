@@ -1,31 +1,3 @@
-<script>
-import OS from "../components/OS.vue";
-import anime from "animejs";
-
-export default {
-    components: {
-        OS: OS,
-    },
-    mounted() {
-        anime({
-            targets: ".fa-angle-right",
-            opacity: [1, 0.2, 1],
-            easing: "easeInCubic",
-            duration: 1000,
-            loop: true,
-            delay: anime.stagger(200),
-        });
-    },
-    methods: {
-        mobile() {
-            if (window.innerWidth > 512) {
-                return "none";
-            }
-        },
-    },
-};
-</script>
-
 <template>
   <div class="container">
       <!-- Section I -->
@@ -109,6 +81,34 @@ export default {
       </div>
   </div>
 </template>
+
+<script>
+import OS from "../components/OS.vue";
+import anime from "animejs";
+
+export default {
+    components: {
+        OS: OS,
+    },
+    mounted() {
+        anime({
+            targets: ".fa-angle-right",
+            opacity: [1, 0.2, 1],
+            easing: "easeInCubic",
+            duration: 1000,
+            loop: true,
+            delay: anime.stagger(200),
+        });
+    },
+    methods: {
+        mobile() {
+            if (window.innerWidth > 512) {
+                return "none";
+            }
+        },
+    },
+};
+</script>
 
 <style scoped>
 .section {

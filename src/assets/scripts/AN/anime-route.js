@@ -1,6 +1,5 @@
 import anime from "animejs";
 
-// DEFAULT-ROUTE-TRANSITION
 function useFadeIn(el, done) {
   anime({
     targets: el,

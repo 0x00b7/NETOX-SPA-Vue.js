@@ -4,15 +4,15 @@ import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import OrderView from "../views/OrderView.vue";
 import ServiceView from "../views/ServiceView.vue";
-import FaqsView from "../views/FaqsView.vue";
+import FAQsView from "../views/FAQsView.vue";
 
 import LegalCenterView from "../views/LegalCenterView.vue";
 import PrivacyView from "../views/Legal-Center/Privacy.vue";
 import TrademarkView from "../views/Legal-Center/Trademark.vue";
 import EulaView from "../views/Legal-Center/Eula.vue";
 
-import success from "../views/Response/success.vue";
-import exception from "../views/Response/exception.vue";
+import Success from "../views/Response/Success.vue";
+import Exception from "../views/Response/Exception.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -30,7 +30,7 @@ const router = createRouter({
     {
       path: "/FAQs",
       name: "FAQs",
-      component: FaqsView,
+      component: FAQsView,
     },
     {
       path: "/Order-Now",
@@ -40,12 +40,12 @@ const router = createRouter({
     {
       path: "/Thanks",
       name: "Success",
-      component: success,
+      component: Success,
     },
     {
       path: "/Sorry",
       name: "Exception",
-      component: exception,
+      component: Exception,
     },
     {
       path: "/About",

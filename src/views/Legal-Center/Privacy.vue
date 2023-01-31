@@ -1,5 +1,7 @@
 <template>
-  <div></div>
+  <div>
+    
+  </div>
 </template>
 <style scoped>
 @media (max-width: 64em) {

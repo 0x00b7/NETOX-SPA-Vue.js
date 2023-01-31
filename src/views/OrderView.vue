@@ -1,3 +1,95 @@
+<template>
+    <div class="container">
+        <div class="section">
+            <div class="header">
+                <h1>{{ stepText }}</h1>
+            </div>
+            <div class="order-now">
+                <div class="select" v-show="step === 1">
+                    <div class="order-opt" v-for="(item, index) in items" :key="index" v-on:click="select(item.h1)">
+                        <h1>{{ item.h1 }}</h1>
+                        <h3>{{ item.h3 }}</h3>
+                    </div>
+                </div>
+                <div class="input" v-show="step === 2">
+                    <div class="interface">
+                        <div class="order-input">
+                            <label>
+                                Forename<span>*</span>
+                                <input type="text" id="forename" v-model="form.forename" placeholder="..." />
+                            </label>
+                        </div>
+                        <div class="order-input">
+                            <label>
+                                Surname<span>*</span>
+                                <input type="text" id="surname" v-model="form.surname" placeholder="..." />
+                            </label>
+                        </div>
+                        <div class="order-input">
+                            <label>
+                                E-Mail<span>*</span>
+                                <input type="text" id="email" v-model="form.email" placeholder="..." />
+                            </label>
+                        </div>
+                        <div class="order-input">
+                            <label>
+                                Phone number
+                                <input type="text" id="number" v-model="form.number" placeholder="..." />
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="input" v-show="step === 3">
+                    <div :style="{background: form.color}" class="color-scheme">
+                        <div class="color-picker">
+                            <ColorPicker style="width: 218px;" theme="light" :color="form.color" :sucker-hide="true" @changeColor="changeColor" />
+                        </div>
+                    </div>
+                </div>
+                <div class="input" v-show="step === 4">
+                    <div class="interface">
+                        <div class="order-input">
+                            <label class="textarea">
+                                Description <span>*</span>
+                                <textarea id="description" v-model="form.imagination" type="text" placeholder="..."></textarea>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="submit" v-show="step === 5">
+                    <form name="order-now" @submit.prevent="handleSubmit">
+                        <label>Type</label>
+                        <input v-model="form.type" disabled type="text" placeholder="..." />
+                        <label>Forename</label>
+                        <input v-model="form.forename" disabled type="text" placeholder="..." />
+                        <label>Surname</label>
+                        <input v-model="form.surname" disabled type="text" placeholder="..." />
+                        <label>E-Mail</label>
+                        <input v-model="form.email" disabled type="text" placeholder="..." />
+                        <label>Phone number</label>
+                        <input v-model="form.number" disabled type="text" placeholder="—" />
+                        <label>Color-Scheme</label>
+                        <input v-model="form.color" disabled type="text" placeholder="..." />
+                        <label>Description</label>
+                        <textarea v-model="form.imagination" disabled type="text" placeholder="..."></textarea>
+                    </form>
+                </div>
+            </div>
+            <div class="button" v-if="step === 2 || step === 3 || step === 4 || step === 5">
+                <button id="prev-btn" class="prev" @click="btn">
+                    <i class="fa-solid fa-hand-point-left"></i>
+                </button>
+                <button v-if="step === 5" class="next" @click="handleSubmit">
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+                <button v-else-if="step" id="next-btn" class="next" @click="btn">
+                    <i class="fa-solid fa-hand-point-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</template>
+
 <script>
 import anime from "animejs";
 import axios from "axios";
@@ -149,98 +241,6 @@ export default {
     },
 };
 </script>
-
-<template>
-    <div class="container">
-        <div class="section">
-            <div class="header">
-                <h1>{{ stepText }}</h1>
-            </div>
-            <div class="order-now">
-                <div class="select" v-show="step === 1">
-                    <div class="order-opt" v-for="(item, index) in items" :key="index" v-on:click="select(item.h1)">
-                        <h1>{{ item.h1 }}</h1>
-                        <h3>{{ item.h3 }}</h3>
-                    </div>
-                </div>
-                <div class="input" v-show="step === 2">
-                    <div class="interface">
-                        <div class="order-input">
-                            <label>
-                                Forename<span>*</span>
-                                <input type="text" id="forename" v-model="form.forename" placeholder="..." />
-                            </label>
-                        </div>
-                        <div class="order-input">
-                            <label>
-                                Surname<span>*</span>
-                                <input type="text" id="surname" v-model="form.surname" placeholder="..." />
-                            </label>
-                        </div>
-                        <div class="order-input">
-                            <label>
-                                E-Mail<span>*</span>
-                                <input type="text" id="email" v-model="form.email" placeholder="..." />
-                            </label>
-                        </div>
-                        <div class="order-input">
-                            <label>
-                                Phone number
-                                <input type="text" id="number" v-model="form.number" placeholder="..." />
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="input" v-show="step === 3">
-                    <div :style="{background: form.color}" class="color-scheme">
-                        <div class="color-picker">
-                            <ColorPicker style="width: 218px;" theme="light" :color="form.color" :sucker-hide="true" @changeColor="changeColor" />
-                        </div>
-                    </div>
-                </div>
-                <div class="input" v-show="step === 4">
-                    <div class="interface">
-                        <div class="order-input">
-                            <label class="textarea">
-                                Description <span>*</span>
-                                <textarea id="description" v-model="form.imagination" type="text" placeholder="..."></textarea>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div class="submit" v-show="step === 5">
-                    <form name="order-now" @submit.prevent="handleSubmit">
-                        <label>Type</label>
-                        <input v-model="form.type" disabled type="text" placeholder="..." />
-                        <label>Forename</label>
-                        <input v-model="form.forename" disabled type="text" placeholder="..." />
-                        <label>Surname</label>
-                        <input v-model="form.surname" disabled type="text" placeholder="..." />
-                        <label>E-Mail</label>
-                        <input v-model="form.email" disabled type="text" placeholder="..." />
-                        <label>Phone number</label>
-                        <input v-model="form.number" disabled type="text" placeholder="—" />
-                        <label>Color-Scheme</label>
-                        <input v-model="form.color" disabled type="text" placeholder="..." />
-                        <label>Description</label>
-                        <textarea v-model="form.imagination" disabled type="text" placeholder="..."></textarea>
-                    </form>
-                </div>
-            </div>
-            <div class="button" v-if="step === 2 || step === 3 || step === 4 || step === 5">
-                <button id="prev-btn" class="prev" @click="btn">
-                    <i class="fa-solid fa-hand-point-left"></i>
-                </button>
-                <button v-if="step === 5" class="next" @click="handleSubmit">
-                    <i class="fa-solid fa-paper-plane"></i>
-                </button>
-                <button v-else-if="step" id="next-btn" class="next" @click="btn">
-                    <i class="fa-solid fa-hand-point-right"></i>
-                </button>
-            </div>
-        </div>
-    </div>
-</template>
 
 <style scoped>
 .button {

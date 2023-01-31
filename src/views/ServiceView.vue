@@ -1,3 +1,41 @@
+<template>
+  <div class="container">
+      <div class="header">
+          <h1>Know our vision</h1>
+      </div>
+      <div class="section">
+          <div class="showcase">
+              <div class="hero-showcase">
+                  <i class="fa-solid fa-star-shooting"></i>
+              </div>
+              <div class="hero-text">
+                  <h1>Not just a simple website!</h1>
+                  <h2>We create innovative web-applications and UX designs at an affordable price. <br /><br /> Our code, primarily based on Vue.js and JavaScript, is highly professional and uses the best solutions to create a masterpiece for our clients. <br /><br /> We also use Font-Awesome, a top-notch SVG icon library, to enhance the overall look and feel of our designs.</h2>
+              </div>
+          </div>
+          <div class="showcase">
+              <div class="carousel" v-touch:swipe.left="sliderSwipe_L" v-touch:swipe.right="sliderSwipe_R">
+                  <div class="steps">
+                      <div class="percentage" :style="{ width: (100 * (sliderCount + 1) / slider.length) + '%' }"></div>
+                  </div>
+                  <button id="prev-btn" @click="sliderBtn">
+                      <i class="fa-solid fa-left"></i>
+                  </button>
+                  <div class="image" v-show="sliderCount === index" v-for="(img, index) in slider" :key="index">
+                      <img :src="img.path">
+                      <div class="text-wrapper">
+                          <h2>{{ img.name }}</h2>
+                      </div>
+                  </div>
+                  <button id="next-btn" @click="sliderBtn">
+                      <i class="fa-solid fa-right"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+  </div>
+</template>
+
 <script>
 import anime from "animejs";
 
@@ -67,44 +105,6 @@ export default {
     }
 }
 </script>
-
-<template>
-  <div class="container">
-      <div class="header">
-          <h1>Know our vision</h1>
-      </div>
-      <div class="section">
-          <div class="showcase">
-              <div class="hero-showcase">
-                  <i class="fa-solid fa-star-shooting"></i>
-              </div>
-              <div class="hero-text">
-                  <h1>Not just a simple website!</h1>
-                  <h2>We create innovative web-applications and UX designs at an affordable price. <br /><br /> Our code, primarily based on Vue.js and JavaScript, is highly professional and uses the best solutions to create a masterpiece for our clients. <br /><br /> We also use Font-Awesome, a top-notch SVG icon library, to enhance the overall look and feel of our designs.</h2>
-              </div>
-          </div>
-          <div class="showcase">
-              <div class="carousel" v-touch:swipe.left="sliderSwipe_L" v-touch:swipe.right="sliderSwipe_R">
-                  <div class="steps">
-                      <div class="percentage" :style="{ width: (100 * (sliderCount + 1) / slider.length) + '%' }"></div>
-                  </div>
-                  <button id="prev-btn" @click="sliderBtn">
-                      <i class="fa-solid fa-left"></i>
-                  </button>
-                  <div class="image" v-show="sliderCount === index" v-for="(img, index) in slider" :key="index">
-                      <img :src="img.path">
-                      <div class="text-wrapper">
-                          <h2>{{ img.name }}</h2>
-                      </div>
-                  </div>
-                  <button id="next-btn" @click="sliderBtn">
-                      <i class="fa-solid fa-right"></i>
-                  </button>
-              </div>
-          </div>
-      </div>
-  </div>
-</template>
 
 <style scoped>
 .container {

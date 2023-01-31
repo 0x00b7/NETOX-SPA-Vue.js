@@ -1,3 +1,60 @@
+<template>
+  <header>
+      <div class="mobile-nav">
+          <ul class="fa-ul">
+              <li>
+                  <span class="fa-li">
+                      <i class="fa-solid fa-earth-americas"></i>
+                  </span>
+                  <RouterLink @click="toggleNavbar" to="/">Home</RouterLink>
+              </li>
+              <li>
+                  <span class="fa-li">
+                      <i class="fa-solid fa-wand-magic-sparkles"></i>
+                  </span>
+                  <RouterLink @click="toggleNavbar" to="/Service">Service</RouterLink>
+              </li>
+              <li>
+                  <span class="fa-li">
+                      <i class="fa-solid fa-book-user"></i>
+                  </span>
+                  <RouterLink @click="toggleNavbar" to="/FAQs">FAQs</RouterLink>
+              </li>
+              <li>
+                  <span class="fa-li">
+                      <i class="fa-solid fa-person-rays"></i>
+                  </span>
+                  <RouterLink @click="toggleNavbar" to="/About">About</RouterLink>
+              </li>
+          </ul>
+      </div>
+      <div class="sign">
+          <div class="sign-background">
+              <div class="N">N</div>
+              <div class="E">E</div>
+              <div class="T">T</div>
+              <div class="O">O</div>
+              <div class="X">X</div>
+              <div class="dot">.</div>
+              <div class="ws">ws</div>
+              <div class="wrapper">
+                  <nav>
+                      <RouterLink to="/">Home</RouterLink>
+                      <RouterLink to="/Service">Service</RouterLink>
+                      <RouterLink to="/FAQs">FAQs</RouterLink>
+                      <RouterLink to="/About">About</RouterLink>
+                  </nav>
+              </div>
+          </div>
+          <div class="mobile-wrapper">
+              <button class="mobile-nav-toggle" @click="toggleNavbar">
+                  <i class="fa-solid fa-bars"></i>
+              </button>
+          </div>
+      </div>
+  </header>
+</template>
+
 <script>
 import anime from "animejs";
 
@@ -91,63 +148,6 @@ export default {
     },
 };
 </script>
-
-<template>
-  <header>
-      <div class="mobile-nav">
-          <ul class="fa-ul">
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-earth-americas"></i>
-                  </span>
-                  <RouterLink @click="toggleNavbar" to="/">Home</RouterLink>
-              </li>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-wand-magic-sparkles"></i>
-                  </span>
-                  <RouterLink @click="toggleNavbar" to="/service">Service</RouterLink>
-              </li>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-book-user"></i>
-                  </span>
-                  <RouterLink @click="toggleNavbar" to="/faqs">FAQs</RouterLink>
-              </li>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-person-rays"></i>
-                  </span>
-                  <RouterLink @click="toggleNavbar" to="/about">About</RouterLink>
-              </li>
-          </ul>
-      </div>
-      <div class="sign">
-          <div class="sign-background">
-              <div class="N">N</div>
-              <div class="E">E</div>
-              <div class="T">T</div>
-              <div class="O">O</div>
-              <div class="X">X</div>
-              <div class="dot">.</div>
-              <div class="ws">ws</div>
-              <div class="wrapper">
-                  <nav>
-                      <RouterLink to="/">Home</RouterLink>
-                      <RouterLink to="/Service">Service</RouterLink>
-                      <RouterLink to="/FAQs">FAQs</RouterLink>
-                      <RouterLink to="/About">About</RouterLink>
-                  </nav>
-              </div>
-          </div>
-          <div class="mobile-wrapper">
-              <button class="mobile-nav-toggle" @click="toggleNavbar">
-                  <i class="fa-solid fa-bars"></i>
-              </button>
-          </div>
-      </div>
-  </header>
-</template>
 
 <style scoped>
 header {

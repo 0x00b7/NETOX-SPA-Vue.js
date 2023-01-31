@@ -1,3 +1,19 @@
+<template>
+    <div class="container">
+        <div class="header">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+        <div class="object" v-for="object in array">
+            <div class="q" @click="toggleAnswer(object)">
+                <span>{{ object.question }}</span>
+            </div>
+            <div class="a" v-if="object.show">
+                <span>{{ object.answer }}</span>
+            </div>
+        </div>
+    </div>
+  </template>
+
 <script>
 export default {
     data() {
@@ -44,25 +60,14 @@ export default {
                 }
             ]
         }
+    },
+    methods: {
+        toggleAnswer(object) {
+            object.show = !object.show;
+        }
     }
 }
 </script>
-
-<template>
-  <div class="container">
-      <div class="header">
-          <h1>Frequently Asked Questions</h1>
-      </div>
-      <div class="object" v-for="object in array">
-          <div class="q" @click="object.show = !object.show">
-              <span>{{ object.question }}</span>
-          </div>
-          <div class="a" v-if="object.show">
-              <span>{{ object.answer }}</span>
-          </div>
-      </div>
-  </div>
-</template>
 
 <style scoped>
 .container {

@@ -1,22 +1,3 @@
-<script>
-export default {
-    mounted() {
-        const computedStyle = window.getComputedStyle(this.$refs.image);
-
-        const imageSrc = computedStyle.content.slice(5, -2);
-
-        const image = new Image();
-
-        image.src = imageSrc;
-
-        image.onload = () => {
-            this.$refs.loading.style.display = "none";
-            this.$refs.image.style.display = "block";
-        };
-    },
-};
-</script>
-
 <template>
   <div class="container">
       <div class="section">
@@ -47,6 +28,25 @@ export default {
       </div>
   </div>
 </template>
+
+<script>
+export default {
+    mounted() {
+        const computedStyle = window.getComputedStyle(this.$refs.image);
+
+        const imageSrc = computedStyle.content.slice(5, -2);
+
+        const image = new Image();
+
+        image.src = imageSrc;
+
+        image.onload = () => {
+            this.$refs.loading.style.display = "none";
+            this.$refs.image.style.display = "block";
+        };
+    },
+};
+</script>
 
 <style scoped>
 .container {
