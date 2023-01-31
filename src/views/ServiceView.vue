@@ -10,7 +10,7 @@
               </div>
               <div class="hero-text">
                   <h1>Not just a simple website!</h1>
-                  <h2>We create innovative web-applications and UX designs at an affordable price. <br /><br /> Our code, primarily based on Vue.js and JavaScript, is highly professional and uses the best solutions to create a masterpiece for our clients. <br /><br /> We also use Font-Awesome, a top-notch SVG icon library, to enhance the overall look and feel of our designs.</h2>
+                  <h2>Netox create innovative web-applications and UI/UX designs at an affordable price. <br /><br /> Our code, primarily based on Vue.js/JavaScript, is highly professional and uses the best solutions to create a masterpiece for our clients. <br /><br /> We also use Font-Awesome, a top-notch SVG icon library, to enhance the overall look and feel of our designs.</h2>
               </div>
           </div>
           <div class="showcase">
@@ -21,7 +21,7 @@
                   <button id="prev-btn" @click="sliderBtn">
                       <i class="fa-solid fa-left"></i>
                   </button>
-                  <div class="image" v-show="sliderCount === index" v-for="(img, index) in slider" :key="index">
+                  <div class="content" v-show="sliderCount === index" v-for="(img, index) in slider" :key="index">
                       <img :src="img.path">
                       <div class="text-wrapper">
                           <h2>{{ img.name }}</h2>
@@ -45,11 +45,11 @@ export default {
             sliderCount: 0,
             slider: [{
                     path: new URL('../assets/images/SF.png', import.meta.url).href,
-                    name: "Netox has the experience and expertise to create a custom web-application on Shopify that fits the unique needs of your business. Whether you're just starting out or looking to take your existing business to the next level, Netox can help. With Netox, you can have a professional, user-friendly online store up and running in no time."
+                    name: "Netox has the experience and expertise to create a web-application with Shopify that fits the unique needs of your business. Whether you're just starting out or looking to take your existing business to the next level, Netox can help. With Netox, you can have a professional, user-friendly online store up and running in no time."
                 },
                 {
-                    path: new URL('../assets/images/LM.png', import.meta.url).href,
-                    name: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+                    path: new URL('../assets/images/VS.png', import.meta.url).href,
+                    name: "Netox creates top-notch web applications and websites that deliver exceptional user experiences and seamless functionality. We, expert developers and designers, use the latest technology and design trends to create custom solutions that meet the unique needs of each client. With a focus on customer satisfaction and transparent communication, Netox sets the bar for quality and service in the industry. Whether you're looking to build a new website or improve an existing one, Netox is the perfect partner to help you achieve your goals and drive business success. Trust in our commitment to delivering outstanding results and take your online presence to the next level with Netox."
                 }
             ]
         }
@@ -73,9 +73,10 @@ export default {
 
         sliderBtn(event) {
             anime({
-                targets: '.image > *',
+                targets: '.content > *',
                 easing: 'linear',
                 opacity: [1, 0],
+                translateY: [0, 50],
                 duration: 250,
                 delay: anime.stagger(100),
                 complete: () => {
@@ -85,9 +86,10 @@ export default {
                         this.sliderCount = (this.sliderCount + this.slider.length - 1) % this.slider.length
                     }
                     anime({
-                        targets: '.image > *',
+                        targets: '.content > *',
                         easing: 'linear',
                         opacity: [0, 1],
+                        translateY: [50, 0],
                         duration: 250,
                         delay: anime.stagger(100),
                     })
@@ -184,19 +186,19 @@ export default {
   transition: width 500ms;
 }
 
-.showcase .carousel .image {
+.showcase .carousel .content {
   display: -ms-grid;
   display: grid;
 }
 
-.showcase .carousel .image img {
+.showcase .carousel .content img {
   -ms-grid-column-align: center;
       justify-self: center;
   width: 75vw;
-  bottom: 5px;
+  margin: 0 0 2rem 0;
 }
 
-.showcase .carousel .text-wrapper h2 {
+.showcase .carousel .content .text-wrapper h2 {
   font-size: larger;
   text-align: left;
   font-weight: 100;

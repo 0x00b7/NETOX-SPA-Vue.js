@@ -12,7 +12,7 @@
               I'm a 21-Year-Old Web/Software-Developer.
           </h1>
           <h2>
-              At the Age of 12 I became Passionate about Technic & it's Journey, Day
+              At the Age of 12 I became Passionate about Technic and it's Journey, Day
               on – Day off, learning new capabilities about HTML/CSS3 as well as
               JavaScript and its wide Spectrum of Features… These days I am running a
               Website Developing Service, helping hundreds of People visualizing their

@@ -113,11 +113,11 @@ export default {
                 },
                 {
                     h1: "Multipager",
-                    h3: "Whenever you need a little extra space, this Website offers up to 9 pages with extensive info about your product, service & its benefits.",
+                    h3: "Whenever you need a little extra space, this Website offers up to 9 pages with extensive info about your product, service and it's benefits.",
                 },
                 {
                     h1: "Shop",
-                    h3: "Your sales will be effortless with your choice of Shopify, Etsy, or any other payment system. Your customers will love the design!",
+                    h3: "Your sales will be effortless with your choice of Shopify, or any other payment system. Your customers will love the design!",
                 },
                 {
                     h1: "Renew",
