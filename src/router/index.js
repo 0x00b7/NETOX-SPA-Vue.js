@@ -18,31 +18,31 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "Home",
       component: HomeView
     },
     {
-      path: "/service",
+      path: "/Service",
       name: "service",
       component: ServiceView
     },
     {
-      path: "/order-now",
+      path: "/Order-Now",
       name: "order-now",
       component: OrderView,
     },
     {
-      path: "/thanks",
+      path: "/Thanks",
       name: "success",
       component: success
     },
     {
-      path: "/sorry",
+      path: "/Sorry",
       name: "exception",
       component: exception
     },
     {
-      path: "/about",
+      path: "/About",
       name: "about",
       component: AboutView
     },
@@ -52,15 +52,15 @@ const router = createRouter({
       component: LegalView,
       children: [
         {
-          path: 'trademark',
+          path: 'Trademark',
           component: LegalTrademark,
         },
         {
-          path: 'privacy',
+          path: 'Privacy',
           component: LegalPrivacy,
         },
         {
-          path: 'eula',
+          path: 'Eula',
           component: LegalEula,
         }
       ],
