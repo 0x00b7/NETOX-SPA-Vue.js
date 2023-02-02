@@ -1,18 +1,18 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import homeView from "../views/homeView.vue";
-import aboutView from "../views/aboutView.vue";
-import orderView from "../views/orderView.vue";
-import serviceView from "../views/serviceView.vue";
-import faqsView from "../views/faqsView.vue";
+import HomeView from "../views/HomeView.vue";
+import AboutView from "../views/AboutView.vue";
+import OrderView from "../views/OrderView.vue";
+import ServiceView from "../views/ServiceView.vue";
+import FAQsView from "../views/FAQsView.vue";
 
-import legalCenterView from "../views/legalCenterView.vue";
-import privacyView from "../views/Legal-Center/privacyView.vue";
-import trademarkView from "../views/Legal-Center/trademarkView.vue";
-import eulaView from "../views/Legal-Center/eulaView.vue";
+import LegalCenterView from "../views/LegalCenterView.vue";
+import PrivacyView from "../views/Legal-Center/PrivacyView.vue";
+import TrademarkView from "../views/Legal-Center/TrademarkView.vue";
+import EulaView from "../views/Legal-Center/EulaView.vue";
 
-import successView from "../views/Response/successView.vue";
-import exceptionView from "../views/Response/exceptionView.vue";
+import SuccessView from "../views/Response/SuccessView.vue";
+import ExceptionView from "../views/Response/ExceptionView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,54 +20,54 @@ const router = createRouter({
     {
       path: "/",
       name: "Home",
-      component: homeView,
+      component: HomeView,
     },
     {
       path: "/Service",
       name: "Service",
-      component: serviceView,
+      component: ServiceView,
     },
     {
       path: "/FAQs",
       name: "FAQs",
-      component: faqsView,
+      component: FAQsView,
     },
     {
       path: "/Order-Now",
       name: "Order-Now",
-      component: orderView,
+      component: OrderView,
     },
     {
       path: "/Thanks",
       name: "Success",
-      component: successView,
+      component: SuccessView,
     },
     {
       path: "/Sorry",
       name: "Exception",
-      component: exceptionView,
+      component: ExceptionView,
     },
     {
       path: "/About",
       name: "About",
-      component: aboutView,
+      component: AboutView,
     },
     {
       path: "/Legal-Center",
       name: "Legal-Center",
-      component: legalCenterView,
+      component: LegalCenterView,
       children: [
         {
           path: "Trademark",
-          component: trademarkView,
+          component: TrademarkView,
         },
         {
           path: "Privacy",
-          component: privacyView,
+          component: PrivacyView,
         },
         {
           path: "Eula",
-          component: eulaView,
+          component: EulaView,
         },
       ],
     },
