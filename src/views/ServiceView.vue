@@ -50,6 +50,10 @@ export default {
                 {
                     path: new URL('../assets/images/VS.png', import.meta.url).href,
                     name: "Netox creates top-notch web applications and websites that deliver exceptional user experiences and seamless functionality. We, expert developers and designers, use the latest technology and design trends to create custom solutions that meet the unique needs of each client. With a focus on customer satisfaction and transparent communication, Netox sets the bar for quality and service in the industry. Whether you're looking to build a new website or improve an existing one, Netox is the perfect partner to help you achieve your goals and drive business success. Trust in our commitment to delivering outstanding results and take your online presence to the next level with Netox."
+                },
+                {
+                    path: new URL('../assets/images/VS.png', import.meta.url).href,
+                    name: "Netox creates top-notch web applications and websites that deliver exceptional user experiences and seamless functionality. We, expert developers and designers, use the latest technology and design trends to create custom solutions that meet the unique needs of each client. With a focus on customer satisfaction and transparent communication, Netox sets the bar for quality and service in the industry. Whether you're looking to build a new website or improve an existing one, Netox is the perfect partner to help you achieve your goals and drive business success. Trust in our commitment to delivering outstanding results and take your online presence to the next level with Netox."
                 }
             ]
         }
@@ -80,14 +84,6 @@ export default {
                 }
             })
         }
-    },
-    mounted() {
-        anime({
-            targets: '.hero-text > *',
-            duration: 1500,
-            opacity: [0, 1],
-            translateX: [-50, 0]
-        })
     }
 }
 </script>
