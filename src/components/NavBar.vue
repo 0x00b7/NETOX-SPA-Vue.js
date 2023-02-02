@@ -1,32 +1,34 @@
 <template>
   <header>
      <div class="container">
-        <button class="mobileBtn" @click="toggleMobile">X</button>
+        <button class="mobileBtn" @click="toggleMobile">
+        <i class="fa-solid fa-map"></i>
+        </button>
         <div id="mobile-nav" class="mobile-nav">
-          <ul>
+           <ul>
               <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-earth-americas"></i>
-                  </span>
-                  <RouterLink to="/">Home</RouterLink>
+                 <span class="fa-li">
+                 <i class="fa-solid fa-earth-americas"></i>
+                 </span>
+                 <RouterLink to="/">Home</RouterLink>
               </li>
               <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-wand-magic-sparkles"></i>
-                  </span>
-                  <RouterLink to="/Service">Service</RouterLink>
+                 <span class="fa-li">
+                 <i class="fa-solid fa-wand-magic-sparkles"></i>
+                 </span>
+                 <RouterLink to="/Service">Service</RouterLink>
               </li>
               <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-comments-question"></i>
-                  </span>
-                  <RouterLink to="/FAQs">FAQs</RouterLink>
+                 <span class="fa-li">
+                 <i class="fa-solid fa-comments-question"></i>
+                 </span>
+                 <RouterLink to="/FAQs">FAQs</RouterLink>
               </li>
               <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-person-rays"></i>
-                  </span>
-                  <RouterLink to="/About">About</RouterLink>
+                 <span class="fa-li">
+                 <i class="fa-solid fa-person-rays"></i>
+                 </span>
+                 <RouterLink to="/About">About</RouterLink>
               </li>
            </ul>
         </div>
@@ -57,7 +59,8 @@ export default {
                     targets: navbar,
                     easing: 'easeInOutQuad',
                     opacity: [1, 0],
-                    duration: 350,
+                    translateX: [0, 50],
+                    duration: 150,
                     complete: () => {
                         navbar.style.display = "none";
                     },
@@ -67,8 +70,9 @@ export default {
                 anime({
                     targets: navbar,
                     opacity: [0, 1],
+                    translateX: [-50, 0],
                     easing: 'easeInOutQuad',
-                    duration: 350,
+                    duration: 150,
                 });
             }
         },
@@ -100,9 +104,17 @@ header .container .mobileBtn {
   position: fixed;
   float: right;
   right: 0;
-  margin: 1rem;
   display: none;
   z-index: 999;
+  padding: 0.5rem;
+  background-color: transparent;
+  color: white;
+  border: 0;
+  font-size: 2rem;
+}
+
+header .container .mobileBtn > * {
+  pointer-events: none;
 }
 
 header .container .mobile-nav {
