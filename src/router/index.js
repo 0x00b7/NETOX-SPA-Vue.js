@@ -4,7 +4,7 @@ import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import OrderView from "../views/OrderView.vue";
 import ServiceView from "../views/ServiceView.vue";
-import FAQsView from "../views/FAQsView.vue";
+import FaqsView from "../views/FaqsView.vue";
 
 import LegalCenterView from "../views/LegalCenterView.vue";
 import PrivacyView from "../views/Legal-Center/Privacy.vue";
@@ -30,7 +30,7 @@ const router = createRouter({
     {
       path: "/FAQs",
       name: "FAQs",
-      component: FAQsView,
+      component: FaqsView,
     },
     {
       path: "/Order-Now",
