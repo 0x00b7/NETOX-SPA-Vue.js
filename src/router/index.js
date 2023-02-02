@@ -4,6 +4,7 @@ import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import OrderView from "../views/OrderView.vue";
 import ServiceView from "../views/ServiceView.vue";
+import FAQsView from "../views/FAQsView.vue";
 
 import LegalView from "../views/LegalCenterView.vue";
 import LegalPrivacy from "../views/Legal/PrivacyView.vue";
@@ -29,7 +30,12 @@ const router = createRouter({
     {
       path: "/Order-Now",
       name: "order-now",
-      component: OrderView,
+      component: OrderView
+    },
+    {
+      path: "/FAQs",
+      name: "faqs",
+      component: FAQsView
     },
     {
       path: "/Thanks",
@@ -53,15 +59,15 @@ const router = createRouter({
       children: [
         {
           path: 'Trademark',
-          component: LegalTrademark,
+          component: LegalTrademark
         },
         {
           path: 'Privacy',
-          component: LegalPrivacy,
+          component: LegalPrivacy
         },
         {
           path: 'Eula',
-          component: LegalEula,
+          component: LegalEula
         }
       ],
     },
