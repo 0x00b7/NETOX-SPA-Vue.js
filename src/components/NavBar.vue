@@ -49,11 +49,6 @@
 import anime from 'animejs';
 
 export default {
-    data() {
-        return {
-            openMobile: false,
-        }
-    },
     methods: {
         toggleMobile() {
             const navbar = document.querySelector(".mobile-nav");
