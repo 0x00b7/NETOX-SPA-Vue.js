@@ -11,8 +11,8 @@ import LegalPrivacy from "../views/Legal/PrivacyView.vue";
 import LegalTrademark from "../views/Legal/TrademarkView.vue";
 import LegalEula from "../views/Legal/EulaView.vue";
 
-import success from "../views/Response/success.vue";
-import exception from "../views/Response/exception.vue";
+import Success from "../views/Response/Success.vue";
+import Exception from "../views/Response/Exception.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,12 +35,12 @@ const router = createRouter({
     {
       path: "/Thanks",
       name: "Success",
-      component: success
+      component: Success
     },
     {
       path: "/Sorry",
       name: "Exception",
-      component: exception
+      component: Exception
     },
     {
       path: "/FAQs",
