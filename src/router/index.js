@@ -1,17 +1,17 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import homeView from "../views/HomeView.vue";
-import aboutView from "../views/AboutView.vue";
-import orderView from "../views/OrderView.vue";
-import serviceView from "../views/ServiceView.vue";
-import faqsView from "../views/FaqsView.vue";
+import homeView from "../views/homeView.vue";
+import aboutView from "../views/aboutView.vue";
+import orderView from "../views/orderView.vue";
+import serviceView from "../views/serviceView.vue";
+import faqsView from "../views/faqsView.vue";
 
-import legalCenterView from "../views/LegalCenterView.vue";
-import privacyView from "../views/Legal-Center/PrivacyView.vue";
-import trademarkView from "../views/Legal-Center/TrademarkView.vue";
+import legalCenterView from "../views/legalCenterView.vue";
+import privacyView from "../views/Legal-Center/privacyView.vue";
+import trademarkView from "../views/Legal-Center/trademarkView.vue";
 import eulaView from "../views/Legal-Center/eulaView.vue";
 
-import successView from "../views/Response/SuccessView.vue";
+import successView from "../views/Response/successView.vue";
 import exceptionView from "../views/Response/exceptionView.vue";
 
 const router = createRouter({
