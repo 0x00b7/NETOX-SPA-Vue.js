@@ -14,7 +14,7 @@
               </div>
           </div>
           <div class="showcase">
-              <div class="carousel" v-touch:swipe.left="sliderSwipe_L" v-touch:swipe.right="sliderSwipe_R">
+              <div class="carousel">
                   <div class="steps">
                       <div class="percentage" :style="{ width: (100 * (sliderCount + 1) / slider.length) + '%' }"></div>
                   </div>
@@ -55,22 +55,6 @@ export default {
         }
     },
     methods: {
-        sliderSwipe_L() {
-            this.sliderBtn({
-                target: {
-                    id: "prev-btn",
-                },
-            });
-        },
-
-        sliderSwipe_R() {
-            this.sliderBtn({
-                target: {
-                    id: "next-btn",
-                },
-            });
-        },
-
         sliderBtn(event) {
             anime({
                 targets: '.content > *',
