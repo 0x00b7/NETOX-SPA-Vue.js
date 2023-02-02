@@ -4,7 +4,6 @@ import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import OrderView from "../views/OrderView.vue";
 import ServiceView from "../views/ServiceView.vue";
-import FAQsView from "../views/FAQsView.vue";
 
 import LegalView from "../views/LegalCenterView.vue";
 import LegalPrivacy from "../views/Legal/PrivacyView.vue";
