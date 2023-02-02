@@ -3,78 +3,72 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import OrderView from "../views/OrderView.vue";
-import ServiceView from "../views/ServiceView.vue";
-import FAQsView from "../views/FAQsView.vue";
+import CreationView from "../views/CreationView.vue";
 
-import LegalCenterView from "../views/LegalCenterView.vue";
-import PrivacyView from "../views/Legal-Center/PrivacyView.vue";
-import TrademarkView from "../views/Legal-Center/TrademarkView.vue";
-import EulaView from "../views/Legal-Center/EulaView.vue";
+import LawView from "../views/LawView.vue";
+import LawPrivacy from "../views/Law/LawPrivacy.vue";
+import LawImprint from "../views/Law/LawImprint.vue";
+import LawEula from "../views/Law/LawEula.vue";
 
-import SuccessView from "../views/Response/SuccessView.vue";
-import ExceptionView from "../views/Response/ExceptionView.vue";
+import success from "../views/Response/success.vue";
+import exception from "../views/Response/exception.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: "/",
-      name: "Home",
-      component: HomeView,
+      name: "home",
+      component: HomeView
     },
     {
-      path: "/Service",
-      name: "Service",
-      component: ServiceView,
+      path: "/creation",
+      name: "creation",
+      component: CreationView
     },
     {
-      path: "/FAQs",
-      name: "FAQs",
-      component: FAQsView,
-    },
-    {
-      path: "/Order-Now",
-      name: "Order-Now",
+      path: "/order-now",
+      name: "order-now",
       component: OrderView,
     },
     {
-      path: "/Thanks",
-      name: "Success",
-      component: SuccessView,
+      path: "/thanks",
+      name: "success",
+      component: success
     },
     {
-      path: "/Sorry",
-      name: "Exception",
-      component: ExceptionView,
+      path: "/sorry",
+      name: "exception",
+      component: exception
     },
     {
-      path: "/About",
-      name: "About",
-      component: AboutView,
+      path: "/about",
+      name: "about",
+      component: AboutView
     },
     {
-      path: "/Legal-Center",
-      name: "Legal-Center",
-      component: LegalCenterView,
+      path: "/Law",
+      name: "Law",
+      component: LawView,
       children: [
         {
-          path: "Trademark",
-          component: TrademarkView,
+          path: 'imprint',
+          component: LawImprint,
         },
         {
-          path: "Privacy",
-          component: PrivacyView,
+          path: 'privacy',
+          component: LawPrivacy,
         },
         {
-          path: "Eula",
-          component: EulaView,
-        },
+          path: 'eula',
+          component: LawEula,
+        }
       ],
     },
   ],
   scrollBehavior() {
-    document.getElementById("app").scrollIntoView();
-  },
+    document.getElementById('app').scrollIntoView();
+}
 });
 
 export default router;
