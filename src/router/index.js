@@ -3,12 +3,12 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/HomeView.vue";
 import AboutView from "../views/AboutView.vue";
 import OrderView from "../views/OrderView.vue";
-import CreationView from "../views/CreationView.vue";
+import ServiceView from "../views/ServiceView.vue";
 
-import LawView from "../views/LawView.vue";
-import LawPrivacy from "../views/Law/LawPrivacy.vue";
-import LawImprint from "../views/Law/LawImprint.vue";
-import LawEula from "../views/Law/LawEula.vue";
+import LegalView from "../views/LegalCenterView.vue";
+import LegalPrivacy from "../views/Legal/PrivacyView.vue";
+import LegalTrademark from "../views/Legal/TrademarkView.vue";
+import LegalEula from "../views/Legal/EulaView.vue";
 
 import success from "../views/Response/success.vue";
 import exception from "../views/Response/exception.vue";
@@ -22,9 +22,9 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: "/creation",
-      name: "creation",
-      component: CreationView
+      path: "/service",
+      name: "service",
+      component: ServiceView
     },
     {
       path: "/order-now",
@@ -47,21 +47,21 @@ const router = createRouter({
       component: AboutView
     },
     {
-      path: "/Law",
-      name: "Law",
-      component: LawView,
+      path: "/Legal",
+      name: "legal",
+      component: LegalView,
       children: [
         {
-          path: 'imprint',
-          component: LawImprint,
+          path: 'trademark',
+          component: LegalTrademark,
         },
         {
           path: 'privacy',
-          component: LawPrivacy,
+          component: LegalPrivacy,
         },
         {
           path: 'eula',
-          component: LawEula,
+          component: LegalEula,
         }
       ],
     },
