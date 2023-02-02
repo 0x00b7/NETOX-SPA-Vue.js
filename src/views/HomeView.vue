@@ -127,6 +127,10 @@ export default {
   background: 0;
 }
 
+.header h1 {
+  z-index: 1;
+}
+
 .header .divider {
   position: relative;
   width: 100%;
