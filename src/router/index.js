@@ -7,12 +7,12 @@ import ServiceView from "../views/ServiceView.vue";
 import FaqsView from "../views/FaqsView.vue";
 
 import LegalCenterView from "../views/LegalCenterView.vue";
-import PrivacyView from "../views/Legal-Center/Privacy.vue";
-import TrademarkView from "../views/Legal-Center/Trademark.vue";
-import EulaView from "../views/Legal-Center/Eula.vue";
+import PrivacyView from "../views/Legal-Center/PrivacyView.vue";
+import TrademarkView from "../views/Legal-Center/TrademarkView.vue";
+import EulaView from "../views/Legal-Center/EulaView.vue";
 
-import Success from "../views/Response/Success.vue";
-import Exception from "../views/Response/Exception.vue";
+import SuccessView from "../views/Response/SuccessView.vue";
+import ExceptionView from "../views/Response/exceptionView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,12 +40,12 @@ const router = createRouter({
     {
       path: "/Thanks",
       name: "Success",
-      component: Success,
+      component: SuccessView,
     },
     {
       path: "/Sorry",
       name: "Exception",
-      component: Exception,
+      component: ExceptionView,
     },
     {
       path: "/About",
