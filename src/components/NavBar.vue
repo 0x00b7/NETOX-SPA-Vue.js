@@ -261,7 +261,7 @@ nav a {
   right: 0;
   height: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 5;
   display: none;
 }
 
@@ -289,7 +289,7 @@ nav a {
     right: 0;
     top: 0;
     padding: 5px;
-    z-index: 999;
+    z-index: 5;
   }
 }
 </style>

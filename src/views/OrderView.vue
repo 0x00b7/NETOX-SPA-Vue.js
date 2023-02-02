@@ -487,7 +487,6 @@ form {
   -ms-grid-column-align: center;
   justify-self: center;
   margin: auto 0;
-  z-index: 0;
 }
 
 .order-opt {

@@ -127,10 +127,6 @@ export default {
   background: 0;
 }
 
-.header h1 {
-  z-index: 1;
-}
-
 .header .divider {
   position: relative;
   width: 100%;
@@ -145,6 +141,7 @@ export default {
   height: 100px;
   right: 50%;
   opacity: 1;
+  z-index: -1;
 }
 
 .header .divider svg:first-child {
