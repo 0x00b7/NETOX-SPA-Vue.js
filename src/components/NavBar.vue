@@ -10,25 +10,25 @@
                  <span class="fa-li">
                  <i class="fa-solid fa-earth-americas"></i>
                  </span>
-                 <RouterLink to="/">Home</RouterLink>
+                 <RouterLink @click="toggleMobile" to="/">Home</RouterLink>
               </li>
               <li>
                  <span class="fa-li">
                  <i class="fa-solid fa-wand-magic-sparkles"></i>
                  </span>
-                 <RouterLink to="/Service">Service</RouterLink>
+                 <RouterLink @click="toggleMobile" to="/Service">Service</RouterLink>
               </li>
               <li>
                  <span class="fa-li">
                  <i class="fa-solid fa-comments-question"></i>
                  </span>
-                 <RouterLink to="/FAQs">FAQs</RouterLink>
+                 <RouterLink @click="toggleMobile" to="/FAQs">FAQs</RouterLink>
               </li>
               <li>
                  <span class="fa-li">
                  <i class="fa-solid fa-person-rays"></i>
                  </span>
-                 <RouterLink to="/About">About</RouterLink>
+                 <RouterLink @click="toggleMobile" to="/About">About</RouterLink>
               </li>
            </ul>
         </div>
@@ -102,13 +102,12 @@ header .container {
 
 header .container .mobileBtn {
   position: fixed;
-  float: right;
-  right: 0;
   display: none;
-  z-index: 999;
-  padding: 0.5rem;
   background-color: transparent;
   color: white;
+  right: 0;
+  z-index: 999;
+  padding: 0.5rem 1rem;
   border: 0;
   font-size: 2rem;
 }
