@@ -33,11 +33,6 @@ const router = createRouter({
       component: OrderView
     },
     {
-      path: "/FAQs",
-      name: "faqs",
-      component: FAQsView
-    },
-    {
       path: "/Thanks",
       name: "success",
       component: success
