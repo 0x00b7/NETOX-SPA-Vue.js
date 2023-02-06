@@ -101,37 +101,22 @@
               v-model="form.forename"
               disabled
               type="text"
-              placeholder="..."
+              placeholder=""
             />
             <label>Surname</label>
-            <input
-              v-model="form.surname"
-              disabled
-              type="text"
-              placeholder="..."
-            />
+            <input v-model="form.surname" disabled type="text" placeholder="" />
             <label>E-Mail</label>
-            <input
-              v-model="form.email"
-              disabled
-              type="text"
-              placeholder="..."
-            />
+            <input v-model="form.email" disabled type="text" placeholder="" />
             <label>Phone number</label>
             <input v-model="form.number" disabled type="text" placeholder="—" />
             <label>Color-Scheme</label>
-            <input
-              v-model="form.color"
-              disabled
-              type="text"
-              placeholder="..."
-            />
+            <input v-model="form.color" disabled type="text" placeholder="" />
             <label>Description</label>
             <textarea
               v-model="form.imagination"
               disabled
               type="text"
-              placeholder="..."
+              placeholder=""
             ></textarea>
           </form>
         </div>
@@ -430,7 +415,9 @@ form {
 }
 .resume {
   text-align: left;
+  margin: 0.5rem;
 }
+
 @media (max-width: 64em) {
   .section .header h1 {
     text-align: center;

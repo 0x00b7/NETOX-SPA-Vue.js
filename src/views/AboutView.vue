@@ -63,6 +63,8 @@ export default {
 
 .section {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   min-height: 100%;
 }
@@ -107,6 +109,9 @@ export default {
   animation: placeholder 2s linear infinite;
   width: 100%;
   padding: 0rem;
+  -webkit-transition: display 1s;
+  -o-transition: display 1s;
+  -moz-transition: display 1s;
   transition: display 1s;
 }
 

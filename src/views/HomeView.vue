@@ -202,6 +202,8 @@ export default {
 .header .divider svg {
   position: relative;
   display: block;
+  width: -webkit-calc(200%);
+  width: -moz-calc(200%);
   width: calc(200%);
   height: 100px;
   right: 50%;
@@ -210,7 +212,11 @@ export default {
 }
 
 .header .divider svg:first-child {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+     -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+       -o-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .header .divider .shape-fill {
