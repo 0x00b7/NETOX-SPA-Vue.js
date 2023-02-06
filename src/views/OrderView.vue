@@ -470,7 +470,6 @@ form {
   margin: auto 0;
 }
 .order-field {
-  margin: 1rem;
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   border-radius: 1rem;
@@ -500,7 +499,6 @@ form {
     hsla(220, 78%, 29%, 1) 100%
   );
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0037", endColorstr="#9BAFD9", GradientType=1 );
-  padding: 1rem;
 }
 .resume {
   text-align: left;
