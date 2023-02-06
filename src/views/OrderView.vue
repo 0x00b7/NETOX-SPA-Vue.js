@@ -499,6 +499,9 @@ form {
     hsla(220, 78%, 29%, 1) 100%
   );
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0037", endColorstr="#9BAFD9", GradientType=1 );
+  justify-self: center;
+  margin: 0 auto;
+  width: 50%;
 }
 .resume {
   text-align: left;
@@ -557,6 +560,7 @@ input {
   color: white;
   outline: none;
   font-size: 24px;
+  width: 100%
 }
 .button {
   display: -webkit-box;
