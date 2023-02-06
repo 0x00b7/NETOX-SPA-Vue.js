@@ -213,10 +213,10 @@ export default {
 
 .header .divider svg:first-child {
   -webkit-transform: rotate(180deg);
-     -moz-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-       -o-transform: rotate(180deg);
-          transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .header .divider .shape-fill {
@@ -364,17 +364,10 @@ li {
   -webkit-border-radius: 1rem;
   -moz-border-radius: 1rem;
   border-radius: 1rem;
-  margin: 0 0.5rem 0 0;
-  padding: 15px 15px;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -moz-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.feature-box:last-child {
-  margin: 0;
+  -ms-grid-column-align: center;
+  justify-self: center;
+  margin: 1rem;
+  padding: 1rem;
 }
 
 .feature-box p:nth-child(1) {

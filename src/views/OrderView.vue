@@ -5,6 +5,11 @@
         <h1>{{ stepText }}</h1>
       </div>
 
+      <div
+        class="percentage"
+        :style="{ width: progressPercentage + '%' }"
+      ></div>
+
       <div class="section-container">
         <div class="step" v-show="step === 1">
           <div
@@ -152,7 +157,9 @@ export default {
   },
   data() {
     return {
+      sliding: false,
       step: 1,
+      steps: ["1", "2", "3", "4", "5"],
 
       items: [
         {
@@ -186,20 +193,22 @@ export default {
   },
 
   computed: {
+    progressPercentage() {
+      return Math.round((this.step / this.steps.length) * 100);
+    },
     stepText() {
       switch (this.step) {
         case 1:
-          return "Choose your product";
+          return "Choose a Service";
         case 2:
-          return "Add your contact info";
+          return "Add Your Info";
         case 3:
-          return "Select a preferred color";
+          return "Select a Hue";
         case 4:
-          return "Describe your website in a few words";
+          return "Share Your Vision";
         case 5:
-          return "Submit your request";
+          return "Send Order";
       }
-
       return 0;
     },
   },
@@ -221,6 +230,9 @@ export default {
             targets: ".section-container",
             opacity: [0, 1],
             easing: "linear",
+            complete: () => {
+              console.log(Math.round((this.step / this.steps.length) * 100));
+            },
             duration: 125,
           });
         },
@@ -296,7 +308,84 @@ export default {
   font-weight: 600;
   text-align: left;
 }
-.submit,
+
+.percentage {
+  background: hsla(347, 100%, 50%, 1);
+  background: -o-linear-gradient(
+    45deg,
+    hsla(347, 100%, 50%, 1) 0%,
+    hsla(221, 45%, 73%, 1) 100%,
+    hsla(220, 78%, 29%, 1) 100%
+  );
+  background: linear-gradient(
+    45deg,
+    hsla(347, 100%, 50%, 1) 0%,
+    hsla(221, 45%, 73%, 1) 100%,
+    hsla(220, 78%, 29%, 1) 100%
+  );
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(347, 100%, 50%, 1) 0%,
+    hsla(221, 45%, 73%, 1) 100%,
+    hsla(220, 78%, 29%, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(347, 100%, 50%, 1) 0%,
+    hsla(221, 45%, 73%, 1) 100%,
+    hsla(220, 78%, 29%, 1) 100%
+  );
+  padding: 0.1rem;
+  -webkit-transition: width 500ms;
+  -o-transition: width 500ms;
+  -moz-transition: width 500ms;
+  transition: width 500ms;
+  -webkit-animation: placeholder 2s linear infinite;
+  -moz-animation: placeholder 2s linear infinite;
+  -o-animation: placeholder 2s linear infinite;
+  animation: placeholder 2s linear infinite;
+  -webkit-mask-image: -webkit-linear-gradient(
+    320deg,
+    rgba(55, 0, 255, 0.8) 70%,
+    rgba(255, 0, 25, 1) 75%,
+    rgba(55, 0, 255, 0.8) 95%
+  );
+  mask-image: linear-gradient(
+    320deg,
+    rgba(55, 0, 255, 0.8) 70%,
+    rgba(255, 0, 25, 1) 75%,
+    rgba(55, 0, 255, 0.8) 80%
+  );
+  -webkit-mask-size: 200% 100%;
+  mask-size: 200% 100%;
+}
+
+@-webkit-keyframes placeholder {
+  100% {
+    -webkit-mask-position: -200% 0%;
+    mask-position: -200% 0%;
+  }
+}
+
+@-moz-keyframes placeholder {
+  100% {
+    mask-position: -200% 0%;
+  }
+}
+
+@-o-keyframes placeholder {
+  100% {
+    mask-position: -200% 0%;
+  }
+}
+
+@keyframes placeholder {
+  100% {
+    -webkit-mask-position: -200% 0%;
+    mask-position: -200% 0%;
+  }
+}
+
 form {
   display: -ms-grid;
   display: grid;
@@ -450,9 +539,9 @@ label {
 }
 textarea {
   background: rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  border-radius: 1rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
   padding: 0.5rem;
   border: 0;
   color: white;
@@ -461,10 +550,10 @@ textarea {
   resize: vertical;
 }
 input {
-  background: rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  border-radius: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
   padding: 0.5rem;
   border: 0;
   color: white;
