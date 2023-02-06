@@ -186,7 +186,7 @@ export default {
         surname: "",
         email: "",
         number: "",
-        scheme: "#007FFF",
+        scheme: "rgba(160, 255, 0, 1)",
         imagination: "",
       },
     };
