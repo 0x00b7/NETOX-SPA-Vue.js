@@ -1,50 +1,54 @@
 <template>
   <div class="container">
-      <div class="section">
-          <div class="loader" ref="loading">
-              <div class="placeholder"></div>
-          </div>
-          <img ref="image" />
+    <div class="section">
+      <div class="loader" ref="loading">
+        <div class="placeholder"></div>
       </div>
-      <div class="section">
-          <h1>
-              My Name is Gernot, Founder of Netox.ws! <br />
-              I'm a 21-Year-Old Web/Software-Developer.
-          </h1>
-          <h2>
-              At the Age of 12 I became Passionate about Technic and it's Journey, Day
-              on – Day off, learning new capabilities about HTML/CSS3 as well as
-              JavaScript and its wide Spectrum of Features… These days I am running a
-              Website Developing Service, helping hundreds of People visualizing their
-              Products on the World Wide Web!
-          </h2>
-          <h1>
-              I am Always Dedicated and Open for new Projects at every Scale possible!
-          </h1>
-          <h2>
-              For business inquiries regarding Web-Development, directly Open a Ticket
-              via our Form or Sending an E-Mail to: admin@netox.ws
-          </h2>
-      </div>
+      <img ref="image" />
+    </div>
+    <div class="section">
+      <h1>
+        My Name is Gernot, Founder of Netox.ws! <br />
+        I'm a 21-Year-Old Web/Software-Developer.
+      </h1>
+      <h2>
+        At the Age of 12 I became Passionate about Technic, and it's Journey,
+        Day on – Day off, learning new capabilities about HTML/CSS3 as well as
+        JavaScript and its wide Spectrum of Features… These days I am running a
+        Website Developing Service, helping People Visualizing their Products on
+        the World Wide Web!
+      </h2>
+      <h1>
+        I am Always Dedicated and Open for new Projects at every Scale possible!
+      </h1>
+      <h2>
+        For business inquiries regarding Web-Development, directly Open a Ticket
+        via our Form or Sending an E-Mail to: admin@netox.ws
+      </h2>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-    mounted() {
-        const computedStyle = window.getComputedStyle(this.$refs.image);
+  mounted() {
+    const computedStyle = window.getComputedStyle(this.$refs.image);
 
-        const imageSrc = computedStyle.content.slice(5, -2);
+    const imageSrc = computedStyle.content.slice(5, -2);
 
-        const image = new Image();
+    const image = new Image();
 
-        image.src = imageSrc;
+    image.src = imageSrc;
 
-        image.onload = () => {
-            this.$refs.loading.style.display = "none";
-            this.$refs.image.style.display = "block";
-        };
-    },
+    if (!image.complete) {
+      this.$refs.loading.style.display = "block";
+    }
+
+    image.onload = () => {
+      this.$refs.loading.style.display = "none";
+      this.$refs.image.style.display = "block";
+    };
+  },
 };
 </script>
 
@@ -59,6 +63,8 @@ export default {
 
 .section {
   width: 100%;
+  height: fit-content;
+  min-height: 100%;
 }
 
 .section h1 {
@@ -80,17 +86,18 @@ export default {
 }
 
 .loader {
+  display: none;
   -webkit-mask-image: -webkit-linear-gradient(
     320deg,
-    #000 55%,
-    rgba(0, 0, 0, 0.8) 75%,
-    #000 95%
+    rgba(0, 0, 0, 0.3) 55%,
+    rgba(0, 0, 0, 0.5) 75%,
+    rgba(0, 0, 0, 0.3) 95%
   );
   mask-image: linear-gradient(
     130deg,
-    #000 55%,
-    rgba(0, 0, 0, 0.8) 75%,
-    #000 95%
+    rgba(0, 0, 0, 0.3) 55%,
+    rgba(0, 0, 0, 0.5) 75%,
+    rgba(0, 0, 0, 0.3) 95%
   );
   -webkit-mask-size: 200% 100%;
   mask-size: 200% 100%;
@@ -99,12 +106,13 @@ export default {
   -o-animation: placeholder 2s linear infinite;
   animation: placeholder 2s linear infinite;
   width: 100%;
+  padding: 0rem;
+  transition: display 1s;
 }
 
 .placeholder {
-  background-color: rgb(0, 0, 0);
-  opacity: 0.5;
-  height: 690px;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: 700px;
 }
 
 img {
@@ -171,5 +179,6 @@ img {
   }
 }
 
-@media (max-width: 32em) {}
+@media (max-width: 32em) {
+}
 </style>

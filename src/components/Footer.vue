@@ -119,9 +119,9 @@ footer div {
 footer div ul {
   list-style: none;
   background-color: rgba(0, 0, 0, 0.2);
-  -webkit-border-radius: 0.5rem;
-     -moz-border-radius: 0.5rem;
-          border-radius: 0.5rem;
+  -webkit-border-radius: 1rem;
+     -moz-border-radius: 1rem;
+          border-radius: 1rem;
   margin: 1.5rem 0.5rem;
 }
 

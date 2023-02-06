@@ -6,13 +6,13 @@ import OrderView from "../views/OrderView.vue";
 import ServiceView from "../views/ServiceView.vue";
 import FaqsView from "../views/FaqsView.vue";
 
+import SuccessView from "../views/Response/SuccessView.vue";
+import ExceptionView from "../views/Response/ExceptionView.vue";
+
 import LegalView from "../views/LegalCenterView.vue";
 import LegalPrivacy from "../views/Legal/PrivacyView.vue";
 import LegalTrademark from "../views/Legal/TrademarkView.vue";
 import LegalEula from "../views/Legal/EulaView.vue";
-
-import success from "../views/Response/success.vue";
-import exception from "../views/Response/exception.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,37 +20,37 @@ const router = createRouter({
     {
       path: "/",
       name: "Home",
-      component: HomeView
+      component: HomeView,
     },
     {
       path: "/Service",
       name: "Service",
-      component: ServiceView
+      component: ServiceView,
     },
     {
       path: "/Order-Now",
       name: "Order-Now",
-      component: OrderView
+      component: OrderView,
     },
     {
       path: "/Thanks",
       name: "success",
-      component: success
+      component: SuccessView,
     },
     {
       path: "/Sorry",
       name: "exception",
-      component: exception
+      component: ExceptionView,
     },
     {
       path: "/FAQs",
       name: "FAQs",
-      component: FaqsView
+      component: FaqsView,
     },
     {
       path: "/About",
       name: "About",
-      component: AboutView
+      component: AboutView,
     },
     {
       path: "/Legal",
@@ -58,23 +58,23 @@ const router = createRouter({
       component: LegalView,
       children: [
         {
-          path: 'Trademark',
-          component: LegalTrademark
+          path: "Trademark",
+          component: LegalTrademark,
         },
         {
-          path: 'Privacy',
-          component: LegalPrivacy
+          path: "Privacy",
+          component: LegalPrivacy,
         },
         {
-          path: 'Eula',
-          component: LegalEula
-        }
+          path: "Eula",
+          component: LegalEula,
+        },
       ],
     },
   ],
   scrollBehavior() {
-    document.getElementById('app').scrollIntoView();
-}
+    document.getElementById("app").scrollIntoView();
+  },
 });
 
 export default router;
