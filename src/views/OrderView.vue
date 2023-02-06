@@ -70,12 +70,12 @@
           </div>
         </div>
         <div class="step" v-show="step === 3">
-          <div :style="{ background: form.color }" class="select-scheme">
+          <div :style="{ background: form.scheme }" class="select-scheme">
             <div class="color-picker">
               <ColorPicker
                 style="width: 218px"
                 theme="light"
-                :color="form.color"
+                :color="form.scheme"
                 :sucker-hide="true"
                 @changeColor="changeColor"
               />
@@ -115,7 +115,7 @@
             <label>Phone number</label>
             <input v-model="form.number" disabled type="text" placeholder="—" />
             <label>Color-Scheme</label>
-            <input v-model="form.color" disabled type="text" placeholder="" />
+            <input v-model="form.scheme" disabled type="text" placeholder="" />
             <label>Description</label>
             <textarea
               v-model="form.imagination"
@@ -186,7 +186,7 @@ export default {
         surname: "",
         email: "",
         number: "",
-        color: "#007FFF",
+        scheme: "#007FFF",
         imagination: "",
       },
     };
@@ -250,7 +250,7 @@ export default {
 
     changeColor(color) {
       const { r, g, b, a } = color.rgba;
-      this.form.color = `rgba(${r}, ${g}, ${b}, ${a})`;
+      this.form.scheme = `rgba(${r}, ${g}, ${b}, ${a})`;
     },
 
     encode(data) {
@@ -562,7 +562,7 @@ input {
   color: white;
   outline: none;
   font-size: 24px;
-  width: 100%
+  width: 100%;
 }
 .button {
   display: -webkit-box;

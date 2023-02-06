@@ -19,26 +19,26 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "Home",
+      name: "home",
       component: HomeView,
     },
     {
-      path: "/Service",
-      name: "Service",
+      path: "/service",
+      name: "service",
       component: ServiceView,
     },
     {
-      path: "/Order-Now",
-      name: "Order-Now",
+      path: "/order-now",
+      name: "order-now",
       component: OrderView,
     },
     {
-      path: "/Thanks",
+      path: "/thanks",
       name: "success",
       component: SuccessView,
     },
     {
-      path: "/Sorry",
+      path: "/sorry",
       name: "exception",
       component: ExceptionView,
     },
@@ -48,8 +48,8 @@ const router = createRouter({
       component: FaqsView,
     },
     {
-      path: "/About",
-      name: "About",
+      path: "/about",
+      name: "about",
       component: AboutView,
     },
     {
