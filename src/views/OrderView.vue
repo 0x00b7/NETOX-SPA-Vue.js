@@ -500,8 +500,9 @@ form {
   );
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0037", endColorstr="#9BAFD9", GradientType=1 );
   justify-self: center;
-  margin: 0 auto;
-  width: 50%;
+  display: grid;
+  margin: 1rem;
+  padding: 0.5rem;
 }
 .resume {
   text-align: left;
@@ -549,6 +550,7 @@ textarea {
   outline: none;
   font-size: 24px;
   resize: vertical;
+  width: 100%;
 }
 input {
   background: rgba(0, 0, 0, 0.3);
