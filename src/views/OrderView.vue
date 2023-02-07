@@ -564,6 +564,10 @@ input {
   font-size: 24px;
   width: 100%;
 }
+input:focus {
+  text-underline-offset: 22;
+  text-decoration: underline;
+}
 .button {
   display: -webkit-box;
   display: -webkit-flex;
