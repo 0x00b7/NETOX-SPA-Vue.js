@@ -73,7 +73,9 @@ const router = createRouter({
     },
   ],
   scrollBehavior() {
-    document.getElementById("app").scrollIntoView();
+    document.querySelector("#app").scrollIntoView({
+      behavior: "smooth",
+    });
   },
 });
 
