@@ -1,90 +1,109 @@
 <template>
   <footer>
-      <div>
-          <div class="header" id="company">NETOX.ws</div>
-          <ul>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-earth-americas"></i>
-                  </span>
-                  <RouterLink to="/">Home</RouterLink>
-              </li>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-wand-magic-sparkles"></i>
-                  </span>
-                  <RouterLink to="/Service">Service</RouterLink>
-              </li>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-comments-question"></i>
-                  </span>
-                  <RouterLink to="/FAQs">FAQs</RouterLink>
-              </li>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-person-rays"></i>
-                  </span>
-                  <RouterLink to="/About">About</RouterLink>
-              </li>
-              <span id="section">Legal Center</span>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-solid fa-trademark"></i>
-                  </span>
-                  <RouterLink to="/Legal/Trademark">Trademark</RouterLink>
-              </li>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-signature-lock"></i>
-                  </span>
-                  <RouterLink to="/Legal/Privacy">Privacy</RouterLink>
-              </li>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-handshake"></i>
-                  </span>
-                  <RouterLink to="/Legal/Eula">Eula</RouterLink>
-              </li>
-          </ul>
-      </div>
-      <div>
-          <div class="header">Social Media</div>
-          <ul>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-brands fa-tiktok"></i>
-                  </span>
-                  <a href="https://www.tiktok.com/@netox.ws" target="_blank" rel="noopener noreferrer">TikTok</a>
-              </li>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-brands fa-instagram"></i>
-                  </span>
-                  <a href="https://www.instagram.com/netox.ws/" target="_blank" rel="noopener noreferrer">Instagram</a>
-              </li>
-          </ul>
-      </div>
-      <div>
-          <div class="header">Communication</div>
-          <ul>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-solid fa-at"></i>
-                  </span>
-                  <a href="mailto:admin@netox.ws" target="_blank" rel="noopener noreferrer">E-Mail</a>
-              </li>
-              <li>
-                  <span class="fa-li">
-                      <i class="fa-brands fa-whatsapp"></i>
-                  </span>
-                  <a href="https://wa.me/message/I2C4ETTGL33HB1" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-              </li>
-          </ul>
-      </div>
+    <div>
+      <div class="header" id="company">NETOX.ws</div>
+      <ul>
+        <li>
+          <span class="fa-li">
+            <i class="fa-solid fa-earth-americas"></i>
+          </span>
+          <RouterLink to="/">Home</RouterLink>
+        </li>
+        <li>
+          <span class="fa-li">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </span>
+          <RouterLink to="/service">Service</RouterLink>
+        </li>
+        <li>
+          <span class="fa-li">
+            <i class="fa-solid fa-comments-question"></i>
+          </span>
+          <RouterLink to="/FAQs">FAQs</RouterLink>
+        </li>
+        <li>
+          <span class="fa-li">
+            <i class="fa-solid fa-person-rays"></i>
+          </span>
+          <RouterLink to="/about">About</RouterLink>
+        </li>
+        <span id="section">Legal Center</span>
+        <li>
+          <span class="fa-li">
+            <i class="fa-solid fa-solid fa-trademark"></i>
+          </span>
+          <RouterLink to="/Legal/Trademark">Trademark</RouterLink>
+        </li>
+        <li>
+          <span class="fa-li">
+            <i class="fa-solid fa-signature-lock"></i>
+          </span>
+          <RouterLink to="/Legal/Privacy">Privacy</RouterLink>
+        </li>
+        <li>
+          <span class="fa-li">
+            <i class="fa-solid fa-handshake"></i>
+          </span>
+          <RouterLink to="/Legal/Eula">Eula</RouterLink>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="header">Social Media</div>
+      <ul>
+        <li>
+          <span class="fa-li">
+            <i class="fa-brands fa-tiktok"></i>
+          </span>
+          <a
+            href="https://www.tiktok.com/@netox.ws"
+            target="_blank"
+            rel="noopener noreferrer"
+            >TikTok</a
+          >
+        </li>
+        <li>
+          <span class="fa-li">
+            <i class="fa-brands fa-instagram"></i>
+          </span>
+          <a
+            href="https://www.instagram.com/netox.ws/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Instagram</a
+          >
+        </li>
+      </ul>
+    </div>
+    <div>
+      <div class="header">Communication</div>
+      <ul>
+        <li>
+          <span class="fa-li">
+            <i class="fa-solid fa-at"></i>
+          </span>
+          <a
+            href="mailto:admin@netox.ws"
+            target="_blank"
+            rel="noopener noreferrer"
+            >E-Mail</a
+          >
+        </li>
+        <li>
+          <span class="fa-li">
+            <i class="fa-brands fa-whatsapp"></i>
+          </span>
+          <a
+            href="https://wa.me/message/I2C4ETTGL33HB1"
+            target="_blank"
+            rel="noopener noreferrer"
+            >WhatsApp</a
+          >
+        </li>
+      </ul>
+    </div>
   </footer>
 </template>
-
 
 <style scoped>
 footer {
@@ -120,8 +139,8 @@ footer div ul {
   list-style: none;
   background-color: rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 1rem;
-     -moz-border-radius: 1rem;
-          border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  border-radius: 1rem;
   margin: 1.5rem 0.5rem;
 }
 
@@ -145,7 +164,6 @@ footer div h3 {
 .router-link-exact-active {
   color: white;
 }
-
 
 @media (max-width: 64em) {
   footer {

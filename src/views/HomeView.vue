@@ -53,7 +53,7 @@
               d="M301.3 256l-22.6 22.6-160 160L96 461.3 50.7 416l22.6-22.6L210.7 256 73.4 118.6 50.7 96 96 50.7l22.6 22.6 160 160L301.3 256z"
             ></path>
           </svg>
-          <RouterLink to="/Order-Now">
+          <RouterLink to="/order-now">
             <div>
               <p>ORDER&nbsp;</p>
               <p>NOW</p>
