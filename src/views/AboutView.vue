@@ -66,7 +66,6 @@ export default {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 100%;
 }
 
 .section h1 {
@@ -108,7 +107,7 @@ export default {
   -o-animation: placeholder 2s linear infinite;
   animation: placeholder 2s linear infinite;
   width: 100%;
-  padding: 0rem;
+  height: fit-content;
   -webkit-transition: display 1s;
   -o-transition: display 1s;
   -moz-transition: display 1s;
@@ -125,6 +124,8 @@ img {
   content: url(../assets/images/admin.png);
   width: 100%;
   height: 100%;
+  border-radius: 6rem;
+  padding: 2rem;
 }
 
 @-webkit-keyframes placeholder {
