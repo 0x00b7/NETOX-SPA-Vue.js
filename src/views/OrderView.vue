@@ -26,45 +26,51 @@
         <div class="step" v-show="step === 2">
           <div class="order-field">
             <label>
-              Forename
+              <input
+                type="text"
+                id="company"
+                v-model="form.company"
+                placeholder="Enter Your Company"
+              />
+            </label>
+          </div>
+          <div class="order-field">
+            <label>
               <input
                 type="text"
                 id="forename"
                 v-model="form.forename"
-                placeholder="..."
+                placeholder="First name"
               />
             </label>
           </div>
           <div class="order-field">
             <label>
-              Surname
               <input
                 type="text"
                 id="surname"
                 v-model="form.surname"
-                placeholder="..."
+                placeholder="Last name"
               />
             </label>
           </div>
           <div class="order-field">
             <label>
-              E-Mail
               <input
                 type="text"
                 id="email"
                 v-model="form.email"
-                placeholder="..."
+                placeholder="Email"
               />
             </label>
           </div>
           <div class="order-field">
             <label>
-              Phone number
               <input
                 type="text"
                 id="number"
                 v-model="form.number"
-                placeholder="..."
+                placeholder="Phone number"
               />
             </label>
           </div>
@@ -86,12 +92,10 @@
         <div class="step" v-show="step === 4">
           <div class="order-field">
             <label>
-              Description
               <textarea
-                id="description"
                 v-model="form.imagination"
                 type="text"
-                placeholder="..."
+                placeholder="Write a brief overview of the website you would like us to create for you."
               ></textarea>
             </label>
           </div>
@@ -99,30 +103,23 @@
 
         <div class="step" v-show="step === 5">
           <form class="resume" name="order-now" @submit.prevent="handleSubmit">
-            <label>Type</label>
-            <input v-model="form.type" disabled type="text" placeholder="..." />
-            <label>Forename</label>
-            <input
-              v-model="form.forename"
-              disabled
-              type="text"
-              placeholder=""
-            />
-            <label>Surname</label>
-            <input v-model="form.surname" disabled type="text" placeholder="" />
-            <label>E-Mail</label>
-            <input v-model="form.email" disabled type="text" placeholder="" />
-            <label>Phone number</label>
+            <label>TYPE</label>
+            <input v-model="form.type" disabled type="text" placeholder="—" />
+            <label>COMPANY</label>
+            <input v-model="form.company" disabled type="text" placeholder="—" />
+            <label>FORENAME</label>
+            <input v-model="form.forename" disabled type="text" placeholder="—"/>
+            <label>SURNAME</label>
+            <input v-model="form.surname" disabled type="text" placeholder="—" />
+            <label>EMAIL</label>
+            <input v-model="form.email" disabled type="text" placeholder="—" />
+            <label>PHONE-NUMBER</label>
             <input v-model="form.number" disabled type="text" placeholder="—" />
-            <label>Color-Scheme</label>
-            <input v-model="form.scheme" disabled type="text" placeholder="" />
-            <label>Description</label>
-            <textarea
-              v-model="form.imagination"
-              disabled
-              type="text"
-              placeholder=""
-            ></textarea>
+            <label>HUE</label>
+            <input v-model="form.scheme" disabled type="text" placeholder="—"/>
+            <label>DESCRIPTION</label>
+            <textarea v-model="form.imagination" disabled type="text" placeholder="—">
+            </textarea>
           </form>
         </div>
       </div>
@@ -159,7 +156,6 @@ export default {
     return {
       sliding: false,
       step: 1,
-      steps: ["1", "2", "3", "4", "5"],
 
       items: [
         {
@@ -194,7 +190,7 @@ export default {
 
   computed: {
     progressPercentage() {
-      return Math.round((this.step / this.steps.length) * 100);
+      return Math.round((this.step / 6) * 100);
     },
     stepText() {
       switch (this.step) {
@@ -215,6 +211,7 @@ export default {
 
   methods: {
     btn(event) {
+      document.getElementById("app").scrollIntoView();
       anime({
         targets: ".section-container",
         opacity: [1, 0],
@@ -230,9 +227,6 @@ export default {
             targets: ".section-container",
             opacity: [0, 1],
             easing: "linear",
-            complete: () => {
-              console.log(Math.round((this.step / this.steps.length) * 100));
-            },
             duration: 125,
           });
         },
@@ -386,12 +380,6 @@ export default {
   }
 }
 
-form {
-  display: -ms-grid;
-  display: grid;
-  padding: 0.5rem 0.5rem;
-  text-align: center;
-}
 .step:first-child {
   display: -moz-box;
   display: -ms-flexbox;
@@ -400,6 +388,7 @@ form {
   display: flex;
   height: auto;
   padding: 1rem;
+  min-height: inherit;
 }
 .select-box {
   background: -webkit-linear-gradient(
@@ -509,6 +498,11 @@ form {
   margin: 0.5rem;
 }
 
+.resume input {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0rem 0 0.5rem 0;
+}
+
 @media (max-width: 64em) {
   .section .header h1 {
     text-align: center;
@@ -531,15 +525,22 @@ form {
     grid-template-columns: inherit;
   }
 }
+
 label {
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
   border-radius: 0.5rem;
-  padding: 0.2rem;
+  padding: 0rem 0.5rem;
   display: -ms-grid;
   display: grid;
 }
-textarea {
+
+label span {
+  bottom: 3.5px;
+}
+
+textarea,
+input {
   background: rgba(0, 0, 0, 0.2);
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
@@ -552,22 +553,14 @@ textarea {
   resize: vertical;
   width: 100%;
 }
-input {
-  background: rgba(0, 0, 0, 0.3);
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  border: 0;
-  color: white;
-  outline: none;
-  font-size: 24px;
-  width: 100%;
+
+form {
+  display: -ms-grid;
+  display: grid;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
 }
-input:focus {
-  text-underline-offset: 22;
-  text-decoration: underline;
-}
+
 .button {
   display: -webkit-box;
   display: -webkit-flex;
