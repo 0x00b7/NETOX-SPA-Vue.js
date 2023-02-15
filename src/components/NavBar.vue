@@ -51,10 +51,16 @@
 import anime from "animejs";
 
 export default {
+  data() {
+    return {
+      showMobileNav: true,
+    };
+  },
   methods: {
     toggleMobile() {
+      this.showMobileNav = !this.showMobileNav;
       const navbar = document.querySelector(".mobile-nav");
-      if (navbar.style.display === "block") {
+      if (this.showMobileNav) {
         anime({
           targets: navbar,
           easing: "easeInOutQuad",
@@ -77,6 +83,13 @@ export default {
       }
     },
   },
+
+  created() {
+    this.$router.beforeEach((to, from, next) => {
+      next();
+    });
+  },
+
   mounted() {
     anime({
       delay: 250,
