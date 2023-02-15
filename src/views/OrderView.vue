@@ -393,32 +393,32 @@ export default {
 .select-box {
   background: -webkit-linear-gradient(
     70deg,
-    rgba(60, 90, 250, 0.7) 0%,
-    rgba(250, 70, 150, 0.7) 100%
+    rgba(60, 90, 250, 0.3) 0%,
+    rgba(250, 70, 150, 0.3) 100%
   );
   background: -moz-linear-gradient(
     70deg,
-    rgba(60, 90, 250, 0.7) 0%,
-    rgba(250, 70, 150, 0.7) 100%
+    rgba(60, 90, 250, 0.3) 0%,
+    rgba(250, 70, 150, 0.3) 100%
   );
   background: -o-linear-gradient(
     70deg,
-    rgba(60, 90, 250, 0.7) 0%,
-    rgba(250, 70, 150, 0.7) 100%
+    rgba(60, 90, 250, 0.3) 0%,
+    rgba(250, 70, 150, 0.3) 100%
   );
   background: linear-gradient(
     20deg,
-    rgba(60, 90, 250, 0.7) 0%,
-    rgba(250, 70, 150, 0.7) 100%
+    rgba(60, 90, 250, 0.2) 0%,
+    rgba(250, 70, 150, 0.3) 100%
   );
   -ms-grid-column-align: center;
   justify-self: center;
   margin: 0.5rem;
   padding: 1rem;
   width: 100%;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  border-radius: 1rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  border-radius: 0.5rem;
   -webkit-transition: 0.3s background-color;
   -o-transition: 0.3s background-color;
   -moz-transition: 0.3s background-color;
@@ -429,7 +429,7 @@ export default {
   user-select: none;
 }
 .select-box:hover {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.3);
 }
 .select-box h1 {
   font-weight: 300;

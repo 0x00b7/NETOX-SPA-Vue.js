@@ -59,7 +59,7 @@ export default {
           targets: navbar,
           easing: "easeInOutQuad",
           opacity: [1, 0],
-          translateX: [0, 50],
+          translateY: [0, -50],
           duration: 150,
           complete: () => {
             navbar.style.display = "none";
@@ -70,7 +70,7 @@ export default {
         anime({
           targets: navbar,
           opacity: [0, 1],
-          translateX: [-50, 0],
+          translateY: [-50, 0],
           easing: "easeInOutQuad",
           duration: 150,
         });
@@ -133,7 +133,7 @@ header .container .mobile-nav ul li {
 }
 
 header .container .mobile-nav ul li a {
-  font-weight: 100;
+  font-weight: 600;
 }
 
 header .container .wrapper {
