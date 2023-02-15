@@ -107,6 +107,8 @@ export default {
   -o-animation: placeholder 2s linear infinite;
   animation: placeholder 2s linear infinite;
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
   height: fit-content;
   -webkit-transition: display 1s;
   -o-transition: display 1s;
@@ -124,7 +126,9 @@ img {
   content: url(../assets/images/admin.png);
   width: 100%;
   height: 100%;
-  border-radius: 6rem;
+  -webkit-border-radius: 6rem;
+     -moz-border-radius: 6rem;
+          border-radius: 6rem;
   padding: 2rem;
 }
 

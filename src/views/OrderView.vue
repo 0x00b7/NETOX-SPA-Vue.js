@@ -190,7 +190,7 @@ export default {
 
   computed: {
     progressPercentage() {
-      return Math.round((this.step / 6) * 100);
+      return Math.round((this.step / 5) * 100);
     },
     stepText() {
       switch (this.step) {
@@ -488,7 +488,9 @@ export default {
     hsla(220, 78%, 29%, 1) 100%
   );
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0037", endColorstr="#9BAFD9", GradientType=1 );
-  justify-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  display: -ms-grid;
   display: grid;
   margin: 1rem;
   padding: 0.5rem;
