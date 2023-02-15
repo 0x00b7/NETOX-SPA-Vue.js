@@ -83,13 +83,6 @@ export default {
       }
     },
   },
-
-  created() {
-    this.$router.beforeEach((to, from, next) => {
-      next();
-    });
-  },
-
   mounted() {
     anime({
       delay: 250,
