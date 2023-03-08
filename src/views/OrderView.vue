@@ -106,19 +106,39 @@
             <label>TYPE</label>
             <input v-model="form.type" disabled type="text" placeholder="—" />
             <label>COMPANY</label>
-            <input v-model="form.company" disabled type="text" placeholder="—" />
+            <input
+              v-model="form.company"
+              disabled
+              type="text"
+              placeholder="—"
+            />
             <label>FORENAME</label>
-            <input v-model="form.forename" disabled type="text" placeholder="—"/>
+            <input
+              v-model="form.forename"
+              disabled
+              type="text"
+              placeholder="—"
+            />
             <label>SURNAME</label>
-            <input v-model="form.surname" disabled type="text" placeholder="—" />
+            <input
+              v-model="form.surname"
+              disabled
+              type="text"
+              placeholder="—"
+            />
             <label>EMAIL</label>
             <input v-model="form.email" disabled type="text" placeholder="—" />
             <label>PHONE-NUMBER</label>
             <input v-model="form.number" disabled type="text" placeholder="—" />
             <label>HUE</label>
-            <input v-model="form.scheme" disabled type="text" placeholder="—"/>
+            <input v-model="form.scheme" disabled type="text" placeholder="—" />
             <label>DESCRIPTION</label>
-            <textarea v-model="form.imagination" disabled type="text" placeholder="—">
+            <textarea
+              v-model="form.imagination"
+              disabled
+              type="text"
+              placeholder="—"
+            >
             </textarea>
           </form>
         </div>
@@ -489,7 +509,7 @@ export default {
   );
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#FF0037", endColorstr="#9BAFD9", GradientType=1 );
   -ms-grid-column-align: center;
-      justify-self: center;
+  justify-self: center;
   display: -ms-grid;
   display: grid;
   margin: 1rem;
