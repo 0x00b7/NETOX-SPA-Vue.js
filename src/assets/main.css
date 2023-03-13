@@ -29,7 +29,7 @@ a {
 }
 
 .router-link-exact-active {
-  color: rgba(255, 255, 255, 0.5)
+  color: rgba(255, 255, 255, 0.5);
 }
 
 @media (hover: hover) {

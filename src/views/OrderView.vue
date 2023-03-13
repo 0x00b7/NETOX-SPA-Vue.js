@@ -30,7 +30,7 @@
                 type="text"
                 id="company"
                 v-model="form.company"
-                placeholder="Enter Your Company"
+                placeholder="Company"
               />
             </label>
           </div>
@@ -40,7 +40,7 @@
                 type="text"
                 id="forename"
                 v-model="form.forename"
-                placeholder="First name"
+                placeholder="First name *"
               />
             </label>
           </div>
@@ -50,7 +50,7 @@
                 type="text"
                 id="surname"
                 v-model="form.surname"
-                placeholder="Last name"
+                placeholder="Last name *"
               />
             </label>
           </div>
@@ -60,7 +60,7 @@
                 type="text"
                 id="email"
                 v-model="form.email"
-                placeholder="Email"
+                placeholder="Email *"
               />
             </label>
           </div>
@@ -411,34 +411,17 @@ export default {
   min-height: inherit;
 }
 .select-box {
-  background: -webkit-linear-gradient(
-    70deg,
-    rgba(60, 90, 250, 0.3) 0%,
-    rgba(250, 70, 150, 0.3) 100%
-  );
-  background: -moz-linear-gradient(
-    70deg,
-    rgba(60, 90, 250, 0.3) 0%,
-    rgba(250, 70, 150, 0.3) 100%
-  );
-  background: -o-linear-gradient(
-    70deg,
-    rgba(60, 90, 250, 0.3) 0%,
-    rgba(250, 70, 150, 0.3) 100%
-  );
   background: linear-gradient(
     20deg,
-    rgba(60, 90, 250, 0.2) 0%,
-    rgba(250, 70, 150, 0.3) 100%
+    rgba(60, 90, 250, 0.8) 0%,
+    rgba(250, 70, 150, 0.8) 100%
   );
   -ms-grid-column-align: center;
   justify-self: center;
   margin: 0.5rem;
   padding: 1rem;
   width: 100%;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   -webkit-transition: 0.3s background-color;
   -o-transition: 0.3s background-color;
   -moz-transition: 0.3s background-color;
@@ -449,15 +432,15 @@ export default {
   user-select: none;
 }
 .select-box:hover {
-  background-color: rgba(255, 0, 0, 0.3);
+  background-color: rgba(255, 0, 0, 1);
 }
 .select-box h1 {
-  font-weight: 300;
+  font-weight: 500;
   text-align: left;
 }
 .select-box h3 {
   font-size: 22px;
-  font-weight: 500;
+  font-weight: 300;
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
   min-width: 100%;
@@ -515,6 +498,7 @@ export default {
   margin: 1rem;
   padding: 0.5rem;
 }
+
 .resume {
   text-align: left;
   margin: 0.5rem;
@@ -548,11 +532,18 @@ export default {
   }
 }
 
+*::placeholder {
+  font-weight: bold;
+  opacity: 0.7;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+}
+
 label {
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
   border-radius: 0.5rem;
-  padding: 0rem 0.5rem;
   display: -ms-grid;
   display: grid;
 }
@@ -563,7 +554,8 @@ label span {
 
 textarea,
 input {
-  background: rgba(0, 0, 0, 0.2);
+  font-family: Titillium Web;
+  background: rgba(0, 0, 0, 0.3);
   -webkit-border-radius: 0.5rem;
   -moz-border-radius: 0.5rem;
   border-radius: 0.5rem;
@@ -574,6 +566,14 @@ input {
   font-size: 24px;
   resize: vertical;
   width: 100%;
+  font-weight: 300;
+  transition: all 150ms;
+}
+
+textarea:focus,
+input:focus {
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.8);
 }
 
 form {
@@ -594,12 +594,14 @@ form {
 button > * {
   pointer-events: none;
 }
+
 button {
   width: 100%;
   font-size: 28px;
   border: 0;
   color: white;
 }
+
 button.next {
   background-color: rgb(100, 0, 255);
   -webkit-border-top-right-radius: 0.5rem;
@@ -609,10 +611,12 @@ button.next {
   -moz-border-radius-bottomright: 0.5rem;
   border-bottom-right-radius: 0.5rem;
 }
+
 button.next:disabled {
   background-color: rgba(100, 0, 255, 0.5);
   color: rgba(255, 255, 255, 0.5);
 }
+
 button.prev {
   -webkit-border-top-left-radius: 0.5rem;
   -moz-border-radius-topleft: 0.5rem;

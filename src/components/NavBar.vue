@@ -124,11 +124,13 @@ header .container .mobileBtn > * {
 
 header .container .mobile-nav {
   position: fixed;
-  background: #1d1b26;
+  background: #302757;
   padding: 0rem 1rem;
   width: 100%;
   height: 210px;
   z-index: 10;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
   font-size: 1.5rem;
   display: none;
 }
