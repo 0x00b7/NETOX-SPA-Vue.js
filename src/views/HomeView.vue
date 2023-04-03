@@ -343,7 +343,7 @@ export default {
   margin-top: 1rem;
   font-weight: 600;
   text-align: center;
-  border-bottom: 2px solid var(--color-border);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 ul {
