@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <!-- Section I -->
     <div class="section">
       <div class="home">
         <h1>WE'LL BUILD YOUR VISION, START YOUR JOURNEY NOW!</h1>
@@ -94,7 +93,7 @@
         </ul>
       </div>
     </div>
-    <!-- Section-Text -->
+    <div class="">ss</div>
     <div class="header">
       <div class="divider">
         <svg viewBox="0 0 1000 120" preserveAspectRatio="none">
@@ -122,7 +121,6 @@
         </svg>
       </div>
     </div>
-    <!-- Section II -->
     <div class="section">
       <OS class="feature-box" :anim="mobile()">
         <p>Awesome</p>
