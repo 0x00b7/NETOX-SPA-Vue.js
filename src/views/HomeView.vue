@@ -93,7 +93,6 @@
         </ul>
       </div>
     </div>
-    <div class="">ss</div>
     <div class="header">
       <div class="divider">
         <svg viewBox="0 0 1000 120" preserveAspectRatio="none">
@@ -351,6 +350,13 @@ ul {
 li {
   font-weight: 200;
   line-height: 1.5;
+}
+
+/* USER-EXPERIENCE */
+
+.user-experience {
+  background-color: red;
+  margin: 0 auto;
 }
 
 /* OUR STANDARD */
