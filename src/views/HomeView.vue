@@ -156,7 +156,7 @@
       <h1>Client Testimonials</h1>
     </div>
     <div class="rating">
-      <OS class="user-experience" delay="100">
+      <OS class="user-experience" anim="zoomIn" delay="100">
         <p>Peter S.</p>
         <p>
           <span class="quote">&ldquo;</span>Netox.ws is a true master in the art
@@ -167,7 +167,7 @@
           <span class="quote">&rdquo;</span>
         </p>
       </OS>
-      <OS class="user-experience" delay="200">
+      <OS class="user-experience" anim="zoomIn" delay="200">
         <p>Nina L.</p>
         <p>
           <span class="quote">&ldquo;</span>If you're looking to take your
@@ -179,7 +179,7 @@
           website they created for me!<span class="quote">&rdquo;</span>
         </p>
       </OS>
-      <OS class="user-experience" delay="300">
+      <OS class="user-experience" anim="zoomIn" delay="300">
         <p>Jan M.</p>
         <p>
           <span class="quote">&ldquo;</span>As someone who knows very little
