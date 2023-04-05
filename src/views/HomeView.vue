@@ -159,43 +159,36 @@
       <div class="user-experience">
         <p>Peter S.</p>
         <p>
-          <span class="quote">&ldquo;</span>Ich war auf der Suche nach einer
-          professionellen und modernen Webseite für mein Unternehmen und bin auf
-          netox.ws gestoßen. Ich war beeindruckt von der schnellen und
-          kompetenten Beratung, die ich erhalten habe. Gernot hat mir bei der
-          Gestaltung und Umsetzung meiner Wünsche und Anforderungen geholfen und
-          das Endprodukt ist einfach fantastisch geworden. Die Webseite ist
-          ansprechend, leicht zu navigieren und erfüllt alle meine Erwartungen.
-          Der Preis war fair und ich würde Gernot und netox.ws jedem empfehlen,
-          der eine großartige Webseite erwerben möchte.<span class="quote"
-            >&rdquo;</span
-          >
+          <span class="quote">&ldquo;</span>Netox.ws is a true master in the art
+          of website creation! Their team of experts have an unparalleled eye
+          for detail and a dedication to their craft that shines through in
+          every project they take on. From custom graphics to seamless user
+          experiences, Netox.ws delivers masterpieces every time.
+          <span class="quote">&rdquo;</span>
         </p>
       </div>
       <div class="user-experience">
-        <p>Dennis W.</p>
+        <p>Nina L.</p>
         <p>
-          <span class="quote">&ldquo;</span>Ich habe meine Webseite über
-          netox.ws und Gernot, den Inhaber, erworben und ich bin wirklich
-          beeindruckt von seiner Kompetenz und Professionalität. Er hat mich bei
-          der Erstellung meiner Webseite unterstützt und all meine Fragen
-          umfassend beantwortet. Das Endprodukt ist großartig - es erfüllt alle
-          meine Anforderungen und sieht fantastisch aus. Der Preis war fair und
-          ich fühle mich gut betreut von Gernot und dem netox.ws-Team. Ich kann
-          ihn und die Plattform jedem empfehlen, der eine großartige Webseite
-          erwerben möchte.<span class="quote">&rdquo;</span>
+          <span class="quote">&ldquo;</span>If you're looking to take your
+          online presence to the next level, look no further than Netox.ws!
+          Their team is made up of some of the most talented designers and
+          developers in the industry, and they work tirelessly to create
+          websites that are not only visually stunning, but also highly
+          functional and easy to navigate. I couldn't be happier with the
+          website they created for me!<span class="quote">&rdquo;</span>
         </p>
       </div>
       <div class="user-experience">
         <p>Jan M.</p>
         <p>
-          <span class="quote">&ldquo;</span>Ich bin begeistert von der Qualität
-          des Endprodukts! Gernot war äußerst hilfreich und hat mich bei jedem
-          Schritt des Prozesses unterstützt. Das Endprodukt erfüllt alle meine
-          Anforderungen und sieht einfach großartig aus. Der Preis war fair und
-          ich fühle mich gut betreut von Gernot und dem netox.ws-Team. Ich kann
-          ihn und die Plattform jedem empfehlen, der eine großartige Webseite
-          erwerben möchte.<span class="quote">&rdquo;</span>
+          <span class="quote">&ldquo;</span>As someone who knows very little
+          about website design, I was blown away by the work that Netox.ws did
+          for my business. They took the time to understand my brand and my
+          goals, and then created a website that exceeded all of my
+          expectations. I've received countless compliments on the site since it
+          launched, and I know that it's helping to drive business to my door.
+          Thank you, Netox.ws!<span class="quote">&rdquo;</span>
         </p>
       </div>
     </div>
