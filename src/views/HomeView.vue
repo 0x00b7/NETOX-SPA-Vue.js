@@ -152,6 +152,53 @@
         </p>
       </OS>
     </div>
+    <div class="header">
+      <h1>What Our Clients Say</h1>
+    </div>
+    <div class="rating">
+      <div class="user-experience">
+        <p>Peter S.</p>
+        <p>
+          <span class="quote">&ldquo;</span>Ich war auf der Suche nach einer
+          professionellen und modernen Webseite für mein Unternehmen und bin auf
+          netox.ws gestoßen. Ich war beeindruckt von der schnellen und
+          kompetenten Beratung, die ich erhalten habe. Gernot hat mir bei der
+          Gestaltung und Umsetzung meiner Wünsche und Anforderungen geholfen und
+          das Endprodukt ist einfach fantastisch geworden. Die Webseite ist
+          ansprechend, leicht zu navigieren und erfüllt alle meine Erwartungen.
+          Der Preis war fair und ich würde Gernot und netox.ws jedem empfehlen,
+          der eine großartige Webseite erwerben möchte.<span class="quote"
+            >&rdquo;</span
+          >
+        </p>
+      </div>
+      <div class="user-experience">
+        <p>Dennis W.</p>
+        <p>
+          <span class="quote">&ldquo;</span>Ich habe meine Webseite über
+          netox.ws und Gernot, den Inhaber, erworben und ich bin wirklich
+          beeindruckt von seiner Kompetenz und Professionalität. Er hat mich bei
+          der Erstellung meiner Webseite unterstützt und all meine Fragen
+          umfassend beantwortet. Das Endprodukt ist großartig - es erfüllt alle
+          meine Anforderungen und sieht fantastisch aus. Der Preis war fair und
+          ich fühle mich gut betreut von Gernot und dem netox.ws-Team. Ich kann
+          ihn und die Plattform jedem empfehlen, der eine großartige Webseite
+          erwerben möchte.<span class="quote">&rdquo;</span>
+        </p>
+      </div>
+      <div class="user-experience">
+        <p>Jan M.</p>
+        <p>
+          <span class="quote">&ldquo;</span>Ich bin begeistert von der Qualität
+          des Endprodukts! Gernot war äußerst hilfreich und hat mich bei jedem
+          Schritt des Prozesses unterstützt. Das Endprodukt erfüllt alle meine
+          Anforderungen und sieht einfach großartig aus. Der Preis war fair und
+          ich fühle mich gut betreut von Gernot und dem netox.ws-Team. Ich kann
+          ihn und die Plattform jedem empfehlen, der eine großartige Webseite
+          erwerben möchte.<span class="quote">&rdquo;</span>
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -352,13 +399,6 @@ li {
   line-height: 1.5;
 }
 
-/* USER-EXPERIENCE */
-
-.user-experience {
-  background-color: red;
-  margin: 0 auto;
-}
-
 /* OUR STANDARD */
 .feature-box {
   width: 100%;
@@ -395,6 +435,58 @@ li {
   filter: drop-shadow(0px 0px 3px rgb(255, 255, 255));
 }
 
+/* USER-EXPERIENCE */
+
+.header:nth-child(4) {
+  text-align: left;
+  padding: 2rem;
+  margin: 0;
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+.rating {
+  width: 100%;
+  display: flex;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.user-experience {
+  background: rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  width: 400px;
+}
+
+.user-experience p {
+  margin: 2rem;
+}
+
+.user-experience p:nth-child(1) {
+  font-size: larger;
+  font-weight: 600;
+}
+
+.user-experience p:nth-child(2) {
+  font-weight: 200;
+  padding-left: 1rem;
+}
+
+.quote {
+  color: #fdb527;
+  font-size: 3em;
+  position: absolute;
+  margin-top: -1rem;
+}
+
+.quote:first-of-type {
+  margin: -1.25rem;
+}
+
+.quote:last-of-type {
+  margin: 0.25rem;
+}
+
 @media (max-width: 64em) {
   .section {
     display: -ms-grid;
@@ -429,6 +521,15 @@ li {
   .feature-box {
     margin: auto 0 20px;
     height: 280px;
+  }
+
+  .rating {
+    display: grid;
+  }
+
+  .user-experience {
+    margin: 1rem 0;
+    width: 100%;
   }
 }
 
