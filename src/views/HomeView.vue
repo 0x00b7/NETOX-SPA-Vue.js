@@ -121,14 +121,14 @@
       </div>
     </div>
     <div class="section">
-      <OS class="feature-box" :anim="mobile()">
+      <OS class="feature-box" delay="100">
         <p>Awesome</p>
         <i class="fa-solid fa-sparkles"></i>
         <p>
           We admire detail and strive to keep our design as clean as possible.
         </p>
       </OS>
-      <OS class="feature-box" :anim="mobile()">
+      <OS class="feature-box" delay="200">
         <p>Handmade</p>
         <i class="fa-solid fa-cubes"></i>
         <p>
@@ -136,14 +136,14 @@
           ourselves.
         </p>
       </OS>
-      <OS class="feature-box" :anim="mobile()">
+      <OS class="feature-box" delay="300">
         <p>Responsive</p>
         <i class="fa-solid fa-laptop-mobile"></i>
         <p>
           We pay close attention to ensuring responsiveness on every device.
         </p>
       </OS>
-      <OS class="feature-box" :anim="mobile()">
+      <OS class="feature-box" delay="400">
         <p>Effortless</p>
         <i class="fa-solid fa-feather"></i>
         <p>
@@ -153,10 +153,10 @@
       </OS>
     </div>
     <div class="header">
-      <h1>What Our Clients Say</h1>
+      <h1>Client Testimonials</h1>
     </div>
     <div class="rating">
-      <div class="user-experience">
+      <OS class="user-experience" delay="100">
         <p>Peter S.</p>
         <p>
           <span class="quote">&ldquo;</span>Netox.ws is a true master in the art
@@ -166,8 +166,8 @@
           experiences, Netox.ws delivers masterpieces every time.
           <span class="quote">&rdquo;</span>
         </p>
-      </div>
-      <div class="user-experience">
+      </OS>
+      <OS class="user-experience" delay="200">
         <p>Nina L.</p>
         <p>
           <span class="quote">&ldquo;</span>If you're looking to take your
@@ -178,8 +178,8 @@
           functional and easy to navigate. I couldn't be happier with the
           website they created for me!<span class="quote">&rdquo;</span>
         </p>
-      </div>
-      <div class="user-experience">
+      </OS>
+      <OS class="user-experience" delay="300">
         <p>Jan M.</p>
         <p>
           <span class="quote">&ldquo;</span>As someone who knows very little
@@ -190,7 +190,7 @@
           launched, and I know that it's helping to drive business to my door.
           Thank you, Netox.ws!<span class="quote">&rdquo;</span>
         </p>
-      </div>
+      </OS>
     </div>
   </div>
 </template>
@@ -212,13 +212,6 @@ export default {
       loop: true,
       delay: anime.stagger(200),
     });
-  },
-  methods: {
-    mobile() {
-      if (window.innerWidth > 512) {
-        return "none";
-      }
-    },
   },
 };
 </script>
@@ -435,6 +428,10 @@ li {
 
 .rating {
   width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.2);
@@ -461,7 +458,7 @@ li {
 
 .user-experience p:nth-child(2) {
   font-weight: 200;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
 }
 
 .quote {
@@ -519,6 +516,7 @@ li {
   }
 
   .rating {
+    display: -ms-grid;
     display: grid;
   }
 

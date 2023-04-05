@@ -26,6 +26,10 @@ export default {
       type: String,
       default: "easeOutExpo",
     },
+    delay: {
+      type: Number,
+      default: 0,
+    },
   },
   setup(props) {
     let hasEnteredOnce = false;
@@ -44,7 +48,7 @@ export default {
         outCallback: onExit,
         once: true,
         options: {
-          threshold: 0.5,
+          threshold: 0,
         },
       });
 
@@ -53,6 +57,7 @@ export default {
         autoplay: false,
         duration: props.duration,
         easing: props.easing,
+        delay: props.delay,
         ...animeTransition,
       });
     });
