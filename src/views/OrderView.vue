@@ -287,7 +287,8 @@ export default {
             };
             const headers = {
                 'Content-Type': 'application/json',
-                'Authorization': 'N3T0X'
+                'Authorization': 'N3T0X',
+                "Access-Control-Allow-Origin": "*",
             };
             const options = {
                 headers
