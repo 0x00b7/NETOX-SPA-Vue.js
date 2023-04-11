@@ -282,7 +282,7 @@ export default {
         },
 
         async handleSubmit() {
-            const data = [JSON.stringify(this.form)];
+            const data = JSON.stringify(this.form);
             const headers = {
                 "Authorization": "N3T0X",
             };
