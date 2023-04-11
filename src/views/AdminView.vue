@@ -18,7 +18,7 @@ export default {
                 headers
             };
             const response = await axios.get('https://armbush.lehle-gernot2441.workers.dev/', options)
-            
+
             this.items.push(...response.data);
             await this.animateItems();
         } catch (error) {
@@ -46,7 +46,7 @@ export default {
     <div class="section">
       <div class="admin">
         <div v-for="item in filteredItems" :key="item.id" class="ticket">
-          {{ item.company }} | {{ item.type }} | {{ item.forename }} | {{ item.surname }} | {{ item.email }} | {{ item.number }} | {{ item.scheme }} | {{ item.imagination }}
+          {{ item.company }} {{ item.type }} {{ item.forename }} {{ item.surname }} {{ item.email }} {{ item.number }} {{ item.scheme }} {{ item.imagination }}
         </div>
       </div>
     </div>
