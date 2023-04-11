@@ -42,7 +42,7 @@ export default {
   <div class="container">
     <div class="section">
     <div class="auth">
-      <input placeholder="Auth...">
+      <input v-model="this.key" placeholder="Auth...">
       <button @click="fetch()">Send</button>
     </div>
       <div class="admin">
