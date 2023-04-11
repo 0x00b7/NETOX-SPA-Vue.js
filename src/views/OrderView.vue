@@ -288,7 +288,7 @@ export default {
                 "Authorization": "N3T0X",
                 "Access-Control-Allow-Methods": "POST",
                 "Access-Control-Allow-Origin": "https://netox.ws",
-                "Access-Control-Allow-Headers": "authorization"
+                "Access-Control-Allow-Headers": "Content-Type, authorization"
             };
             const options = {
                 headers
