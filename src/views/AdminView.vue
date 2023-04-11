@@ -32,7 +32,6 @@ export default {
     },
     methods: {
         async animateItems() {
-            await this.$nextTick();
             this.items.forEach((item, index) => {
                 const selector = `#data-${item.id}`;
                 anime({
@@ -42,21 +41,7 @@ export default {
                     delay: 25 * index
                 });
             });
-        },
-    },
-    computed: {
-        filteredItems() {
-            return this.items.filter(item => {
-                return item.type.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-                    item.company.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
-                    item.url.toLowerCase().includes(this.searchQuery.toLowerCase());
-            });
-        },
-    },
-    watch: {
-        searchQuery() {
-            this.animateItems();
-        },
+        }
     }
 }
 </script>
@@ -65,11 +50,8 @@ export default {
   <div class="container">
     <div class="section">
       <div class="admin">
-        <div>
-          <input type="text" v-model="searchQuery" placeholder="Suche...">
-        </div>
         <div v-for="item in filteredItems" :key="item.id" class="ticket">
-          {{ item.type }} {{ item.forename }} {{ item.surname }} {{ item.email }} {{ item.number }} {{ item.scheme }} {{ item.imagination }} {{ item.company }}
+          {{ item.company }} | {{ item.type }} | {{ item.forename }} | {{ item.surname }} | {{ item.email }} | {{ item.number }} | {{ item.scheme }} | {{ item.imagination }}
         </div>
       </div>
     </div>
@@ -101,7 +83,8 @@ export default {
 }
 
 .ticket {
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 1rem;
   width: 100%;
   padding: 1rem;
 }
