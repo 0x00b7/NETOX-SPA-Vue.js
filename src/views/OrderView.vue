@@ -294,8 +294,7 @@ export default {
                     this.$router.push("thanks");
                 })
                 .catch(() => {
-                  console.log(data);
-                    this.$router.push("thanks");
+                    this.$router.push("sorry");
                 });
         },
     },
