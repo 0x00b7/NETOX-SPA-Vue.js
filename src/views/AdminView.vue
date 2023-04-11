@@ -52,7 +52,7 @@ export default {
     <div class="section">
     <div class="auth">
       <input v-model="this.key" placeholder="Auth...">
-      <button @click="fetch()">Send</button>
+      <button @click="fetch()" :disabled="loading">{{ loading ? 'Loading...' : 'Send' }}</button>
     </div>
       <div class="admin">
         <div v-for="item in items" :key="item.id" :id="'data-' + item.id" class="ticket">
