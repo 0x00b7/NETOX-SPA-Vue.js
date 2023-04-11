@@ -45,7 +45,7 @@ export default {
   <div class="container">
     <div class="section">
       <div class="admin">
-        <div v-for="item in filteredItems" :key="item.id" class="ticket">
+        <div v-for="item in items" :key="item.id" class="ticket">
           {{ item.company }} | {{ item.type }} | {{ item.forename }} | {{ item.surname }} | {{ item.email }} | {{ item.number }} | {{ item.scheme }} | {{ item.imagination }}
         </div>
       </div>
