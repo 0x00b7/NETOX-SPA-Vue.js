@@ -7,12 +7,13 @@ export default {
     data() {
         return {
             items: [],
+            key: ""
         }
     },
-    async mounted() {
-        try {
+    methods: {
+        async fetch() {
             const headers = {
-                "Authorization": "N3T0X",
+                "Authorization": this.key,
             };
             const options = {
                 headers
@@ -20,11 +21,7 @@ export default {
             const response = await axios.get('https://armbush.lehle-gernot2441.workers.dev/', options)
             this.items.push(...response.data);
             await this.animateItems();
-        } catch (error) {
-            console.error(error);
-        }
-    },
-    methods: {
+        },
         async animateItems() {
             await this.$nextTick();
             this.items.forEach((item, index) => {
@@ -44,6 +41,10 @@ export default {
 <template>
   <div class="container">
     <div class="section">
+    <div class="auth">
+      <input placeholder="Auth...">
+      <button @click="fetch()">Send</button>
+    </div>
       <div class="admin">
         <div v-for="item in items" :key="item.id" :id="'data-' + item.id" class="ticket">
           {{ item.company }} | {{ item.type }} | {{ item.forename }} | {{ item.surname }} | {{ item.email }} | {{ item.number }} | {{ item.scheme }} | {{ item.imagination }}
@@ -54,6 +55,29 @@ export default {
 </template>
 
 <style scoped>
+input {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  border: 0;
+  font-size: larger;
+  color: white;
+}
+
+button {
+  font-family: 'Titillium Web';
+  font-weight: 200;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: larger;
+  border: 0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+button:hover {
+  background-color: rgba(0, 75, 255, 0.8);
+}
 
 .container {
   display: -webkit-box;
@@ -68,19 +92,27 @@ export default {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  padding: 0 2rem;
+}
+
+.section * {
+  margin: 0.5rem 0;
 }
 
 .admin {
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 1rem;
-  height: 200px;
-  margin: 1rem;
+  border-radius: 0.5rem;
   padding: 1rem;
+}
+
+.auth {
+  width: 100%;
+  display: grid;
 }
 
 .ticket {
   background-color: rgba(0, 0, 0, 0.3);
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   width: 100%;
   padding: 1rem;
 }
