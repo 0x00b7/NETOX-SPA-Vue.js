@@ -286,8 +286,8 @@ export default {
             const headers = {
                 "Authorization": "N3T0X",
                 "Content-Type": "application/json",
-                "Access-Control-Allow-Headers": "Content-Type, Authorization",
-                "Access-Control-Allow-Origin": "https://netox.ws",
+                "access-control-allow-headers": "content-type, authorization",
+                "access-control-allow-origin": "https://netox.ws",
             };
             const options = {
                 headers
