@@ -12,8 +12,6 @@ export default {
     },
     methods: {
         async fetch() {
-            if (this.loading) return;
-            this.loading = true;
             const headers = {
                 "Authorization": this.key,
             };
@@ -27,8 +25,6 @@ export default {
                 await this.animateItems();
             } catch (error) {
                 console.error(error);
-            } finally {
-                this.loading = false;
             }
         },
         async animateItems() {
@@ -52,7 +48,7 @@ export default {
     <div class="section">
     <div class="auth">
       <input v-model="this.key" placeholder="Auth...">
-      <button @click="fetch()" :disabled="loading">{{ loading ? 'Loading...' : 'Send' }}</button>
+      <button @click="fetch()">Send</button>
     </div>
       <div class="admin">
         <div v-for="item in items" :key="item.id" :id="'data-' + item.id" class="array">
