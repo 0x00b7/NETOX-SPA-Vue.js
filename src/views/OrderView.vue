@@ -165,151 +165,155 @@
 import anime from "animejs";
 import axios from "axios";
 
-import { ColorPicker } from "vue-color-kit";
+import {
+    ColorPicker
+} from "vue-color-kit";
 import "vue-color-kit/dist/vue-color-kit.css";
 
 export default {
-  components: {
-    ColorPicker,
-  },
-  data() {
-    return {
-      sliding: false,
-      step: 1,
-
-      items: [
-        {
-          h1: "Onepager",
-          h3: "A beautiful one-page website for providing information of all types, whether for business or personal use.",
-        },
-        {
-          h1: "Multipager",
-          h3: "Whenever you need a little extra space, this Website offers up to 9 pages with extensive info about your product, service and it's benefits.",
-        },
-        {
-          h1: "Shop",
-          h3: "Your sales will be effortless with your choice of Shopify, or any other payment system. Your customers will love the design!",
-        },
-        {
-          h1: "Renew",
-          h3: "If you need to give your old website a fresh look but don't know how, this option is perfect for you.",
-        },
-      ],
-
-      form: {
-        type: "",
-        forename: "",
-        surname: "",
-        email: "",
-        number: "",
-        scheme: "rgba(160, 255, 0, 1)",
-        imagination: "",
-      },
-    };
-  },
-
-  computed: {
-    progressPercentage() {
-      return Math.round((this.step / 5) * 100);
+    components: {
+        ColorPicker,
     },
-    stepText() {
-      switch (this.step) {
-        case 1:
-          return "Choose a Service";
-        case 2:
-          return "Add Your Info";
-        case 3:
-          return "Select a Hue";
-        case 4:
-          return "Share Your Vision";
-        case 5:
-          return "Send Order";
-      }
-      return 0;
-    },
-  },
+    data() {
+        return {
+            sliding: false,
+            step: 1,
 
-  methods: {
-    btn(event) {
-      document.getElementById("app").scrollIntoView();
-      anime({
-        targets: ".section-container",
-        opacity: [1, 0],
-        easing: "linear",
-        duration: 125,
-        complete: () => {
-          if (event.target.id === "next-btn") {
-            this.step++;
-          } else if (event.target.id === "prev-btn") {
-            this.step--;
-          }
-          anime({
-            targets: ".section-container",
+            items: [{
+                    h1: "Onepager",
+                    h3: "A beautiful one-page website for providing information of all types, whether for business or personal use.",
+                },
+                {
+                    h1: "Multipager",
+                    h3: "Whenever you need a little extra space, this Website offers up to 9 pages with extensive info about your product, service and it's benefits.",
+                },
+                {
+                    h1: "Shop",
+                    h3: "Your sales will be effortless with your choice of Shopify, or any other payment system. Your customers will love the design!",
+                },
+                {
+                    h1: "Renew",
+                    h3: "If you need to give your old website a fresh look but don't know how, this option is perfect for you.",
+                },
+            ],
+
+            form: {
+                type: "",
+                forename: "",
+                surname: "",
+                email: "",
+                number: "",
+                scheme: "rgba(160, 255, 0, 1)",
+                imagination: "",
+            }
+        };
+    },
+
+    computed: {
+        progressPercentage() {
+            return Math.round((this.step / 5) * 100);
+        },
+        stepText() {
+            switch (this.step) {
+                case 1:
+                    return "Choose a Service";
+                case 2:
+                    return "Add Your Info";
+                case 3:
+                    return "Select a Hue";
+                case 4:
+                    return "Share Your Vision";
+                case 5:
+                    return "Send Order";
+            }
+            return 0;
+        },
+    },
+
+    methods: {
+        btn(event) {
+            document.getElementById("app").scrollIntoView();
+            anime({
+                targets: ".section-container",
+                opacity: [1, 0],
+                easing: "linear",
+                duration: 125,
+                complete: () => {
+                    if (event.target.id === "next-btn") {
+                        this.step++;
+                    } else if (event.target.id === "prev-btn") {
+                        this.step--;
+                    }
+                    anime({
+                        targets: ".section-container",
+                        opacity: [0, 1],
+                        easing: "linear",
+                        duration: 125,
+                    });
+                },
+            });
+        },
+
+        select(x) {
+            this.form.type = x;
+            this.btn({
+                target: {
+                    id: "next-btn",
+                },
+            });
+        },
+
+        changeColor(color) {
+            const {
+                r,
+                g,
+                b,
+                a
+            } = color.rgba;
+            this.form.scheme = `rgba(${r}, ${g}, ${b}, ${a})`;
+        },
+
+        encode(data) {
+            return Object.keys(data)
+                .map(
+                    (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
+                )
+                .join("&");
+        },
+
+        async handleSubmit() {
+            const data = {
+                message: JSON.stringify(this.form)
+            };
+            const headers = {
+                'Content-Type': 'application/json',
+                'Authorization': 'N3T0X'
+            };
+            const options = {
+                headers
+            };
+            await axios.post('https://armbush.lehle-gernot2441.workers.dev/', data, options)
+                .then(() => {
+                    this.$router.push("thanks");
+                })
+                .catch(() => {
+                    console.log(data)
+                    this.$router.push("sorry");
+                });
+        },
+    },
+
+    mounted() {
+        anime({
+            targets: ".select-box",
             opacity: [0, 1],
-            easing: "linear",
-            duration: 125,
-          });
-        },
-      });
-    },
-
-    select(x) {
-      this.form.type = x;
-      this.btn({
-        target: {
-          id: "next-btn",
-        },
-      });
-    },
-
-    changeColor(color) {
-      const { r, g, b, a } = color.rgba;
-      this.form.scheme = `rgba(${r}, ${g}, ${b}, ${a})`;
-    },
-
-    encode(data) {
-      return Object.keys(data)
-        .map(
-          (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-        )
-        .join("&");
-    },
-
-    handleSubmit() {
-      const axiosConfig = {
-        header: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      };
-      axios
-        .post(
-          "/",
-          this.encode({
-            "form-name": "order-now",
-            ...this.form,
-          }),
-          axiosConfig
-        )
-        .then(() => {
-          this.$router.push("thanks");
-        })
-        .catch(() => {
-          this.$router.push("sorry");
+            duration: 100,
+            translateX: [-50, 0],
+            direction: "linear",
+            easing: "easeInQuad",
+            delay: anime.stagger(100),
         });
     },
-  },
-
-  mounted() {
-    anime({
-      targets: ".select-box",
-      opacity: [0, 1],
-      duration: 100,
-      translateX: [-50, 0],
-      direction: "linear",
-      easing: "easeInQuad",
-      delay: anime.stagger(100),
-    });
-  },
 };
 </script>
 
