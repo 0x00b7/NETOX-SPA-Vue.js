@@ -284,9 +284,9 @@ export default {
         async handleSubmit() {
             const data = [JSON.stringify(this.form)];
             const headers = {
-                'Content-Type': 'application/json',
-                'Authorization': 'N3T0X',
-                'Access-Control-Allow-Origin': 'https://netox.ws'
+                "Content-Type": "application/json",
+                "Authorization": "N3T0X",
+                "Access-Control-Allow-Origin": "https://netox.ws"
             };
             const options = {
                 headers
