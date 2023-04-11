@@ -14,6 +14,7 @@ export default {
         async complete(item) {
             const headers = {
                 "Authorization": this.key,
+                "Access-Control-Allow-Methods": "DELETE"
             };
             const options = {
                 headers
