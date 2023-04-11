@@ -18,7 +18,6 @@ export default {
                 headers
             };
             const response = await axios.get('https://armbush.lehle-gernot2441.workers.dev/', options)
-
             this.items.push(...response.data);
             await this.animateItems();
         } catch (error) {
@@ -27,16 +26,17 @@ export default {
     },
     methods: {
         async animateItems() {
+            await this.$nextTick();
             this.items.forEach((item, index) => {
                 const selector = `#data-${item.id}`;
                 anime({
                     targets: document.querySelectorAll(selector),
                     opacity: 1,
-                    duration: 250,
+                    duration: 100,
                     delay: 25 * index
                 });
             });
-        }
+        },
     }
 }
 </script>
@@ -46,7 +46,7 @@ export default {
     <div class="section">
       <div class="admin">
         <div v-for="item in filteredItems" :key="item.id" class="ticket">
-          {{ item.company }} {{ item.type }} {{ item.forename }} {{ item.surname }} {{ item.email }} {{ item.number }} {{ item.scheme }} {{ item.imagination }}
+          {{ item.company }} | {{ item.type }} | {{ item.forename }} | {{ item.surname }} | {{ item.email }} | {{ item.number }} | {{ item.scheme }} | {{ item.imagination }}
         </div>
       </div>
     </div>
@@ -54,6 +54,7 @@ export default {
 </template>
 
 <style scoped>
+
 .container {
   display: -webkit-box;
   display: -webkit-flex;
