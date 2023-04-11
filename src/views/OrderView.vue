@@ -287,7 +287,7 @@ export default {
                 "Content-Type": "application/json",
                 "Authorization": "N3T0X",
                 "Access-Control-Allow-Origin": "https://netox.ws",
-                "Access-Control-Allow-Headers": "authorization",
+                "Access-Control-Allow-Headers": "authorization"
             };
             const options = {
                 headers
@@ -297,7 +297,8 @@ export default {
                     this.$router.push("thanks");
                 })
                 .catch(() => {
-                    this.$router.push("sorry");
+                  console.log(data);
+                    this.$router.push("thanks");
                 });
         },
     },
