@@ -11,6 +11,9 @@ export default {
         }
     },
     methods: {
+      async complete(item) {
+        await axios.delete('https://armbush.lehle-gernot2441.workers.dev/' + item, options)
+      },
         async fetch() {
             const headers = {
                 "Authorization": this.key,
@@ -47,12 +50,16 @@ export default {
   <div class="container">
     <div class="section">
     <div class="auth">
-      <input v-model="this.key" placeholder="Auth...">
+      <input v-model="this.key" placeholder="Password...">
       <button @click="fetch()">Send</button>
     </div>
       <div class="admin">
         <div v-for="item in items" :key="item.id" :id="'data-' + item.id" class="array">
           <h3>ID: {{ item.id }}</h3>
+          <div v-if="item.status">
+            {{ item.status }}
+          </div>
+          <button @click="complete(item.id)">done</button>
           <div class="object"><span>company: </span>{{ item.company }}</div>
           <div class="object"><span>type: </span>{{ item.type }}</div>
           <div class="object"><span>forename: </span>{{ item.forename }}</div>
