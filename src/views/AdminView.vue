@@ -55,8 +55,16 @@ export default {
       <button @click="fetch()" :disabled="loading">{{ loading ? 'Loading...' : 'Send' }}</button>
     </div>
       <div class="admin">
-        <div v-for="item in items" :key="item.id" :id="'data-' + item.id" class="ticket">
-          {{ item.company }} | {{ item.type }} | {{ item.forename }} | {{ item.surname }} | {{ item.email }} | {{ item.number }} | {{ item.scheme }} | {{ item.imagination }}
+        <div v-for="item in items" :key="item.id" :id="'data-' + item.id" class="array">
+          <h3>ID: {{ item.id }}</h3>
+          <div class="object"><span>company: </span>{{ item.company }}</div>
+          <div class="object"><span>type: </span>{{ item.type }}</div>
+          <div class="object"><span>forename: </span>{{ item.forename }}</div>
+          <div class="object"><span>surname: </span>{{ item.surname }}</div>
+          <div class="object"><span>e-mail: </span>{{ item.email }}</div>
+          <div class="object"><span>number: </span>{{ item.number }}</div>
+          <div class="object"><span>scheme: </span>{{ item.scheme }}</div>
+          <div class="object"><span>imagination: </span>{{ item.imagination }}</div>
         </div>
       </div>
     </div>
@@ -119,11 +127,21 @@ button:hover {
   display: grid;
 }
 
-.ticket {
-  background-color: rgba(0, 0, 0, 0.3);
+.array {
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.object {
+  padding: 0.5rem;
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 0.5rem;
-  width: 100%;
-  padding: 1rem;
+}
+
+.object span {
+  font-variant: small-caps;
+  color: rgb(0, 100, 255);
+  font-size: larger;
+  font-weight: 700;
 }
 
 @media (max-width: 64em) {
