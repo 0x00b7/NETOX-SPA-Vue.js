@@ -5,6 +5,7 @@ import AboutView from "../views/AboutView.vue";
 import OrderView from "../views/OrderView.vue";
 import ServiceView from "../views/ServiceView.vue";
 import FaqsView from "../views/FaqsView.vue";
+import AdminView from "../views/AdminView.vue";
 
 import SuccessView from "../views/Response/SuccessView.vue";
 import ExceptionView from "../views/Response/ExceptionView.vue";
@@ -51,6 +52,11 @@ const router = createRouter({
       path: "/about",
       name: "about",
       component: AboutView,
+    },
+    {
+      path: "/admin",
+      name: "admin",
+      component: AdminView,
     },
     {
       path: "/Legal",
