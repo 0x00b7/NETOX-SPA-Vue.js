@@ -282,9 +282,7 @@ export default {
         },
 
         async handleSubmit() {
-            const data = {
-                message: JSON.stringify(this.form)
-            };
+            const data = [JSON.stringify(this.form)];
             const headers = {
                 'Content-Type': 'application/json',
                 'Authorization': 'N3T0X',
@@ -298,7 +296,6 @@ export default {
                     this.$router.push("thanks");
                 })
                 .catch(() => {
-                    console.log(data)
                     this.$router.push("sorry");
                 });
         },
