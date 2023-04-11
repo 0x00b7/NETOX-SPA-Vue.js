@@ -7,9 +7,6 @@ export default {
     data() {
         return {
             items: [],
-            searchQuery: '',
-            prevSearchQuery: '',
-            fetch: false,
         }
     },
     async mounted() {
@@ -21,9 +18,7 @@ export default {
                 headers
             };
             const response = await axios.get('https://armbush.lehle-gernot2441.workers.dev/', options)
-            if (response) {
-                this.fetch = true;
-            };
+            
             this.items.push(...response.data);
             await this.animateItems();
         } catch (error) {
@@ -37,7 +32,7 @@ export default {
                 anime({
                     targets: document.querySelectorAll(selector),
                     opacity: 1,
-                    duration: 100,
+                    duration: 250,
                     delay: 25 * index
                 });
             });
