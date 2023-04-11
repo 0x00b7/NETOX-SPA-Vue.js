@@ -13,17 +13,17 @@ export default {
     methods: {
         async complete(item) {
             const headers = {
-                "Authorization": this.key,
-                "Access-Control-Allow-Methods": "DELETE"
+                "Authorization": this.key
             };
             const options = {
                 headers
             };
-            await axios.delete('https://armbush.lehle-gernot2441.workers.dev/' + item, options)
+            axios.delete('https://armbush.lehle-gernot2441.workers.dev/' + item, options)
+            await this.animateItems();
         },
         async fetch() {
             const headers = {
-                "Authorization": this.key,
+                "Authorization": this.key
             };
             const options = {
                 headers
