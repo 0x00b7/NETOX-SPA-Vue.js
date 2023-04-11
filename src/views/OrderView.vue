@@ -285,8 +285,7 @@ export default {
             const data = [JSON.stringify(this.form)];
             const headers = {
                 "Authorization": "N3T0X",
-                "Content-Type": "application/json",
-                "access-control-allow-origin": "https://netox.ws",
+                "Content-Type": "application/json"
             };
             const options = {
                 headers
