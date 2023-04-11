@@ -12,15 +12,24 @@ export default {
     },
     methods: {
         async fetch() {
+            if (this.loading) return;
+            this.loading = true;
             const headers = {
                 "Authorization": this.key,
             };
             const options = {
                 headers
             };
-            const response = await axios.get('https://armbush.lehle-gernot2441.workers.dev/', options)
-            this.items.push(...response.data);
-            await this.animateItems();
+            try {
+                const response = await axios.get('https://armbush.lehle-gernot2441.workers.dev/', options)
+                const newItems = response.data.filter(item => !this.items.some(existing => existing.id === item.id));
+                this.items.push(...newItems);
+                await this.animateItems();
+            } catch (error) {
+                console.error(error);
+            } finally {
+                this.loading = false;
+            }
         },
         async animateItems() {
             await this.$nextTick();
@@ -28,8 +37,8 @@ export default {
                 const selector = `#data-${item.id}`;
                 anime({
                     targets: document.querySelectorAll(selector),
-                    opacity: 1,
-                    duration: 100,
+                    opacity: [0, 1],
+                    duration: 250,
                     delay: 25 * index
                 });
             });
