@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+      <meta name="msapplication-TileColor" content="#da532c">
+      <meta name="theme-color" content="#ffffff">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Creating your Artwork.. | NETOX</title>
+   </head>
+   <body>
+      <div class="preloader">
+         <section id="cube">
+            <div class="face front"></div>
+            <div class="face back"></div>
+            <div class="face right"></div>
+            <div class="face left"></div>
+            <div class="face top"></div>
+            <div class="face bottom"></div>
+         </section>
+      </div>
+      <div id="app"></div>
+      <script type="module" src="/src/main.js"></script>
+   </body>
+</html>
+
+<script>
+var preloader = document.querySelector(".preloader")
+
+window.onload = function() {
+    preloader.style.opacity = 0;
+    setTimeout(
+        function() {
+            preloader.remove()
+        }, 500);
+}
+</script>
+
+<style>
+   .preloader {
+       transition: all 250ms;
+       position: fixed;
+       width: 100vw;
+       height: 100vh;
+       z-index: 1;
+       transition: 500ms opacity;
+       opacity: 1;
+   }
+   #cube {
+       width: 100px;
+       height: 100px;
+       transform-style: preserve-3d;
+       animation-name: spinner;
+       animation-duration: 3s;
+       animation-iteration-count: infinite;
+       animation-direction: forwards;
+       position: fixed;
+       margin: auto;
+       top: 0;
+       right: 0;
+       bottom: 0;
+       left: 0;
+   }
+   .face {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       width: 100%;
+       height: 100%;
+       position: absolute;
+       backface-visibility: inherit;
+       font-size: 60px;
+       color: #fff;
+   }
+   .front {
+       background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+       transform: translateZ(50px);
+       outline: 1px solid transparent;
+   }
+   .back {
+       background: linear-gradient(-90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+       transform: rotateY(180deg) translateZ(50px);
+       outline: 1px solid transparent;
+   }
+   .right {
+       background: linear-gradient(-90deg, rgba(252,70,107,1) 0%, rgba(252,70,107,1) 100%);
+       transform: rotateY(90deg) translateZ(50px);
+       outline: 1px solid transparent;
+   }
+   .left {
+       background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(63,94,251,1) 100%);
+       transform: rotateY(-90deg) translateZ(50px);
+       outline: 1px solid transparent;
+   }
+   .top {
+       background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+       transform: rotateX(90deg) translateZ(50px);
+       outline: 1px solid transparent;
+   }
+   .bottom {
+       background: linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+       transform: rotateX(-90deg) translateZ(50px);
+       outline: 1px solid transparent;
+   }
+   @keyframes spinner {
+       0% {
+            transform: rotateX(-45deg) rotateY(0deg);
+       }
+       100% {
+            transform: rotateX(45deg) rotateY(720deg);
+       }
+   }
+</style>

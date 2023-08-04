@@ -1,0 +1,39 @@
+@import './base.css';
+
+#app {
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  -moz-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.header {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.header h1 {
+	font-weight: 600;
+}
+
+.router-link-active {
+  color: rgba(255, 255, 255, 0.5)
+}
+
+.router-link-exact-active {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (hover: hover) {
+  a:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+}
