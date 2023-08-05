@@ -32,8 +32,6 @@
 <script>
 import anime from "animejs";
 
-import image from "../assets/logo.svg"
-
 export default {
   data() {
     return {
@@ -41,8 +39,7 @@ export default {
       sliderCount: 0,
       slider: [
         {
-          name: "Web Development",
-          path: image
+          name: "This Project is Deprecated!",
         }
       ],
     };

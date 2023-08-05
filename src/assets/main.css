@@ -20,6 +20,14 @@ a {
   background: rgba(0, 0, 0, 0.3);
 }
 
+.warning {
+  padding: .5em;
+  background-color: black;
+  color: red;
+  font-size: 28px;
+  text-align: center;
+}
+
 .header h1 {
 	font-weight: 600;
 }

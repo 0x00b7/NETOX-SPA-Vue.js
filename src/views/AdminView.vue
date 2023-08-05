@@ -4,62 +4,58 @@ import anime from 'animejs';
 
 
 export default {
-    data() {
-        return {
-            items: [],
-            key: ""
-        }
-    },
-    methods: {
-        async complete(item) {
-            const headers = {
-                "Authorization": this.key
-            };
-            const options = {
-                headers
-            };
-            axios.delete('https://armbush.lehle-gernot2441.workers.dev/' + item, options)
-            await this.animateItems();
-        },
-        async fetch() {
-            const headers = {
-                "Authorization": this.key
-            };
-            const options = {
-                headers
-            };
-            try {
-                const response = await axios.get('https://armbush.lehle-gernot2441.workers.dev/', options)
-                const newItems = response.data.filter(item => !this.items.some(existing => existing.id === item.id));
-                this.items.push(...newItems);
-                await this.animateItems();
-            } catch (error) {
-                console.error(error);
-            }
-        },
-        async animateItems() {
-            await this.$nextTick();
-            this.items.forEach((item, index) => {
-                const selector = `#data-${item.id}`;
-                anime({
-                    targets: document.querySelectorAll(selector),
-                    opacity: [0, 1],
-                    duration: 250,
-                    delay: 25 * index
-                });
-            });
-        },
+  data() {
+    return {
+      items: [],
+      key: ""
     }
+  },
+  methods: {
+    async complete(item) {
+      const headers = {};
+      const options = {
+        headers
+      };
+      axios.delete("" + item, options)
+      await this.animateItems();
+    },
+    async fetch() {
+      const headers = {};
+      const options = {
+        headers
+      };
+      try {
+        const response = await axios.get("", options)
+        const newItems = response.data.filter(item => !this.items.some(existing => existing.id === item.id));
+        this.items.push(...newItems);
+        await this.animateItems();
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async animateItems() {
+      await this.$nextTick();
+      this.items.forEach((item, index) => {
+        const selector = `#data-${item.id}`;
+        anime({
+          targets: document.querySelectorAll(selector),
+          opacity: [0, 1],
+          duration: 250,
+          delay: 25 * index
+        });
+      });
+    },
+  }
 }
 </script>
 
 <template>
   <div class="container">
     <div class="section">
-    <div class="auth">
-      <input v-model="this.key" placeholder="Password...">
-      <button @click="fetch()">Send</button>
-    </div>
+      <div class="auth">
+        <input v-model="this.key" placeholder="Password...">
+        <button @click="fetch()">Send</button>
+      </div>
       <div class="admin">
         <div v-for="item in items" :key="item.id" :id="'data-' + item.id" class="array">
           <h3>ID: {{ item.id }}</h3>
@@ -162,6 +158,5 @@ button:hover {
 
 }
 
-@media (max-width: 32em) {
-}
+@media (max-width: 32em) {}
 </style>

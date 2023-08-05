@@ -218,13 +218,11 @@ export default {
 
     async handleSubmit() {
       const data = JSON.stringify(this.form);
-      const headers = {
-        "Authorization": "N3T0X",
-      };
+      const headers = {};
       const options = {
         headers
       };
-      await axios.post('https://armbush.lehle-gernot2441.workers.dev/', data, options)
+      await axios.post("...", data, options)
         .then(() => {
           this.$router.push("thanks");
         })

@@ -29,6 +29,9 @@ function useFadeOut(el, done) {
 </script>
 
 <template>
+  <div className="warning">
+    <p>This Project is Deprecated!</p>
+  </div>
   <NavBar />
   <router-view v-slot="{ Component }">
     <transition
