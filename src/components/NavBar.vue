@@ -24,12 +24,6 @@
             </span>
             <RouterLink @click="toggleMobile" to="/FAQs">FAQs</RouterLink>
           </li>
-          <li>
-            <span class="fa-li">
-              <i class="fa-solid fa-person-rays"></i>
-            </span>
-            <RouterLink @click="toggleMobile" to="/about">About</RouterLink>
-          </li>
         </ul>
       </div>
       <div class="wrapper">

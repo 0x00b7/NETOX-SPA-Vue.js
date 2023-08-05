@@ -30,23 +30,13 @@
           <span class="fa-li">
             <i class="fa-brands fa-tiktok"></i>
           </span>
-          <a
-            href="https://www.tiktok.com/@netox.ws"
-            target="_blank"
-            rel="noopener noreferrer"
-            >TikTok</a
-          >
+          <a href="https://www.tiktok.com/@netox.ws" target="_blank" rel="noopener noreferrer">TikTok</a>
         </li>
         <li>
           <span class="fa-li">
             <i class="fa-brands fa-instagram"></i>
           </span>
-          <a
-            href="https://www.instagram.com/netox.ws/"
-            target="_blank"
-            rel="noopener noreferrer"
-            >Instagram</a
-          >
+          <a href="https://www.instagram.com/netox.ws/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </li>
       </ul>
     </div>
@@ -57,23 +47,13 @@
           <span class="fa-li">
             <i class="fa-solid fa-at"></i>
           </span>
-          <a
-            href="mailto:admin@netox.ws"
-            target="_blank"
-            rel="noopener noreferrer"
-            >E-Mail</a
-          >
+          <a href="mailto:admin@netox.ws" target="_blank" rel="noopener noreferrer">E-Mail</a>
         </li>
         <li>
           <span class="fa-li">
             <i class="fa-brands fa-whatsapp"></i>
           </span>
-          <a
-            href="https://wa.me/message/I2C4ETTGL33HB1"
-            target="_blank"
-            rel="noopener noreferrer"
-            >WhatsApp</a
-          >
+          <a href="https://wa.me/message/I2C4ETTGL33HB1" target="_blank" rel="noopener noreferrer">WhatsApp</a>
         </li>
       </ul>
     </div>
