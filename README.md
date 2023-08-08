@@ -4,4 +4,4 @@ Netox.ws was a freelancing project aimed at helping people bring their ideas to 
 
 While the original code is now deprecated, I am actively working on a new application with the same goals.
 
-Contact: [gernot@netox.ws](mailto:gernot@netox.ws)
+Contact: [gernot@netox.ws](mailto:admin@gernot-lehle.de)
