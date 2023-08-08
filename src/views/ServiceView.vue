@@ -39,7 +39,7 @@ export default {
       sliderCount: 0,
       slider: [
         {
-          name: "This Project is Deprecated!",
+          name: "Slider UI using Anime.js", 
         }
       ],
     };
