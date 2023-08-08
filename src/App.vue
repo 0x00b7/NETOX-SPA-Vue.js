@@ -29,17 +29,12 @@ function useFadeOut(el, done) {
 </script>
 
 <template>
+  <NavBar />
   <div className="warning">
     <p>This Project is Deprecated!</p>
   </div>
-  <NavBar />
   <router-view v-slot="{ Component }">
-    <transition
-      @enter="useFadeIn"
-      @leave="useFadeOut"
-      :css="false"
-      mode="out-in"
-    >
+    <transition @enter="useFadeIn" @leave="useFadeOut" :css="false" mode="out-in">
       <component :is="Component" />
     </transition>
   </router-view>
