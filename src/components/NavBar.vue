@@ -111,7 +111,7 @@ header .container .mobileBtn {
   font-size: 2rem;
 }
 
-header .container .mobileBtn > * {
+header .container .mobileBtn>* {
   pointer-events: none;
 }
 
@@ -120,7 +120,7 @@ header .container .mobile-nav {
   background: #302757;
   padding: 0rem 1rem;
   width: 100%;
-  height: 210px;
+  height: 160px;
   z-index: 10;
   border-bottom-left-radius: 2rem;
   border-bottom-right-radius: 2rem;
@@ -170,6 +170,7 @@ header .container .wrapper .desktop-nav nav a {
   header .container .wrapper .desktop-nav {
     display: none;
   }
+
   header .container .mobileBtn {
     display: block;
   }
